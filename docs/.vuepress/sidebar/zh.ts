@@ -9,7 +9,7 @@ export const zhSidebar = sidebar({
       link: "partnership.md",
     },
     {
-      icon: "note",
+      icon: "proposal",
       text: "标准化文档",
       prefix: "/standards/",
       children: ["UIGF.md", "UIAF.md"]

@@ -9,7 +9,7 @@ export const enSidebar = sidebar({
       link: "partnership.md",
     },
     {
-      icon: "note",
+      icon: "proposal",
       text: "Standards Document",
       prefix: "/en/standards/",
       children: ["UIGF.md", "UIAF.md"]

@@ -15,12 +15,12 @@ actions:
 
 features:
   - title: 统一可交换祈愿记录标准
-    icon: markdown
+    icon: proposal
     details: Uniformed Interchangeable GachaLog Format standard (UIGF)
     link: /standards/UIGF.md
 
   - title: 统一可交换成就标准
-    icon: slides
+    icon: proposal
     details: Uniformed Interchangeable Achievement Format standard (UIAF)
     link: /standards/UIGF.md
 

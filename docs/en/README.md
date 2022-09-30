@@ -15,12 +15,12 @@ actions:
 
 features:
   - title: Uniformed Interchangeable GachaLog Format standard
-    icon: markdown
+    icon: proposal
     details: UIGF
     link: /en/standards/UIGF.md
 
   - title: Uniformed Interchangeable Achievement Format standard
-    icon: slides
+    icon: proposal
     details: UIAF
     link: /en/standards/UIGF.md
 
