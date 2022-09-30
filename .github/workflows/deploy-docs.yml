@@ -34,12 +34,12 @@ jobs:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |-
           npm run docs:build
-          > docs/.vuepress/dist/.nojekyll
+          > dist/.nojekyll
 
       - name: Deploy Docs
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # This is the branch where the docs are deployed to
           branch: gh-pages
-          folder: docs/.vuepress/dist
+          folder: dist
 
