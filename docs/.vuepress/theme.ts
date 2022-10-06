@@ -14,7 +14,9 @@ export default hopeTheme({
 
   logo: "/uigf-logo128.png",
 
-  repo: "UIGF-org/UIGF-org.github.io",
+  repo: "UIGF-org",
+
+  repoDisplay: true,
 
   docsDir: "docs",
 
