@@ -1,74 +1,193 @@
-# 统一可交换祈愿记录标准 v2.2
+# 统一可交换祈愿记录标准 v2.3
 
 > Uniformed Interchangeable GachaLog Format standard (UIGF)
 
-## 前言
+## 更新记录
+|版本|说明|兼容|
+|-|-|-|
+|`v2.0`| 首个正式版本 | v2.0 |
+|`v2.1`| 简化了部分语言表述，与 v2.0在数据格式上完全一致 | v2.1 and lower |
+|`v2.2`| 新增 `info.export_timestamp` 填充 UNIX 时间戳 | v2.2 and lower |
+|`v2.3`| 扩充至非中文语境，使用 Json Schema 表述 | v2.3 and lower |
 
-由于原神的祈愿卡池与记录越来越多，越来越复杂，各个App间进行数据交换的代价越来越大，于是
-我们
-
-* [biuuu/genshin wish export](https://github.com/biuuu/genshin-wish-export)
-* [DGP Studio/Snap.Genshin](https://github.com/DGP-Studio/Snap.Genshin)
-* [Scighost/KeqingNiuza](https://github.com/Scighost/KeqingNiuza)
-* [sunfkny/genshin gacha export](https://github.com/sunfkny/genshin-gacha-export)
-* [TremblingMoeNew/DodocoTales](https://github.com/TremblingMoeNew/DodocoTales)
-* [voderl/genshin gacha analyzer](https://github.com/voderl/genshin-gacha-analyzer)
-
-（上述名称以字典顺序排序，不代表其他任何意义）  
-在此一起，制定了此项标准，旨在加强各个原神相关的App间的数据可交换性  
-如果今后出现了新的需要在各App间交换的数据，我们也会进行规范
-
-## 注意事项
-
-> 在采用此格式时，需要特别注意某些字段名称中可能存在的下划线 `_` 或空格字符  
-> 此格式仅适用于**简体中文**环境
-
-### Id
+## Id
 
 原神的祈愿记录物品内包含了一项较为特殊的字段: `id` ，该值在 1.3版本后加入  
 所以**先前查询出的物品**若无特殊兼容性修改则不会包含相应的 `id`  
-导出时
+App 导出 UIGF 时
 * 需要确保每个物品的 `id`  的有效性。  
-* 推荐从最后一个自带有效 `id` 的物品开始，向前（相对于时间）依次递减 `id` 的值,每次递减的值应保持为 `1`
-* 生成的 `id` 值不应大于 `1612303200000000000`
+* 从最后一个自带有效 `id` 的物品开始，向前（相对于时间）依次递减 `id` 的值,每次递减的值应保持为 `1`
+
+导入 UIGF 到 App 时
 * App不应假设所有的 `gacha_item` 都有有效的 `id` 值
 * App应具有处理 `id` 字段为 `null`或 `` 空字符串的能力
 
-### GachaType
+## GachaType
 
 祈愿包含了会共享保底与概率的卡池，所以需要一个额外的字段来界定  
 我们在`UIGF`的所有格式中注入了`uigf_gacha_type`字段  
 在导出到`UIGF`格式时需要注意添加对应的`uigf_gacha_type`字段  
 
-#### `uigf_gacha_type` 映射关系
+### 映射关系
 
 |`uigf_gacha_type`|`gacha_type`|
 |-|-|
-|100|100|
-|200|200|
-|301|301\|400|
-|302|302|
+|`100`|`100`|
+|`200`|`200`|
+|`301`|`301` or `400`|
+|`302`|`302`|
+
+## Json 格式
+
+> Uniformed Interchangeable GachaLog Format standard of Json (UIGF.J)
+
+Json 格式 由于 与从官方接口获取到的格式一致  
+更便于各App的导入与导出，我们也在此做出规范  
+该格式应仅用于各App间的数据互通
+
+### 导出的格式
+
+```json
+{
+  "type": "object",
+  "title": "UIGF object",
+  "properties": {
+    "info": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "title": "Uid",
+          "description": "Uid"
+        },
+        "lang": {
+          "type": "string",
+          "title": "Language",
+          "description": "语言 ISO 3166"
+        },
+        "uigf_version": {
+          "type": "string",
+          "title": "UIGF Version",
+          "description": "UIGF 版本号"
+        },
+        "export_timestamp": {
+          "type": "number",
+          "title": "Export Timestamp",
+          "description": "导出时间戳（秒）"
+        },
+        "export_time": {
+          "type": "string",
+          "description": "导出时间",
+          "format": "date-time",
+          "pattern": "yyyy-MM-dd HH:mm:ss",
+          "title": "Export Time"
+        },
+        "export_app": {
+          "type": "string",
+          "title": "Export App",
+          "description": "导出应用"
+        },
+        "export_app_version": {
+          "type": "string",
+          "title": "Export App Version",
+          "description": "导出应用版本"
+        }
+      },
+      "title": "Infomation",
+      "required": [
+        "uid",
+        "lang",
+        "uigf_version"
+      ],
+      "description": "包含导出方定义的基本信息"
+    },
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "gacha_type": {
+            "type": "string",
+            "description": "祈愿类型"
+          },
+          "item_id": {
+            "type": "string",
+            "title": "Item Id",
+            "description": "空字符串"
+          },
+          "count": {
+            "type": "string",
+            "title": "Count",
+            "description": "数量"
+          },
+          "time": {
+            "type": "string",
+            "title": "Time",
+            "description": "物品获取时间",
+            "pattern": "yyyy-MM-dd HH:mm:ss",
+            "format": "date-time"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "名称"
+          },
+          "item_type": {
+            "type": "string",
+            "title": "Item Type",
+            "description": "物品类型"
+          },
+          "rank_type": {
+            "type": "string",
+            "title": "Item Quality",
+            "description": "物品星级"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "内部数据库Id"
+          },
+          "uigf_gacha_type": {
+            "type": "string",
+            "title": "Query Type",
+            "description": "向接口查询时需要的 gacha_type"
+          }
+        },
+        "required": [
+          "gacha_type",
+          "name",
+          "id",
+          "uigf_gacha_type",
+          "time"
+        ],
+        "title": "Gacha Item",
+        "description": "祈愿物品"
+      },
+      "title": "List",
+      "description": "物品列表"
+    }
+  },
+  "required": [
+    "info",
+    "list"
+  ],
+  "description": "UIGF 根对象"
+}
+```
 
 ## Excel 工作簿 (Workbook Format)
 > Uniformed Interchangeable GachaLog Format standard of Workbook (UIGF.W)
 
-### 文件的名称
-
-我们建议：
-
-* 在名称中包含导出数据所属用户的 `uid`  
-* 用户在导出操作发生前应具有修改文件名称的权力
-
 ### 单元格的格式
 
-* 在填充单元格内的数据时，应统一转换到String字符串类型后填入
+* 在填充单元格内的数据时，应统一转换到 `String` 字符串类型后填入
 
 ### 表名及内容
 
 |表名|内容|类型|是否必要|
 |-|-|-|-|
 |统计分析|统计分析内容等|任意|否|
-|角色活动祈愿|`gacha_type` : `301\|400` 的祈愿数据|祈愿表|否，但是应该导出|
+|角色活动祈愿|`gacha_type` : `301 or 400` 的祈愿数据|祈愿表|否，但是应该导出|
 |武器活动祈愿|`gacha_type` : `302` 的祈愿数据|祈愿表|否，但是应该导出|
 |常驻祈愿|`gacha_type` : `200` 的祈愿数据|祈愿表|否，但是应该导出|
 |新手祈愿|`gacha_type` : `100` 的祈愿数据|祈愿表|否，但是应该导出|
@@ -152,76 +271,3 @@
 |-|-|-|-|-|-|-|-|-|-|-|
 |1|301|1613556360008291100||武器|zh-cn|以理服人|3|2021-02-17 18:45:09|123456789|301|
 |...|...|...|...|...|...|...|...|...|...|...|
-
-## Json 格式
-
-> Uniformed Interchangeable GachaLog Format standard of Json (UIGF.J)
-
-Json 格式 由于 与从官方接口获取到的格式一致  
-更便于各App的导入与导出，我们也在此做出规范  
-该格式应仅用于各App间的数据互通
-
-### 导出的格式
-
-以同值字段提取至上层的思想，我们拟定了以下json格式
-
-```json
-{
-    "info" : {
-        "uid" : "000000000",
-        "lang" : "zh-cn",
-        ...
-    },
-    "list" : [
-        {
-            "gacha_type": "000",
-            "item_id": "",
-            "count": "1",
-            "time": "yyyy-MM-dd HH:mm:ss",
-            "name": "以理服人",
-            "item_type": "武器",
-            "rank_type": "3",
-            "id": "1600099200004770203",
-            "uigf_gacha_type": "000",
-        },
-        ...
-    ]
-}
-```
-
-### `info` 
-
-除了从 `{gacha_item}` 中提取的 `uid`,`lang`字段，还可以包含我们认可的以下字段
-
-|字段名|值|说明|
-|-|-|-|
-|`export_time`|导出时间 : `yyyy-MM-dd HH:mm:ss`||
-|`export_timestamp`|导出UNIX时间戳|v2.2+|
-|`export_app`|导出此份记录的App名称，详见下方表格||
-|`export_app_version`|导出此份记录的App版本号||
-|`uigf_version`|所应用的 `UIGF` 的版本,包含此字段以防 `UIGF` 出现中断性变更时，App无法处理||
-
-#### `uigf_version`
-
-合法值
-
-|值|说明|兼容|
-|-|-|-|
-|`v2.0`|首个正式版本|v2.0|
-|`v2.1`|简化了部分语言表述，与 v2.0在数据格式上完全一致|v2.1 and lower|
-|`v2.2`|新增 `info.export_timestamp` 填充 UNIX 时间戳|v2.2 and lower|
-
-#### `export_app`
-
-未实现导出支持的以 `-` 代替
-
-|导出 App|`export_app` 的值|
-|-|-|
-| [biuuu/genshin wish export](https://github.com/biuuu/genshin-wish-export) | `genshin-wish-export` |
-| [DGP Studio/Snap.Genshin](https://github.com/DGP-Studio/Snap.Genshin) | `Snap Genshin` |
-|[MUK/应急食品](https://gtool.mukapp.top/)|`MUKGenshinTool`|
-| [Scighost/KeqingNiuza](https://github.com/Scighost/KeqingNiuza) | - |
-| [Scighost/Xunkong](https://github.com/Scighost/Xunkong) | `Xunkong.Desktop` |
-| [sunfkny/genshin gacha export](https://github.com/sunfkny/genshin-gacha-export) | `genshin-gacha-export` |
-| [TremblingMoeNew/DodocoTales](https://github.com/TremblingMoeNew/DodocoTales) | - |
-| [voderl/genshin gacha analyzer](https://github.com/voderl/genshin-gacha-analyzer) | - |
