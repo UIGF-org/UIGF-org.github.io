@@ -1,6 +1,6 @@
 # 统一可交换成就标准 v1.1
 
-> Uniformed Interchangeable Achievement Format standard (UIAF)
+> Uniformed Interchangeable Achievement Format standard (UIAF) v1.1 <Badge text="Current" type="message" />
 
 ## 前言
 
