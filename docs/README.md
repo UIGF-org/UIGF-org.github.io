@@ -11,7 +11,7 @@ actions:
   type: primary
 
 - text: API
-  link: /standards/UIGF.md
+  link: /API.md
 
 features:
   - title: 统一可交换祈愿记录标准
