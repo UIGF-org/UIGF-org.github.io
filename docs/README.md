@@ -11,7 +11,7 @@ actions:
   type: primary
 
 - text: API
-  link: /standards/UIGF.md
+  link: /API.md
 
 features:
   - title: 统一可交换祈愿记录标准
@@ -27,4 +27,5 @@ features:
 copyright: false
 footer: MIT Licensed | Copyright © 2021-present UIGF-org
 ---
+@include(./partnership-index.md)
 
