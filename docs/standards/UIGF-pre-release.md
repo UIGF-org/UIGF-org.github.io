@@ -1,6 +1,5 @@
 # 统一可交换祈愿记录标准 v2.3
-
-> Uniformed Interchangeable GachaLog Format standard (UIGF)
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.3 <Badge text="Pre-release" type="message" />
 
 ## 更新记录
 |版本|说明|兼容|
