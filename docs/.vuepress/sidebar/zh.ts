@@ -11,8 +11,8 @@ export const zhSidebar = sidebar({
     {
       icon: "proposal",
       text: "标准化文档",
-      prefix: "/standards/",
-      children: ["UIGF.md", "UIAF.md"]
+      prefix: "standards/",
+      children: "structure"
     }
   ],
 });
