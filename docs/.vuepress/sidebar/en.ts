@@ -11,8 +11,8 @@ export const enSidebar = sidebar({
     {
       icon: "proposal",
       text: "Standards Document",
-      prefix: "/en/standards/",
-      children: ["UIGF.md", "UIAF.md"]
+      prefix: "en/standards/",
+      children: "structure"
     }
   ],
 });

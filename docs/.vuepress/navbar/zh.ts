@@ -6,7 +6,7 @@ export const zhNavbar = navbar([
   {
     text: "规范标准",
     icon: "proposal",
-    prefix: "/standards/",
+    prefix: "standards/",
     children: ["UIGF.md", "UIAF.md"]
   },
 ]);

@@ -6,7 +6,7 @@ export const enNavbar = navbar([
   {
     text: "Standards",
     icon: "proposal",
-    prefix: "/en/standards/",
+    prefix: "en/standards/",
     children: ["UIGF.md", "UIAF.md"]
   },
 ]);
