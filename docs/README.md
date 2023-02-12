@@ -13,6 +13,9 @@ actions:
 - text: API
   link: /API.md
 
+- text: 合作项目
+  link: /partnership.md
+
 features:
   - title: 统一可交换祈愿记录标准
     icon: proposal

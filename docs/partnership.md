@@ -95,7 +95,9 @@ uiaf:
 
 
 ---
+## 添加你的项目
 
+如果你的项目使用了 UIGF 或 UIAF 标准，欢迎通过 [Pull Request](https://github.com/UIGF-org/UIGF-org.github.io) 将你的项目添加到这里
 
 ## 使用 UIGF 标准的项目
 
