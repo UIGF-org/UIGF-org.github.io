@@ -11,7 +11,7 @@ export const enSidebar = sidebar({
     {
       icon: "proposal",
       text: "Standards Document",
-      prefix: "en/standards/",
+      prefix: "standards/",
       children: "structure"
     }
   ],

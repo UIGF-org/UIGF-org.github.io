@@ -4,7 +4,7 @@ icon: home
 title: Home
 heroImage: /uigf-logo128.png
 heroText: UIGF-org
-tagline: Unified standardized GenshinData Format
+tagline: Unified Standardized GenshinData Format
 actions:
 - text: Standards Documents
   link: /en/standards/
@@ -12,6 +12,9 @@ actions:
 
 - text: API
   link: /en/standards/UIGF.md
+
+- text: Partnerships
+  link: /en/partnership.md
 
 features:
   - title: Uniformed Interchangeable GachaLog Format standard
@@ -27,4 +30,4 @@ features:
 copyright: false
 footer: MIT Licensed | Copyright © 2021-present UIGF-org
 ---
-
+@include(partnership-index.md)
