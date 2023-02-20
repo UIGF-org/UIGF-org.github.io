@@ -30,5 +30,5 @@ features:
 copyright: false
 footer: MIT Licensed | Copyright © 2021-present UIGF-org
 ---
-@include(./partnership-index.md)
+@include(./partnership.md)
 
