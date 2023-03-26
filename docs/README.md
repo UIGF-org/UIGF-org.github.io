@@ -32,3 +32,8 @@ footer: MIT Licensed | Copyright © 2021-present UIGF-org
 ---
 @include(./partnership.md)
 
+## 平台
+
+UIGF-Org 目前使用了以下软件厂商提供的服务
+
+<a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-light.svg" alt="Deploys by Netlify" /> </a>
