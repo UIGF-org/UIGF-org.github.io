@@ -31,3 +31,9 @@ copyright: false
 footer: MIT Licensed | Copyright © 2021-present UIGF-org
 ---
 @include(partnership.md)
+
+## Service Used
+
+UIGF-Org is currently using software provided by the following service provider.
+
+<a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-light.svg" alt="Deploys by Netlify" /> </a>
