@@ -2,6 +2,8 @@ import { defineUserConfig } from "vuepress";
 import { viteBundler } from '@vuepress/bundler-vite'
 import theme from "./theme.js";
 import { redirectPlugin } from "vuepress-plugin-redirect";
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 
 export default defineUserConfig({
   base: "/",
@@ -22,6 +24,9 @@ export default defineUserConfig({
   },
 
   plugins: [
+    googleAnalyticsPlugin({
+      id: 'G-H6BK8H0332',
+    }),
     redirectPlugin({
       defaultLocale: "/en/",
       defaultBehavior: "defaultLocale",
@@ -30,6 +35,11 @@ export default defineUserConfig({
         "/en/": ["en-US", "en-UK", "en"],
         "/zh/": ["zh-CN", "zh-TW", "zh"],
       }
+    }),
+    docsearchPlugin({
+      apiKey: "599cec31baffa4868cae4e79f180729b",
+      indexName: "docsearch",
+      appId: "R2IYF7ETH7"
     }),
   ],
 

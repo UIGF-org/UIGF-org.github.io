@@ -1,7 +1,3 @@
----
-redirectFrom: /partnership.html
----
-
 # 合作项目
 ## 欢迎加入 UIGF-org
 
