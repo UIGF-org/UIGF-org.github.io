@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from '@vuepress/bundler-vite'
 import theme from "./theme.js";
+import { redirectPlugin } from "vuepress-plugin-redirect";
 
 export default defineUserConfig({
   base: "/",
@@ -13,7 +14,7 @@ export default defineUserConfig({
       title: "UIGF-org",
       description: "Uniformed Interchangeable GenshinData Format",
     },
-    "/": {
+    "/zh/": {
       lang: "zh-CN",
       title: "UIGF-org",
       description: "统一可交换原神数据标准",
