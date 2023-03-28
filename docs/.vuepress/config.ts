@@ -21,6 +21,18 @@ export default defineUserConfig({
     },
   },
 
+  plugins: [
+    redirectPlugin({
+      defaultLocale: "/en/",
+      defaultBehavior: "defaultLocale",
+      autoLocale: true,
+      localeConfig: {
+        "/en/": ["en-US", "en-UK", "en"],
+        "/zh/": ["zh-CN", "zh-TW", "zh"],
+      }
+    }),
+  ],
+
   theme,
 
   shouldPrefetch: false,

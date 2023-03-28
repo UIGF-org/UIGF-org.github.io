@@ -1,3 +1,7 @@
+---
+redirectFrom: /API.html
+---
+
 # UIGF API 
 
 ## 介绍
