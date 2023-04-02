@@ -3,12 +3,15 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import theme from "./theme.js";
 import { redirectPlugin } from "vuepress-plugin-redirect";
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
-import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 
 export default defineUserConfig({
   base: "/",
 
   dest: "./dist",
+
+  head:[
+    ['div', {id: "docsearch"}],
+  ],
 
   locales: {
     "/en/": {
@@ -35,11 +38,6 @@ export default defineUserConfig({
         "/en/": ["en-US", "en-UK", "en"],
         "/zh/": ["zh-CN", "zh-TW", "zh"],
       }
-    }),
-    docsearchPlugin({
-      apiKey: "599cec31baffa4868cae4e79f180729b",
-      indexName: "docsearch",
-      appId: "R2IYF7ETH7"
     }),
   ],
 
