@@ -7,25 +7,25 @@ heroText: UIGF-org
 tagline: 统一标准化的原神数据格式
 actions:
 - text: 标准化文档
-  link: /standards/
+  link: standards/
   type: primary
 
 - text: API
-  link: /API.md
+  link: API.html
 
 - text: 合作项目
-  link: /partnership.md
+  link: partnership.html
 
 features:
   - title: 统一可交换祈愿记录标准
     icon: proposal
     details: Uniformed Interchangeable GachaLog Format standard (UIGF)
-    link: /standards/UIGF.md
+    link: standards/UIGF.html
 
   - title: 统一可交换成就标准
     icon: proposal
     details: Uniformed Interchangeable Achievement Format standard (UIAF)
-    link: /standards/UIGF.md
+    link: standards/UIGF.html
 
 copyright: false
 footer: MIT Licensed | Copyright © 2021-present UIGF-org
