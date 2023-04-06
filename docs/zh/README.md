@@ -25,7 +25,7 @@ features:
   - title: 统一可交换成就标准
     icon: proposal
     details: Uniformed Interchangeable Achievement Format standard (UIAF)
-    link: standards/UIGF.html
+    link: standards/UIAF.html
 
 copyright: false
 footer: MIT Licensed | Copyright © 2021-present UIGF-org
