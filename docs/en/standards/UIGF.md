@@ -207,13 +207,13 @@ we have drawn up the following json format
 
 Addition to `uid` and `lang` fields extracted from `{gacha_item}`, we also recognize the following field
 
-| Field Name           | Value                                                                                        | Note  |
-|----------------------|----------------------------------------------------------------------------------------------|-------|
-| `export_time`        | Exported time in format of `yyyy-MM-dd HH:mm:ss`                                             |       |
-| `export_timestamp`   | Exported time in UNIX timestamp                                                              | v2.2+ |
-| `export_app`         | Name of export application, see details in table below                                       |       |
-| `export_app_version` | Version of export application                                                                |       |
-| `uigf_version`       | `UIGF` version , keep this to prevent application not to work when UIGF have breaking update |       |
+| Field Name           | Value                                                                                               | Note  |
+|----------------------|-----------------------------------------------------------------------------------------------------|-------|
+| `export_time`        | Exported time in format of `yyyy-MM-dd HH:mm:ss`                                                    |       |
+| `export_timestamp`   | Exported time in UNIX timestamp                                                                     | v2.2+ |
+| `export_app`         | Name of export application, see details in table below                                              |       |
+| `export_app_version` | Version of export application                                                                       |       |
+| `uigf_version`       | `UIGF` version applied, keep this to prevent application not working when UIGF have breaking update |       |
 
 #### `uigf_version`
 
