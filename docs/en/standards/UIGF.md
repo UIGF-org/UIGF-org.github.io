@@ -15,7 +15,7 @@ As a result, we (list in alphabetical order):
 * [sunfkny/genshin gacha export](https://github.com/sunfkny/genshin-gacha-export)
 * [TremblingMoeNew/DodocoTales](https://github.com/TremblingMoeNew/DodocoTales)
 * [voderl/genshin gacha analyzer](https://github.com/voderl/genshin-gacha-analyzer)
- 
+
 Make standard here together to strengthen the data exchange-ability between each Genshin-related App.
 
 We will also make new standards if there's more data can be transferred in the further.
@@ -68,9 +68,9 @@ We suggest:
 
 * When filling the shell with data, the format should be set to string (`Text`)
 
-### Table Name and Content
+### Sheet  Name and Content
 
-| Table Name | Content                            | Category          | Required                   |
+| Sheet Name | Content                            | Category          | Required                   |
 |------------|------------------------------------|-------------------|----------------------------|
 | 统计分析       | Statistical analysis content, etc. | Any               | No                         |
 | 角色活动祈愿     | Data of `gacha_type` : `301\|400`  | Wish record table | No, but should have        |
@@ -85,7 +85,7 @@ We suggest:
 
 > Application should transmit data through **raw wish history data**
 
-### Wish Record Table Structure
+### Wish Record Sheet Structure
 
 This section is to normalize analysis-related applications
 
@@ -125,7 +125,7 @@ and the analysis app should not assume that the order in the table is a specific
 |2021-02-17 18:45:09|以理服人|武器|3|角色活动祈愿-2|...|
 |...|...|...|...|...|...|
 
-### Raw Wish Data Table
+### Raw Wish Data Sheet
 
 When exporting
 
@@ -142,7 +142,7 @@ When importing
 * We strongly recommended you to write programs that do import independently of the ordinal position of the columns,
 for maximum compatibility
 * If the values of some of the non-essential fields are omitted, 
-please keep the table header and the corresponding columns will be empty
+please keep the column header and the corresponding columns will be empty
 
 | Column Header     | Required                                                                                 |
 |-------------------|------------------------------------------------------------------------------------------|
