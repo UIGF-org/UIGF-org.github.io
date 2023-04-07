@@ -15,64 +15,138 @@ redirectFrom: /API.html
 
 ## 使用
 UIGF API 有三个常用接口，示例如下
-### 翻译接口
-- 接口 URL <Badge text="GET" type="info" vertical="top" />
-  - `https://api.uigf.org/translate/{lang}/{text}`
-- lang 参数：
+### 翻译接口 <Badge text="POST" type="tip" vertical="top" />
+翻译接口会将指定语言的文本文字转义为原神内置的物品 ID 或通过反向翻译将指定的物品 ID 翻译成指定语言
+- 接口地址：`https://api.uigf.org/translate/`
+- Body Json
+  ```Json
+  {
+    "lang": "language",
+    "type": "normal|reverse",
+    "item_name": "str | str[]",
+    "item_id": "int | int[]"
+    
+  }
+  ```
+#### 请求参数
+- `lang` **必填**
   - 需要翻译的文本的原始语言
-    - 目前可接受的语言参数包括 `chs`, `cht`, `de`, `en`, `es`, `fr`, `id`, `jp`, `kr`,
-    `pt`, `ru`, `th`, `vi`
-- text 参数：
-  - 需要翻译的文本（单条数据查询时）
-    - 比如：`神里绫华`
-  - 或者一个包含翻译文本的列表（多条数据查询时）
-    - 由方括号包裹字串符，以英文半角逗号间隔，不需要包含空格和引号
-    - 比如：`[神里绫华,神里绫人]`
-- 返回格式：
+  - 可接受的语言参数包括 `chs`, `cht`, `de`, `en`, `es`, `fr`, `id`, `jp`, `kr`,
+  `pt`, `ru`, `th`, `vi`
+- `type` **必填**
+  - 翻译接口的方法
+    - 当 `type` 值为 `normal` 时，接口将文本翻译成物品 ID
+    - 当 `type` 值为 `reverse` 时，接口将物品 ID 翻译成文本
+- `item_name` **当 `type: normal` 时必填**
+  - 需要翻译的文本或文本列表
+    - 需要翻译的文本（单条数据查询时）
+      - 比如：`神里绫华`
+    - 或者一个包含翻译文本的列表（多条数据查询时）
+      - 由方括号包裹字串符，以英文半角逗号间隔，不需要包含空格和引号
+        - 比如：`[神里绫华,神里绫人]`
+- `item_id` **当 `type: reverse` 时必填**
+  - 需要翻译的物品 ID
+#### 返回格式
   - 当请求单个文本翻译
-    - 成功时，将返回一个`Json`，`item_id`键的值即为对应物品 ID
+    - 成功时，将返回一个`Json`
+      - `item_id`键的值为对应物品 ID
+      - `item_name`键的值为对应物品名称
     - 失败时，将返回 `HTTP 404 NOT FOUND` 错误
   - 当请求多个文本翻译
-    - 成功时，将返回一个`Json`，`item_id`的值为一个整数值列表，列表中每一个 ID 对应请求的物品文本
+    - 成功时，将返回一个`Json`
+      - `item_id`或`item_name`的值为一个整数值列表
       - 当列表中有文本不存在于数据库中，则会为该记录返回值为`0`的 ID
+      - 当列表中有 ID 不存在于数据库中，则会为该记录返回值为`""`的名称
       - 使用该方法请求 API 时需要检验请求的列表长度是否等于返回的列表的长度
     - 失败时，将返回 `HTTP 404 NOT FOUND` 错误
-  
 
 ::: tabs
-@tab 单条查询
+@tab 单条翻译查询
 
-https://api.uigf.org/translate/chs/神里绫华
-
-@tab 单条查询结果
+**Request Body**
 ```json
 {
-  "item_id": 10000002
+  "lang": "chs",
+  "item_name": "珊瑚宫心海",
+  "type": "normal"
+}
+```
+**Response**
+```json
+{
+"item_id": 10000054
 }
 ```
 
-@tab 多条查询
 
-https://api.uigf.org/translate/chs/[神里绫华,神里绫人,一个不存在的角色,神里绫人]
 
-@tab 多条查询结果
-
+@tab 多条翻译查询
+**Request Body**
+```json
+{
+  "lang": "chs",
+  "item_name": "[神里绫华,神里绫人,不存在的角色,纳西妲,妮露,甘雨,珊瑚宫心海]",
+  "type": "normal"
+}
+```
+**Response**
 ```json
 {
   "item_id": [
     10000002,
     10000066,
     0,
-    10000066
+    10000073,
+    10000070,
+    10000037,
+    10000054
+  ]
+}
+```
+
+@tab 单条反向翻译查询
+
+**Request Body**
+```json
+{
+  "lang": "chs",
+  "item_id": "10000002",
+  "type": "reverse"
+}
+```
+**Response**
+```json
+{
+  "item_name": "神里绫华"
+}
+```
+
+@tab 多条反向翻译查询
+
+**Request Body**
+```json
+{
+  "lang": "chs",
+  "item_id": "[10000000, 10000003, 10000002]",
+  "type": "reverse"
+}
+```
+**Response**
+```json
+{
+  "item_name": [
+    "",
+    "琴",
+    "神里绫华"
   ]
 }
 ```
 
 :::
 
-### 语言判断接口
+### 语言判断接口 <Badge text="GET" type="info" vertical="top" />
 该接口用于当无法判断原始文本语言时使用，不应该依赖其作为物品文本和物品 ID 之间的批量转换
-- 接口 URL <Badge text="GET" type="info" vertical="top" />
+- 接口 URL 
   - `https://api.uigf.org/generic-translate/{text}`
 - text 参数
   - 单个需要翻译的文本
@@ -100,12 +174,12 @@ https://api.uigf.org/generic-translate/神里绫华
 ```
 :::
 
-### 字典下载接口
+### 字典下载接口 <Badge text="GET" type="info" vertical="top" />
 对于有能力在服务端或用户端进行物品文本和物品 ID 转换的工具，我们推荐减少对 UIGF 在线翻译 API 的依赖。
 
 你可以通过字典下载接口获取到各个语言的物品文本和物品 ID 转换关系的 Json 文件
 
-- 接口 URL <Badge text="GET" type="info" vertical="top" />
+- 接口 URL 
   - `https://api.uigf.org/dict/{lang}.json`
 - lang 参数
   - 语言代码，目前可接受的语言包含 `chs`, `cht`, `de`, `en`, `es`, `fr`, `id`, `jp`, `kr`,
