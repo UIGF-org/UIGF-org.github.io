@@ -5,16 +5,16 @@ desc="Easily export the Genshin Impact wish record"
 url="https://github.com/biuuu/genshin-wish-export"
 logo="https://raw.githubusercontent.com/biuuu/genshin-wish-export/main/build/icons/256x256.png"
 repo="https://github.com/biuuu/genshin-wish-export"
-preview="None"
+preview="https://img.alicdn.com/imgextra/i3/1797064093/O1CN018VkZBw1g6dvTMaX9W_!!1797064093.png"
 />
 
 <SiteInfo
 name="胡桃"
 desc="唷，找本堂主有何贵干呀？"
-logo="https://raw.githubusercontent.com/DGP-Studio/Snap.Hutao.Docs/main/docs/.vuepress/public/images/202209/HeroImageLogo.png"
+logo="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01oaGvKE1g6dut0pICS_!!1797064093.png"
 url="https://hut.ao/"
 repo="https://github.com/DGP-Studio/Snap.Hutao"
-preview="https://repository-images.githubusercontent.com/482734649/5f8cf574-2ef0-43e9-aa8d-6cf094b54dd9"
+preview="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01F0AGTl1g6dvW6j28q_!!1797064093.png"
 />
 
 <SiteInfo
@@ -38,7 +38,7 @@ preview="https://raw.githubusercontent.com/voderl/genshin-gacha-analyzer/main/do
 <SiteInfo
 name="应急食品"
 desc="安卓平台下的原神工具客户端"
-logo="partnerships/mukapp-logo.png"
+logo="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01agfnd91g6dvMzibmE_!!1797064093.png"
 url="https://gtool.mukapp.top/"
 preview="partnerships/mukapp.webp"
 />
@@ -46,7 +46,7 @@ preview="partnerships/mukapp.webp"
 <SiteInfo
 name="提瓦特小助手"
 desc="专注旅行者服务的微信小程序"
-logo="partnerships/paimon.png"
+logo="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01wVRiEq1g6dvGG2mmX_!!1797064093.png"
 url="https://www.yshelper.com/index.php"
 preview="partnerships/teyvat-preview.png"
 />
@@ -57,7 +57,7 @@ desc="原神抽卡记录导出"
 logo="https://raw.githubusercontent.com/sunfkny/genshin-gacha-export/main/ys.ico"
 url="https://github.com/sunfkny/genshin-gacha-export"
 repo="https://github.com/sunfkny/genshin-gacha-export"
-preview="None"
+preview="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01Or2BBf1g6dvUQwGP9_!!1797064093.png"
 />
 
 <SiteInfo
@@ -91,10 +91,10 @@ preview="https://raw.githubusercontent.com/xunkong/KeqingNiuza/v2/img/Snipaste_2
 <SiteInfo
 name="胡桃"
 desc="唷，找本堂主有何贵干呀？"
-logo="https://raw.githubusercontent.com/DGP-Studio/Snap.Hutao.Docs/main/docs/.vuepress/public/images/202209/HeroImageLogo.png"
+logo="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01oaGvKE1g6dut0pICS_!!1797064093.png"
 url="https://hut.ao/"
 repo="https://github.com/DGP-Studio/Snap.Hutao"
-preview="https://repository-images.githubusercontent.com/482734649/5f8cf574-2ef0-43e9-aa8d-6cf094b54dd9"
+preview="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01F0AGTl1g6dvW6j28q_!!1797064093.png"
 />
 
 <SiteInfo
