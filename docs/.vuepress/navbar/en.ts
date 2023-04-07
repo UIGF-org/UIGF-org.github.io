@@ -3,7 +3,7 @@ import { navbar } from "vuepress-theme-hope";
 export const enNavbar = navbar([
   "/en/",
   { text: "Partnerships", icon: "discover", link: "/en/partnership.md" },
-  "API.md",
+  "/en/API.md",
   {
     text: "Standards",
     icon: "proposal",
