@@ -1,5 +1,8 @@
 ---
 redirectFrom: /API.html
+headerDepth: 1
+category: [API]
+icon: api
 ---
 
 # UIGF API 
