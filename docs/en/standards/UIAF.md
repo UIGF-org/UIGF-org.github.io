@@ -2,24 +2,24 @@
 
 > Uniformed Interchangeable Achievement Format standard (UIAF) v1.1 <Badge text="Current" type="message" />
 
-## 前言
+## Manifesto
 
-由于原神的第三方成就识别、导出、记录软件越来越多，在有了 UIGF 的经验后，
-我们
+With more third-party working on Genshin Impact's achievement recognition, export and record.
+
+Based on experience we had in UIGF, we (list in alphabetical order)
 
 * [babalae/genshin achievement toy](https://github.com/babalae/genshin-achievement-toy)
 * [DGP Studio/Snap.Genshin](https://github.com/DGP-Studio/Snap.Genshin)
 * [HolographicHat/genshin achievement export](https://github.com/HolographicHat/genshin-achievement-export)
 * [YuehaiTeam/cocogoat](https://github.com/YuehaiTeam/cocogoat)
 
-（上述名称以字典顺序排序，不代表其他任何意义）  
-在此一起，制定了此项标准，旨在加强各个原神相关的App间的数据可交换性。
+Make standard here together to strengthen the achievement data exchange-ability between each Genshin-related App.
 
-## 注意事项
+## Precautions
 
-### 时间
+### Time
 
-本标准的所有时间格式均以 `UTC+8` 时区为基准
+All time in this standard are based on `UTC+8` time zone
 
 ## Json Schema
 
@@ -33,27 +33,27 @@
       "properties": {
         "export_app": {
           "type": "string",
-          "description": "导出的app名称"
+          "description": "Export application name"
         },
         "export_app_version": {
           "type": "string",
-          "description": "导出此份记录的App版本号"
+          "description": "Export application version"
         },
         "uiaf_version": {
           "type": "string",
-          "description": "所应用的 UIAF 的版本,包含此字段以防 UIAF 出现中断性变更时，App无法处理",
+          "description": "UIAF version applied; Used to prevent application not working when UIGF have breaking update",
           "pattern": "v\\d+.\\d+"
         },
         "export_timestamp": {
           "type": "number",
-          "description": "导出UNIX时间戳"
+          "description": "Export time in UNIX timestamp"
         }
       },
       "required": [
         "export_app",
         "uiaf_version"
       ],
-      "description": "包含导出方定义的基本信息"
+      "description": "Include basic information defined by export application"
     },
     "list": {
       "type": "array",
@@ -62,15 +62,15 @@
         "properties": {
           "id": {
             "type": "number",
-            "description": "对应的成就id"
+            "description": "Achievement ID"
           },
           "current": {
             "type": "number",
-            "description": "进度"
+            "description": "Process"
           },
           "status": {
             "type": "number",
-            "description": "完成状态",
+            "description": "Finished status",
             "enum": [
               0,
               1,
@@ -81,7 +81,7 @@
           },
           "timestamp": {
             "type": "number",
-            "description": "完成的时间"
+            "description": "Finished time"
           }
         },
         "required": [
@@ -90,9 +90,9 @@
           "status",
           "timestamp"
         ],
-        "description": "表示一个成就"
+        "description": "To represent an achievement"
       },
-      "description": "包含完成或未完成的成就"
+      "description": "Include finished or unfinished achievements"
     }
   },
   "required": [
@@ -104,50 +104,53 @@
 
 ### `info` 
 
-可以包含我们认可的以下字段
+We recognize the following fields:
 
-|字段名|值|说明|
-|-|-|-|
-|`export_timestamp`|导出UNIX时间戳||
-|`export_app_version`|导出此份记录的App版本号||
-|`uiaf_version`|所应用的 `UIAF` 的版本,包含此字段以防 `UIAF` 出现中断性变更时，App无法处理||
+| Field                | Value                                                                                        | Notes |
+|----------------------|----------------------------------------------------------------------------------------------|-------|
+| `export_timestamp`   | Export time in UNIX timestamp                                                                |       |
+| `export_app_version` | Export application version                                                                   |       |
+| `uiaf_version`       | UIAF version applied; Used to prevent application not working when UIGF have breaking update |       |
 
 #### `uiaf_version`
 
-合法值
+Valid value:
 
-|值|说明|向下兼容的最低版本|
-|-|-|-|
-|`v1.0`|首个正式版本|v1.0|
-|`v1.1`|在 `achievement` 中引入了 `status` 字段，指示成就的完成情况|v1.1|
+| Value  | Note                                                                             | Compatibility |
+|--------|----------------------------------------------------------------------------------|---------------|
+| `v1.0` | First public official version                                                    | v1.0          |
+| `v1.1` | Introduced `status` field in `achievement` to indicate completion of achievement | v1.1          |
 
 #### `export_app`
 
-未实现导出支持的以 `-` 代替
+Application haven't made export feature is marked as `-`
 
-|导出 App|`export_app` 的值|
-|-|-|
-|Empty|Empty|
+| Export Application | `export_app` value |
+|--------------------|--------------------|
+| Empty              | Empty              |
 
 ### `achievement`
 
 #### `id`
 
-原神的成就在游戏内部带有Id，对于扫描类导出软件，在取得成就的外在表现形式（如：呈现文本）后，便可对应到内部的Id
+The achievements of the Genshin Impact have a built-in ID inside the game. 
+For OCR scanning export software, after obtaining the external manifestation of the achievement (such as: displaying text),
+correspond internal ID can also be achieved.
 
-> 导入/导出软件应自行负责Id与呈现文本间的转换  
-> 成就的信息可以从 [Dimbreath/GenshinData](https://github.com/Dimbreath/GenshinData) 库中获取
+> Import/Export software should handle conversion between ID and text themselves
+
+> Achievement metadata can be found in GenshinData
 
 #### `timestamp`
 
-* 对于识别成功的值，直接将时间转换为对应的UNIX 时间戳（秒）
+* For successfully recognized value, set the time to UNIX timestamp (in seconds precision)
 
-* 对于识别失败的值，直接将时间设置为 `9999-12-31 23:59:59`（253402271999（秒））
+* For failed recognized value, set the time to `9999-12-31 23:59:59` (UNIX timestamp `253402271999` in seconds precision)
 
 #### `current`
 
-* 对于识别成功的值，如 30/40 `current` 的值应设置为30
+* For successfully recognized value, set it to current process value
+  * For example if `30/40` is recongnized, set `current` to `30`
+  * You can always get final finished value in Genshin's data
 
-    > 因为始终可以从原神的数据中找到目标达成值
-
-* 对于识别失败的值，请将该字段的值设为 `0`
+*For failed recognized value, set `current` to `0`

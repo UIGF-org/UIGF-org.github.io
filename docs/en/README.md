@@ -25,7 +25,7 @@ features:
   - title: Uniformed Interchangeable Achievement Format standard
     icon: proposal
     details: UIAF
-    link: standards/UIGF.html
+    link: standards/UIAF.html
 
 copyright: false
 footer: MIT Licensed | Copyright © 2021-present UIGF-org
