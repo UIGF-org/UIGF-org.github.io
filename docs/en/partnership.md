@@ -1,3 +1,6 @@
+---
+category: [Announcement]
+---
 # Partnerships
 ## Join UIGF-Org with Your Project
 

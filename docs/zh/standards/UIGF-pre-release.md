@@ -1,5 +1,6 @@
 ---
 redirectFrom: /standards/UIGF-pre-release.html
+category: [标准化文档]
 ---
 
 # 统一可交换祈愿记录标准 v2.3

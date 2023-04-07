@@ -8,6 +8,7 @@ export const enSidebar = sidebar({
       text: "Our Partnerships",
       link: "partnership.md",
     },
+    "API.md",
     {
       icon: "proposal",
       text: "Standards Document",

@@ -1,6 +1,6 @@
 ---
 redirectFrom: /API.html
-headerDepth: 1
+headerDepth: 2
 category: [API]
 icon: api
 ---

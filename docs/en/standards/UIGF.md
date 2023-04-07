@@ -1,3 +1,6 @@
+---
+category: [Standard Document]
+---
 # Uniformed Interchangeable GachaLog Format standard v2.2
 
 > Uniformed Interchangeable GachaLog Format standard (UIGF) v2.2 <Badge text="Current" type="message" />

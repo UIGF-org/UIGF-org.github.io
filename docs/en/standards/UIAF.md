@@ -1,3 +1,6 @@
+---
+category: [Standard Document]
+---
 # Uniformed Interchangeable Achievement Format standard v1.1
 
 > Uniformed Interchangeable Achievement Format standard (UIAF) v1.1 <Badge text="Current" type="message" />

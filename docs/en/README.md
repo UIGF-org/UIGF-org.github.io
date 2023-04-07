@@ -11,7 +11,7 @@ actions:
   type: primary
 
 - text: API
-  link: standards/UIGF.html
+  link: API.html
 
 - text: Partnerships
   link: partnership.html

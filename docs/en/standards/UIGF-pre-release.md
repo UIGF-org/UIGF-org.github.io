@@ -1,3 +1,6 @@
+---
+category: [Standard Document]
+---
 # Uniformed Interchangeable GachaLog Format standard v2.3
 > Uniformed Interchangeable GachaLog Format standard (UIGF) v2.3 <Badge text="Pre-release" type="message" />
 
