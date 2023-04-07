@@ -1,91 +1,170 @@
+---
+headerDepth: 1
+category: [API]
+icon: api
+---
+
 # UIGF API 
 
-## 介绍
-在统一可交换祈愿记录标准2.3版本中，我们将`item_id`的优先度提高，成为必填的字段。
-这将允许 UIGF 数据集支持国际服的多语言环境，进而将更多的原神工具连接在一起。
+## Introduction
+In UIGF standard v2.3, we prioritize `item_id` and make it as a required field.
+This allows UIGF data set to support multi-language environment that common seen in international server,
+and allows worldwide Genshin-related software been connected together.
 
-但是，一些程序运行于受限的环境中，在将祈愿获取物品名称转化为物品 ID 的过程中有困难。所以 UIGF-Org 提供了一个用于翻译物品文本的 API，
-供需要该资源的任何开源程序使用。
+However, some software are running at a limited server environment, so it is hard to them to convert 
+item name to item ID. As a result, UIGF-Org is now supporting the open-source community with an API for translation.
 
-本 API 已开源于 [UIGF-org/UIGF-API](https://github.com/UIGF-org/UIGF-API)
+The API is open-sourced at [UIGF-org/UIGF-API](https://github.com/UIGF-org/UIGF-API)
 
-## 使用
-UIGF API 有三个常用接口，示例如下
-### 翻译接口
-- 接口 URL <Badge text="GET" type="info" vertical="top" />
-  - `https://api.uigf.org/translate/{lang}/{text}`
-- lang 参数：
-  - 需要翻译的文本的原始语言
-    - 目前可接受的语言参数包括 `chs`, `cht`, `de`, `en`, `es`, `fr`, `id`, `jp`, `kr`,
-    `pt`, `ru`, `th`, `vi`
-- text 参数：
-  - 需要翻译的文本（单条数据查询时）
-    - 比如：`神里绫华`
-  - 或者一个包含翻译文本的列表（多条数据查询时）
-    - 由方括号包裹字串符，以英文半角逗号间隔，不需要包含空格和引号
-    - 比如：`[神里绫华,神里绫人]`
-- 返回格式：
-  - 当请求单个文本翻译
-    - 成功时，将返回一个`Json`，`item_id`键的值即为对应物品 ID
-    - 失败时，将返回 `HTTP 404 NOT FOUND` 错误
-  - 当请求多个文本翻译
-    - 成功时，将返回一个`Json`，`item_id`的值为一个整数值列表，列表中每一个 ID 对应请求的物品文本
-      - 当列表中有文本不存在于数据库中，则会为该记录返回值为`0`的 ID
-      - 使用该方法请求 API 时需要检验请求的列表长度是否等于返回的列表的长度
-    - 失败时，将返回 `HTTP 404 NOT FOUND` 错误
-  
+## Usage
+UIGF API have 3 common interface, shown below
+### Translation API <Badge text="POST" type="tip" vertical="top" />
+The translation API to convert the text in specific language to Genshin Impact's internal item ID, or reverse convert 
+the specific item ID to its name in specific language.
+- URL: `https://api.uigf.org/translate/`
+- Body Json
+  ```Json
+  {
+    "lang": "language",
+    "type": "normal|reverse",
+    "item_name": "str | str[]",
+    "item_id": "int | int[]"
+    
+  }
+  ```
+#### Request Parameters
+- `lang` **Required**
+  - Text's original language
+  - Supported language includes `chs`, `cht`, `de`, `en`, `es`, `fr`, `id`, `jp`, `kr`,
+  `pt`, `ru`, `th`, `vi`
+- `type` **Required**
+  - Translation type
+    - When `type` value is `normal`, the API will translate item name to item ID
+    - When `type` value is `reverse`, the API will translate item ID to item name
+- `item_name` **Required when `type: normal`**
+  - Text or list of text that need to be translated
+    - Text (Single query)
+      - such as: `Kamisato Ayaka`
+    - List of text (Multiple queries)
+      - Strings wrapped in square brackets, separated by commas; do not contain spaces and quotation marks
+        - such as: `[Kamisato Ayaka,Sangonomiya Kokomi]`
+- `item_id` **Required when `type: reverse`**
+  - Item ID that need to be translated to item name
+  - Input rule is same to `item_name` field, supporting single integer or a list of integer
+#### Return Schema
+  - When requesting single translation
+    - When success, will return a `Json`
+      - `item_id` for corresponding item ID
+      - `item_name` for corresponding item name
+    - When failed, `HTTP 404 NOT FOUND` error will be returned
+  - When requesting multiple translations
+    - When success, will return a `Json`
+      - `item_id` or `item_name` will be a list of return value
+      - When the requested text is not in the database, `0` will be returned as the ID
+      - When the requested ID is not in the database, `""` will be returned as the name
+      - When using this method requesting the API, you need to valid the length of returned list
+    - When failed, `HTTP 404 NOT FOUND` error will be returned
 
 ::: tabs
-@tab 单条查询
+@tab Single Translation
 
-https://api.uigf.org/translate/chs/神里绫华
-
-@tab 单条查询结果
+**Request Body**
 ```json
 {
-  "item_id": 10000002
+  "lang": "en",
+  "item_name": "Sangonomiya Kokomi",
+  "type": "normal"
+}
+```
+**Response**
+```json
+{
+  "item_id": 10000054
 }
 ```
 
-@tab 多条查询
-
-https://api.uigf.org/translate/chs/[神里绫华,神里绫人,一个不存在的角色,神里绫人]
-
-@tab 多条查询结果
-
+@tab Multiple Translation
+**Request Body**
+```json
+{
+  "lang": "en",
+  "item_name": "[Kamisato Ayaka,Sangonomiya Kokomi,a character not exist,Nahida]",
+  "type": "normal"
+}
+```
+**Response**
 ```json
 {
   "item_id": [
     10000002,
-    10000066,
+    10000054,
     0,
-    10000066
+    10000073
+  ]
+}
+```
+
+@tab Single Reverse-translation
+
+**Request Body**
+```json
+{
+  "lang": "chs",
+  "item_id": "10000002",
+  "type": "reverse"
+}
+```
+**Response**
+```json
+{
+  "item_name": "Kamisato Ayaka"
+}
+```
+
+@tab Multiple Reverse-translation
+
+**Request Body**
+```json
+{
+  "lang": "en",
+  "item_id": "[10000002,10000054]",
+  "type": "reverse"
+}
+```
+**Response**
+```json
+{
+  "item_name": [
+    "Kamisato Ayaka",
+    "Sangonomiya Kokomi"
   ]
 }
 ```
 
 :::
 
-### 语言判断接口
-该接口用于当无法判断原始文本语言时使用，不应该依赖其作为物品文本和物品 ID 之间的批量转换
-- 接口 URL <Badge text="GET" type="info" vertical="top" />
-  - `https://api.uigf.org/generic-translate/{text}`
-- text 参数
-  - 单个需要翻译的文本
-    - 比如：`神里绫华`
-- 返回格式
-  - 成功时，将返回一个`Json`
-    - `item_id`键的值即为对应物品 ID
-    - `lang`键的值为一个列表，其包含找到的对应语言。通常情况，该列表仅会有一个语言代码。但在少数情况下，一个文本可能在多个语言下代表同一个物品。
-    这种情况下，列表中会有多个语言代码。
-  - 失败时，将返回 `HTTP 404 NOT FOUND` 错误
+### Language Identification API <Badge text="GET" type="info" vertical="top" />
+This API is used to identify the language when the original text's language is not recognized.
+It should not be relied on as the conversion tool between item name and item ID.
+- URL: `https://api.uigf.org/identify/{text}`
+#### Request Parameters
+- `text`
+  - Single text that needs to be identified
+    - such as: `神里绫华`
+#### Return Schema
+  - When success, a `Json` will be returned
+    - value in the `item_id` field is the corresponding item ID
+    - value in the `lang` field will be a list.
+      - In most situation, there will be only 1 language in the list. However, in a few scenario, 
+        the text may represent multiple language, and the list will contain multiple language code.
+  - When failed, `HTTP 404 NOT FOUND` error will be returned
 
 ::: tabs
-@tab 样例
+@tab Example
 
 https://api.uigf.org/generic-translate/神里绫华
 
-@tab 返回值
+@tab Returned Value
 ```json
 {
   "item_id": 10000002,
@@ -96,25 +175,28 @@ https://api.uigf.org/generic-translate/神里绫华
 ```
 :::
 
-### 字典下载接口
-对于有能力在服务端或用户端进行物品文本和物品 ID 转换的工具，我们推荐减少对 UIGF 在线翻译 API 的依赖。
+### Dictionary Download API <Badge text="GET" type="info" vertical="top" />
+For applications have ability converting item text and item IDs on the server or client side, 
+we recommend reducing reliance on the UIGF Online Translation API.
 
-你可以通过字典下载接口获取到各个语言的物品文本和物品 ID 转换关系的 Json 文件
+You can obtain the Json file of the mapping between item text and item ID in each language through 
+the dictionary download API.
 
-- 接口 URL <Badge text="GET" type="info" vertical="top" />
-  - `https://api.uigf.org/dict/{lang}.json`
-- lang 参数
-  - 语言代码，目前可接受的语言包含 `chs`, `cht`, `de`, `en`, `es`, `fr`, `id`, `jp`, `kr`,
+- URL: `https://api.uigf.org/dict/{lang}.json`
+
+#### Request Parameters
+- `lang`
+  - language code, supporting languages includes `chs`, `cht`, `de`, `en`, `es`, `fr`, `id`, `jp`, `kr`,
     `pt`, `ru`, `th`, `vi`
-- 返回格式
-  - Json 文件的下载
+#### Return Schema
+- Download of Json file
 
 ::: tabs
-@tab 样例
+@tab Example
 
 https://api.uigf.org/dict/jp.json
 
-@tab 返回值
+@tab Return Value
 ```json
 {
   "無鋒の剣": 11101,
