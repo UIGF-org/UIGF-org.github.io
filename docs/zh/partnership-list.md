@@ -87,6 +87,15 @@ repo="https://github.com/xunkong/KeqingNiuza"
 preview="https://raw.githubusercontent.com/xunkong/KeqingNiuza/v2/img/Snipaste_2021-06-19_10-46-43.png"
 />
 
+<SiteInfo
+name="原神披萨小助手"
+desc="Apple全平台原神小助手"
+logo="https://ophelper.top/img/ophelper_logo_clipped.png"
+url="https://apps.apple.com/app/id1635319193"
+repo="https://github.com/CanglongCl/Genshin-Pizza-Helper"
+preview="https://ophelper.top/img/ophelper-uigf-preview.png"
+/>
+
 ## 使用 UIAF 标准的项目
 <SiteInfo
 name="胡桃"

@@ -87,6 +87,15 @@ repo="https://github.com/xunkong/KeqingNiuza"
 preview="https://raw.githubusercontent.com/xunkong/KeqingNiuza/v2/img/Snipaste_2021-06-19_10-46-43.png"
 />
 
+<SiteInfo
+name="Genshin Pizza Helper"
+desc="Apple-platform game tool for Genshin Impact"
+logo="https://ophelper.top/img/ophelper_logo_clipped.png"
+url="https://apps.apple.com/app/id1635319193"
+repo="https://github.com/CanglongCl/Genshin-Pizza-Helper"
+preview="https://ophelper.top/img/ophelper-uigf-preview.png"
+/>
+
 ## Projects with UIAF Standard
 <SiteInfo
 name="胡桃"
