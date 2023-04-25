@@ -141,7 +141,7 @@ category: [标准化文档]
 原神的成就在游戏内部带有Id，对于扫描类导出软件，在取得成就的外在表现形式（如：呈现文本）后，便可对应到内部的Id
 
 > 导入/导出软件应自行负责Id与呈现文本间的转换  
-> 成就的信息可以从 [Dimbreath/GenshinData](https://github.com/Dimbreath/GenshinData) 库中获取
+> 成就的信息可以从 [gitlab:Dimbreath/AnimeGameData](https://gitlab.com/Dimbreath/AnimeGameData) 库中获取
 
 #### `timestamp`
 
