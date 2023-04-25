@@ -162,7 +162,7 @@ It should not be relied on as the conversion tool between item name and item ID.
 ::: tabs
 @tab Example
 
-https://api.uigf.org/generic-translate/神里绫华
+https://api.uigf.org/identify/神里绫华
 
 @tab Returned Value
 ```json

@@ -151,7 +151,7 @@ UIGF API 有三个常用接口，示例如下
 ### 语言判断接口 <Badge text="GET" type="info" vertical="top" />
 该接口用于当无法判断原始文本语言时使用，不应该依赖其作为物品文本和物品 ID 之间的批量转换
 - 接口 URL 
-  - `https://api.uigf.org/generic-translate/{text}`
+  - `https://api.uigf.org/identify/{text}`
 #### 请求参数
 - `text`
   - 单个需要翻译的文本
@@ -166,7 +166,7 @@ UIGF API 有三个常用接口，示例如下
 ::: tabs
 @tab 样例
 
-https://api.uigf.org/generic-translate/神里绫华
+https://api.uigf.org/identify/神里绫华
 
 @tab 返回值
 ```json
