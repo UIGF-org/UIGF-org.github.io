@@ -7,37 +7,45 @@ category: [标准化文档]
 > Uniformed Interchangeable GachaLog Format standard (UIGF) v2.3 <Badge text="Current" type="message" />
 
 ## 更新记录
-|版本|说明|兼容|
-|-|-|-|
-|`v2.0`| 首个正式版本 | v2.0 |
-|`v2.1`| 简化了部分语言表述，与 v2.0在数据格式上完全一致 | v2.1 and lower |
-|`v2.2`| 新增 `info.export_timestamp` 填充 UNIX 时间戳 | v2.2 and lower |
-|`v2.3`| 扩充至非中文语境，使用 Json Schema 表述。移除了 Excel 格式 | v2.3 and lower |
+| 版本     | 说明                                      | 兼容             |
+|--------|-----------------------------------------|----------------|
+| `v2.0` | 首个正式版本                                  | v2.0           |
+| `v2.1` | 简化了部分语言表述，与 v2.0在数据格式上完全一致              | v2.1 and lower |
+| `v2.2` | 新增 `info.export_timestamp` 填充 UNIX 时间戳  | v2.2 and lower |
+| `v2.3` | 扩充至非中文语境，使用 Json Schema 表述。移除了 Excel 格式 | v2.3 and lower |
 
-## Id
+### v2.3 更新内容
+* 移除了 UIGF.W 标准
+* 国际化兼容性增强
+  * `name` 不再是必要字段
+  * `item_type` 不再是必要字段
+  * **`item_id` 变更为必要字段**
+
+## 字段说明
+### id
 
 物品内包含了一项较为特殊的字段: `id`，App 导出 UIGF 时
 * 需要确保每个物品的 `id`  的有效性。  
 * 从最后一个自带有效 `id` 的物品开始，向前（相对于时间）依次递减 `id` 的值,每次递减的值应保持为 `1`
 
-## GachaType
+### gacha_type
 
 由于存在会共享保底与概率的卡池，所以需要一个额外的字段来界定  
 我们在 `UIGF` 的所有格式中注入了 `uigf_gacha_type` 字段  
 在导出到 `UIGF` 格式时需要注意添加对应的 `uigf_gacha_type` 字段  
 
-### 映射关系
+#### 映射关系
 
-|`uigf_gacha_type`|`gacha_type`|
-|-|-|
-|`100`|`100`|
-|`200`|`200`|
-|`301`|`301` or `400`|
-|`302`|`302`|
+| `uigf_gacha_type` | `gacha_type`   |
+|-------------------|----------------|
+| `100`             | `100`          |
+| `200`             | `200`          |
+| `301`             | `301` or `400` |
+| `302`             | `302`          |
 
-## ItemId
+### item_id
 
-物品Id
+物品游戏内ID，你可以通过 [UIGF API](../API.md) 获取这一数据
 
 ## Json Schema
 
