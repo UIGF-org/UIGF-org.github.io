@@ -24,9 +24,10 @@ category: [标准化文档]
 ## 字段说明
 ### id
 
-物品内包含了一项较为特殊的字段: `id`，App 导出 UIGF 时
-* 需要确保每个物品的 `id`  的有效性。  
-* 从最后一个自带有效 `id` 的物品开始，向前（相对于时间）依次递减 `id` 的值,每次递减的值应保持为 `1`
+物品内包含了一项较为特殊的字段: `id`，为原神官方 API 中包含的，代表每条抽卡记录唯一性的 `id`。App 导出 UIGF 时
+* 需要确保每个物品都有一个有效的唯一 `id` 
+* 若有记录中不包含`id`，则应从下一个自带有效 `id` 的物品开始，为每条缺失`id`字段的数据补全`id`。
+赋值数据向前（时间排序）依次递减，每次递减的值应保持为 `1`
 
 ### gacha_type
 
@@ -49,7 +50,7 @@ category: [标准化文档]
 
 ## Json Schema
 
-> 提供[Json Schema](/schema/uigf.json) 用于验证
+> UIGF-Org 提供[Json Schema](/schema/uigf.json) 用于验证
 
 ```json
 {
@@ -74,7 +75,7 @@ category: [标准化文档]
           "export_time": {
             "type": "string",
             "title": "导出时间",
-            "description": "yyyy-MM-dd HH:mm:ss",
+            "description": "yyyy-MM-dd HH:mm:ss"
           },
           "export_app": {
             "type": "string",
@@ -116,7 +117,8 @@ category: [标准化文档]
             },
             "count": {
               "type": "string",
-              "title": "个数，一般为1"
+              "title": "个数",
+              "description": "一般为1"
             },
             "time": {
               "type": "string",

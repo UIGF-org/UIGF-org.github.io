@@ -20,7 +20,7 @@
             "export_time": {
               "type": "string",
               "title": "导出时间",
-              "description": "yyyy-MM-dd HH:mm:ss",
+              "description": "yyyy-MM-dd HH:mm:ss"
             },
             "export_app": {
               "type": "string",
