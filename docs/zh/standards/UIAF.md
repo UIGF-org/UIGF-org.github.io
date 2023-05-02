@@ -1,6 +1,7 @@
 ---
 redirectFrom: /standards/UIAF.html
 category: [标准化文档]
+order: 2
 ---
 
 # 统一可交换成就标准 v1.1

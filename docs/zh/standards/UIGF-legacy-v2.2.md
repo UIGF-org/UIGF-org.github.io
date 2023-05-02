@@ -1,6 +1,7 @@
 ---
 redirectFrom: /standards/UIGF-legacy-v2.2.html
 category: [标准化文档]
+order: 3
 ---
 
 # 统一可交换祈愿记录标准 v2.2

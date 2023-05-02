@@ -1,6 +1,7 @@
 ---
 redirectFrom: /standards/UIGF.html
 category: [标准化文档]
+order: 1
 ---
 
 # 统一可交换抽卡记录标准 v2.3
