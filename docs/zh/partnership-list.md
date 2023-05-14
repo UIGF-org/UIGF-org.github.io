@@ -70,24 +70,6 @@ preview="partnerships/DodocoTales.png"
 />
 
 <SiteInfo
-name="Snap.Genshin"
-desc="你想要的原神全家桶"
-logo="https://raw.githubusercontent.com/DGP-Studio/Snap.Genshin.Docs/main/docs/.vuepress/public/logo/SGLogoPure.png"
-url="https://www.snapgenshin.com/"
-repo="https://github.com/DGP-Studio/Snap.Genshin"
-preview="https://repository-images.githubusercontent.com/331187187/0a2420e5-881a-4709-9f99-fdd42f13e1fc"
-/>
-
-<SiteInfo
-name="KeqingNiuza"
-desc="刻记牛杂店"
-logo="https://raw.githubusercontent.com/xunkong/KeqingNiuza/final/img/logo_nbg.png"
-url="https://github.com/xunkong/KeqingNiuza"
-repo="https://github.com/xunkong/KeqingNiuza"
-preview="https://raw.githubusercontent.com/xunkong/KeqingNiuza/v2/img/Snipaste_2021-06-19_10-46-43.png"
-/>
-
-<SiteInfo
 name="原神披萨小助手"
 desc="Apple全平台原神小助手"
 logo="https://ophelper.top/img/ophelper_logo_clipped.png"
