@@ -99,10 +99,10 @@ preview="https://ophelper.top/img/ophelper-uigf-preview.png"
 <SiteInfo
 name="Sangonomiya"
 desc="Gacha Report Tool for Genshin Impact"
-logo="https://imgloc.com/i/VZZObq"
+logo="https://raw.githubusercontent.com/AuroraZiling/sangonomiya.Metadata/main/avatar.png"
 url="https://github.com/AuroraZiling/sangonomiya"
 repo="https://github.com/AuroraZiling/sangonomiya"
-preview="https://imgloc.com/i/VZZjQw"
+preview="https://raw.githubusercontent.com/AuroraZiling/sangonomiya.Metadata/main/show_light.png"
 />
 
 ## Projects with UIAF Standard
