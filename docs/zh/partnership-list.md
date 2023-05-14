@@ -96,6 +96,15 @@ repo="https://github.com/CanglongCl/Genshin-Pizza-Helper"
 preview="https://ophelper.top/img/ophelper-uigf-preview.png"
 />
 
+<SiteInfo
+name="Sangonomiya"
+desc="原神祈愿记录工具"
+logo="https://raw.githubusercontent.com/AuroraZiling/sangonomiya.Metadata/main/avatar.png"
+url="https://github.com/AuroraZiling/sangonomiya"
+repo="https://github.com/AuroraZiling/sangonomiya"
+preview="https://raw.githubusercontent.com/AuroraZiling/sangonomiya.Metadata/main/show_light.png"
+/>
+
 ## 使用 UIAF 标准的项目
 <SiteInfo
 name="胡桃"
