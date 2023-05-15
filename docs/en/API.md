@@ -16,6 +16,8 @@ item name to item ID. As a result, UIGF-Org is now supporting the open-source co
 
 The API is open-sourced at [UIGF-org/UIGF-API](https://github.com/UIGF-org/UIGF-API)
 
+The API is available for Genshin Impact and Honkai: Star Rail
+
 ## Usage
 UIGF API have 3 common interface, shown below
 ### Translation API <Badge text="POST" type="tip" vertical="top" />
@@ -27,9 +29,9 @@ the specific item ID to its name in specific language.
   {
     "lang": "language",
     "type": "normal|reverse",
+    "game": "genshin|starrail",
     "item_name": "str | str[]",
     "item_id": "int | int[]"
-    
   }
   ```
 #### Request Parameters
@@ -41,6 +43,8 @@ the specific item ID to its name in specific language.
   - Translation type
     - When `type` value is `normal`, the API will translate item name to item ID
     - When `type` value is `reverse`, the API will translate item ID to item name
+- `game` **Required**
+  - Target game's name, supporting `genshin` for Genshin Impact and `starrail` for Honkai: Star Rail
 - `item_name` **Required when `type: normal`**
   - Text or list of text that need to be translated
     - Text (Single query)
@@ -73,7 +77,8 @@ the specific item ID to its name in specific language.
 {
   "lang": "en",
   "item_name": "Sangonomiya Kokomi",
-  "type": "normal"
+  "type": "normal",
+  "game": "genshin"
 }
 ```
 **Response**
@@ -89,7 +94,8 @@ the specific item ID to its name in specific language.
 {
   "lang": "en",
   "item_name": "[Kamisato Ayaka,Sangonomiya Kokomi,a character not exist,Nahida]",
-  "type": "normal"
+  "type": "normal",
+  "game": "genshin"
 }
 ```
 **Response**
@@ -111,7 +117,8 @@ the specific item ID to its name in specific language.
 {
   "lang": "chs",
   "item_id": "10000002",
-  "type": "reverse"
+  "type": "reverse",
+  "game": "genshin"
 }
 ```
 **Response**
@@ -128,7 +135,8 @@ the specific item ID to its name in specific language.
 {
   "lang": "en",
   "item_id": "[10000002,10000054]",
-  "type": "reverse"
+  "type": "reverse",
+  "game": "genshin"
 }
 ```
 **Response**
@@ -146,8 +154,10 @@ the specific item ID to its name in specific language.
 ### Language Identification API <Badge text="GET" type="info" vertical="top" />
 This API is used to identify the language when the original text's language is not recognized.
 It should not be relied on as the conversion tool between item name and item ID.
-- URL: `https://api.uigf.org/identify/{text}`
+- URL: `https://api.uigf.org/identify/{game}/{text}`
 #### Request Parameters
+- `game`
+  - Target game's name
 - `text`
   - Single text that needs to be identified
     - such as: `神里绫华`
@@ -162,7 +172,7 @@ It should not be relied on as the conversion tool between item name and item ID.
 ::: tabs
 @tab Example
 
-https://api.uigf.org/identify/神里绫华
+https://api.uigf.org/identify/genshin/神里绫华
 
 @tab Returned Value
 ```json
@@ -182,19 +192,23 @@ we recommend reducing reliance on the UIGF Online Translation API.
 You can obtain the Json file of the mapping between item text and item ID in each language through 
 the dictionary download API.
 
-- URL: `https://api.uigf.org/dict/{lang}.json`
+- URL: `https://api.uigf.org/dict/{game}/{lang}.json`
 
 #### Request Parameters
+- `game`
+  - Target game's name
 - `lang`
   - language code, supporting languages includes `chs`, `cht`, `de`, `en`, `es`, `fr`, `id`, `jp`, `kr`,
     `pt`, `ru`, `th`, `vi`
+  - If you need the full language package, you can use `all` as the value
+  - If you need to download MD5 of language files, you can use `md5` as the value
 #### Return Schema
 - Download of Json file
 
 ::: tabs
 @tab Example
 
-https://api.uigf.org/dict/jp.json
+https://api.uigf.org/dict/genshin/jp.json
 
 @tab Return Value
 ```json
@@ -210,4 +224,70 @@ https://api.uigf.org/dict/jp.json
   "七七（テスト）": 11000044
 }
 ```
+:::
 
+### MD5 Verification API <Badge text="GET" type="info" vertical="top" />
+
+UIGF-API is providing MD5 checksum for all language Json files. Developers can use their local version's to compare with 
+online version to check updates. 
+
+Developers can use HTTP dynamic API or download MD5 Json file to check the latest MD5 checksum.
+
+::: tabs
+@tab HTTP Dynamic API
+
+API: `https://api.uigf.org/md5/{game}`
+#### Request Parameter
+- `game`
+  - Target game's name
+
+#### Sample Return Value
+https://api.uigf.org/md5/genshin
+```json
+{
+  "chs": "51b02a0b306ec0a60b1756eb5ea8d96f",
+  "cht": "53cd815f3129cdfc71c57d799675df8f",
+  "de": "86c03e498df8da34c7028e4ee227e611",
+  "en": "8b8e9c58145fd611d19e799a24e5846f",
+  "es": "063b164b1bbeacdaa75e33915ccf7db9",
+  "fr": "2de4e073f727b91d0b5ad8320c6476f9",
+  "id": "bb22a8b0e53443b7f278c701664a3d9e",
+  "jp": "06615f9a59d2119b6d4df4d07b744191",
+  "kr": "f3f011bfa125e96823f7717d5def52a6",
+  "pt": "7b14a8994fe93254fa8eef9eb19dbf8d",
+  "ru": "c1e83580ef442a35d9d7bda7f066b083",
+  "th": "5181ef5ef7f73306162dea66a54c7c0c",
+  "vi": "40424f1785ea1cc2476756c80e17b069",
+  "all": "722b2514d8409214282ee16de306a898"
+}
+```
+
+@tab Json File Download
+
+API: `https://api.uigf.org/dict/{game}/md5.json`
+
+#### Request Parameter
+- `game`
+  - Target name's name
+
+#### Sample Return Value
+https://api.uigf.org/dict/starrail/md5.json
+```json
+{
+  "chs": "ab765e3f23e87e48b91f576aee48a00a",
+  "cht": "8e5a5bc23ca1f4deb3c3fa1e472ee1f9",
+  "de": "e4c60b50dd75bb5f4dee8df0635c1712",
+  "en": "a3abde3f0c0ed48415c301b5eaf04f2f",
+  "es": "c2d08766bce94dc65ad92b78e30a4a9a",
+  "fr": "3ab714a06945db49129c487bab73c85d",
+  "id": "a3abde3f0c0ed48415c301b5eaf04f2f",
+  "jp": "42b3185a9b503c54d5ee2ee4305d157d",
+  "kr": "02465972fba7f211b513b6587ce74d92",
+  "pt": "701d5414dc1add1e6be4b48179bd5932",
+  "ru": "31107b0c2d6a1c0c8600003adf241558",
+  "th": "a3abde3f0c0ed48415c301b5eaf04f2f",
+  "vi": "e549c35c64edc8b26098f65ba313a428",
+  "all": "e9e65534e0f64ab56c947df4dd5f353d"
+}
+```
+:::
