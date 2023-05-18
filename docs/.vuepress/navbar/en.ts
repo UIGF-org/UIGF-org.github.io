@@ -10,4 +10,15 @@ export const enNavbar = navbar([
     prefix: "/en/standards/",
     children: ["UIGF.md", "UIAF.md"]
   },
+  {
+    text: "Useful Tools",
+    icon: "config",
+    children: [
+      {
+        text: "MiHoYo API",
+        link: "https://github.com/Kamisato-Ayaka-233/mihoyo-api-collect",
+        icon: "repo"
+      },
+    ]
+  },
 ]);
