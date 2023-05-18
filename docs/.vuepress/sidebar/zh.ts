@@ -14,6 +14,27 @@ export const zhSidebar = sidebar({
       text: "标准化文档",
       prefix: "standards/",
       children: "structure"
-    }
+    },
+    {
+      icon: "api",
+      text: "米哈游 API 合集",
+      prefix: "mihoyo-api-collection/",
+      children: [
+          {
+              text: "米游社",
+              icon: "stack",
+              prefix: "hoyolab",
+              children: "structure"
+          },
+          {
+              text: "其它",
+              icon: "stack",
+              prefix: "other",
+              children: "structure"
+          },
+          "CONTRIBUTING.md"
+        ]
+    },
+
   ],
 });
