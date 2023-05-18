@@ -1,0 +1,3 @@
+[submodule "docs/zh/mihoyo-api-collection"]
+	path = docs/zh/mihoyo-api-collection
+	url = https://github.com/Kamisato-Ayaka-233/mihoyo-api-collect
