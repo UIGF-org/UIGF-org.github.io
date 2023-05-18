@@ -18,22 +18,26 @@ export const zhSidebar = sidebar({
     {
       icon: "api",
       text: "米哈游 API 合集",
-      prefix: "mihoyo-api-collection/",
       children: [
+          "MiHoYo-API-Collection-project.md",
           {
               text: "米游社",
-              icon: "stack",
-              prefix: "hoyolab",
+              icon: "community",
+              prefix: "mihoyo-api-collection/hoyolab",
               children: "structure"
           },
           {
               text: "其它",
               icon: "stack",
-              prefix: "other",
-              children: "structure"
+              prefix: "mihoyo-api-collection/other",
+              children: "structure",
           },
-          "CONTRIBUTING.md"
-        ]
+          {
+              icon: "proposal",
+              text: "向 API 合集贡献",
+              link: "mihoyo-api-collection/CONTRIBUTING.md"
+          }
+      ]
     },
 
   ],

@@ -15,9 +15,9 @@ export const zhNavbar = navbar([
     icon: "config",
     children: [
       {
-        text: "米哈游 API",
-        link: "https://github.com/Kamisato-Ayaka-233/mihoyo-api-collect",
-        icon: "repo"
+        text: "米哈游 API 合集",
+        link: "/zh/MiHoYo-API-Collection-project.html",
+        icon: "api"
       },
     ]
   },
