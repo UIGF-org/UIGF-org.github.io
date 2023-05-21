@@ -24,7 +24,7 @@ order: 2
   "list": [
     {
       "gacha_id": "2003",
-      "gacha_type": "200",
+      "gacha_type": "x",
       "item_id": "10000065",
       "count": "1",
       "time": "2023-05-07 10:47:00",
@@ -94,7 +94,13 @@ order: 2
           },
           "gacha_type": {
             "type": "string",
-            "description": "卡池类型"
+            "description": "卡池类型",
+            "enum": [
+              "1",
+              "2",
+              "11",
+              "12"
+            ]
           },
           "item_id": {
             "type": "string",
