@@ -52,7 +52,7 @@ order: 2
         },
         "lang": {
           "type": "string",
-          "description": "语言"
+          "description": "语言 languagecode2-country/regioncode2"
         },
         "region_time_zone": {
           "type": "string",
@@ -60,7 +60,7 @@ order: 2
         },
         "export_timestamp": {
           "type": "number",
-          "description": "导出UNIX时间戳"
+          "description": "导出 UNIX 时间戳"
         },
         "export_app": {
           "type": "string",
