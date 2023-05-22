@@ -14,7 +14,7 @@ order: 2
   "info": {
     "uid": "xxxxxxxxx",
     "lang": "zh-cn",
-    "region_time_zone": "xxxx",
+    "region_time_zone": 8,
     "export_timestamp": 1684124992,
     "export_app": "xxx",
     "export_app_version": "xxxxx",
@@ -54,7 +54,7 @@ order: 2
           "description": "language formatted in languagecode2-country/regioncode2"
         },
         "region_time_zone": {
-          "type": "string",
+          "type": "number",
           "description": "Timezone"
         },
         "export_timestamp": {
