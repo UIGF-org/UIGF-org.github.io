@@ -26,6 +26,11 @@ features:
     icon: proposal
     details: Uniformed Interchangeable Achievement Format standard (UIAF)
     link: standards/UIAF.html
+    
+  - title: 星穹铁道抽卡记录标准
+    icon: proposal
+    details: Star Rail GachaLog Format standard (SRGF)
+    link: standards/SRGF.html
 
 copyright: false
 footer: MIT Licensed | Copyright © 2021-present UIGF-org

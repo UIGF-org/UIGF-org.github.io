@@ -27,6 +27,12 @@ features:
     details: UIAF
     link: standards/UIAF.html
 
+  - title: Star Rail GachaLog Format Standard
+    icon: proposal
+    details: SRGF
+    link: standards/SRGF.html
+
+
 copyright: false
 footer: MIT Licensed | Copyright © 2021-present UIGF-org
 ---
