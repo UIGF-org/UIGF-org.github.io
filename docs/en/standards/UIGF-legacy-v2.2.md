@@ -2,7 +2,7 @@
 category: [Standard Document]
 order: 3
 ---
-# Uniformed Interchangeable GachaLog Format standard v2.2
+# Uniformed Interchangeable GachaLog Format Standard v2.2
 
 > Uniformed Interchangeable GachaLog Format standard (UIGF) v2.2 <Badge text="Legacy" type="message" />
 

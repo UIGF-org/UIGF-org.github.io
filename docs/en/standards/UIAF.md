@@ -2,7 +2,7 @@
 category: [Standard Document]
 order: 2
 ---
-# Uniformed Interchangeable Achievement Format standard v1.1
+# Uniformed Interchangeable Achievement Format Standard v1.1
 
 > Uniformed Interchangeable Achievement Format standard (UIAF) v1.1 <Badge text="Current" type="message" />
 
