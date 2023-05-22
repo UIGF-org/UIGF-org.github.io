@@ -8,7 +8,19 @@ export const enNavbar = navbar([
     text: "Standards",
     icon: "proposal",
     prefix: "/en/standards/",
-    children: ["UIGF.md", "UIAF.md"]
+    children: [
+      {
+        text: "Genshin Impact",
+        children: [
+            "UIGF.md",
+            "UIAF.md"
+        ]
+      },
+      {
+        text: "Honkai: Star Rail",
+        children: ["SRGF.md"]
+      }
+    ]
   },
   {
     text: "Useful Tools",

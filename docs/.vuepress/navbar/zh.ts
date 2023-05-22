@@ -8,7 +8,19 @@ export const zhNavbar = navbar([
     text: "规范标准",
     icon: "proposal",
     prefix: "/zh/standards/",
-    children: ["UIGF.md", "UIAF.md"]
+    children: [
+      {
+        text: "原神",
+        children: [
+          "UIGF.md",
+          "UIAF.md"
+        ]
+      },
+      {
+        text: "崩坏：星穹铁道",
+        children: ["SRGF.md"]
+      }
+    ]
   },
   {
     text: "实用工具",

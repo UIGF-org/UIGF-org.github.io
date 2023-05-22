@@ -13,7 +13,19 @@ export const zhSidebar = sidebar({
       icon: "proposal",
       text: "标准化文档",
       prefix: "standards/",
-      children: "structure"
+        children: [
+            {
+                text: "原神",
+                children: [
+                    "UIGF.md",
+                    "UIAF.md"
+                ]
+            },
+            {
+                text: "崩坏：星穹铁道",
+                children: ["SRGF.md"]
+            }
+        ]
     },
     {
       icon: "api",

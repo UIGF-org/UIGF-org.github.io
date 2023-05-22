@@ -13,7 +13,19 @@ export const enSidebar = sidebar({
       icon: "proposal",
       text: "Standards Document",
       prefix: "standards/",
-      children: "structure"
+      children: [
+        {
+          text: "Genshin Impact",
+          children: [
+              "UIGF.md",
+              "UIAF.md"
+          ]
+        },
+        {
+          text: "Honkai: Star Rail",
+          children: ["SRGF.md"]
+        }
+      ]
     }
   ],
 });
