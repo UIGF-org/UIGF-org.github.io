@@ -123,3 +123,13 @@ url="https://github.com/HolographicHat/YaeAchievement"
 repo="https://github.com/HolographicHat/YaeAchievement"
 preview="https://raw.githubusercontent.com/Finchaos/yae-markdown-230119/main/images/4.png"
 />
+
+## 使用 SRGF 标准的项目
+<SiteInfo
+name="StarRail Gacha Exporter"
+desc="一个快捷简便的崩坏：星穹铁道抽卡导出工具"
+logo="https://raw.githubusercontent.com/DancingSnow0517/StarRail-gacha/master/imgs/star_rail.png"
+url="https://dancingsnow0517.github.io/StarRail-gacha/"
+repo="https://github.com/DancingSnow0517/StarRail-gacha"
+preview="https://raw.githubusercontent.com/DancingSnow0517/StarRail-gacha/master/imgs/1.png"
+>
