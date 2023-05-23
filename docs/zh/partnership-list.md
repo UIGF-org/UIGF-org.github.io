@@ -132,4 +132,4 @@ logo="https://raw.githubusercontent.com/DancingSnow0517/StarRail-gacha/master/im
 url="https://dancingsnow0517.github.io/StarRail-gacha/"
 repo="https://github.com/DancingSnow0517/StarRail-gacha"
 preview="https://raw.githubusercontent.com/DancingSnow0517/StarRail-gacha/master/imgs/1.png"
->
+/>
