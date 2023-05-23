@@ -141,3 +141,13 @@ url="https://github.com/HolographicHat/YaeAchievement"
 repo="https://github.com/HolographicHat/YaeAchievement"
 preview="https://raw.githubusercontent.com/Finchaos/yae-markdown-230119/main/images/4.png"
 />
+
+## Projects with SRGF Standard
+<SiteInfo
+name="StarRail Gacha Exporter"
+desc="A Quick and Easy Honkai: Star Rail Gacha export tool"
+logo="https://raw.githubusercontent.com/DancingSnow0517/StarRail-gacha/master/imgs/star_rail.png"
+url="https://dancingsnow0517.github.io/StarRail-gacha/"
+repo="https://github.com/DancingSnow0517/StarRail-gacha"
+preview="https://raw.githubusercontent.com/DancingSnow0517/StarRail-gacha/master/imgs/1.png"
+/>
