@@ -133,3 +133,12 @@ url="https://dancingsnow0517.github.io/StarRail-gacha/"
 repo="https://github.com/DancingSnow0517/StarRail-gacha"
 preview="https://raw.githubusercontent.com/DancingSnow0517/StarRail-gacha/master/imgs/1.png"
 />
+
+<SiteInfo
+name="SRCat"
+desc="崩坏：星穹铁道 - 工具箱 / 愿此行，有猫猫一直相伴"
+logo="https://raw.githubusercontent.com/BoxCatTeam/SRCat/master/github-assets/images/app_icon.png"
+url="https://boxcat.org/SRCat/"
+repo="https://github.com/BoxCatTeam/SRCat"
+preview="https://raw.githubusercontent.com/BoxCatTeam/SRCat/master/github-assets/images/3.png"
+/>
