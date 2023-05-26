@@ -151,3 +151,12 @@ url="https://dancingsnow0517.github.io/StarRail-gacha/"
 repo="https://github.com/DancingSnow0517/StarRail-gacha"
 preview="https://raw.githubusercontent.com/DancingSnow0517/StarRail-gacha/master/imgs/1.png"
 />
+
+<SiteInfo
+name="SRCat"
+desc="Honkai: Star Rail Toolbox / May the kitties accompany all the way along."
+logo="https://raw.githubusercontent.com/BoxCatTeam/SRCat/master/github-assets/images/app_icon.png"
+url="https://srcat.boxcat.org/"
+repo="https://github.com/BoxCatTeam/SRCat"
+preview="https://raw.githubusercontent.com/BoxCatTeam/SRCat/master/github-assets/images/3.png"
+/>
