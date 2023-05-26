@@ -1,6 +1,10 @@
 ---
 category: [Standard Document]
 order: 1
+head:
+  - - meta
+    - name: keywords
+      content: Genshin, Genshin Impact, Gacha, Gacha log, UIGF
 ---
 # Uniformed Interchangeable GachaLog Format Standard v2.3
 > Uniformed Interchangeable GachaLog Format standard (UIGF) v2.3 <Badge text="Current" type="message" />

@@ -1,6 +1,10 @@
 ---
 category: [Standard Document]
 order: 2
+head:
+  - - meta
+    - name: keywords
+      content: Genshin, Genshin Impact, achievement, UIAF
 ---
 # Uniformed Interchangeable Achievement Format Standard v1.1
 

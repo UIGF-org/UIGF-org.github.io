@@ -1,6 +1,10 @@
 ---
 category: [Standard Document]
 order: 2
+head:
+  - - meta
+    - name: keywords
+      content: Honkai, Star Rail, Gacha, Gachalog, SRGF
 ---
 
 # Star Rail GachaLog Format Standard v1.0

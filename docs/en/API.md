@@ -2,6 +2,10 @@
 headerDepth: 2
 category: [API]
 icon: api
+head:
+  - - meta
+    - name: keywords
+      content: Genshin, UIGF, Genshin Data, API, Genshin Impact
 ---
 
 # UIGF API 

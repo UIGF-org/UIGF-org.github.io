@@ -3,6 +3,10 @@ redirectFrom: /API.html
 headerDepth: 2
 category: [API]
 icon: api
+head:
+  - - meta
+    - name: keywords
+      content: 原神, 原神数据, API, 翻译
 ---
 
 # UIGF API 

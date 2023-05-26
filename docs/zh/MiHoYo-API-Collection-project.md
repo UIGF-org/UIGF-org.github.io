@@ -1,6 +1,10 @@
 ---
 category: [API]
 icon: repo
+head:
+  - - meta
+    - name: keywords
+      content: 原神, 米哈游, 原神数据, API
 ---
 # 米哈游 API 合集项目说明
 

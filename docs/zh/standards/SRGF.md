@@ -2,6 +2,10 @@
 redirectFrom: /standards/SRGF.html
 category: [标准化文档]
 order: 2
+head:
+  - - meta
+    - name: keywords
+      content: 崩坏, 星穹铁道, 抽卡, 抽卡记录, SRGF
 ---
 
 # 星穹铁道抽卡记录标准 v1.0

@@ -2,6 +2,10 @@
 redirectFrom: /standards/UIGF-legacy-v2.2.html
 category: [标准化文档]
 order: 3
+head:
+  - - meta
+    - name: keywords
+      content: 原神, 抽卡, 抽卡记录, UIGF
 ---
 
 # 统一可交换祈愿记录标准 v2.2
