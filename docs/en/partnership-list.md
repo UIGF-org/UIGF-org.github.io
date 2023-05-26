@@ -61,15 +61,6 @@ preview="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01Or2BBf1g6dvUQwGP9_!
 />
 
 <SiteInfo
-name="DodocoTales"
-desc="A banner-oriented Genshin Impact wish logs exporter & explorer"
-logo="https://raw.githubusercontent.com/sunfkny/genshin-gacha-export/main/ys.ico"
-url="https://github.com/TremblingMoeNew/DodocoTales"
-repo="https://github.com/TremblingMoeNew/DodocoTales"
-preview="partnerships/DodocoTales.png"
-/>
-
-<SiteInfo
 name="Snap.Genshin"
 desc="你想要的原神全家桶"
 logo="https://raw.githubusercontent.com/DGP-Studio/Snap.Genshin.Docs/main/docs/.vuepress/public/logo/SGLogoPure.png"
@@ -177,4 +168,13 @@ logo=""
 url="https://github.com/Scighost/Starward"
 repo="https://github.com/Scighost/Starward"
 preview="https://starward.scighost.com/resource/img/uigf/srgf_en.webp"
+/>
+
+<SiteInfo
+name="Star Rail Warp Observe"
+desc="Observe every warp of you"
+logo="partnerships/starwo-icon.png"
+url="https://starwo.dodocotales.cc/"
+repo="https://github.com/TremblingMoeNew/StarRailWarpObserve"
+preview="partnerships/starwo-preview.png"
 />

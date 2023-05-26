@@ -61,15 +61,6 @@ preview="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01Or2BBf1g6dvUQwGP9_!
 />
 
 <SiteInfo
-name="DodocoTales"
-desc="A banner-oriented Genshin Impact wish logs exporter & explorer"
-logo="https://raw.githubusercontent.com/sunfkny/genshin-gacha-export/main/ys.ico"
-url="https://github.com/TremblingMoeNew/DodocoTales"
-repo="https://github.com/TremblingMoeNew/DodocoTales"
-preview="partnerships/DodocoTales.png"
-/>
-
-<SiteInfo
 name="原神披萨小助手"
 desc="Apple全平台原神小助手"
 logo="https://ophelper.top/img/ophelper_logo_clipped.png"
@@ -168,4 +159,13 @@ logo=""
 url="https://github.com/Scighost/Starward"
 repo="https://github.com/Scighost/Starward"
 preview="https://starward.scighost.com/resource/img/uigf/srgf_zh.webp"
+/>
+
+<SiteInfo
+name="星穹铁道跃迁观测工具"
+desc="观测您的每一次跃迁"
+logo="partnerships/starwo-icon.png"
+url="https://starwo.dodocotales.cc/"
+repo="https://github.com/TremblingMoeNew/StarRailWarpObserve"
+preview="partnerships/starwo-preview.png"
 />
