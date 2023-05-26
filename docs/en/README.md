@@ -42,4 +42,9 @@ footer: MIT Licensed | Copyright © 2021-present UIGF-org
 
 UIGF-Org is currently using software provided by the following service provider.
 
-<a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-light.svg" alt="Deploys by Netlify" /> </a>
+<a href="https://www.netlify.com"> 
+    <img src="https://www.netlify.com/v3/img/components/netlify-light.svg" alt="Deploys by Netlify" />
+</a> &nbsp;
+<a href="https://www.cloudflare.com/">
+    <img src="/CF_logo_stacked_blktype.png" style="width:140px;height:40px;" alt="Cloudflare" />
+</a>
