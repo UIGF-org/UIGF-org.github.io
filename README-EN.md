@@ -44,7 +44,7 @@ This is the repository of UIGF-org website. You can always view its live version
      - **`url`**: Home page URL of your project
      - **`repo`**: Repository URL of your project
      - **`preview`**: Screenshot or banner image URL of your project
-   - You can create a folder with your project name in `docs/.vuepress/public/partnerships`, and upload your project-related image assets. If the asset you create is `docs/.vuepress/public/partnerships/sample-project/logo.png`, then its URL path can be written as `https://uigf.org/sample-project/logo.png` or `/sample-project/logo.png`
+   - You can create a folder with your project name in `docs/.vuepress/public/partnerships`, and upload your project-related image assets. If the asset you create is `docs/.vuepress/public/partnerships/sample-project/logo.png`, then its URL path can be written as `https://uigf.org/partnerships/sample-project/logo.png` or `/partnerships/sample-project/logo.png`
 
 4. Save your change; make your Pull Request to the main breach
 

@@ -43,7 +43,7 @@
      - **`url`**: 项目主页的 URL
      - **`repo`**: 项目代码库的 URL
      - **`preview`**: 项目截图或宣传图的 URL
-   - 你可以在本项目的 `docs/.vuepress/public/partnerships` 目录下以你的项目名称创建一个文件夹，并上传相关图片资源。 如果你创建的资源路径为 `docs/.vuepress/public/partnerships/sample-project/logo.png`，则其 URL 路径可以写为`https://uigf.org/sample-project/logo.png` 或 `/sample-project/logo.png`
+   - 你可以在本项目的 `docs/.vuepress/public/partnerships` 目录下以你的项目名称创建一个文件夹，并上传相关图片资源。 如果你创建的资源路径为 `docs/.vuepress/public/partnerships/sample-project/logo.png`，则其 URL 路径可以写为`https://uigf.org/partnerships/sample-project/logo.png` 或 `/partnerships/sample-project/logo.png`
 
 4. 保存你的更改；开启一个 Pull Request 将更改提交到本库的主分支中
 
