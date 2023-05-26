@@ -23,7 +23,7 @@ desc="记录旅途中发生的事"
 logo="https://xunkong.cc/images/logo.640.webp"
 url="https://xunkong.cc/"
 repo="https://github.com/xunkong/xunkong"
-preview="https://camo.githubusercontent.com/a4fde5352903fb0bcf4d8b36543724129828d57c033b646565740b0e674dcaee/68747470733a2f2f66696c652e78756e6b6f6e672e63632f7374617469632f7265706f2f78756e6b6f6e672f73637265656e73686f742d686f6d652d6b6f6e6779696e672e77656270"
+preview="https://file.xunkong.cc/static/repo/xunkong/YanfeiLawyer.webp"
 />
 
 <SiteInfo
@@ -79,15 +79,6 @@ preview="https://repository-images.githubusercontent.com/331187187/0a2420e5-881a
 />
 
 <SiteInfo
-name="KeqingNiuza"
-desc="刻记牛杂店"
-logo="https://raw.githubusercontent.com/xunkong/KeqingNiuza/final/img/logo_nbg.png"
-url="https://github.com/xunkong/KeqingNiuza"
-repo="https://github.com/xunkong/KeqingNiuza"
-preview="https://raw.githubusercontent.com/xunkong/KeqingNiuza/v2/img/Snipaste_2021-06-19_10-46-43.png"
-/>
-
-<SiteInfo
 name="Genshin Pizza Helper"
 desc="Apple-platform game tool for Genshin Impact"
 logo="https://ophelper.top/img/ophelper_logo_clipped.png"
@@ -103,6 +94,15 @@ logo="https://raw.githubusercontent.com/AuroraZiling/sangonomiya.Metadata/main/a
 url="https://github.com/AuroraZiling/sangonomiya"
 repo="https://github.com/AuroraZiling/sangonomiya"
 preview="https://raw.githubusercontent.com/AuroraZiling/sangonomiya.Metadata/main/show_light.png"
+/>
+
+<SiteInfo
+name="Starward"
+desc="Game Launcher for miHoYo"
+logo=""
+url="https://github.com/Scighost/Starward"
+repo="https://github.com/Scighost/Starward"
+preview="https://starward.scighost.com/resource/img/uigf/uigf_en.webp"
 />
 
 ## Projects with UIAF Standard
@@ -121,7 +121,7 @@ desc="记录旅途中发生的事"
 logo="https://xunkong.cc/images/logo.640.webp"
 url="https://xunkong.cc/"
 repo="https://github.com/xunkong/xunkong"
-preview="https://camo.githubusercontent.com/a4fde5352903fb0bcf4d8b36543724129828d57c033b646565740b0e674dcaee/68747470733a2f2f66696c652e78756e6b6f6e672e63632f7374617469632f7265706f2f78756e6b6f6e672f73637265656e73686f742d686f6d652d6b6f6e6779696e672e77656270"
+preview="https://file.xunkong.cc/static/repo/xunkong/YanfeiLawyer.webp"
 />
 
 <SiteInfo
@@ -168,4 +168,13 @@ logo="https://raw.githubusercontent.com/AuroraZiling/asta.Metadata/main/avatar.p
 url="https://github.com/AuroraZiling/star-rail-asta"
 repo="https://github.com/AuroraZiling/star-rail-asta"
 preview="https://raw.githubusercontent.com/AuroraZiling/asta.Metadata/main/show_light.png"
+/>
+
+<SiteInfo
+name="Starward"
+desc="Game Launcher for miHoYo"
+logo=""
+url="https://github.com/Scighost/Starward"
+repo="https://github.com/Scighost/Starward"
+preview="https://starward.scighost.com/resource/img/uigf/srgf_en.webp"
 />
