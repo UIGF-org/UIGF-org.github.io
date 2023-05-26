@@ -164,7 +164,7 @@ preview="https://starward.scighost.com/resource/img/uigf/srgf_zh.webp"
 <SiteInfo
 name="星穹铁道跃迁观测工具"
 desc="观测您的每一次跃迁"
-logo="partnerships/starwo-icon.png"
+logo="/partnerships/starwo-icon.png"
 url="https://starwo.dodocotales.cc/"
 repo="https://github.com/TremblingMoeNew/StarRailWarpObserve"
 preview="partnerships/starwo-preview.png"

@@ -173,7 +173,7 @@ preview="https://starward.scighost.com/resource/img/uigf/srgf_en.webp"
 <SiteInfo
 name="Star Rail Warp Observe"
 desc="Observe every warp of you"
-logo="partnerships/starwo-icon.png"
+logo="/partnerships/starwo-icon.png"
 url="https://starwo.dodocotales.cc/"
 repo="https://github.com/TremblingMoeNew/StarRailWarpObserve"
 preview="partnerships/starwo-preview.png"
