@@ -160,3 +160,12 @@ url="https://srcat.boxcat.org/"
 repo="https://github.com/BoxCatTeam/SRCat"
 preview="https://raw.githubusercontent.com/BoxCatTeam/SRCat/master/github-assets/images/3.png"
 />
+
+<SiteInfo
+name="Asta"
+desc="Gacha Report Tool for Honkai: Star Rail"
+logo="https://raw.githubusercontent.com/AuroraZiling/asta.Metadata/main/avatar.png"
+url="https://github.com/AuroraZiling/star-rail-asta"
+repo="https://github.com/AuroraZiling/star-rail-asta"
+preview="https://raw.githubusercontent.com/AuroraZiling/asta.Metadata/main/show_light.png"
+/>
