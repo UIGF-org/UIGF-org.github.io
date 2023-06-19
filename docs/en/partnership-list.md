@@ -133,6 +133,15 @@ repo="https://github.com/HolographicHat/YaeAchievement"
 preview="https://raw.githubusercontent.com/Finchaos/yae-markdown-230119/main/images/4.png"
 />
 
+<SiteInfo
+name="Tauri.Genshin"
+desc="A Genshin Tool build with Tauri"
+logo="/partnerships/tauri-genshin-icon.webp"
+url="https://github.com/BTMuli/Tauri.Genshin"
+repo="https://github.com/BTMuli/Tauri.Genshin"
+preview="/partnerships/tauri-genshin-preview.webp"
+/>
+
 ## Projects with SRGF Standard
 <SiteInfo
 name="StarRail Gacha Exporter"
