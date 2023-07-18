@@ -178,3 +178,12 @@ url="https://starwo.dodocotales.cc/"
 repo="https://github.com/TremblingMoeNew/StarRailWarpObserve"
 preview="partnerships/starwo-preview.png"
 />
+
+<SiteInfo
+name="SRTools"
+desc="星轨工具箱"
+logo="/partnerships/SRTools/logo.png"
+url="https://github.com/JamXi233/SRTools"
+repo="https://github.com/JamXi233/SRTools"
+preview="/partnerships/SRTools/banner.png"
+/>
