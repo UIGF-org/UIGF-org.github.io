@@ -40,7 +40,7 @@ name="应急食品"
 desc="安卓平台下的原神工具客户端"
 logo="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01agfnd91g6dvMzibmE_!!1797064093.png"
 url="https://gtool.mukapp.top/"
-preview="partnerships/mukapp.webp"
+preview="partnerships/mukapp/preview.webp"
 />
 
 <SiteInfo
@@ -127,10 +127,10 @@ preview="https://raw.githubusercontent.com/Finchaos/yae-markdown-230119/main/ima
 <SiteInfo
 name="Tauri.Genshin"
 desc="A Genshin Tool build with Tauri"
-logo="/partnerships/tauri-genshin-icon.webp"
+logo="/partnerships/tauri-genshin/logo.webp"
 url="https://github.com/BTMuli/Tauri.Genshin"
 repo="https://github.com/BTMuli/Tauri.Genshin"
-preview="/partnerships/tauri-genshin-preview.webp"
+preview="/partnerships/tauri-genshin/preview.webp"
 />
 
 ## 使用 SRGF 标准的项目
@@ -173,10 +173,10 @@ preview="https://starward.scighost.com/resource/img/uigf/srgf_zh.webp"
 <SiteInfo
 name="星穹铁道跃迁观测工具"
 desc="观测您的每一次跃迁"
-logo="/partnerships/starwo-icon.png"
+logo="/partnerships/starwo/logo.png"
 url="https://starwo.dodocotales.cc/"
 repo="https://github.com/TremblingMoeNew/StarRailWarpObserve"
-preview="partnerships/starwo-preview.png"
+preview="/partnerships/starwo/preview.png"
 />
 
 <SiteInfo
@@ -185,5 +185,5 @@ desc="星轨工具箱"
 logo="/partnerships/SRTools/logo.png"
 url="https://github.com/JamXi233/SRTools"
 repo="https://github.com/JamXi233/SRTools"
-preview="/partnerships/SRTools/banner.png"
+preview="/partnerships/SRTools/preview.png"
 />
