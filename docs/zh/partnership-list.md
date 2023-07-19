@@ -180,10 +180,10 @@ preview="/partnerships/starwo/preview.png"
 />
 
 <SiteInfo
-name="SRTools"
-desc="星轨工具箱"
-logo="/partnerships/SRTools/logo.png"
-url="https://github.com/JamXi233/SRTools"
+name="星轨工具箱"
+desc="被增强后的星穹铁道启动器"
+logo="https://cdn.jamsg.cn/release/SRTools/Logo.webp"
+url="https://srtools.jamsg.cn"
 repo="https://github.com/JamXi233/SRTools"
-preview="/partnerships/SRTools/preview.png"
+preview="https://cdn.jamsg.cn/release/SRTools/Preview.webp"
 />

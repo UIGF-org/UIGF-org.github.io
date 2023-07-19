@@ -181,9 +181,9 @@ preview="/partnerships/starwo/preview.png"
 
 <SiteInfo
 name="SRTools"
-desc="Star Rail Tool"
-logo="/partnerships/SRTools/logo.png"
-url="https://github.com/JamXi233/SRTools"
+desc="Enhanced StarRail Launcher"
+logo="https://cdn.jamsg.cn/release/SRTools/Logo.webp"
+url="https://srtools.jamsg.cn/en"
 repo="https://github.com/JamXi233/SRTools"
-preview="/partnerships/SRTools/preview.png"
+preview="https://cdn.jamsg.cn/release/SRTools/Preview.webp"
 />
