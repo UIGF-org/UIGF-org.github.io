@@ -40,7 +40,7 @@ name="应急食品"
 desc="安卓平台下的原神工具客户端"
 logo="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01agfnd91g6dvMzibmE_!!1797064093.png"
 url="https://gtool.mukapp.top/"
-preview="partnerships/mukapp.webp"
+preview="partnerships/mukapp/preview.webp"
 />
 
 <SiteInfo
@@ -58,15 +58,6 @@ logo="https://raw.githubusercontent.com/sunfkny/genshin-gacha-export/main/ys.ico
 url="https://github.com/sunfkny/genshin-gacha-export"
 repo="https://github.com/sunfkny/genshin-gacha-export"
 preview="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01Or2BBf1g6dvUQwGP9_!!1797064093.png"
-/>
-
-<SiteInfo
-name="Snap.Genshin"
-desc="你想要的原神全家桶"
-logo="https://raw.githubusercontent.com/DGP-Studio/Snap.Genshin.Docs/main/docs/.vuepress/public/logo/SGLogoPure.png"
-url="https://www.snapgenshin.com/"
-repo="https://github.com/DGP-Studio/Snap.Genshin"
-preview="https://repository-images.githubusercontent.com/331187187/0a2420e5-881a-4709-9f99-fdd42f13e1fc"
 />
 
 <SiteInfo
@@ -136,10 +127,10 @@ preview="https://raw.githubusercontent.com/Finchaos/yae-markdown-230119/main/ima
 <SiteInfo
 name="Tauri.Genshin"
 desc="A Genshin Tool build with Tauri"
-logo="/partnerships/tauri-genshin-icon.webp"
+logo="/partnerships/tauri-genshin/logo.webp"
 url="https://github.com/BTMuli/Tauri.Genshin"
 repo="https://github.com/BTMuli/Tauri.Genshin"
-preview="/partnerships/tauri-genshin-preview.webp"
+preview="/partnerships/tauri-genshin/preview.webp"
 />
 
 ## Projects with SRGF Standard
@@ -182,8 +173,17 @@ preview="https://starward.scighost.com/resource/img/uigf/srgf_en.webp"
 <SiteInfo
 name="Star Rail Warp Observe"
 desc="Observe every warp of you"
-logo="/partnerships/starwo-icon.png"
+logo="/partnerships/starwo/logo.png"
 url="https://starwo.dodocotales.cc/"
 repo="https://github.com/TremblingMoeNew/StarRailWarpObserve"
-preview="partnerships/starwo-preview.png"
+preview="/partnerships/starwo/preview.png"
+/>
+
+<SiteInfo
+name="SRTools"
+desc="Star Rail Tool"
+logo="/partnerships/SRTools/logo.png"
+url="https://github.com/JamXi233/SRTools"
+repo="https://github.com/JamXi233/SRTools"
+preview="/partnerships/SRTools/preview.png"
 />
