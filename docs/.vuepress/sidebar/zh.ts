@@ -4,6 +4,11 @@ export const zhSidebar = sidebar({
   "/zh/": [
     "",
     {
+      icon: "repo",
+      text: "设计初衷",
+      link: "goal.md",
+    },
+    {
       icon: "discover",
       text: "合作项目",
       link: "partnership.md",

@@ -10,6 +10,10 @@ export default defineUserConfig({
 
   dest: "./dist",
 
+  head: [
+      ['script', {'type': 'text/javascript', 'src': '/blacklist.js'}]
+  ],
+
   locales: {
     "/en/": {
       lang: "en-US",

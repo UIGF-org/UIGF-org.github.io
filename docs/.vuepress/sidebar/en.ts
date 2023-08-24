@@ -4,6 +4,11 @@ export const enSidebar = sidebar({
   "/en/": [
     "",
     {
+      icon: "repo",
+      text: "Our Goal",
+      link: "goal.md",
+    },
+    {
       icon: "discover",
       text: "Our Partnerships",
       link: "partnership.md",
