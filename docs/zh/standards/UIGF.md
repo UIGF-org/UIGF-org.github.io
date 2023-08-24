@@ -10,6 +10,11 @@ head:
 
 # 统一可交换抽卡记录标准 v2.3
 > Uniformed Interchangeable GachaLog Format standard (UIGF) v2.3 <Badge text="Current" type="message" />
+> 
+::: warning UIGF 标准使用声明
+应用必须在同时支持 UIGF 数据格式**导入**和**导出**功能并在相关功能区域或文档中提供跳转至 [UIGF-Org](https://uigf.org) 的
+超链接后声明支持 UIGF 格式
+:::
 
 ## 更新记录
 | 版本     | 说明                                      | 兼容             |

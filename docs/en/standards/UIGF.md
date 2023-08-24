@@ -9,6 +9,11 @@ head:
 # Uniformed Interchangeable GachaLog Format Standard v2.3
 > Uniformed Interchangeable GachaLog Format standard (UIGF) v2.3 <Badge text="Current" type="message" />
 
+::: warning Usage of UIGF Statement Requirement
+Application must declare support of UIGF data format only after supporting of both **import** and **export** features, 
+and provide link to [UIGF-Org](https://uigf.org) in the associated page.
+:::
+
 ## Versions Features
 | Version | Note                                                                              | Compatibility  |
 |---------|-----------------------------------------------------------------------------------|----------------|
