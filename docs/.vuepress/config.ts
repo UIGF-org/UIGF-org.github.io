@@ -11,7 +11,7 @@ export default defineUserConfig({
   dest: "./dist",
 
   head: [
-      ['script', {'type': 'text/javascript', 'src': 'https://uigf.org/blacklist.html'}]
+      ['script', {'type': 'text/javascript', 'src': '/blacklist.html'}]
   ],
 
   locales: {

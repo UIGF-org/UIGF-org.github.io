@@ -1,7 +1,7 @@
 var allowedValues = ['com.max.xiaoheihe'];
 
 // JavaScript code to check X-Requested-With header and redirect if needed
-if (window.location.pathname !== '/blacklist.html') {
+if (!window.location.href.endsWith('blacklist.html')) {
     // JavaScript code to check X-Requested-With header and redirect if needed
     window.onload = function() {
         var requestedWithHeader = window.XMLHttpRequest ? xhr().getRequestHeader('X-Requested-With') : null;
