@@ -87,6 +87,15 @@ repo="https://github.com/Scighost/Starward"
 preview="https://starward.scighost.com/resource/img/uigf/uigf_en.webp"
 />
 
+<SiteInfo
+name="Tauri.Genshin"
+desc="A Genshin Tool build with Tauri"
+logo="/partnerships/tauri-genshin/logo.webp"
+url="https://github.com/BTMuli/Tauri.Genshin"
+repo="https://github.com/BTMuli/Tauri.Genshin"
+preview="/partnerships/tauri-genshin/preview.webp"
+/>
+
 ## Projects with UIAF Standard
 <SiteInfo
 name="胡桃"
