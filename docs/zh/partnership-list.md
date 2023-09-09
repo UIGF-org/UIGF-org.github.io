@@ -32,7 +32,7 @@ desc="genshin wish history analyzer"
 logo="https://raw.githubusercontent.com/sunfkny/genshin-gacha-export/main/ys.ico"
 url="https://genshin.voderl.cn/"
 repo="https://github.com/voderl/genshin-gacha-analyzer"
-preview="https://raw.githubusercontent.com/voderl/genshin-gacha-analyzer/main/docs/charts.png"
+preview="https://s1.ax1x.com/2023/09/09/pP6x1eK.png"
 />
 
 <SiteInfo
