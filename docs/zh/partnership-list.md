@@ -164,10 +164,10 @@ preview="https://raw.githubusercontent.com/BoxCatTeam/SRCat/master/github-assets
 <SiteInfo
 name="Asta"
 desc="崩坏：星穹铁道 跃迁记录工具"
-logo="https://raw.githubusercontent.com/AuroraZiling/asta.Metadata/main/avatar.png"
+logo="https://s1.ax1x.com/2023/09/09/pP6xLlR.png"
 url="https://github.com/AuroraZiling/star-rail-asta"
 repo="https://github.com/AuroraZiling/star-rail-asta"
-preview="https://raw.githubusercontent.com/AuroraZiling/asta.Metadata/main/show_light.png"
+preview="https://s1.ax1x.com/2023/09/09/pP6xO61.png"
 />
 
 <SiteInfo
