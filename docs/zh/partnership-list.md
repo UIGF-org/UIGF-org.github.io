@@ -3,7 +3,7 @@
 name="genshin wish export"
 desc="Easily export the Genshin Impact wish record"
 url="https://github.com/biuuu/genshin-wish-export"
-logo="https://raw.githubusercontent.com/biuuu/genshin-wish-export/main/build/icons/256x256.png"
+logo="https://s1.ax1x.com/2023/09/09/pP6xBef.png"
 repo="https://github.com/biuuu/genshin-wish-export"
 preview="https://img.alicdn.com/imgextra/i3/1797064093/O1CN018VkZBw1g6dvTMaX9W_!!1797064093.png"
 />
@@ -29,7 +29,7 @@ preview="https://file.xunkong.cc/static/repo/xunkong/YanfeiLawyer.webp"
 <SiteInfo
 name="genshin-gacha-analyzer"
 desc="genshin wish history analyzer"
-logo="https://raw.githubusercontent.com/sunfkny/genshin-gacha-export/main/ys.ico"
+logo="https://s1.ax1x.com/2023/09/09/pP6xyFg.jpg"
 url="https://genshin.voderl.cn/"
 repo="https://github.com/voderl/genshin-gacha-analyzer"
 preview="https://s1.ax1x.com/2023/09/09/pP6x1eK.png"
@@ -54,7 +54,7 @@ preview="partnerships/teyvat-preview.png"
 <SiteInfo
 name="genshin-gacha-export"
 desc="原神抽卡记录导出"
-logo="https://raw.githubusercontent.com/sunfkny/genshin-gacha-export/main/ys.ico"
+logo="https://s1.ax1x.com/2023/09/09/pP6xyFg.jpg"
 url="https://github.com/sunfkny/genshin-gacha-export"
 repo="https://github.com/sunfkny/genshin-gacha-export"
 preview="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01Or2BBf1g6dvUQwGP9_!!1797064093.png"
@@ -72,10 +72,10 @@ preview="https://ophelper.top/img/ophelper-uigf-preview.png"
 <SiteInfo
 name="Sangonomiya"
 desc="原神祈愿记录工具"
-logo="https://raw.githubusercontent.com/AuroraZiling/sangonomiya.Metadata/main/avatar.png"
+logo="https://s1.ax1x.com/2023/09/09/pP6x7Y4.png"
 url="https://github.com/AuroraZiling/sangonomiya"
 repo="https://github.com/AuroraZiling/sangonomiya"
-preview="https://raw.githubusercontent.com/AuroraZiling/sangonomiya.Metadata/main/show_light.png"
+preview="https://s1.ax1x.com/2023/09/09/pP6xHfJ.png"
 />
 
 <SiteInfo
