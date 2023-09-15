@@ -10,6 +10,13 @@ head:
 
 > Uniformed Interchangeable Achievement Format standard (UIAF) v1.1 <Badge text="Current" type="message" />
 
+::: warning Usage of UIAF Statement Requirement
+
+Application must declare support of UIAF data format only after supporting of both **import** and **export** features, and provide link to [UIGF-Org](https://uigf.org) in the associated page.
+
+Including only importing feature reduces the interchangeability of user data, and puts the data in a risk that user can not control, which is not in line with intention of UIGF-Org.
+:::
+
 ## Manifesto
 
 With more third-party working on Genshin Impact's achievement recognition, export and record.
