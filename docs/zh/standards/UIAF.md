@@ -11,6 +11,7 @@ head:
 # 统一可交换成就标准 v1.1
 
 > Uniformed Interchangeable Achievement Format standard (UIAF) v1.1 <Badge text="Current" type="message" />
+
 ::: warning UIAF 标准使用声明
 应用必须在同时支持 UIAF 数据格式**导入**和**导出**功能并在相关功能区域或文档中提供跳转至 [UIGF-Org](https://uigf.org) 的超链接后声明支持 UIAF 格式
 
