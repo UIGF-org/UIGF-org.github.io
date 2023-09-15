@@ -88,12 +88,12 @@ preview="https://starward.scighost.com/resource/img/uigf/uigf_en.webp"
 />
 
 <SiteInfo
-name="Tauri.Genshin"
+name="Teyvat Guide"
 desc="A Genshin Tool build with Tauri"
-logo="/partnerships/tauri-genshin/logo.webp"
-url="https://github.com/BTMuli/Tauri.Genshin"
-repo="https://github.com/BTMuli/Tauri.Genshin"
-preview="/partnerships/tauri-genshin/preview.webp"
+logo="/partnerships/TeyvatGuide/logo.png"
+url="https://apps.microsoft.com/store/detail/teyvat-guide/9NLBNNNBNSJN?hl=zh-cn&gl=cn&rtc=1"
+repo="https://github.com/BTMuli/TeyvatGuide"
+preview="/partnerships/TeyvatGuide/AppPreview.png"
 />
 
 ## Projects with UIAF Standard
@@ -134,12 +134,12 @@ preview="https://raw.githubusercontent.com/Finchaos/yae-markdown-230119/main/ima
 />
 
 <SiteInfo
-name="Tauri.Genshin"
+name="Teyvat Guide"
 desc="A Genshin Tool build with Tauri"
-logo="/partnerships/tauri-genshin/logo.webp"
-url="https://github.com/BTMuli/Tauri.Genshin"
-repo="https://github.com/BTMuli/Tauri.Genshin"
-preview="/partnerships/tauri-genshin/preview.webp"
+logo="/partnerships/TeyvatGuide/logo.png"
+url="https://apps.microsoft.com/store/detail/teyvat-guide/9NLBNNNBNSJN?hl=zh-cn&gl=cn&rtc=1"
+repo="https://github.com/BTMuli/TeyvatGuide"
+preview="/partnerships/TeyvatGuide/AppPreview.png"
 />
 
 ## Projects with SRGF Standard
