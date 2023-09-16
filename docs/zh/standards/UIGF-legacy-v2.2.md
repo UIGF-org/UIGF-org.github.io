@@ -12,6 +12,10 @@ head:
 
 > Uniformed Interchangeable GachaLog Format standard (UIGF) v2.2 <Badge text="Legacy" type="message" />
 
+::: warning 警告
+该标准已过时，请尽量使用 [UIGF v2.3]()
+:::
+
 ## 前言
 
 由于原神的祈愿卡池与记录越来越多，越来越复杂，各个App间进行数据交换的代价越来越大，于是
