@@ -11,6 +11,13 @@ head:
 
 > Star Rail GachaLog Format standard (SRGF) v1.0 <Badge text="Current" type="message" />
 
+::: warning Usage of SRGF Statement Requirement
+
+Application must declare support of SRGF data format only after supporting of both **import** and **export** features, and provide link to [UIGF-Org](https://uigf.org) in the associated page.
+
+Including only importing feature reduces the interchangeability of user data, and puts the data in a risk that user can not control, which is not in line with intention of UIGF-Org.
+:::
+
 ## Json Example
 
 ```json
