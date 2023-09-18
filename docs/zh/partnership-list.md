@@ -196,3 +196,12 @@ url="https://srtools.jamsg.cn"
 repo="https://github.com/JamXi233/SRTools"
 preview="https://cdn.jamsg.cn/release/SRTools/Preview.webp"
 />
+
+<SiteInfo
+name="咸鱼的崩铁助理"
+desc="崩坏：星穹铁道 抽卡分析&充能计算器"
+logo="https://raw.githubusercontent.com/xyxyx718/HSRchargingCalculator/main/img/logo.png"
+url="https://github.com/xyxyx718/HSRchargingCalculator/blob/main/%E5%92%B8%E9%B1%BC%E7%9A%84%E5%B4%A9%E9%93%81%E5%8A%A9%E7%90%86.md"
+repo="https://github.com/xyxyx718/HSRchargingCalculator"
+preview="https://raw.githubusercontent.com/xyxyx718/HSRchargingCalculator/main/img/mp-history.jpg"
+/>
