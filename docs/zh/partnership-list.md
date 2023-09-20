@@ -205,3 +205,12 @@ url="https://github.com/xyxyx718/HSRchargingCalculator/blob/main/%E5%92%B8%E9%B1
 repo="https://github.com/xyxyx718/HSRchargingCalculator"
 preview="https://raw.githubusercontent.com/xyxyx718/HSRchargingCalculator/main/img/mp-history.jpg"
 />
+
+<SiteInfo
+name="StarRailTools"
+desc="保存星铁数据的小工具"
+logo="https://github.com/cntvc/star-rail-tools/blob/main/resource/hsr.ico"
+url="https://github.com/cntvc/star-rail-tools"
+repo="https://github.com/cntvc/star-rail-tools"
+preview="/partnerships/cntvc/star_rail_tools/preview.png"
+/>
