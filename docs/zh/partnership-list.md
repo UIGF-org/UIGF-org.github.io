@@ -96,6 +96,15 @@ repo="https://github.com/BTMuli/TeyvatGuide"
 preview="/partnerships/TeyvatGuide/AppPreview.png"
 />
 
+<SiteInfo
+name="派蒙笔记本"
+desc="安卓平台下的原神工具"
+logo="https://cdn.jsdelivr.net/gh/QooLianyi/PaimonsNotebook.github.io/icon_paimonsnotebook_playstore.webp"
+url="https://github.com/QooLianyi/PaimonsNotebook"
+repo="https://github.com/QooLianyi/PaimonsNotebook"
+preview="https://cdn.jsdelivr.net/gh/QooLianyi/PaimonsNotebook.github.io/bg_paimonsnotebook_uigf.webp"
+/>
+
 ## 使用 UIAF 标准的项目
 <SiteInfo
 name="胡桃"
