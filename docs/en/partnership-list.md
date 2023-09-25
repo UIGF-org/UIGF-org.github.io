@@ -96,6 +96,15 @@ repo="https://github.com/BTMuli/TeyvatGuide"
 preview="/partnerships/TeyvatGuide/AppPreview.png"
 />
 
+<SiteInfo
+name="PaimonsNotebook"
+desc="Android-platform game tool for Genshin Impact"
+logo="https://cdn.jsdelivr.net/gh/QooLianyi/PaimonsNotebook.github.io/icon_paimonsnotebook_playstore.webp"
+url="https://github.com/QooLianyi/PaimonsNotebook"
+repo="https://github.com/QooLianyi/PaimonsNotebook"
+preview="https://cdn.jsdelivr.net/gh/QooLianyi/PaimonsNotebook.github.io/bg_paimonsnotebook_uigf.webp"
+/>
+
 ## Projects with UIAF Standard
 <SiteInfo
 name="胡桃"
