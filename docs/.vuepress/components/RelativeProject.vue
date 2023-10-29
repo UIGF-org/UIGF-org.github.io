@@ -93,7 +93,6 @@ function brokenImage(ev: Event) {
 </template>
 
 <style scoped lang="scss">
-$width: calc(50% - 24px);
 $fallback-preview-color: #a09783;
 $thirdparty-margin: 0.3em;
 $thirdparty-item-size: 1.5em;
@@ -103,7 +102,6 @@ $main-lt-margin: 1em;
 
 .partnership-project {
   position: relative;
-  width: $width;
   aspect-ratio: 16 / 9;
   background-size: cover;
   background-repeat: no-repeat;
