@@ -41,28 +41,39 @@ const containerStyle = ref<CSSProperties>({
 })
 
 const hoverAreaElm = ref<HTMLElement>()
-const hoverAreaStyle = ref<CSSProperties>({
+const hoverAreaStyle = ref<CSSProperties>({})
+
+onMounted(() => {
 })
 
-// onMounted(() => {
-//   hoverAreaElm.value!.addEventListener('mouseover', () => {
-//     hoverAreaStyle.value.display = ''
-//   })
-//   hoverAreaElm.value!.addEventListener('mouseleave', () => {
-//     hoverAreaStyle.value.display = 'none'
-//   })
-// })
+function toOuter(url: string) {
+  window.open(url, "_blank");
+}
+
+function brokenImage(ev: Event) {
+  (<HTMLImageElement>ev.currentTarget).style.display = 'none'
+}
 </script>
 
 <template>
   <div class="partnership-project" :style="containerStyle">
-    <div class="content" ref="hoverAreaElm" :transparent="Boolean(props.preview)">
+    <div class="content" ref="hoverAreaElm" :transparent="Boolean(props.preview)" :title="props.name" @click="toOuter(props.url)">
       <div class="blocker"></div>
-      <a :href="props.url" :title="props.name" target="_blank" class="link" :style="hoverAreaStyle"></a>
-      
-      <img class="icon" :alt="props.name" :src="props.logo" v-if="props.logo" ref="logoElm" @error="$event.currentTarget.src = 'broken'">
-      <h4 class="name">{{ props.name }}</h4>
-      <span class="desc" v-if="props.desc">{{ props.desc }}</span>
+
+      <!-- hover 时消失 -->
+      <div class="main-center">
+        <img class="icon" :alt="props.name" :src="props.logo" v-if="props.logo" @error="brokenImage">
+        <div class="info">
+          <div class="name">{{ props.name }}</div>
+          <span class="desc" v-if="props.desc">{{ props.desc }}</span>
+        </div>
+      </div>
+
+      <!-- hover 时出现 -->
+      <div class="main-lt">
+        <img class="icon" :alt="props.name" :src="props.logo" v-if="props.logo" @error="brokenImage">
+        <div class="name">{{ props.name }}</div>
+      </div>
     </div>
 
     <div class="thirdparty" v-if="props.thirdparty">
@@ -76,21 +87,24 @@ const hoverAreaStyle = ref<CSSProperties>({
     </div>
 
     <div class="version" v-if="props.version">
-      <span>{{ props.version }}</span>
+      {{ props.version }}
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
+$width: calc(50% - 24px);
 $fallback-preview-color: #a09783;
 $thirdparty-margin: 0.3em;
 $thirdparty-item-size: 1.5em;
+$transition-duration: 0.8s;
 $version-margin: 0.35em;
+$main-lt-margin: 1em;
 
 .partnership-project {
   position: relative;
-  width: calc(50% - 24px);
-  height: 12em;
+  width: $width;
+  aspect-ratio: 16 / 9;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: $fallback-preview-color;
@@ -104,6 +118,9 @@ $version-margin: 0.35em;
   .version {
     display: flex;
     flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 48%;
     position: absolute;
     bottom: $version-margin;
     left: $version-margin;
@@ -111,17 +128,16 @@ $version-margin: 0.35em;
     backdrop-filter: blur(10px) brightness(0.9);
     border-radius: 5px;
     overflow: hidden;
-    color: #dae3e8;
+    height: calc(1rem + 0.2em);
     z-index: 1;
-    padding: 0em 0.2em;
-
-    span {
-      font-size: 1.05rem;
-      line-height: 1rem;
-      word-break: keep-all;
-      text-align: center;
-      transform: translateY(-0.5px);
-    }
+    padding: 0.1em 0.2em;
+    pointer-events: none;
+    user-select: none;
+    color: #dae3e8;
+    text-overflow: ellipsis;
+    font-size: 1.05rem;
+    word-break: keep-all;
+    line-height: 1rem;
   }
 
   .thirdparty {
@@ -143,7 +159,9 @@ $version-margin: 0.35em;
           line-height: $thirdparty-item-size;
           border-radius: 50%;
           overflow: hidden;
-          display: block;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           background-color: white;
           text-align: center;
 
@@ -157,7 +175,6 @@ $version-margin: 0.35em;
   }
 
   .content {
-    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
@@ -167,21 +184,17 @@ $version-margin: 0.35em;
     justify-content: center;
     padding: 0 0.4em;
     z-index: 1;
-    transition-duration: 0.5s;
+    cursor: pointer;
 
     &:hover[transparent="true"] {
-      opacity: 0;
-
-      > *:not(.link) {
-        pointer-events: none;
-        user-select: none;
+      .blocker, 
+      .main-center {
+        opacity: 0;
       }
-    }
 
-    .link {
-      width: 100%;
-      height: 100%;
-      position: absolute;
+      .main-lt {
+        opacity: 1;
+      }
     }
 
     .blocker {
@@ -193,35 +206,89 @@ $version-margin: 0.35em;
       z-index: -1;
     }
     
-    > * {
+    * {
+      transition: all $transition-duration ease;
       font-family: Arial, Helvetica, sans-serif;
       text-align: center;
+      user-select: none;
     }
 
-    .icon {
-      width: 3em;
-      margin-bottom: -1em;
+    .main-center {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
       border-radius: 5px;
-      display: block;
+      column-gap: 1.2em;
 
-      &[src="broken"] {
-        display: none;
+      .icon {
+        height: 3.5em;
+        border-radius: 5px;
+        display: block;
+      }
+
+      .info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 1em;
+        padding: 0 0.1em;
+        
+        .name {
+          width: 100%;
+          overflow: hidden;
+          font-size: 1.35rem;
+          color: #effefa;
+          font-weight: 800;
+          border-bottom: 1px solid #aaa;
+          width: auto;
+          text-overflow: ellipsis;
+        }
+
+        .desc {
+          font-size: 0.97rem;
+          color: #a7a7b6;
+          word-break: break-all;
+          text-overflow: ellipsis;
+        }
       }
     }
 
-    .name {
-      font-size: 1.35rem;
-      color: #fff;
-      font-weight: 800;
-      padding-bottom: 2px;
-      border-bottom: 1px solid #aaa;
-      margin-bottom: 0.8em;
-    }
-
-    .desc {
-      font-size: 0.97rem;
-      color: #a7a7b6;
-      word-break: break-all;
+    .main-lt {
+      opacity: 0;
+      position: absolute;
+      top: $main-lt-margin;
+      left: $main-lt-margin;
+      height: 40px;
+      background-color: rgba(50, 50, 50, 0.4);
+      backdrop-filter: blur(8px) brightness(0.8);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0.4em;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.65);
+    
+      .icon {
+        border-radius: 5px;
+        height: 2em;
+        margin-right: 0.5em;
+      }
+      
+      .name {
+        font-size: 1.1rem;
+        border: none;
+        color: #ebeaeb;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: keep-all;
+      }
     }
   }
 }
@@ -230,5 +297,8 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+img {
+  cursor: initial !important;
 }
 </style>
