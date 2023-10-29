@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="relative-project-panel"><slot></slot></div>
@@ -7,8 +6,10 @@
 
 <style scoped lang="scss">
 .relative-project-panel {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
