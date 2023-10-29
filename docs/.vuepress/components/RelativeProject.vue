@@ -1,71 +1,79 @@
 <script setup lang="ts">
-import {CSSProperties, ref} from 'vue';
+import { CSSProperties, ref } from "vue";
 
 enum ThirdpartyType {
   github,
   gitee,
   gitlab,
-  other
+  other,
 }
 
-type Thirdparty = keyof typeof ThirdpartyType
+type Thirdparty = keyof typeof ThirdpartyType;
 
 interface ProjectProps {
-  name: string
-  desc?: string
-  url: string
-  logo?: string
+  name: string;
+  desc?: string;
+  url: string;
+  logo?: string;
   thirdparty?: {
-    type: Thirdparty
-    url: string
-    tip?: string
-  }[]
-  preview?: string
-  version?: string
+    type: Thirdparty;
+    url: string;
+    tip?: string;
+  }[];
+  preview?: string;
+  version?: string;
 }
 
 const props = defineProps<ProjectProps>();
 
 const icons: Record<Thirdparty, string> = {
-  github: 'github',
-  gitlab: 'gitlab',
-  gitee: 'gitee',
-  other: 'arrow'
-}
+  github: "github",
+  gitlab: "gitlab",
+  gitee: "gitee",
+  other: "arrow",
+};
 const titles: Record<Thirdparty, string> = {
-  gitee: '源代码',
-  github: '源代码',
-  gitlab: '源代码',
-  other: '第三方站点'
-}
+  gitee: "源代码",
+  github: "源代码",
+  gitlab: "源代码",
+  other: "第三方站点",
+};
 
 const containerStyle = ref<CSSProperties>({
   backgroundImage: `url("${props.preview}")`,
-})
+});
 
-const hoverAreaElm = ref<HTMLElement>()
+const hoverAreaElm = ref<HTMLElement>();
 
 function toOuter(url: string) {
   window.open(url, "_blank");
 }
 
 function brokenImage(ev: Event) {
-  (<HTMLImageElement>ev.currentTarget).style.display = 'none'
+  (<HTMLImageElement>ev.currentTarget).style.display = "none";
 }
 </script>
 
 <template>
   <div class="partnership-project" :style="containerStyle">
-    <div class="content" ref="hoverAreaElm"
-         :transparent="Boolean(props.preview)"
-         :title="props.name"
-         @click="toOuter(props.url)"
+    <div
+      class="content"
+      ref="hoverAreaElm"
+      :transparent="Boolean(props.preview)"
+      :title="props.name"
+      @click="toOuter(props.url)"
     >
       <div class="blocker"></div>
 
       <!-- hover 时消失 -->
       <div class="main-center">
-        <img class="icon" :alt="props.name" :src="props.logo" v-if="props.logo" @error="brokenImage">
+        <img
+          class="icon"
+          :alt="props.name"
+          :src="props.logo"
+          v-if="props.logo"
+          @error="brokenImage"
+        />
         <div class="info">
           <div class="name" :title="props.name">{{ props.name }}</div>
           <span class="desc" v-if="props.desc" :title="props.desc">{{ props.desc }}</span>
@@ -74,7 +82,13 @@ function brokenImage(ev: Event) {
 
       <!-- hover 时出现 -->
       <div class="main-lt">
-        <img class="icon" :alt="props.name" :src="props.logo" v-if="props.logo" @error="brokenImage">
+        <img
+          class="icon"
+          :alt="props.name"
+          :src="props.logo"
+          v-if="props.logo"
+          @error="brokenImage"
+        />
         <div class="name" :title="props.name">{{ props.name }}</div>
       </div>
     </div>

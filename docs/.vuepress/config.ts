@@ -1,9 +1,9 @@
 import { defineUserConfig } from "vuepress";
-import { viteBundler } from '@vuepress/bundler-vite'
+import { viteBundler } from "@vuepress/bundler-vite";
 import theme from "./theme.js";
 import { redirectPlugin } from "vuepress-plugin-redirect";
-import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
-import { docsearchPlugin } from '@vuepress/plugin-docsearch'
+import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 
 export default defineUserConfig({
   base: "/",
@@ -25,7 +25,7 @@ export default defineUserConfig({
 
   plugins: [
     googleAnalyticsPlugin({
-      id: 'G-H6BK8H0332',
+      id: "G-H6BK8H0332",
     }),
     docsearchPlugin({
       appId: "8RHTTFZDBN",
@@ -34,8 +34,8 @@ export default defineUserConfig({
       locales: {
         "/zh/": {
           placeholder: "搜索文档",
-          translations:{
-            button:{
+          translations: {
+            button: {
               buttonText: "搜索文档",
               buttonAriaLabel: "搜索文档",
             },
@@ -71,17 +71,17 @@ export default defineUserConfig({
                 reportMissingResultsLinkText: "点击反馈",
               },
             },
-          }
+          },
         },
         "/en/": {
           placeholder: "Search documents",
-          translations:{
-            button:{
-              buttonText: "Search documents"
-            }
-          }
-        }
-      }
+          translations: {
+            button: {
+              buttonText: "Search documents",
+            },
+          },
+        },
+      },
     }),
     redirectPlugin({
       defaultLocale: "/en/",
@@ -91,7 +91,7 @@ export default defineUserConfig({
         "/en/": ["en-US", "en-UK", "en"],
         "/zh/": ["zh-CN", "zh-TW", "zh"],
       },
-      switchLocale: "modal"
+      switchLocale: "modal",
     }),
   ],
 
@@ -101,9 +101,9 @@ export default defineUserConfig({
 
   bundler: viteBundler({
     viteOptions: {
-      build:{
-        chunkSizeWarningLimit: 1500
-      }
+      build: {
+        chunkSizeWarningLimit: 1500,
+      },
     },
     vuePluginOptions: {},
   }),
