@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CSSProperties, onMounted, ref } from 'vue';
+import {CSSProperties, ref} from 'vue';
 
 enum ThirdpartyType {
   github,
@@ -7,9 +7,10 @@ enum ThirdpartyType {
   gitlab,
   other
 }
+
 type Thirdparty = keyof typeof ThirdpartyType
 
-const props = withDefaults(defineProps<{
+interface ProjectProps {
   name: string
   desc?: string
   url: string
@@ -21,7 +22,9 @@ const props = withDefaults(defineProps<{
   }[]
   preview?: string
   version?: string
-}>(), {})
+}
+
+const props = defineProps<ProjectProps>();
 
 const icons: Record<Thirdparty, string> = {
   github: 'github',
@@ -41,10 +44,6 @@ const containerStyle = ref<CSSProperties>({
 })
 
 const hoverAreaElm = ref<HTMLElement>()
-const hoverAreaStyle = ref<CSSProperties>({})
-
-onMounted(() => {
-})
 
 function toOuter(url: string) {
   window.open(url, "_blank");
@@ -57,22 +56,26 @@ function brokenImage(ev: Event) {
 
 <template>
   <div class="partnership-project" :style="containerStyle">
-    <div class="content" ref="hoverAreaElm" :transparent="Boolean(props.preview)" :title="props.name" @click="toOuter(props.url)">
+    <div class="content" ref="hoverAreaElm"
+         :transparent="Boolean(props.preview)"
+         :title="props.name"
+         @click="toOuter(props.url)"
+    >
       <div class="blocker"></div>
 
       <!-- hover 时消失 -->
       <div class="main-center">
         <img class="icon" :alt="props.name" :src="props.logo" v-if="props.logo" @error="brokenImage">
         <div class="info">
-          <div class="name">{{ props.name }}</div>
-          <span class="desc" v-if="props.desc">{{ props.desc }}</span>
+          <div class="name" :title="props.name">{{ props.name }}</div>
+          <span class="desc" v-if="props.desc" :title="props.desc">{{ props.desc }}</span>
         </div>
       </div>
 
       <!-- hover 时出现 -->
       <div class="main-lt">
         <img class="icon" :alt="props.name" :src="props.logo" v-if="props.logo" @error="brokenImage">
-        <div class="name">{{ props.name }}</div>
+        <div class="name" :title="props.name">{{ props.name }}</div>
       </div>
     </div>
 
@@ -98,7 +101,8 @@ $thirdparty-margin: 0.3em;
 $thirdparty-item-size: 1.5em;
 $transition-duration: 0.8s;
 $version-margin: 0.35em;
-$main-lt-margin: 1em;
+$left-margin: 0.2em;
+$main-lt-size: 1.5em;
 
 .partnership-project {
   position: relative;
@@ -118,21 +122,18 @@ $main-lt-margin: 1em;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    max-width: 48%;
     position: absolute;
-    bottom: $version-margin;
-    left: $version-margin;
-    background-color: rgba(47, 47, 47, 0.5);
-    backdrop-filter: blur(10px) brightness(0.9);
+    bottom: $left-margin;
+    left: $left-margin;
+    background-color: rgba(50, 50, 50, 0.4);
+    backdrop-filter: blur(10px) brightness(0.75);
     border-radius: 5px;
-    overflow: hidden;
     height: calc(1rem + 0.2em);
     z-index: 1;
     padding: 0.1em 0.2em;
     pointer-events: none;
     user-select: none;
     color: #dae3e8;
-    text-overflow: ellipsis;
     font-size: 1.05rem;
     word-break: keep-all;
     line-height: 1rem;
@@ -185,7 +186,7 @@ $main-lt-margin: 1em;
     cursor: pointer;
 
     &:hover[transparent="true"] {
-      .blocker, 
+      .blocker,
       .main-center {
         opacity: 0;
       }
@@ -203,7 +204,7 @@ $main-lt-margin: 1em;
       pointer-events: none;
       z-index: -1;
     }
-    
+
     * {
       transition: all $transition-duration ease;
       font-family: Arial, Helvetica, sans-serif;
@@ -215,44 +216,46 @@ $main-lt-margin: 1em;
       position: absolute;
       width: 100%;
       height: 100%;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      border-radius: 5px;
-      column-gap: 1.2em;
 
       .icon {
+        // todo: width 小于 300 时会出现问题
+        max-height: calc(100% - 4rem);
         height: 3.5em;
+        aspect-ratio: 1 / 1;
         border-radius: 5px;
-        display: block;
+        margin: 0 auto;
       }
 
       .info {
         position: relative;
+        max-width: calc(100% - 0.4em);
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        margin-top: 1em;
-        padding: 0 0.1em;
-        
+        margin: 0 0.2em;
+
         .name {
+          white-space: nowrap;
           width: 100%;
           overflow: hidden;
           font-size: 1.35rem;
           color: #effefa;
           font-weight: 800;
           border-bottom: 1px solid #aaa;
-          width: auto;
           text-overflow: ellipsis;
         }
 
         .desc {
+          white-space: nowrap;
           font-size: 0.97rem;
           color: #a7a7b6;
-          word-break: break-all;
+          word-break: keep-all;
+          max-width: 100%;
+          overflow: hidden;
           text-overflow: ellipsis;
         }
       }
@@ -261,31 +264,34 @@ $main-lt-margin: 1em;
     .main-lt {
       opacity: 0;
       position: absolute;
-      top: $main-lt-margin;
-      left: $main-lt-margin;
-      height: 40px;
+      max-width: calc(50% - #{$left-margin} - #{$main-lt-size});
+      top: $left-margin;
+      left: $left-margin;
+      height: $main-lt-size;
       background-color: rgba(50, 50, 50, 0.4);
       backdrop-filter: blur(8px) brightness(0.8);
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding: 0.4em;
+      padding: 0.3em;
+      column-gap: 0.3em;
       border-radius: 5px;
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.65);
-    
+      box-shadow: 0 0 0.1em rgba(255, 255, 255, 0.65);
+
       .icon {
         border-radius: 5px;
-        height: 2em;
-        margin-right: 0.5em;
+        height: $main-lt-size;
+        width: $main-lt-size;
       }
-      
+
       .name {
         font-size: 1.1rem;
-        border: none;
+        border-bottom: 1px solid #aaa;
         color: #ebeaeb;
         overflow: hidden;
         text-overflow: ellipsis;
         word-break: keep-all;
+        white-space: nowrap;
       }
     }
   }
@@ -296,6 +302,7 @@ ul {
   padding: 0;
   list-style: none;
 }
+
 img {
   cursor: initial !important;
 }
