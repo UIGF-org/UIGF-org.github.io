@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CSSProperties, ref } from "vue";
+import { CSSProperties, onMounted, ref, watch } from "vue";
 
 enum ThirdpartyType {
   github,
@@ -39,12 +39,6 @@ const titles: Record<Thirdparty, string> = {
   other: "第三方站点",
 };
 
-const containerStyle = ref<CSSProperties>({
-  backgroundImage: `url("${props.preview}")`,
-});
-
-const hoverAreaElm = ref<HTMLElement>();
-
 function toOuter(url: string) {
   window.open(url, "_blank");
 }
@@ -52,28 +46,48 @@ function toOuter(url: string) {
 function brokenImage(ev: Event) {
   (<HTMLImageElement>ev.currentTarget).style.display = "none";
 }
+
+const imgs = ref<Partial<{
+  preview: string
+  logo: string
+}>>()
+function processImgUrl(url: string | undefined) {
+  if (!url) {
+    return undefined
+  }
+
+  const tempUrl = url.toLowerCase()
+  const origin = window.location.origin
+  if (tempUrl.startsWith('/')) {
+    return `${origin}${url}`
+  }
+  else if (tempUrl.startsWith('http')) {
+    return url
+  }
+  else {
+    return `${origin}/${url}`
+  }
+}
+function processImgs() {
+  imgs.value = {
+    preview: processImgUrl(props.preview),
+    logo: processImgUrl(props.logo)
+  }
+}
+watch(props, processImgs)
+onMounted(processImgs)
 </script>
 
 <template>
-  <div class="partnership-project" :style="containerStyle">
-    <div
-      class="content"
-      ref="hoverAreaElm"
-      :transparent="Boolean(props.preview)"
-      :title="props.name"
-      @click="toOuter(props.url)"
-    >
+  <div class="partnership-project" :style="{
+    backgroundImage: `url('${imgs?.preview}')`,
+  }">
+    <div class="content" :transparent="Boolean(imgs?.preview)" :title="props.name" @click="toOuter(props.url)">
       <div class="blocker"></div>
 
       <!-- hover 时消失 -->
       <div class="main-center">
-        <img
-          class="icon"
-          :alt="props.name"
-          :src="props.logo"
-          v-if="props.logo"
-          @error="brokenImage"
-        />
+        <img class="icon" :alt="props.name" :src="imgs.logo" v-if="imgs?.logo" @error="brokenImage">
         <div class="info">
           <div class="name" :title="props.name">{{ props.name }}</div>
           <span class="desc" v-if="props.desc" :title="props.desc">{{ props.desc }}</span>
@@ -82,13 +96,7 @@ function brokenImage(ev: Event) {
 
       <!-- hover 时出现 -->
       <div class="main-lt">
-        <img
-          class="icon"
-          :alt="props.name"
-          :src="props.logo"
-          v-if="props.logo"
-          @error="brokenImage"
-        />
+        <img class="icon" :alt="props.name" :src="imgs.logo" v-if="imgs?.logo" @error="brokenImage">
         <div class="name" :title="props.name">{{ props.name }}</div>
       </div>
     </div>
@@ -116,15 +124,15 @@ $thirdparty-item-size: 1.5em;
 $transition-duration: 0.8s;
 $version-margin: 0.35em;
 $left-margin: 0.2em;
-$main-lt-size: 1.5em;
+$main-lt-size: 1.9em;
 
 .partnership-project {
   position: relative;
   aspect-ratio: 16 / 9;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   background-color: $fallback-preview-color;
-  margin: 8px 11px;
   border-radius: 8px;
   overflow: hidden;
   display: inline-flex;
@@ -132,25 +140,25 @@ $main-lt-size: 1.5em;
   z-index: 0;
 
   .version {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    $font-size: 1.05rem;
+
     position: absolute;
     bottom: $left-margin;
     left: $left-margin;
     background-color: rgba(50, 50, 50, 0.4);
     backdrop-filter: blur(10px) brightness(0.75);
     border-radius: 5px;
-    height: calc(1rem + 0.2em);
     z-index: 1;
     padding: 0.1em 0.2em;
     pointer-events: none;
+    display: block;
+    line-height: 1rem;
+    height: $font-size;
+    font-size: $font-size;
+    text-align: center;
+    word-break: keep-all;
     user-select: none;
     color: #dae3e8;
-    font-size: 1.05rem;
-    word-break: keep-all;
-    line-height: 1rem;
   }
 
   .thirdparty {
@@ -278,10 +286,11 @@ $main-lt-size: 1.5em;
     .main-lt {
       opacity: 0;
       position: absolute;
-      max-width: calc(50% - #{$left-margin} - #{$main-lt-size});
+      max-width: calc(50% + #{$main-lt-size} - #{$left-margin});
       top: $left-margin;
       left: $left-margin;
-      height: $main-lt-size;
+      max-height: $main-lt-size;
+      height: auto;
       background-color: rgba(50, 50, 50, 0.4);
       backdrop-filter: blur(8px) brightness(0.8);
       display: flex;
@@ -300,7 +309,6 @@ $main-lt-size: 1.5em;
 
       .name {
         font-size: 1.1rem;
-        border-bottom: 1px solid #aaa;
         color: #ebeaeb;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -319,5 +327,14 @@ ul {
 
 img {
   cursor: initial !important;
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 </style>
