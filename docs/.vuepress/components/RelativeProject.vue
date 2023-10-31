@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { CSSProperties, computed, onMounted, ref, watch } from "vue";
-import { useLocalStorage } from '@vueuse/core'
+import { onMounted, ref, watch } from "vue";
+import { useLocalStorage } from "@vueuse/core";
 
 enum ThirdpartyType {
   github,
@@ -27,9 +27,9 @@ interface ProjectProps {
 
 const props = defineProps<ProjectProps>();
 
-const theme = useLocalStorage<'auto' | 'dark' | 'light'>('vuepress-theme-hope-scheme', 'auto')
-const themeMedia = matchMedia("(prefers-color-scheme: light)")
-themeMedia.addEventListener('change', e => theme.value = e.matches ? 'light' : 'dark')
+const theme = useLocalStorage<"auto" | "dark" | "light">("vuepress-theme-hope-scheme", "auto");
+const themeMedia = matchMedia("(prefers-color-scheme: light)");
+themeMedia.addEventListener("change", e => theme.value = e.matches ? "light" : "dark");
 
 const icons: Record<Thirdparty, string> = {
   github: "github",
@@ -55,32 +55,33 @@ function brokenImage(ev: Event) {
 const imgs = ref<Partial<{
   preview: string
   logo: string
-}>>()
+}>>();
+
 function processImgUrl(url: string | undefined) {
   if (!url) {
-    return undefined
+    return undefined;
   }
 
-  const tempUrl = url.toLowerCase()
-  const origin = window.location.origin
-  if (tempUrl.startsWith('/')) {
-    return `${origin}${url}`
-  }
-  else if (tempUrl.startsWith('http')) {
-    return url
-  }
-  else {
-    return `${origin}/${url}`
+  const tempUrl = url.toLowerCase();
+  const origin = window.location.origin;
+  if (tempUrl.startsWith("/")) {
+    return `${origin}${url}`;
+  } else if (tempUrl.startsWith("http")) {
+    return url;
+  } else {
+    return `${origin}/${url}`;
   }
 }
+
 function processImgs() {
   imgs.value = {
     preview: processImgUrl(props.preview),
-    logo: processImgUrl(props.logo)
-  }
+    logo: processImgUrl(props.logo),
+  };
 }
-watch(props, processImgs)
-onMounted(processImgs)
+
+watch(props, processImgs);
+onMounted(processImgs);
 </script>
 
 <template>
@@ -125,43 +126,36 @@ onMounted(processImgs)
 <style scoped lang="scss">
 $fallback-preview-color: #a09783;
 $fallback-preview-color-light: #bab3b8;
-$thirdparty-margin: 0.3em;
 $thirdparty-item-size: 1.5em;
 $transition-duration: 0.8s;
 $version-margin: 0.35em;
-$left-margin: 0.2em;
+$left-margin: 0.6em;
 $main-lt-size: 1.9em;
 
 .partnership-project {
   &[theme='light'] {
     background-color: $fallback-preview-color-light;
 
-    .version {
-      background-color: rgba(222, 200, 222, 0.6);
-      color: #212121;
-      backdrop-filter: blur(12px) brightness(0.9);
-    }
-
     .content {
       .blocker {
-        background-color: rgba(254, 253, 252, 0.6);
+        background-color: rgba(253, 249, 243, 0.6);
       }
 
       .main-center {
         .info {
           .name {
-            color: #363636;
-            border-color: #111;
+            color: #222222;
+            border-bottom: 1px solid #000;
           }
 
           .desc {
-            color: #e21102;
+            color: #666666;
           }
         }
       }
 
       .main-lt {
-        background-color: rgba(200, 200, 200, 0.5);
+        background-color: rgba(253, 249, 243, 0.6);
         backdrop-filter: blur(6px) brightness(0.8);
 
         .name {
@@ -177,21 +171,23 @@ $main-lt-size: 1.9em;
   background-position: center;
   background-repeat: no-repeat;
   background-color: $fallback-preview-color;
-  border-radius: 8px;
+  border-radius: 0.5em;
   overflow: hidden;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   z-index: 0;
 
   .version {
     $font-size: 1.05rem;
 
+    background: #0052D4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6FB1FC, #4364F7, #0052D4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+    backdrop-filter: blur(12px) brightness(0.9);
     position: absolute;
     bottom: $left-margin;
     left: $left-margin;
-    background-color: rgba(50, 50, 50, 0.4);
-    color: #dae3e8;
-    backdrop-filter: blur(10px) brightness(0.75);
     border-radius: 5px;
     z-index: 1;
     padding: 0.1em 0.2em;
@@ -207,8 +203,8 @@ $main-lt-size: 1.9em;
 
   .thirdparty {
     position: absolute;
-    bottom: $thirdparty-margin;
-    right: $thirdparty-margin;
+    bottom: $left-margin;
+    right: $left-margin;
     z-index: 1;
 
     > ul {
@@ -264,6 +260,7 @@ $main-lt-size: 1.9em;
 
     .blocker {
       background-color: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(1px);
       position: absolute;
       width: 100%;
       height: 100%;
@@ -335,7 +332,7 @@ $main-lt-size: 1.9em;
       left: $left-margin;
       max-height: $main-lt-size;
       height: auto;
-      background-color: rgba(50, 50, 50, 0.4);
+      background-color: rgba(13, 17, 23, 0.4);
       backdrop-filter: blur(8px) brightness(0.8);
       display: flex;
       justify-content: flex-start;
