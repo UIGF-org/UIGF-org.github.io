@@ -2,7 +2,7 @@
 <RelativeProjectPanel>
 
 <RelativeProject
-name="genshin wish exportfjsaiooooooooooooooooooooooo"
+name="genshin wish export"
 desc="Easily export the Genshin Impact wish record"
 url="https://github.com/biuuu/genshin-wish-export"
 logo="https://s1.ax1x.com/2023/09/09/pP6xBef.png"

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { CSSProperties, onMounted, ref, watch } from "vue";
+import { CSSProperties, computed, onMounted, ref, watch } from "vue";
+import { useLocalStorage } from '@vueuse/core'
 
 enum ThirdpartyType {
   github,
@@ -25,6 +26,10 @@ interface ProjectProps {
 }
 
 const props = defineProps<ProjectProps>();
+
+const theme = useLocalStorage<'auto' | 'dark' | 'light'>('vuepress-theme-hope-scheme', 'auto')
+const themeMedia = matchMedia("(prefers-color-scheme: light)")
+themeMedia.addEventListener('change', e => theme.value = e.matches ? 'light' : 'dark')
 
 const icons: Record<Thirdparty, string> = {
   github: "github",
@@ -81,7 +86,7 @@ onMounted(processImgs)
 <template>
   <div class="partnership-project" :style="{
     backgroundImage: `url('${imgs?.preview}')`,
-  }">
+  }" :theme="theme">
     <div class="content" :transparent="Boolean(imgs?.preview)" :title="props.name" @click="toOuter(props.url)">
       <div class="blocker"></div>
 
@@ -119,6 +124,7 @@ onMounted(processImgs)
 
 <style scoped lang="scss">
 $fallback-preview-color: #a09783;
+$fallback-preview-color-light: #bab3b8;
 $thirdparty-margin: 0.3em;
 $thirdparty-item-size: 1.5em;
 $transition-duration: 0.8s;
@@ -127,6 +133,44 @@ $left-margin: 0.2em;
 $main-lt-size: 1.9em;
 
 .partnership-project {
+  &[theme='light'] {
+    background-color: $fallback-preview-color-light;
+
+    .version {
+      background-color: rgba(222, 200, 222, 0.6);
+      color: #212121;
+      backdrop-filter: blur(12px) brightness(0.9);
+    }
+
+    .content {
+      .blocker {
+        background-color: rgba(254, 253, 252, 0.6);
+      }
+
+      .main-center {
+        .info {
+          .name {
+            color: #363636;
+            border-color: #111;
+          }
+
+          .desc {
+            color: #e21102;
+          }
+        }
+      }
+
+      .main-lt {
+        background-color: rgba(200, 200, 200, 0.5);
+        backdrop-filter: blur(6px) brightness(0.8);
+
+        .name {
+          color: #353637;
+        }
+      }
+    }
+  }
+
   position: relative;
   aspect-ratio: 16 / 9;
   background-size: cover;
@@ -146,6 +190,7 @@ $main-lt-size: 1.9em;
     bottom: $left-margin;
     left: $left-margin;
     background-color: rgba(50, 50, 50, 0.4);
+    color: #dae3e8;
     backdrop-filter: blur(10px) brightness(0.75);
     border-radius: 5px;
     z-index: 1;
@@ -158,7 +203,6 @@ $main-lt-size: 1.9em;
     text-align: center;
     word-break: keep-all;
     user-select: none;
-    color: #dae3e8;
   }
 
   .thirdparty {
@@ -183,7 +227,7 @@ $main-lt-size: 1.9em;
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: white;
+          background-color: rgb(246, 246, 246);
           text-align: center;
 
           .iconfont {
