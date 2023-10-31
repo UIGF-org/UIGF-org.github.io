@@ -126,11 +126,10 @@ onMounted(processImgs);
 <style scoped lang="scss">
 $fallback-preview-color: #a09783;
 $fallback-preview-color-light: #bab3b8;
-$thirdparty-margin: 0.3em;
 $thirdparty-item-size: 1.5em;
 $transition-duration: 0.8s;
 $version-margin: 0.35em;
-$left-margin: 0.2em;
+$left-margin: 0.6em;
 $main-lt-size: 1.9em;
 
 .partnership-project {
@@ -172,9 +171,9 @@ $main-lt-size: 1.9em;
   background-position: center;
   background-repeat: no-repeat;
   background-color: $fallback-preview-color;
-  border-radius: 8px;
+  border-radius: 0.5em;
   overflow: hidden;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   z-index: 0;
 
@@ -204,8 +203,8 @@ $main-lt-size: 1.9em;
 
   .thirdparty {
     position: absolute;
-    bottom: $thirdparty-margin;
-    right: $thirdparty-margin;
+    bottom: $left-margin;
+    right: $left-margin;
     z-index: 1;
 
     > ul {
