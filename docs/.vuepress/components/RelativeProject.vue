@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from "vue";
+import { onMounted, ref } from "vue";
 import { useLocalStorage } from "@vueuse/core";
 
 enum ThirdpartyType {
@@ -28,9 +28,6 @@ interface ProjectProps {
 const props = defineProps<ProjectProps>();
 
 const theme = useLocalStorage<"auto" | "dark" | "light">("vuepress-theme-hope-scheme", "auto");
-const themeMedia = matchMedia("(prefers-color-scheme: light)");
-themeMedia.addEventListener("change", e => theme.value = e.matches ? "light" : "dark");
-
 const icons: Record<Thirdparty, string> = {
   github: "github",
   gitlab: "gitlab",
@@ -73,15 +70,14 @@ function processImgUrl(url: string | undefined) {
   }
 }
 
-function processImgs() {
+onMounted(() => {
   imgs.value = {
     preview: processImgUrl(props.preview),
     logo: processImgUrl(props.logo),
   };
-}
-
-watch(props, processImgs);
-onMounted(processImgs);
+  matchMedia("(prefers-color-scheme: light)")
+    .addEventListener("change", e => theme.value = e.matches ? "light" : "dark");
+});
 </script>
 
 <template>
@@ -180,8 +176,8 @@ $main-lt-size: 1.9em;
   .version {
     $font-size: 1.05rem;
 
-    background: #0052D4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: #0052D4; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #6FB1FC, #4364F7, #0052D4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #ffffff;
     backdrop-filter: blur(12px) brightness(0.9);
