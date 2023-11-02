@@ -75,9 +75,16 @@ onMounted(() => {
     preview: processImgUrl(props.preview),
     logo: processImgUrl(props.logo),
   };
-  matchMedia("(prefers-color-scheme: light)")
-    .addEventListener("change", e => theme.value = e.matches ? "light" : "dark");
+  const media = matchMedia("(prefers-color-scheme: light)");
+  genMatch(media.matches);
+  media.addEventListener("change", e => genMatch(e.matches));
 });
+
+function genMatch(isMatch: boolean): void {
+  if (theme.value === "auto") {
+    isMatch ? theme.value = "light" : theme.value = "dark";
+  }
+}
 </script>
 
 <template>
