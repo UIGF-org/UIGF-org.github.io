@@ -85,42 +85,44 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="partnership-project" :style="{
+  <ClientOnly>
+    <div class="partnership-project" :style="{
     backgroundImage: `url('${imgs?.preview}')`,
   }" :theme="themeCss">
-    <div class="content" :transparent="Boolean(imgs?.preview)" :title="props.name" @click="toOuter(props.url)">
-      <div class="blocker"></div>
+      <div class="content" :transparent="Boolean(imgs?.preview)" :title="props.name" @click="toOuter(props.url)">
+        <div class="blocker"></div>
 
-      <!-- hover 时消失 -->
-      <div class="main-center">
-        <img class="icon" :alt="props.name" :src="imgs.logo" v-if="imgs?.logo" @error="brokenImage">
-        <div class="info">
+        <!-- hover 时消失 -->
+        <div class="main-center">
+          <img class="icon" :alt="props.name" :src="imgs.logo" v-if="imgs?.logo" @error="brokenImage">
+          <div class="info">
+            <div class="name" :title="props.name">{{ props.name }}</div>
+            <span class="desc" v-if="props.desc" :title="props.desc">{{ props.desc }}</span>
+          </div>
+        </div>
+
+        <!-- hover 时出现 -->
+        <div class="main-lt">
+          <img class="icon" :alt="props.name" :src="imgs.logo" v-if="imgs?.logo" @error="brokenImage">
           <div class="name" :title="props.name">{{ props.name }}</div>
-          <span class="desc" v-if="props.desc" :title="props.desc">{{ props.desc }}</span>
         </div>
       </div>
 
-      <!-- hover 时出现 -->
-      <div class="main-lt">
-        <img class="icon" :alt="props.name" :src="imgs.logo" v-if="imgs?.logo" @error="brokenImage">
-        <div class="name" :title="props.name">{{ props.name }}</div>
+      <div class="thirdparty" v-if="props.thirdparty">
+        <ul>
+          <li v-for="(platform, i) in props.thirdparty" :key="i">
+            <a :href="platform.url" :title="platform.tip ?? titles[platform.type]" target="_blank">
+              <i :class="`iconfont icon-${icons[platform.type]}`"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="version" v-if="props.version">
+        {{ props.version }}
       </div>
     </div>
-
-    <div class="thirdparty" v-if="props.thirdparty">
-      <ul>
-        <li v-for="(platform, i) in props.thirdparty" :key="i">
-          <a :href="platform.url" :title="platform.tip ?? titles[platform.type]" target="_blank">
-            <i :class="`iconfont icon-${icons[platform.type]}`"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="version" v-if="props.version">
-      {{ props.version }}
-    </div>
-  </div>
+  </ClientOnly>
 </template>
 
 <style scoped lang="scss">
