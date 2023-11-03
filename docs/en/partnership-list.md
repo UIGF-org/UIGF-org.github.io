@@ -40,7 +40,7 @@ name="应急食品"
 desc="安卓平台下的原神工具客户端"
 logo="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01agfnd91g6dvMzibmE_!!1797064093.png"
 url="https://gtool.mukapp.top/"
-preview="/partnerships/mukapp/preview.webp"
+preview="partnerships/mukapp/preview.webp"
 />
 
 <SiteInfo
@@ -48,7 +48,7 @@ name="提瓦特小助手"
 desc="专注旅行者服务的微信小程序"
 logo="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01wVRiEq1g6dvGG2mmX_!!1797064093.png"
 url="https://www.yshelper.com/index.php"
-preview="/partnerships/teyvat-preview.png"
+preview="partnerships/teyvat-preview.png"
 />
 
 <SiteInfo
@@ -130,7 +130,7 @@ desc="A toolbox for Genshin Impact 100% running in browser."
 logo="https://avatars.githubusercontent.com/u/82107463"
 url="https://cocogoat.work/"
 repo="https://github.com/yuehaiTeam/cocogoat"
-preview="/partnerships/cocogoat.png"
+preview="partnerships/cocogoat.png"
 />
 
 <SiteInfo

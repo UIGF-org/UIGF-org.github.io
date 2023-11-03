@@ -11,13 +11,16 @@ export const enNavbar = navbar([
     children: [
       {
         text: "Genshin Impact",
-        children: ["UIGF.md", "UIAF.md"],
+        children: [
+            "UIGF.md",
+            "UIAF.md"
+        ]
       },
       {
         text: "Honkai: Star Rail",
-        children: ["SRGF.md"],
-      },
-    ],
+        children: ["SRGF.md"]
+      }
+    ]
   },
   {
     text: "Useful Tools",
@@ -26,8 +29,8 @@ export const enNavbar = navbar([
       {
         text: "MiHoYo API",
         link: "https://github.com/Kamisato-Ayaka-233/mihoyo-api-collect",
-        icon: "repo",
+        icon: "repo"
       },
-    ],
+    ]
   },
 ]);
