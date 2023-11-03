@@ -21,16 +21,13 @@ export const enSidebar = sidebar({
       children: [
         {
           text: "Genshin Impact",
-          children: [
-              "UIGF.md",
-              "UIAF.md"
-          ]
+          children: ["UIGF.md", "UIAF.md"],
         },
         {
           text: "Honkai: Star Rail",
-          children: ["SRGF.md"]
-        }
-      ]
-    }
+          children: ["SRGF.md"],
+        },
+      ],
+    },
   ],
 });

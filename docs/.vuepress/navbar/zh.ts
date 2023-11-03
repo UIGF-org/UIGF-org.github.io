@@ -11,16 +11,13 @@ export const zhNavbar = navbar([
     children: [
       {
         text: "原神",
-        children: [
-          "UIGF.md",
-          "UIAF.md"
-        ]
+        children: ["UIGF.md", "UIAF.md"],
       },
       {
         text: "崩坏：星穹铁道",
-        children: ["SRGF.md"]
-      }
-    ]
+        children: ["SRGF.md"],
+      },
+    ],
   },
   {
     text: "实用工具",
@@ -29,8 +26,8 @@ export const zhNavbar = navbar([
       {
         text: "米哈游 API 合集",
         link: "/zh/MiHoYo-API-Collection-project.html",
-        icon: "api"
+        icon: "api",
       },
-    ]
+    ],
   },
 ]);

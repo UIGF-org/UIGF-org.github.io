@@ -18,44 +18,40 @@ export const zhSidebar = sidebar({
       icon: "proposal",
       text: "标准化文档",
       prefix: "standards/",
-        children: [
-            {
-                text: "原神",
-                children: [
-                    "UIGF.md",
-                    "UIAF.md"
-                ]
-            },
-            {
-                text: "崩坏：星穹铁道",
-                children: ["SRGF.md"]
-            }
-        ]
+      children: [
+        {
+          text: "原神",
+          children: ["UIGF.md", "UIAF.md"],
+        },
+        {
+          text: "崩坏：星穹铁道",
+          children: ["SRGF.md"],
+        },
+      ],
     },
     {
       icon: "api",
       text: "米哈游 API 合集",
       children: [
-          "MiHoYo-API-Collection-project.md",
-          {
-              text: "米游社",
-              icon: "community",
-              prefix: "mihoyo-api-collection/hoyolab",
-              children: "structure"
-          },
-          {
-              text: "其它",
-              icon: "stack",
-              prefix: "mihoyo-api-collection/other",
-              children: "structure",
-          },
-          {
-              icon: "proposal",
-              text: "向 API 合集贡献",
-              link: "mihoyo-api-collection/CONTRIBUTING.md"
-          }
-      ]
+        "MiHoYo-API-Collection-project.md",
+        {
+          text: "米游社",
+          icon: "community",
+          prefix: "mihoyo-api-collection/hoyolab",
+          children: "structure",
+        },
+        {
+          text: "其它",
+          icon: "stack",
+          prefix: "mihoyo-api-collection/other",
+          children: "structure",
+        },
+        {
+          icon: "proposal",
+          text: "向 API 合集贡献",
+          link: "mihoyo-api-collection/CONTRIBUTING.md",
+        },
+      ],
     },
-
   ],
 });
