@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { useLocalStorage } from "@vueuse/core";
 
 enum ThirdpartyType {
@@ -70,60 +70,59 @@ function processImgUrl(url: string | undefined) {
   }
 }
 
+const themeCss = computed<string>(() => {
+  if (theme.value !== "auto") return theme.value;
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
+  return "light";
+});
+
 onMounted(() => {
   imgs.value = {
     preview: processImgUrl(props.preview),
     logo: processImgUrl(props.logo),
   };
-  const media = matchMedia("(prefers-color-scheme: light)");
-  genMatch(media.matches);
-  media.addEventListener("change", e => genMatch(e.matches));
 });
-
-function genMatch(isMatch: boolean): void {
-  if (theme.value === "auto") {
-    isMatch ? theme.value = "light" : theme.value = "dark";
-  }
-}
 </script>
 
 <template>
-  <div class="partnership-project" :style="{
+  <ClientOnly>
+    <div class="partnership-project" :style="{
     backgroundImage: `url('${imgs?.preview}')`,
-  }" :theme="theme">
-    <div class="content" :transparent="Boolean(imgs?.preview)" :title="props.name" @click="toOuter(props.url)">
-      <div class="blocker"></div>
+  }" :theme="themeCss">
+      <div class="content" :transparent="Boolean(imgs?.preview)" :title="props.name" @click="toOuter(props.url)">
+        <div class="blocker"></div>
 
-      <!-- hover 时消失 -->
-      <div class="main-center">
-        <img class="icon" :alt="props.name" :src="imgs.logo" v-if="imgs?.logo" @error="brokenImage">
-        <div class="info">
+        <!-- hover 时消失 -->
+        <div class="main-center">
+          <img class="icon" :alt="props.name" :src="imgs.logo" v-if="imgs?.logo" @error="brokenImage">
+          <div class="info">
+            <div class="name" :title="props.name">{{ props.name }}</div>
+            <span class="desc" v-if="props.desc" :title="props.desc">{{ props.desc }}</span>
+          </div>
+        </div>
+
+        <!-- hover 时出现 -->
+        <div class="main-lt">
+          <img class="icon" :alt="props.name" :src="imgs.logo" v-if="imgs?.logo" @error="brokenImage">
           <div class="name" :title="props.name">{{ props.name }}</div>
-          <span class="desc" v-if="props.desc" :title="props.desc">{{ props.desc }}</span>
         </div>
       </div>
 
-      <!-- hover 时出现 -->
-      <div class="main-lt">
-        <img class="icon" :alt="props.name" :src="imgs.logo" v-if="imgs?.logo" @error="brokenImage">
-        <div class="name" :title="props.name">{{ props.name }}</div>
+      <div class="thirdparty" v-if="props.thirdparty">
+        <ul>
+          <li v-for="(platform, i) in props.thirdparty" :key="i">
+            <a :href="platform.url" :title="platform.tip ?? titles[platform.type]" target="_blank">
+              <i :class="`iconfont icon-${icons[platform.type]}`"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="version" v-if="props.version">
+        {{ props.version }}
       </div>
     </div>
-
-    <div class="thirdparty" v-if="props.thirdparty">
-      <ul>
-        <li v-for="(platform, i) in props.thirdparty" :key="i">
-          <a :href="platform.url" :title="platform.tip ?? titles[platform.type]" target="_blank">
-            <i :class="`iconfont icon-${icons[platform.type]}`"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="version" v-if="props.version">
-      {{ props.version }}
-    </div>
-  </div>
+  </ClientOnly>
 </template>
 
 <style scoped lang="scss">
@@ -132,7 +131,7 @@ $fallback-preview-color-light: #bab3b8;
 $thirdparty-item-size: 1.5em;
 $transition-duration: 0.8s;
 $version-margin: 0.35em;
-$left-margin: 0.6em;
+$left-margin: 0.7em;
 $main-lt-size: 1.9em;
 
 .partnership-project {
@@ -141,7 +140,7 @@ $main-lt-size: 1.9em;
 
     .content {
       .blocker {
-        background-color: rgba(253, 249, 243, 0.6);
+        background-color: rgba(255, 255, 255, 0.63);
       }
 
       .main-center {
@@ -152,7 +151,7 @@ $main-lt-size: 1.9em;
           }
 
           .desc {
-            color: #666666;
+            color: mix(#000000, #777777);
           }
         }
       }
@@ -272,8 +271,7 @@ $main-lt-size: 1.9em;
     }
 
     * {
-      transition: all $transition-duration ease;
-      font-family: Arial, Helvetica, sans-serif;
+      transition: all 0.3s linear;
       text-align: center;
       user-select: none;
     }
@@ -298,7 +296,7 @@ $main-lt-size: 1.9em;
 
       .info {
         position: relative;
-        max-width: calc(100% - 0.4em);
+        max-width: calc(100% - 2 * $left-margin);
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -318,11 +316,12 @@ $main-lt-size: 1.9em;
         .desc {
           white-space: nowrap;
           font-size: 0.97rem;
-          color: #a7a7b6;
+          color: mix(#ffffff, #999999);
           word-break: keep-all;
           max-width: 100%;
           overflow: hidden;
           text-overflow: ellipsis;
+          font-weight: 700;
         }
       }
     }
