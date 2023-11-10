@@ -43,7 +43,8 @@ head:
 ### `region_time_zone`
 
 由于在获取祈愿记录时得到的`time`为服务器时间，为了准确判断时间的时区偏移，引入此字段。
-与 SRGF 不同，由于无法直接从服务器获取`region_time_zone`，因此我们需要根据`uid`进行推算。
+
+与 SRGF 不同，由于无法直接从服务器获取`region_time_zone`，因此，在导出方未提供此字段时，需要根据 `uid` 进行推断。
 
 #### 映射关系
 
@@ -54,6 +55,7 @@ head:
 | `Any`        | `8`                |
 
 App 不应假定 `region_time_zone` 的值为上表中给出的值，应具有处理非标准 `region_time_zone` 值的能力。
+若 `region_time_zone` 的值与 `uid` 推断结果不一致，则优先选择 `region_time_zone` 给出的值。
 
 ## `list` 字段说明
 
