@@ -34,6 +34,10 @@
             "type": "string",
             "title": "UIGF 版本号",
             "pattern": "v\\d+\\.\\d+"
+          },
+          "region_time_zone": {
+            "type": "number",
+            "title": "区域时区偏移"
           }
         },
         "required": ["uid", "uigf_version"],
