@@ -10,6 +10,10 @@ head:
 
 > Uniformed Interchangeable GachaLog Format standard (UIGF) v2.2 <Badge text="Legacy" type="message" />
 
+::: warning Warning
+This standard is outdated, [UIGF v2.3](UIGF-legacy-v2.3.md) is the successor.
+:::
+
 ## Manifesto
 
 With the conflict between Genshin Impact's popularity and its lack of software supporting, there has been variety of 

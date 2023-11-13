@@ -7,7 +7,7 @@ head:
       content: Genshin, Genshin Impact, Gacha, Gacha log, UIGF
 ---
 # Uniformed Interchangeable GachaLog Format Standard v2.3
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.3 <Badge text="Current" type="message" />
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.3 <Badge text="Legacy" type="message" />
 
 ::: warning Usage of UIGF Statement Requirement
 
@@ -16,54 +16,39 @@ Application must declare support of UIGF data format only after supporting of bo
 Including only importing feature reduces the interchangeability of user data, and puts the data in a risk that user can not control, which is not in line with intention of UIGF-Org.
 :::
 
+::: warning Warning
+This standard is outdated, [UIGF v2.4](UIGF.md) is the successor.
+:::
+
 ## Versions Features
 | Version                       | Note                                                                              | Compatibility  |
 |-------------------------------|-----------------------------------------------------------------------------------|----------------|
 | `v2.0`                        | First public version                                                              | v2.0           |
 | `v2.1`                        | Simplified in language expression, data format is completely consistent with v2.0 | v2.1 and lower |
 | [`v2.2`](UIGF-legacy-v2.2.md) | Add `info.export_timestamp` to fill UNIX timestamp                                | v2.2 and lower |
-| [`v2.3`](UIGF-legacy-v2.3.md) | Add support for non-Chinese environment, express in Json Schema                   | v2.3 and lower |
-| `v2.4`                        | Add `info.region_time_zone` to support time zone processing                       | v2.4 and lower |
+| `v2.3`                        | Add support for non-Chinese environment, express in Json Schema                   | v2.3 and lower |
 
-### What's Changed in v2.4
+### What's Changed in v2.3
+* UIGF.W standard is deprecated
 * Localization compatibility enhancements
-  * Added `region_time_zone` field in the `info` object
+    * `name` is not required any more
+    * `item_name` is not required any more
+    * **`item_id` is now a required field**
 
 
-## `info` Data Field Explanations
-### `region_time_zone`
-
-Since `time` received from wish records are server local time, this field is introduced in order to accurately 
-determine the time zone offset of the wish record time.
-
-Unlike SRGF, since `region_time_zone` cannot be obtained directly from the game server, when this field is not 
-provided by the exporter, it needs to be inferred based on the uid.
-
-#### Mapping
-
-| First Character of `uid` | `region_time_zone` | Game Server                       |
-|--------------------------|--------------------|-----------------------------------|
-| `'6'`                    | `-5`               | os_usa                            |
-| `'7'`                    | `1`                | os_euro                           |
-| Any other                | `8`                | os_cht, os_asia, cn_gf01, cn_qd01 |
-
-Application should not presume value in `region_time_zone` match the value in the form above, and should be able to handle
-non-standardized `region_time_zone` values. If `region_time_zone` value is different from value inferred based on `uid`, 
-then value provided by `region_time_zone` should be preferred.
-
-## `list` Data Field Explanations
+## Data Field Explanations
 ### id
 
 There is a special field `id` in the item, which is included in Genshin Impact official API wish history API and represents
 unique ID of each wish record. When exporting data in UIGF format, app should:
 - Make sure each item has a unique and valid `id`
-- If there is not `id` included in the record, then the missing `id` field should be filled starting form the next item 
-with a valid `id`. The assigned data should be sequentially decreased (time-ordered), with each decrease being a value 
-of `1`.
+- If there is not `id` included in the record, then the missing `id` field should be filled starting form the next item
+  with a valid `id`. The assigned data should be sequentially decreased (time-ordered), with each decrease being a value
+  of `1`.
 
 ### gacha_type
 
-The probabilistic wish system has a shared pity rule, so we need extra field to identify the pool. 
+The probabilistic wish system has a shared pity rule, so we need extra field to identify the pool.
 In UIGF format, we added a uigf_gacha_type field addition to the original wish record data.
 
 Please remember to add corresponding uigf_gacha_type field when applying UIGF format
@@ -77,7 +62,7 @@ Please remember to add corresponding uigf_gacha_type field when applying UIGF fo
 | `301`             | `301` or `400` |
 | `302`             | `302`          |
 
-### `item_id`
+### item_id
 
 Item's in-game ID, refer to [UIGF API](../API.md) to get this data
 
@@ -122,10 +107,6 @@ Item's in-game ID, refer to [UIGF API](../API.md) to get this data
             "type": "string",
             "title": "UIGF Version",
             "pattern": "v\\d+\\.\\d+"
-          },
-          "region_time_zone": {
-            "type": "number",
-            "title": "Timezone offset"
           }
         },
         "required": [
