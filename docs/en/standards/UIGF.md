@@ -6,8 +6,8 @@ head:
     - name: keywords
       content: Genshin, Genshin Impact, Gacha, Gacha log, UIGF
 ---
-# Uniformed Interchangeable GachaLog Format Standard v2.3
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.3 <Badge text="Current" type="message" />
+# Uniformed Interchangeable GachaLog Format Standard v2.4
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.4 <Badge text="Current" type="message" />
 
 ::: warning Usage of UIGF Statement Requirement
 
