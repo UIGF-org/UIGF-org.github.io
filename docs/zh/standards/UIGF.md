@@ -84,114 +84,99 @@ App 不应假定 `region_time_zone` 的值为上表中给出的值，应具有�
 
 ```json
 {
-  "root": {
-    "type": "object",
-    "properties": {
-      "info": {
+  "type": "object",
+  "properties": {
+    "info": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "title": "导出记录的 UID"
+        },
+        "lang": {
+          "type": "string",
+          "title": "语言 languagecode2-country/regioncode2"
+        },
+        "export_timestamp": {
+          "type": "number",
+          "title": "导出 UNIX 时间戳（秒）"
+        },
+        "export_time": {
+          "type": "string",
+          "title": "导出时间",
+          "description": "yyyy-MM-dd HH:mm:ss"
+        },
+        "export_app": {
+          "type": "string",
+          "title": "导出 App 名称"
+        },
+        "export_app_version": {
+          "type": "string",
+          "title": "导出 App 版本"
+        },
+        "uigf_version": {
+          "type": "string",
+          "title": "UIGF 版本号",
+          "pattern": "v\\d+\\.\\d+"
+        },
+        "region_time_zone": {
+          "type": "number",
+          "title": "区域时区偏移"
+        }
+      },
+      "required": ["uid", "uigf_version"],
+      "title": "UIGF 导出信息"
+    },
+    "list": {
+      "type": "array",
+      "items": {
         "type": "object",
         "properties": {
-          "uid": {
+          "uigf_gacha_type": {
             "type": "string",
-            "title": "导出记录的 UID"
+            "title": "UIGF 卡池类型",
+            "description": "用于区分卡池类型不同，但卡池保底计算相同的物品"
           },
-          "lang": {
+          "gacha_type": {
             "type": "string",
-            "title": "语言 languagecode2-country/regioncode2"
+            "title": "卡池类型"
           },
-          "export_timestamp": {
-            "type": "number",
-            "title": "导出 UNIX 时间戳（秒）"
-          },
-          "export_time": {
+          "item_id": {
             "type": "string",
-            "title": "导出时间",
-            "description": "yyyy-MM-dd HH:mm:ss"
+            "title": "物品的内部 ID"
           },
-          "export_app": {
+          "count": {
             "type": "string",
-            "title": "导出 App 名称"
+            "title": "个数，一般为1"
           },
-          "export_app_version": {
+          "time": {
             "type": "string",
-            "title": "导出 App 版本"
+            "title": "获取物品的时间"
           },
-          "uigf_version": {
+          "name": {
             "type": "string",
-            "title": "UIGF 版本号",
-            "pattern": "v\\d+\\.\\d+"
+            "title": "物品名称"
           },
-          "region_time_zone": {
-            "type": "number",
-            "title": "区域时区偏移"
+          "item_type": {
+            "type": "string",
+            "title": "物品类型"
+          },
+          "rank_type": {
+            "type": "string",
+            "title": "物品等级"
+          },
+          "id": {
+            "type": "string",
+            "title": "记录内部 ID"
           }
         },
-        "required": [
-          "uid",
-          "uigf_version"
-        ],
-        "title": "UIGF 导出信息"
+        "required": ["uigf_gacha_type", "gacha_type", "id", "item_id", "time"],
+        "title": "UIGF 物品"
       },
-      "list": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "uigf_gacha_type": {
-              "type": "string",
-              "title": "UIGF 卡池类型",
-              "description": "用于区分卡池类型不同，但卡池保底计算相同的物品"
-            },
-            "gacha_type": {
-              "type": "string",
-              "title": "卡池类型"
-            },
-            "item_id": {
-              "type": "string",
-              "title": "物品的内部 ID"
-            },
-            "count": {
-              "type": "string",
-              "title": "个数",
-              "description": "一般为1"
-            },
-            "time": {
-              "type": "string",
-              "title": "获取物品的时间"
-            },
-            "name": {
-              "type": "string",
-              "title": "物品名称"
-            },
-            "item_type": {
-              "type": "string",
-              "title": "物品类型"
-            },
-            "rank_type": {
-              "type": "string",
-              "title": "物品等级"
-            },
-            "id": {
-              "type": "string",
-              "title": "记录内部 ID"
-            }
-          },
-          "required": [
-            "uigf_gacha_type",
-            "gacha_type",
-            "id",
-            "item_id",
-            "time"
-          ],
-          "title": "UIGF 物品"
-        },
-        "title": "物品列表"
-      }
-    },
-    "required": [
-      "info",
-      "list"
-    ],
-    "title": "UIGF 根对象"
-  }
+      "title": "物品列表"
+    }
+  },
+  "required": ["info", "list"],
+  "title": "UIGF 根对象"
 }
 ```

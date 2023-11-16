@@ -87,114 +87,99 @@ Item's in-game ID, refer to [UIGF API](../API.md) to get this data
 
 ```json
 {
-  "root": {
-    "type": "object",
-    "properties": {
-      "info": {
+  "type": "object",
+  "properties": {
+    "info": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "title": "导出记录的 UID"
+        },
+        "lang": {
+          "type": "string",
+          "title": "语言 languagecode2-country/regioncode2"
+        },
+        "export_timestamp": {
+          "type": "number",
+          "title": "导出 UNIX 时间戳（秒）"
+        },
+        "export_time": {
+          "type": "string",
+          "title": "导出时间",
+          "description": "yyyy-MM-dd HH:mm:ss"
+        },
+        "export_app": {
+          "type": "string",
+          "title": "导出 App 名称"
+        },
+        "export_app_version": {
+          "type": "string",
+          "title": "导出 App 版本"
+        },
+        "uigf_version": {
+          "type": "string",
+          "title": "UIGF 版本号",
+          "pattern": "v\\d+\\.\\d+"
+        },
+        "region_time_zone": {
+          "type": "number",
+          "title": "区域时区偏移"
+        }
+      },
+      "required": ["uid", "uigf_version"],
+      "title": "UIGF 导出信息"
+    },
+    "list": {
+      "type": "array",
+      "items": {
         "type": "object",
         "properties": {
-          "uid": {
+          "uigf_gacha_type": {
             "type": "string",
-            "title": "UID for exported data"
+            "title": "UIGF 卡池类型",
+            "description": "用于区分卡池类型不同，但卡池保底计算相同的物品"
           },
-          "lang": {
+          "gacha_type": {
             "type": "string",
-            "title": "language formatted in languagecode2-country/regioncode2"
+            "title": "卡池类型"
           },
-          "export_timestamp": {
-            "type": "number",
-            "title": "Export Timestamp (in seconds precision)"
-          },
-          "export_time": {
+          "item_id": {
             "type": "string",
-            "title": "Export Time",
-            "description": "yyyy-MM-dd HH:mm:ss"
+            "title": "物品的内部 ID"
           },
-          "export_app": {
+          "count": {
             "type": "string",
-            "title": "Export application name"
+            "title": "个数，一般为1"
           },
-          "export_app_version": {
+          "time": {
             "type": "string",
-            "title": "Export application version"
+            "title": "获取物品的时间"
           },
-          "uigf_version": {
+          "name": {
             "type": "string",
-            "title": "UIGF Version",
-            "pattern": "v\\d+\\.\\d+"
+            "title": "物品名称"
           },
-          "region_time_zone": {
-            "type": "number",
-            "title": "Timezone offset"
+          "item_type": {
+            "type": "string",
+            "title": "物品类型"
+          },
+          "rank_type": {
+            "type": "string",
+            "title": "物品等级"
+          },
+          "id": {
+            "type": "string",
+            "title": "记录内部 ID"
           }
         },
-        "required": [
-          "uid",
-          "uigf_version"
-        ],
-        "title": "UIGF Export Infomation"
+        "required": ["uigf_gacha_type", "gacha_type", "id", "item_id", "time"],
+        "title": "UIGF 物品"
       },
-      "list": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "uigf_gacha_type": {
-              "type": "string",
-              "title": "UIGF Wish Pool Type",
-              "description": "Used to identify pools that has different type but shared the pity count"
-            },
-            "gacha_type": {
-              "type": "string",
-              "title": "Wish type"
-            },
-            "item_id": {
-              "type": "string",
-              "title": "Item internal ID"
-            },
-            "count": {
-              "type": "string",
-              "title": "count of item",
-              "description": "Usually count is 1"
-            },
-            "time": {
-              "type": "string",
-              "title": "Time of item achieved"
-            },
-            "name": {
-              "type": "string",
-              "title": "Item name"
-            },
-            "item_type": {
-              "type": "string",
-              "title": "Type of item"
-            },
-            "rank_type": {
-              "type": "string",
-              "title": "Item Quality"
-            },
-            "id": {
-              "type": "string",
-              "title": "Internal record ID"
-            }
-          },
-          "required": [
-            "uigf_gacha_type",
-            "gacha_type",
-            "id",
-            "item_id",
-            "time"
-          ],
-          "title": "UIGF Item"
-        },
-        "title": "Items list"
-      }
-    },
-    "required": [
-      "info",
-      "list"
-    ],
-    "title": "UIGF root object"
-  }
+      "title": "物品列表"
+    }
+  },
+  "required": ["info", "list"],
+  "title": "UIGF 根对象"
 }
 ```
