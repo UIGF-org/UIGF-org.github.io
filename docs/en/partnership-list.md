@@ -61,12 +61,12 @@ preview="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01Or2BBf1g6dvUQwGP9_!
 />
 
 <SiteInfo
-name="Genshin Pizza Helper"
+name="Pizza Helper for Genshin"
 desc="Apple-platform game tool for Genshin Impact"
-logo="https://ophelper.top/img/ophelper_logo_clipped.png"
+logo="https://gi.pizzastudio.org/img/ophelper_logo_clipped.png"
 url="https://apps.apple.com/app/id1635319193"
-repo="https://github.com/CanglongCl/Genshin-Pizza-Helper"
-preview="https://ophelper.top/img/ophelper-uigf-preview.png"
+repo="https://github.com/pizza-studio/GenshinPizzaHelper"
+preview="https://gi.pizzastudio.org/img/ophelper-uigf-preview.png"
 />
 
 <SiteInfo
