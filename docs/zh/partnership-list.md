@@ -67,10 +67,10 @@ preview="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01Or2BBf1g6dvUQwGP9_!
 <RelativeProject
 name="原神披萨小助手"
 desc="Apple全平台原神小助手"
-logo="https://ophelper.top/img/ophelper_logo_clipped.png"
+logo="https://gi.pizzastudio.org/img/ophelper_logo_clipped.png"
 url="https://apps.apple.com/app/id1635319193"
-:thirdparty="[{type: 'github', url: 'https://github.com/CanglongCl/Genshin-Pizza-Helper'}]"
-preview="https://ophelper.top/img/ophelper-uigf-preview.png"
+:thirdparty="[{type: 'github', url: 'https://github.com/pizza-studio/GenshinPizzaHelper'}]"
+preview="https://gi.pizzastudio.org/img/ophelper-uigf-preview.png"
 />
 
 <RelativeProject
