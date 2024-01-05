@@ -236,5 +236,14 @@ url="https://github.com/cntvc/star-rail-tools"
 preview="/partnerships/cntvc/star_rail_tools/preview.png"
 />
 
+<RelativeProject
+name="StarRailToolkit"
+desc="崩坏：星穹铁道工具箱"
+logo="/partnerships/StarRailToolkit/logo.jpg"
+url="https://github.com/LittleNyima/honkai-starrail-toolkit"
+:thirdparty="[{type: 'github', url: 'https://github.com/LittleNyima/honkai-starrail-toolkit'}]"
+preview="/partnerships/StarRailToolkit/preview.jpg"
+/>
+
 </RelativeProjectPanel>
 
