@@ -29,7 +29,7 @@ head:
 * [YuehaiTeam/cocogoat](https://github.com/YuehaiTeam/cocogoat)
 
 （上述名称以字典顺序排序，不代表其他任何意义）  
-在此一起，制定了此项标准，旨在加强各个原神相关的App间的数据可交换性。
+在此一起，制定了此项标准，旨在加强各个原神相关的App间的成就数据可交换性。
 
 ## 注意事项
 
