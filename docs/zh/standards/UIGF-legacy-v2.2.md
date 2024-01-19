@@ -13,7 +13,7 @@ head:
 > Uniformed Interchangeable GachaLog Format standard (UIGF) v2.2 <Badge text="Legacy" type="message" />
 
 ::: warning 警告
-该标准已过时，[UIGF v2.3](UIGF-legacy-v2.3.md) 替代了本标准。
+该标准已过时，[UIGF v2.4](UIGF.md) 替代了本标准。
 :::
 
 ## 前言
@@ -29,7 +29,7 @@ head:
 * [voderl/genshin gacha analyzer](https://github.com/voderl/genshin-gacha-analyzer)
 
 （上述名称以字典顺序排序，不代表其他任何意义）  
-在此一起，制定了此项标准，旨在加强各个原神相关的App间的数据可交换性  
+在此一起，制定了此项标准，旨在加强各个原神相关的App间的祈愿数据可交换性  
 如果今后出现了新的需要在各App间交换的数据，我们也会进行规范
 
 ## 注意事项
