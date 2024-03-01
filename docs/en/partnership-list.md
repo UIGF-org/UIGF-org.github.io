@@ -218,10 +218,10 @@ preview="https://raw.githubusercontent.com/xyxyx718/HSRchargingCalculator/main/i
 <SiteInfo
 name="StarRailTools"
 desc="保存星铁数据的小工具"
-logo="https://github.com/cntvc/star-rail-tools/blob/main/resource/hsr.ico"
+logo=""
 url="https://github.com/cntvc/star-rail-tools"
 repo="https://github.com/cntvc/star-rail-tools"
-preview="/partnerships/cntvc/star_rail_tools/preview.png"
+preview="https://raw.githubusercontent.com/cntvc/star-rail-tools/main/docs/image/star_rail_tools_cover.png"
 />
 
 <SiteInfo
