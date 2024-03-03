@@ -6,14 +6,17 @@ head:
     - name: keywords
       content: Genshin, Genshin Impact, Gacha, Gacha log, UIGF
 ---
-# Uniformed Interchangeable GachaLog Format Standard v3.0
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v3.0 <Badge text="Current" type="message" />
+# Uniformed Interchangeable GachaLog Format Standard v2.4
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.4 <Badge text="Legacy" type="message" />
 
 ::: warning Usage of UIGF Statement Requirement
 
 Application must declare support of UIGF data format only after supporting of both **import** and **export** features, and provide link to [UIGF-Org](https://uigf.org) in the associated page.
 
 Including only importing feature reduces the interchangeability of user data, and puts the data in a risk that user can not control, which is not in line with intention of UIGF-Org.
+:::
+::: warning Warning
+This standard is outdated, [UIGF v3.0](UIGF.md) is the successor.
 :::
 
 ## Versions Features
@@ -24,11 +27,10 @@ Including only importing feature reduces the interchangeability of user data, an
 | [`v2.2`](UIGF-legacy-v2.2.md) | Add `info.export_timestamp` to fill UNIX timestamp                                | v2.2 and lower |
 | [`v2.3`](UIGF-legacy-v2.3.md) | Add support for non-Chinese environment, express in Json Schema                   | v2.3 and lower |
 | `v2.4`                        | Add `info.region_time_zone` to support time zone processing                       | v2.4 and lower |
-| `v3.0`                        | Add support for Chronicled Wish                                                   | v3.0 and lower |
 
-### What's Changed in v3.0
-* Added new enumeration items in `gacha_type`
-  * In the `gacha_type` enumeration, a new item with a value of `500` is used to represent the Chronicled Wish type.
+### What's Changed in v2.4
+* Localization compatibility enhancements
+  * Added `region_time_zone` field in the `info` object
 
 
 ## `info` Data Field Explanations
@@ -77,7 +79,6 @@ Please remember to add corresponding uigf_gacha_type field when applying UIGF fo
 | `200`             | `200`          |
 | `301`             | `301` or `400` |
 | `302`             | `302`          |
-| `500`             | `500`          |
 
 ### `item_id`
 
