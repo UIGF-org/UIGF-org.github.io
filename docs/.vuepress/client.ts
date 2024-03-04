@@ -1,4 +1,4 @@
-import { defineClientConfig } from "@vuepress/client";
+import { defineClientConfig } from "vuepress/client";
 import RelativeProject from "./components/RelativeProject.vue";
 import RelativeProjectPanel from "./components/RelativeProjectPanel.vue";
 
