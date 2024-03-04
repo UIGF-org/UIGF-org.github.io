@@ -137,6 +137,7 @@ $main-lt-size: 1.9em;
 .partnership-project {
   &[theme='light'] {
     background-color: $fallback-preview-color-light;
+    box-shadow: 2px 2px 5px 2px rgb(0 0 0 / 15%);
 
     .content {
       .blocker {
