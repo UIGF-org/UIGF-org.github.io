@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     const { languages } = window.navigator;
     const anchor = hash.substring(1);
 
-    const localeConfig = {"0":["/en/",["en-US","en-UK","en"]],"1":["/zh/",["zh-CN","zh-TW","zh"]],"/en/":["en-US"],"/zh/":["zh-CN"]};
+    const localeConfig = {"/en/":["en-US","en-UK","en"],"/zh/":["zh-CN","zh-TW","zh"]};
     const availableLocales = ["/en/","/zh/"];
     const defaultLocale = "/en/";
     const defaultBehavior = "defaultLocale"
@@ -27,7 +27,7 @@
             matchedLocalePath = localePath;
             break findLanguage;
           }
-    
+
     // default link
     const defaultLink = defaultLocale? `${origin}${defaultLocale}${routePath}${anchor? `#${anchor}`: ""}`: null;
 
