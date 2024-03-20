@@ -232,3 +232,12 @@ url="https://github.com/LittleNyima/honkai-starrail-toolkit"
 repo="https://github.com/LittleNyima/honkai-starrail-toolkit"
 preview="/partnerships/StarRailToolkit/preview.jpg"
 />
+
+<SiteInfo
+name="Firefly"
+desc="Honkai: Star Rail Tools"
+logo="/partnerships/Firefly/logo.png"
+url="https://github.com/Natrium0521/Firefly"
+repo="https://github.com/Natrium0521/Firefly"
+preview="/partnerships/Firefly/preview.png"
+/>
