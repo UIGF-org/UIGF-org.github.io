@@ -248,5 +248,15 @@ url="https://github.com/LittleNyima/honkai-starrail-toolkit"
 preview="/partnerships/StarRailToolkit/preview.jpg"
 />
 
+<RelativeProject
+name="流萤工具箱"
+desc="《崩坏：星穹铁道》工具集"
+logo="/partnerships/Firefly/logo.png"
+url="https://github.com/Natrium0521/Firefly"
+:thirdparty="[{type: 'github', url: 'https://github.com/Natrium0521/Firefly'}]"
+version="SRGF v1.0"
+preview="/partnerships/Firefly/preview.png"
+/>
+
 </RelativeProjectPanel>
 
