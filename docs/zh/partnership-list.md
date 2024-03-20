@@ -82,7 +82,7 @@ name="Sangonomiya"
 desc="原神祈愿记录工具"
 logo="https://s1.ax1x.com/2023/09/09/pP6x7Y4.png"
 url="https://github.com/AuroraZiling/sangonomiya"
-version="已存档"
+version="Archived"
 :thirdparty="[{type: 'github', url: 'https://github.com/AuroraZiling/sangonomiya'}]"
 preview="https://s1.ax1x.com/2023/09/09/pP6xHfJ.png"
 />
