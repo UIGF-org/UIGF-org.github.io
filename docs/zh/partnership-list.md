@@ -6,7 +6,7 @@ name="genshin wish export"
 desc="Easily export the Genshin Impact wish record"
 url="https://github.com/biuuu/genshin-wish-export"
 logo="https://s1.ax1x.com/2023/09/09/pP6xBef.png"
-version="UIGF v2.4"
+version="UIGF v3.0"
 :thirdparty="[{type: 'github', url: 'https://github.com/biuuu/genshin-wish-export'}]"
 preview="https://img.alicdn.com/imgextra/i3/1797064093/O1CN018VkZBw1g6dvTMaX9W_!!1797064093.png"
 />
