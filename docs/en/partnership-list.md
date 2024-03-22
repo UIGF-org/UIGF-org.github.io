@@ -89,7 +89,7 @@ preview="https://starward.scighost.com/resource/img/uigf/uigf_en.webp"
 
 <SiteInfo
 name="Teyvat Guide"
-desc="A Genshin Tool build with Tauri"
+desc="Game Tool for Genshin Impact Player"
 logo="/partnerships/TeyvatGuide/logo.png"
 url="https://apps.microsoft.com/store/detail/teyvat-guide/9NLBNNNBNSJN?hl=zh-cn&gl=cn&rtc=1"
 repo="https://github.com/BTMuli/TeyvatGuide"
