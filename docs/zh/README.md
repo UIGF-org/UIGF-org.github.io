@@ -11,7 +11,7 @@ actions:
   type: primary
 
 - text: API
-  link: API.html
+  link: api.html
 
 - text: 合作项目
   link: partnership.html
@@ -20,17 +20,17 @@ features:
   - title: 统一可交换祈愿记录标准
     icon: proposal
     details: Uniformed Interchangeable GachaLog Format standard (UIGF)
-    link: standards/UIGF.html
+    link: standards/uigf.html
 
   - title: 统一可交换成就标准
     icon: proposal
     details: Uniformed Interchangeable Achievement Format standard (UIAF)
-    link: standards/UIAF.html
+    link: standards/uiaf.html
     
   - title: 星穹铁道抽卡记录标准
     icon: proposal
     details: Star Rail GachaLog Format standard (SRGF)
-    link: standards/SRGF.html
+    link: standards/srgf.html
 
 copyright: false
 footer: MIT Licensed | Copyright © 2021-present UIGF-org
