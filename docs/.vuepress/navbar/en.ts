@@ -3,7 +3,7 @@ import { navbar } from "vuepress-theme-hope";
 export const enNavbar = navbar([
   "/en/",
   { text: "Partnerships", icon: "discover", link: "/en/partnership.md" },
-  "/en/API.md",
+  "/en/api.md",
   {
     text: "Standards",
     icon: "proposal",
@@ -11,11 +11,11 @@ export const enNavbar = navbar([
     children: [
       {
         text: "Genshin Impact",
-        children: ["UIGF.md", "UIAF.md"],
+        children: ["uigf.md", "uiaf.md"],
       },
       {
         text: "Honkai: Star Rail",
-        children: ["SRGF.md"],
+        children: ["srgf.md"],
       },
     ],
   },
