@@ -21,11 +21,11 @@ export const zhSidebar = sidebar({
       children: [
         {
           text: "原神",
-          children: ["UIGF.md", "UIAF.md"],
+          children: ["uigf.md", "uiaf.md"],
         },
         {
           text: "崩坏：星穹铁道",
-          children: ["SRGF.md"],
+          children: ["srgf.md"],
         },
       ],
     },

@@ -13,7 +13,7 @@ export const enSidebar = sidebar({
       text: "Our Partnerships",
       link: "partnership.md",
     },
-    "API.md",
+    "api.md",
     {
       icon: "proposal",
       text: "Standards Document",
@@ -21,11 +21,11 @@ export const enSidebar = sidebar({
       children: [
         {
           text: "Genshin Impact",
-          children: ["UIGF.md", "UIAF.md"],
+          children: ["uigf.md", "uiaf.md"],
         },
         {
           text: "Honkai: Star Rail",
-          children: ["SRGF.md"],
+          children: ["srgf.md"],
         },
       ],
     },
