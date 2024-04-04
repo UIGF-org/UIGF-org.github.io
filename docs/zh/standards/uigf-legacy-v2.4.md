@@ -1,5 +1,5 @@
 ---
-redirectFrom: /standards/UIGF.html
+redirectFrom: /zh/standards/UIGF-legacy-v2.4.html
 category: [标准化文档]
 order: 1
 head:

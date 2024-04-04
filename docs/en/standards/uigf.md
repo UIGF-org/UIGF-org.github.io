@@ -1,4 +1,5 @@
 ---
+redirectFrom: /en/standards/UIGF.html
 category: [Standard Document]
 order: 1
 head:
