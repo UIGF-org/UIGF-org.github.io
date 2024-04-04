@@ -1,5 +1,4 @@
 ---
-redirectFrom: /en/standards/SRGF.html
 category: [Standard Document]
 order: 2
 head:

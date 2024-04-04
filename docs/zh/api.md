@@ -1,5 +1,4 @@
 ---
-redirectFrom: /zh/API.html
 headerDepth: 2
 category: [API]
 icon: api
