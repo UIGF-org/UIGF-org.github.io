@@ -1,4 +1,5 @@
 ---
+redirectFrom: /en/standards/UIGF-legacy-v2.2.html
 category: [Standard Document]
 order: 3
 head:
@@ -11,7 +12,7 @@ head:
 > Uniformed Interchangeable GachaLog Format standard (UIGF) v2.2 <Badge text="Legacy" type="message" />
 
 ::: warning Warning
-This standard is outdated, [UIGF v2.3](UIGF-legacy-v2.3.md) is the successor.
+This standard is outdated, [UIGF v2.3](uigf-legacy-v2.3.md) is the successor.
 :::
 
 ## Manifesto

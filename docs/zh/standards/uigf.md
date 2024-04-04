@@ -1,5 +1,5 @@
 ---
-redirectFrom: /standards/UIGF.html
+redirectFrom: /zh/standards/UIGF.html
 category: [标准化文档]
 order: 1
 head:
@@ -22,9 +22,9 @@ head:
 |-------------------------------|-----------------------------------------|----------------|
 | `v2.0`                        | 首个正式版本                                  | v2.0           |
 | `v2.1`                        | 简化了部分语言表述，与 v2.0在数据格式上完全一致              | v2.1 and lower |
-| [`v2.2`](UIGF-legacy-v2.2.md) | 新增 `info.export_timestamp` 填充 UNIX 时间戳  | v2.2 and lower |
-| [`v2.3`](UIGF-legacy-v2.3.md) | 扩充至非中文语境，使用 Json Schema 表述。移除了 Excel 格式 | v2.3 and lower |
-| [`v2.4`](UIGF-legacy-v2.4.md) | 新增 `info.region_time_zone` 支持时区处理       | v2.4 and lower |
+| [`v2.2`](uigf-legacy-v2.2.md) | 新增 `info.export_timestamp` 填充 UNIX 时间戳  | v2.2 and lower |
+| [`v2.3`](uigf-legacy-v2.3.md) | 扩充至非中文语境，使用 Json Schema 表述。移除了 Excel 格式 | v2.3 and lower |
+| [`v2.4`](uigf-legacy-v2.4.md) | 新增 `info.region_time_zone` 支持时区处理       | v2.4 and lower |
 | `v3.0`                        | 新增 集录祈愿类型支持       | v3.0 and lower |
 
 ### v3.0 更新内容
@@ -78,7 +78,7 @@ App 不应假定 `region_time_zone` 的值为上表中给出的值，应具有�
 
 ### `item_id`
 
-物品游戏内ID，你可以通过 [UIGF API](../API.md) 获取这一数据
+物品游戏内ID，你可以通过 [UIGF API](../api.md) 获取这一数据
 
 ## Json Schema
 

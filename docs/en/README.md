@@ -11,7 +11,7 @@ actions:
   type: primary
 
 - text: API
-  link: API.html
+  link: api.html
 
 - text: Partnerships
   link: partnership.html
@@ -20,17 +20,17 @@ features:
   - title: Uniformed Interchangeable GachaLog Format standard
     icon: proposal
     details: UIGF
-    link: standards/UIGF.html
+    link: standards/uigf.html
 
   - title: Uniformed Interchangeable Achievement Format standard
     icon: proposal
     details: UIAF
-    link: standards/UIAF.html
+    link: standards/uiaf.html
 
   - title: Star Rail GachaLog Format Standard
     icon: proposal
     details: SRGF
-    link: standards/SRGF.html
+    link: standards/srgf.html
 
 
 copyright: false

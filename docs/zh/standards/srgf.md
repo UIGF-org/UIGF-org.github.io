@@ -1,5 +1,5 @@
 ---
-redirectFrom: /standards/SRGF.html
+redirectFrom: /zh/standards/SRGF.html
 category: [标准化文档]
 order: 2
 head:

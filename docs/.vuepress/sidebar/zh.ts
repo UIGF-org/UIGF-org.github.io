@@ -13,7 +13,7 @@ export const zhSidebar = sidebar({
       text: "合作项目",
       link: "partnership.md",
     },
-    "API.md",
+    "api.md",
     {
       icon: "proposal",
       text: "标准化文档",
@@ -21,11 +21,11 @@ export const zhSidebar = sidebar({
       children: [
         {
           text: "原神",
-          children: ["UIGF.md", "UIAF.md"],
+          children: ["uigf.md", "uiaf.md"],
         },
         {
           text: "崩坏：星穹铁道",
-          children: ["SRGF.md"],
+          children: ["srgf.md"],
         },
       ],
     },
@@ -33,7 +33,7 @@ export const zhSidebar = sidebar({
       icon: "api",
       text: "米哈游 API 合集",
       children: [
-        "MiHoYo-API-Collection-project.md",
+        "mihoyo-api-collection-project.md",
         {
           text: "米游社",
           icon: "community",

@@ -1,4 +1,5 @@
 ---
+redirectFrom: /en/standards/UIGF-legacy-v2.3.html
 category: [Standard Document]
 order: 1
 head:
@@ -17,7 +18,7 @@ Including only importing feature reduces the interchangeability of user data, an
 :::
 
 ::: warning Warning
-This standard is outdated, [UIGF v2.4](UIGF.md) is the successor.
+This standard is outdated, [UIGF v2.4](uigf.md) is the successor.
 :::
 
 ## Versions Features

@@ -1,4 +1,5 @@
 ---
+redirectFrom: /en/standards/UIGF.html
 category: [Standard Document]
 order: 1
 head:
@@ -6,8 +7,8 @@ head:
     - name: keywords
       content: Genshin, Genshin Impact, Gacha, Gacha log, UIGF
 ---
-# Uniformed Interchangeable GachaLog Format Standard v2.4
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.4 <Badge text="Legacy" type="message" />
+# Uniformed Interchangeable GachaLog Format Standard v3.0
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v3.0 <Badge text="Current" type="message" />
 
 ::: warning Usage of UIGF Statement Requirement
 
@@ -15,22 +16,20 @@ Application must declare support of UIGF data format only after supporting of bo
 
 Including only importing feature reduces the interchangeability of user data, and puts the data in a risk that user can not control, which is not in line with intention of UIGF-Org.
 :::
-::: warning Warning
-This standard is outdated, [UIGF v3.0](UIGF.md) is the successor.
-:::
 
 ## Versions Features
 | Version                       | Note                                                                              | Compatibility  |
 |-------------------------------|-----------------------------------------------------------------------------------|----------------|
 | `v2.0`                        | First public version                                                              | v2.0           |
 | `v2.1`                        | Simplified in language expression, data format is completely consistent with v2.0 | v2.1 and lower |
-| [`v2.2`](UIGF-legacy-v2.2.md) | Add `info.export_timestamp` to fill UNIX timestamp                                | v2.2 and lower |
-| [`v2.3`](UIGF-legacy-v2.3.md) | Add support for non-Chinese environment, express in Json Schema                   | v2.3 and lower |
+| [`v2.2`](uigf-legacy-v2.2.md) | Add `info.export_timestamp` to fill UNIX timestamp                                | v2.2 and lower |
+| [`v2.3`](uigf-legacy-v2.3.md) | Add support for non-Chinese environment, express in Json Schema                   | v2.3 and lower |
 | `v2.4`                        | Add `info.region_time_zone` to support time zone processing                       | v2.4 and lower |
+| `v3.0`                        | Add support for Chronicled Wish                                                   | v3.0 and lower |
 
-### What's Changed in v2.4
-* Localization compatibility enhancements
-  * Added `region_time_zone` field in the `info` object
+### What's Changed in v3.0
+* Added new enumeration items in `gacha_type`
+  * In the `gacha_type` enumeration, a new item with a value of `500` is used to represent the Chronicled Wish type.
 
 
 ## `info` Data Field Explanations
@@ -79,6 +78,7 @@ Please remember to add corresponding uigf_gacha_type field when applying UIGF fo
 | `200`             | `200`          |
 | `301`             | `301` or `400` |
 | `302`             | `302`          |
+| `500`             | `500`          |
 
 ### `item_id`
 
@@ -97,41 +97,41 @@ Item's in-game ID, refer to [UIGF API](../API.md) to get this data
       "properties": {
         "uid": {
           "type": "string",
-          "title": "导出记录的 UID"
+          "title": "UID of the export record"
         },
         "lang": {
           "type": "string",
-          "title": "语言 languagecode2-country/regioncode2"
+          "title": "language in the format of languagecode2-country/regioncode2"
         },
         "export_timestamp": {
           "type": "number",
-          "title": "导出 UNIX 时间戳（秒）"
+          "title": "Export UNIX timestamp (accurate to the second)"
         },
         "export_time": {
           "type": "string",
-          "title": "导出时间",
+          "title": "Export time",
           "description": "yyyy-MM-dd HH:mm:ss"
         },
         "export_app": {
           "type": "string",
-          "title": "导出 App 名称"
+          "title": "Name of the export application"
         },
         "export_app_version": {
           "type": "string",
-          "title": "导出 App 版本"
+          "title": "Version of the export application"
         },
         "uigf_version": {
           "type": "string",
-          "title": "UIGF 版本号",
+          "title": "UIGF version; follow the regular expression pattern",
           "pattern": "v\\d+\\.\\d+"
         },
         "region_time_zone": {
           "type": "number",
-          "title": "区域时区偏移"
+          "title": "Region timezone offset"
         }
       },
       "required": ["uid", "uigf_version"],
-      "title": "UIGF 导出信息"
+      "title": "UIGF Export Information"
     },
     "list": {
       "type": "array",
@@ -140,49 +140,49 @@ Item's in-game ID, refer to [UIGF API](../API.md) to get this data
         "properties": {
           "uigf_gacha_type": {
             "type": "string",
-            "title": "UIGF 卡池类型",
-            "description": "用于区分卡池类型不同，但卡池保底计算相同的物品"
+            "title": "UIGF gacha type",
+            "description": "Used to differentiate different gacha types with the same pity calculation for items"
           },
           "gacha_type": {
             "type": "string",
-            "title": "卡池类型"
+            "title": "Gacha type"
           },
           "item_id": {
             "type": "string",
-            "title": "物品的内部 ID"
+            "title": "Internal ID of the item"
           },
           "count": {
             "type": "string",
-            "title": "个数，一般为1"
+            "title": "Count, usually 1"
           },
           "time": {
             "type": "string",
-            "title": "获取物品的时间"
+            "title": "Time when the item was obtained"
           },
           "name": {
             "type": "string",
-            "title": "物品名称"
+            "title": "Item name"
           },
           "item_type": {
             "type": "string",
-            "title": "物品类型"
+            "title": "Item type"
           },
           "rank_type": {
             "type": "string",
-            "title": "物品等级"
+            "title": "Item rank"
           },
           "id": {
             "type": "string",
-            "title": "记录内部 ID"
+            "title": "Internal ID of the record"
           }
         },
         "required": ["uigf_gacha_type", "gacha_type", "id", "item_id", "time"],
-        "title": "UIGF 物品"
+        "title": "UIGF Item"
       },
-      "title": "物品列表"
+      "title": "Item List"
     }
   },
   "required": ["info", "list"],
-  "title": "UIGF 根对象"
+  "title": "UIGF Root Object"
 }
 ```

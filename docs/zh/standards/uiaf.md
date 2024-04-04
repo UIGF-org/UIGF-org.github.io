@@ -1,5 +1,5 @@
 ---
-redirectFrom: /standards/UIAF.html
+redirectFrom: /zh/standards/UIAF.html
 category: [标准化文档]
 order: 2
 head:

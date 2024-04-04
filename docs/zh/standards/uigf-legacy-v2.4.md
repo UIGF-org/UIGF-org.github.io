@@ -1,5 +1,5 @@
 ---
-redirectFrom: /standards/UIGF.html
+redirectFrom: /zh/standards/UIGF-legacy-v2.4.html
 category: [标准化文档]
 order: 1
 head:
@@ -17,7 +17,7 @@ head:
 仅包含导入或导出功能降低了用户数据可流通性，且将数据至于用户不可控的风险中，不符合 UIGF-Org 设计的初衷。
 :::
 ::: warning 警告
-该标准已过时，[UIGF v3.0](UIGF.md) 替代了该版本的标准。
+该标准已过时，[UIGF v3.0](uigf.md) 替代了该版本的标准。
 :::
 
 ## 更新记录

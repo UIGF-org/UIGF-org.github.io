@@ -1,4 +1,5 @@
 ---
+redirectFrom: /zh/MiHoYo-API-Collection-project.html
 category: [API]
 icon: repo
 head:

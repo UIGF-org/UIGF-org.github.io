@@ -3,7 +3,7 @@ import { navbar } from "vuepress-theme-hope";
 export const zhNavbar = navbar([
   "/zh/",
   { text: "合作项目", icon: "discover", link: "/zh/partnership.md" },
-  "/zh/API.md",
+  "/zh/api.md",
   {
     text: "规范标准",
     icon: "proposal",
@@ -11,11 +11,11 @@ export const zhNavbar = navbar([
     children: [
       {
         text: "原神",
-        children: ["UIGF.md", "UIAF.md"],
+        children: ["uigf.md", "uiaf.md"],
       },
       {
         text: "崩坏：星穹铁道",
-        children: ["SRGF.md"],
+        children: ["srgf.md"],
       },
     ],
   },
@@ -25,7 +25,7 @@ export const zhNavbar = navbar([
     children: [
       {
         text: "米哈游 API 合集",
-        link: "/zh/MiHoYo-API-Collection-project.html",
+        link: "/zh/mihoyo-api-collection-project.html",
         icon: "api",
       },
     ],
