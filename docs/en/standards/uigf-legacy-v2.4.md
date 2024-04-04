@@ -16,7 +16,7 @@ Application must declare support of UIGF data format only after supporting of bo
 Including only importing feature reduces the interchangeability of user data, and puts the data in a risk that user can not control, which is not in line with intention of UIGF-Org.
 :::
 ::: warning Warning
-This standard is outdated, [UIGF v3.0](UIGF.md) is the successor.
+This standard is outdated, [UIGF v3.0](uigf.md) is the successor.
 :::
 
 ## Versions Features
@@ -82,7 +82,7 @@ Please remember to add corresponding uigf_gacha_type field when applying UIGF fo
 
 ### `item_id`
 
-Item's in-game ID, refer to [UIGF API](../API.md) to get this data
+Item's in-game ID, refer to [UIGF API](../api.md) to get this data
 
 ## Json Schema
 

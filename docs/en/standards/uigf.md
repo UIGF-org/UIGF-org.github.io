@@ -21,8 +21,8 @@ Including only importing feature reduces the interchangeability of user data, an
 |-------------------------------|-----------------------------------------------------------------------------------|----------------|
 | `v2.0`                        | First public version                                                              | v2.0           |
 | `v2.1`                        | Simplified in language expression, data format is completely consistent with v2.0 | v2.1 and lower |
-| [`v2.2`](UIGF-legacy-v2.2.md) | Add `info.export_timestamp` to fill UNIX timestamp                                | v2.2 and lower |
-| [`v2.3`](UIGF-legacy-v2.3.md) | Add support for non-Chinese environment, express in Json Schema                   | v2.3 and lower |
+| [`v2.2`](uigf-legacy-v2.2.md) | Add `info.export_timestamp` to fill UNIX timestamp                                | v2.2 and lower |
+| [`v2.3`](uigf-legacy-v2.3.md) | Add support for non-Chinese environment, express in Json Schema                   | v2.3 and lower |
 | `v2.4`                        | Add `info.region_time_zone` to support time zone processing                       | v2.4 and lower |
 | `v3.0`                        | Add support for Chronicled Wish                                                   | v3.0 and lower |
 
