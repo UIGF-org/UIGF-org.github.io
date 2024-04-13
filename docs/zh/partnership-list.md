@@ -110,11 +110,11 @@ preview="/partnerships/TeyvatGuide/AppPreview.png"
 <RelativeProject
 name="派蒙笔记本"
 desc="安卓平台下的原神工具"
-logo="https://cdn.jsdelivr.net/gh/QooLianyi/PaimonsNotebook.github.io/icon_paimonsnotebook_playstore.webp"
+logo="/partnerships/PaimonsNotebook/logo.webp"
 url="https://github.com/QooLianyi/PaimonsNotebook"
-version="UIGF v2.3"
+version="UIGF v3.0"
 :thirdparty="[{type: 'github', url: 'https://github.com/QooLianyi/PaimonsNotebook'}]"
-preview="https://cdn.jsdelivr.net/gh/QooLianyi/PaimonsNotebook.github.io/bg_paimonsnotebook_uigf.webp"
+preview="/partnerships/PaimonsNotebook/preview.webp"
 />
 
 </RelativeProjectPanel>
@@ -167,6 +167,16 @@ url="https://apps.microsoft.com/store/detail/teyvat-guide/9NLBNNNBNSJN?hl=zh-cn&
 version="UIAF v1.1"
 :thirdparty="[{type: 'github', url: 'https://github.com/BTMuli/TeyvatGuide'}]"
 preview="/partnerships/TeyvatGuide/AppPreview.png"
+/>
+
+<RelativeProject
+name="派蒙笔记本"
+desc="安卓平台下的原神工具"
+logo="/partnerships/PaimonsNotebook/logo.webp"
+url="https://github.com/QooLianyi/PaimonsNotebook"
+version="UIAF v1.1"
+:thirdparty="[{type: 'github', url: 'https://github.com/QooLianyi/PaimonsNotebook'}]"
+preview="/partnerships/PaimonsNotebook/preview.webp"
 />
 
 </RelativeProjectPanel>

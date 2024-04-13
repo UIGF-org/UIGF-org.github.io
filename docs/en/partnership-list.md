@@ -99,10 +99,10 @@ preview="/partnerships/TeyvatGuide/AppPreview.png"
 <SiteInfo
 name="PaimonsNotebook"
 desc="Android-platform game tool for Genshin Impact"
-logo="https://cdn.jsdelivr.net/gh/QooLianyi/PaimonsNotebook.github.io/icon_paimonsnotebook_playstore.webp"
+logo="/partnerships/PaimonsNotebook/logo.webp"
 url="https://github.com/QooLianyi/PaimonsNotebook"
 repo="https://github.com/QooLianyi/PaimonsNotebook"
-preview="https://cdn.jsdelivr.net/gh/QooLianyi/PaimonsNotebook.github.io/bg_paimonsnotebook_uigf.webp"
+preview="/partnerships/PaimonsNotebook/preview.webp"
 />
 
 ## Projects with UIAF Standard
@@ -149,6 +149,15 @@ logo="/partnerships/TeyvatGuide/logo.png"
 url="https://apps.microsoft.com/store/detail/teyvat-guide/9NLBNNNBNSJN?hl=zh-cn&gl=cn&rtc=1"
 repo="https://github.com/BTMuli/TeyvatGuide"
 preview="/partnerships/TeyvatGuide/AppPreview.png"
+/>
+
+<SiteInfo
+name="PaimonsNotebook"
+desc="Android-platform game tool for Genshin Impact"
+logo="/partnerships/PaimonsNotebook/logo.webp"
+url="https://github.com/QooLianyi/PaimonsNotebook"
+repo="https://github.com/QooLianyi/PaimonsNotebook"
+preview="/partnerships/PaimonsNotebook/preview.webp"
 />
 
 ## Projects with SRGF Standard
