@@ -63,7 +63,7 @@ App 不应假定 `region_time_zone` 的值为上表中给出的值，应具有�
 
 由于存在会共享保底与概率的卡池，所以需要一个额外的字段来界定  
 我们在 `UIGF` 的所有格式中注入了 `uigf_gacha_type` 字段  
-在导出到 `UIGF` 格式时需要注意添加对应的 `uigf_gacha_type` 字段  
+在导出到 `UIGF` 格式时需要注意添加对应的 `uigf_gacha_type` 字段。
 
 #### 映射关系
 
@@ -77,11 +77,21 @@ App 不应假定 `region_time_zone` 的值为上表中给出的值，应具有�
 
 ### `item_id`
 
-物品游戏内ID，你可以通过 [UIGF API](../api.md) 获取这一数据
+物品游戏内ID，你可以通过 [UIGF API](../api.md) 获取这一数据。
 
 ## Json Schema
 
-> UIGF-Org 提供[Json Schema](/schema/uigf.json) 用于验证
+> UIGF-Org 提供下述 Json Schema 以用于验证资料结构的正确性。
+
+::: warning 警告
+请各位开发者务必尊重 Schema 内定义的资料类型。该是 String 的请一定不要用 Int 凑合。
+
+任何此类行为都等价于让其他支持 UIGF 的 App 开发者们替您擦屁股。
+
+为了规避这类问题，您或许可以针对 UIGF 资料导出的需求设计专用的 Struct（而非与其他 Class 互为继承关系）、或善用「JsonNumberHandling.WriteAsString」等手段，且设计专门的单元测试、以确保导出与导入时的资料的一致性。
+
+此外，这里也有 [Json 格式合规性校验工具](https://github.com/UIGF-org/UIGF-SchemaVerify) 可用。
+:::
 
 ```json
 {
@@ -152,7 +162,7 @@ App 不应假定 `region_time_zone` 的值为上表中给出的值，应具有�
           },
           "time": {
             "type": "string",
-            "title": "获取物品的时间"
+            "description": "获取物品的时间，应为「抽卡记录网页上写的原始时间字串值 (String)」而非任何读取转换过的值。任何此般类型转换，但凡设备时区与伺服器时区有异，便一定会出现时区转换误差（除非开发者有做过专门的应对措施）。"
           },
           "name": {
             "type": "string",
