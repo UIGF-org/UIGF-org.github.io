@@ -38,6 +38,14 @@ All time in this standard are based on `UTC+8` time zone
 
 ## Json Schema
 
+::: warning Mind the Field Types
+Devs are strongly urged to respect the data types of each property in the schema. Using incorrect types could result in errors when parsing JSON files by other tools developed in strong typing programming languages, leading to data transfer failures.
+
+To avoid such issues, we recommend designing dedicated structs for the UIAF format or utilizing methods like `JsonNumberHandling.WriteAsString`. Additionally, it is advisable to design relevant unit tests to ensure consistency between imports and exports.
+
+We also provide the [UIAF Json Schema Verify Tool](https://schema.uigf.org/?schema=uiaf) to help you to verify validation of Json files.
+:::
+
 ```json
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
