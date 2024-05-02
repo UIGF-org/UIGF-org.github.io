@@ -38,6 +38,14 @@ head:
 
 ## Json Schema
 
+::: warning 注意字段类型
+请各位开发者务必尊重 Schema 内定义的字段类型。使用错误的类型可能会导致其它由强类型编程语言制成的工具在解析 Json 文件时产生错误，进而导致数据转移失败。
+
+为了避免这类问题，我们建议您针对 UIAF 格式设计专用的 struct，或善用 `JsonNumberHandling.WriteAsString` 等方法。同时，设计相关的单元测试以确保导入导出的一致性。
+
+我们也提供 [UIAF 格式校验工具](https://schema.uigf.org/?schema=uiaf)来帮助你校验 Json 文件。
+:::
+
 ```json
 {
   "$schema": "http://json-schema.org/draft-04/schema#",

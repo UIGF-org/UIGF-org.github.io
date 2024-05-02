@@ -49,6 +49,14 @@ Including only importing feature reduces the interchangeability of user data, an
 
 ## Json Schema
 
+::: warning Mind the Field Types
+Devs are strongly urged to respect the data types of each property in the schema. Using incorrect types could result in errors when parsing JSON files by other tools developed in strong typing programming languages, leading to data transfer failures.
+
+To avoid such issues, we recommend designing dedicated structs for the SRGF format or utilizing methods like `JsonNumberHandling.WriteAsString`. Additionally, it is advisable to design relevant unit tests to ensure consistency between imports and exports.
+
+We also provide the [SRGF Json Schema Verify Tool](https://schema.uigf.org/?schema=srgf) to help you to verify validation of Json files.
+:::
+
 ```json
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -122,7 +130,7 @@ Including only importing feature reduces the interchangeability of user data, an
           },
           "time": {
             "type": "string",
-            "description": "Time of item achieved"
+            "description": "Time when the item was obtained. This MUST BE THE String typed value captured intact from the gacha record webpage WITHOUT ANY CONVERTION TO ANY DATE TYPES. Any conversion of such can cause potential timezone mistakes if the device time zone differs from the server time zone, unless special treatments are applied by individual app devs."
           },
           "name": {
             "type": "string",

@@ -81,11 +81,19 @@ Please remember to add corresponding uigf_gacha_type field when applying UIGF fo
 
 ### `item_id`
 
-Item's in-game ID, refer to [UIGF API](../API.md) to get this data
+Item's in-game ID, refer to [UIGF API](../API.md) to get this data.
 
 ## Json Schema
 
-> UIGF-Org provides [Json Schema](/schema/uigf.json) for validation
+> UIGF-Org provides the following JSON Schema for the validation of the data structure.
+
+::: warning Mind the Field Types
+Devs are strongly urged to respect the data types of each property in the schema. Using incorrect types could result in errors when parsing JSON files by other tools developed in strong typing programming languages, leading to data transfer failures.
+
+To avoid such issues, we recommend designing dedicated structs for the UIGF format or utilizing methods like `JsonNumberHandling.WriteAsString`. Additionally, it is advisable to design relevant unit tests to ensure consistency between imports and exports.
+
+We also provide the [UIGF Json Schema Verify Tool](https://schema.uigf.org/?schema=uigf) to help you to verify validation of Json files.
+:::
 
 ```json
 {
@@ -156,7 +164,7 @@ Item's in-game ID, refer to [UIGF API](../API.md) to get this data
           },
           "time": {
             "type": "string",
-            "title": "Time when the item was obtained"
+            "title": "Time when the item was obtained. This MUST BE THE String typed value captured intact from the gacha record webpage WITHOUT ANY CONVERTION TO ANY DATE TYPES. Any conversion of such can cause potential timezone mistakes if the device time zone differs from the server time zone, unless special treatments are applied by individual app devs."
           },
           "name": {
             "type": "string",

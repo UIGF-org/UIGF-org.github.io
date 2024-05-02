@@ -140,7 +140,7 @@ Item's in-game ID, refer to [UIGF API](../API.md) to get this data
             },
             "time": {
               "type": "string",
-              "title": "Time of item achieved"
+              "title": "Time when the item was obtained. "
             },
             "name": {
               "type": "string",
