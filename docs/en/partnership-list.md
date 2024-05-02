@@ -89,7 +89,7 @@ preview="https://s1.ax1x.com/2023/09/09/pP6xHfJ.png"
 
 <RelativeProject
 name="Starward"
-desc="米家游戏启动器"
+desc="Game Launcher for miHoYo"
 logo=""
 url="https://github.com/Scighost/Starward"
 version="UIGF v2.3"
@@ -124,7 +124,7 @@ preview="/partnerships/PaimonsNotebook/preview.webp"
 
 <RelativeProject
 name="Snap Hutao"
-desc="唷，找本堂主有何贵干呀？"
+desc="A multifunctional open-source Genshin Impact toolkit"
 logo="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01oaGvKE1g6dut0pICS_!!1797064093.png"
 url="https://hut.ao/"
 version="UIAF v1.1"
@@ -212,7 +212,7 @@ preview="https://s1.ax1x.com/2023/09/09/pP6xO61.png"
 
 <RelativeProject
 name="Starward"
-desc="米家游戏启动器"
+desc="Game Launcher for miHoYo"
 logo=""
 url="https://github.com/Scighost/Starward"
 preview="https://starward.scighost.com/resource/img/uigf/srgf_zh.webp"

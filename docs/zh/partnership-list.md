@@ -12,7 +12,7 @@ preview="https://img.alicdn.com/imgextra/i3/1797064093/O1CN018VkZBw1g6dvTMaX9W_!
 />
 
 <RelativeProject
-name="Snap Hutao"
+name="胡桃工具箱"
 desc="实用的开源多功能原神工具箱"
 logo="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01oaGvKE1g6dut0pICS_!!1797064093.png"
 url="https://hut.ao/"
@@ -123,8 +123,8 @@ preview="/partnerships/PaimonsNotebook/preview.webp"
 <RelativeProjectPanel>
 
 <RelativeProject
-name="胡桃"
-desc="唷，找本堂主有何贵干呀？"
+name="胡桃工具箱"
+desc="实用的开源多功能原神工具箱"
 logo="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01oaGvKE1g6dut0pICS_!!1797064093.png"
 url="https://hut.ao/"
 version="UIAF v1.1"
