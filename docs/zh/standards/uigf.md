@@ -88,7 +88,7 @@ App 不应假定 `region_time_zone` 的值为上表中给出的值，应具有�
 
 为了避免这类问题，我们建议您针对 UIGF 格式设计专用的 struct，或善用 `JsonNumberHandling.WriteAsString` 等方法。同时，设计相关的单元测试以确保导入导出的一致性。
 
-我们也提供 [UIGF 格式校验工具](https://schema.uigf.org/)来帮助你校验 Json 文件。
+我们也提供 [UIGF 格式校验工具](https://schema.uigf.org/?schema=uigf)来帮助你校验 Json 文件。
 :::
 
 ```json
@@ -160,7 +160,7 @@ App 不应假定 `region_time_zone` 的值为上表中给出的值，应具有�
           },
           "time": {
             "type": "string",
-            "description": "获取物品的时间，应为「抽卡记录网页上写的原始时间字串值 (String)」而非任何读取转换过的值。任何此般类型转换，但凡设备时区与伺服器时区有异，便一定会出现时区转换误差（除非开发者有做过专门的应对措施）。"
+            "description": "获取物品的时间，应为「抽卡记录网页上显示的原始时间字符串」而非任何转换过的值。如果设备时区与服务器时区不一致，任意类型转换将会导致时区转换出现误差（除非应用进行了特殊处理）。"
           },
           "name": {
             "type": "string",

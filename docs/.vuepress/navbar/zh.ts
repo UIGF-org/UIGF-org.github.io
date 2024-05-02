@@ -29,7 +29,7 @@ export const zhNavbar = navbar([
         icon: "api",
       },
       {
-        text: "UIGF 格式合规性校验工具",
+        text: "UIGF 格式校验工具",
         link: "https://schema.uigf.org/",
         icon: "tool"
       }

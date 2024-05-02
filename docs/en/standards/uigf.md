@@ -92,7 +92,7 @@ Devs are strongly urged to respect the data types of each property in the schema
 
 To avoid such issues, we recommend designing dedicated structs for the UIGF format or utilizing methods like `JsonNumberHandling.WriteAsString`. Additionally, it is advisable to design relevant unit tests to ensure consistency between imports and exports.
 
-We also provide the [UIGF Json Schema Verify Tool](https://schema.uigf.org/) to help you to verify validation of Json files.
+We also provide the [UIGF Json Schema Verify Tool](https://schema.uigf.org/?schema=uigf) to help you to verify validation of Json files.
 :::
 
 ```json
