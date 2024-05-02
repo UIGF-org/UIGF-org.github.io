@@ -12,7 +12,7 @@ preview="https://img.alicdn.com/imgextra/i3/1797064093/O1CN018VkZBw1g6dvTMaX9W_!
 />
 
 <RelativeProject
-name="Snap Hutao"
+name="胡桃工具箱"
 desc="实用的开源多功能原神工具箱"
 logo="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01oaGvKE1g6dut0pICS_!!1797064093.png"
 url="https://hut.ao/"
@@ -50,7 +50,7 @@ preview="/partnerships/mukapp/preview.webp"
 />
 
 <RelativeProject
-name="提瓦特小助手"
+name="提瓦特小助手 (YSHelper)"
 desc="专注旅行者服务的微信小程序"
 logo="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01wVRiEq1g6dvGG2mmX_!!1797064093.png"
 url="https://www.yshelper.com/index.php"
@@ -68,8 +68,8 @@ preview="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01Or2BBf1g6dvUQwGP9_!
 />
 
 <RelativeProject
-name="原神披萨小助手"
-desc="Apple全平台原神小助手"
+name="原神披萨助手"
+desc="iPadOS / iOS / watchOS / macOS 专用原神小助手"
 logo="https://gi.pizzastudio.org/img/ophelper_logo_clipped.png"
 url="https://apps.apple.com/app/id1635319193"
 version="UIGF v2.2"
@@ -123,8 +123,8 @@ preview="/partnerships/PaimonsNotebook/preview.webp"
 <RelativeProjectPanel>
 
 <RelativeProject
-name="胡桃"
-desc="唷，找本堂主有何贵干呀？"
+name="胡桃工具箱"
+desc="实用的开源多功能原神工具箱"
 logo="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01oaGvKE1g6dut0pICS_!!1797064093.png"
 url="https://hut.ao/"
 version="UIAF v1.1"
@@ -245,7 +245,6 @@ url="https://github.com/xyxyx718/HSRchargingCalculator/blob/main/%E5%92%B8%E9%B1
 preview="https://raw.githubusercontent.com/xyxyx718/HSRchargingCalculator/main/img/mp-history.jpg"
 />
 
-
 <RelativeProject
 name="StarRailTools"
 desc="保存星铁数据的小工具"
@@ -275,5 +274,14 @@ version="SRGF v1.0"
 preview="/partnerships/Firefly/preview.png"
 />
 
-</RelativeProjectPanel>
+<RelativeProject
+name="星穹铁道披萨助手"
+desc="iPadOS / iOS / watchOS / macOS 专用星穹铁道小助手"
+logo="https://hsr.pizzastudio.org/img/icon.hsrhelper.clipped.png"
+url="https://apps.apple.com/app/id6448894222"
+version="SRGF v1.0"
+:thirdparty="[{type: 'github', url: 'https://github.com/pizza-studio/HSRPizzaHelper/'}]"
+preview="https://hsr.pizzastudio.org/img/hsrhelper-srgf-preview.png"
+/>
 
+</RelativeProjectPanel>
