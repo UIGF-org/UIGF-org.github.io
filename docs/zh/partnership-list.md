@@ -50,7 +50,7 @@ preview="/partnerships/mukapp/preview.webp"
 />
 
 <RelativeProject
-name="提瓦特小助手"
+name="提瓦特小助手 (YSHelper)"
 desc="专注旅行者服务的微信小程序"
 logo="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01wVRiEq1g6dvGG2mmX_!!1797064093.png"
 url="https://www.yshelper.com/index.php"

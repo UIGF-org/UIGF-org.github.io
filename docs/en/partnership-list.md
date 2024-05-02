@@ -22,8 +22,8 @@ preview="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01F0AGTl1g6dvW6j28q_!
 />
 
 <RelativeProject
-name="Xunkong"
-desc="Record every happenings to your travel log."
+name="寻空"
+desc="记录旅途中发生的事"
 logo="https://xunkong.cc/images/logo.640.webp"
 url="https://xunkong.cc/"
 version="UIGF v2.2"
@@ -36,7 +36,7 @@ name="genshin-gacha-analyzer"
 desc="genshin wish history analyzer"
 logo="https://s1.ax1x.com/2023/09/09/pP6xyFg.jpg"
 url="https://genshin.voderl.cn/"
-version="不支持 UIGF 导出"
+version="UIGF Export is not supported"
 :thirdparty="[{type: 'github', url: 'https://github.com/voderl/genshin-gacha-analyzer'}]"
 preview="https://s1.ax1x.com/2023/09/09/pP6x1eK.png"
 />
@@ -50,7 +50,7 @@ preview="/partnerships/mukapp/preview.webp"
 />
 
 <RelativeProject
-name="提瓦特小助手 (YSHelper)"
+name="YSHelper"
 desc="专注旅行者服务的微信小程序"
 logo="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01wVRiEq1g6dvGG2mmX_!!1797064093.png"
 url="https://www.yshelper.com/index.php"
@@ -79,7 +79,7 @@ preview="https://gi.pizzastudio.org/img/ophelper-uigf-preview.png"
 
 <RelativeProject
 name="Sangonomiya"
-desc="原神祈愿记录工具"
+desc="Gacha Report Tool for Genshin Impact"
 logo="https://s1.ax1x.com/2023/09/09/pP6x7Y4.png"
 url="https://github.com/AuroraZiling/sangonomiya"
 version="Archived"
@@ -98,7 +98,7 @@ preview="https://starward.scighost.com/resource/img/uigf/uigf_zh.webp"
 />
 
 <RelativeProject
-name="提瓦特指南"
+name="Teyvat Guide"
 desc="Game Tool for Genshin Impact Player"
 logo="/partnerships/TeyvatGuide/logo.png"
 version="UIGF v3.0"
@@ -108,8 +108,8 @@ preview="/partnerships/TeyvatGuide/AppPreview.png"
 />
 
 <RelativeProject
-name="派蒙笔记本"
-desc="安卓平台下的原神工具"
+name="PaimonsNotebook"
+desc="Android-platform game tool for Genshin Impact"
 logo="/partnerships/PaimonsNotebook/logo.webp"
 url="https://github.com/QooLianyi/PaimonsNotebook"
 version="UIGF v3.0"
@@ -133,8 +133,8 @@ preview="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01F0AGTl1g6dvW6j28q_!
 />
 
 <RelativeProject
-name="Xunkong"
-desc="Record every happenings to your travel log."
+name="寻空"
+desc="记录旅途中发生的事"
 logo="https://xunkong.cc/images/logo.640.webp"
 url="https://xunkong.cc/"
 :thirdparty="[{type: 'github', url: 'https://github.com/xunkong/xunkong'}]"
@@ -212,7 +212,7 @@ preview="https://s1.ax1x.com/2023/09/09/pP6xO61.png"
 
 <RelativeProject
 name="Starward"
-desc="Game Launcher for miHoYo"
+desc="米家游戏启动器"
 logo=""
 url="https://github.com/Scighost/Starward"
 preview="https://starward.scighost.com/resource/img/uigf/srgf_zh.webp"
@@ -231,14 +231,14 @@ preview="/partnerships/starwo/preview.png"
 name="SRTools"
 desc="Enhanced StarRail Launcher"
 logo="https://cdn.jamsg.cn/release/SRTools/Logo.webp"
-url="https://srtools.jamsg.cn"
+url="https://srtools.jamsg.cn/en"
 :thirdparty="[{type: 'github', url: 'https://github.com/JamXi233/SRTools'}]"
 preview="https://cdn.jamsg.cn/release/SRTools/Preview.webp"
 />
 
 <RelativeProject
 name="咸鱼的崩铁助理"
-desc="崩坏：星穹铁道 抽卡分析&充能计算器"
+desc="Gacha Analyzer & Charging Calculator for Honkai: Star Rail"
 logo="https://raw.githubusercontent.com/xyxyx718/HSRchargingCalculator/main/img/logo.png"
 url="https://github.com/xyxyx718/HSRchargingCalculator/blob/main/%E5%92%B8%E9%B1%BC%E7%9A%84%E5%B4%A9%E9%93%81%E5%8A%A9%E7%90%86.md"
 :thirdparty="[{type: 'github', url: 'https://github.com/xyxyx718/HSRchargingCalculator'}]"
@@ -257,7 +257,7 @@ preview="https://raw.githubusercontent.com/cntvc/star-rail-tools/main/docs/image
 
 <RelativeProject
 name="StarRailToolkit"
-desc="崩坏：星穹铁道工具箱"
+desc="Honkai: Star Rail Toolkit"
 logo="/partnerships/StarRailToolkit/logo.jpg"
 url="https://github.com/LittleNyima/honkai-starrail-toolkit"
 :thirdparty="[{type: 'github', url: 'https://github.com/LittleNyima/honkai-starrail-toolkit'}]"
