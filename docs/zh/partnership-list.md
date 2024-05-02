@@ -68,8 +68,8 @@ preview="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01Or2BBf1g6dvUQwGP9_!
 />
 
 <RelativeProject
-name="原神披萨小助手"
-desc="Apple全平台原神小助手"
+name="原神披萨助手"
+desc="iPadOS / iOS / watchOS / macOS 专用原神小助手"
 logo="https://gi.pizzastudio.org/img/ophelper_logo_clipped.png"
 url="https://apps.apple.com/app/id1635319193"
 version="UIGF v2.2"
@@ -245,7 +245,6 @@ url="https://github.com/xyxyx718/HSRchargingCalculator/blob/main/%E5%92%B8%E9%B1
 preview="https://raw.githubusercontent.com/xyxyx718/HSRchargingCalculator/main/img/mp-history.jpg"
 />
 
-
 <RelativeProject
 name="StarRailTools"
 desc="保存星铁数据的小工具"
@@ -275,5 +274,14 @@ version="SRGF v1.0"
 preview="/partnerships/Firefly/preview.png"
 />
 
-</RelativeProjectPanel>
+<RelativeProject
+name="星穹铁道披萨助手"
+desc="iPadOS / iOS / watchOS / macOS 专用星穹铁道小助手"
+logo="https://gi.pizzastudio.org/img/hsrhelper_logo_clipped.png"
+url="https://apps.apple.com/app/id6448894222"
+version="SRGF v1.0"
+:thirdparty="[{type: 'github', url: 'https://github.com/pizza-studio/HSRPizzaHelper/'}]"
+preview="https://gi.pizzastudio.org/img/hsrhelper-srgf-preview.png"
+/>
 
+</RelativeProjectPanel>
