@@ -22,7 +22,7 @@ preview="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01F0AGTl1g6dvW6j28q_!
 />
 
 <RelativeProject
-name="寻空"
+name="Xunkong"
 desc="记录旅途中发生的事"
 logo="https://xunkong.cc/images/logo.640.webp"
 url="https://xunkong.cc/"
@@ -133,7 +133,7 @@ preview="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01F0AGTl1g6dvW6j28q_!
 />
 
 <RelativeProject
-name="寻空"
+name="Xunkong"
 desc="记录旅途中发生的事"
 logo="https://xunkong.cc/images/logo.640.webp"
 url="https://xunkong.cc/"
