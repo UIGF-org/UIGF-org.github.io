@@ -49,14 +49,12 @@ Including only importing feature reduces the interchangeability of user data, an
 
 ## Json Schema
 
-::: warning WARNING
-Devs are strongly urged to respect the data types of each property in the schema. Especially, please do not use Int for those String fields.
+::: warning Mind the Field Types
+Devs are strongly urged to respect the data types of each property in the schema. Using incorrect types could result in errors when parsing JSON files by other tools developed in strong typing programming languages, leading to data transfer failures.
 
-Any disrespect of such can result in forcing the devs of other apps to wipe your arse.
+Use of dedicated structs (in lieu of inheritable classes) is strongly recommended for UIGF exports in order to avoid such kind of troubles. You may also take advantages of some in-language features like `JsonNumberHandling.WriteAsString` in C#. Use dedicated unit tests to make sure the consistency between the exported and the imported data.
 
-Use of dedicated structs (in lieu of inheritable classes) is strongly recommended for SRGF exports in order to avoid such kind of troubles. You may also take advantages of some in-language features like `JsonNumberHandling.WriteAsString` in C#. Use dedicated unit tests to make sure the consistency between the exported and the imported data.
-
-Furthermore, here are the [Json Schema Validation Utilities](https://github.com/UIGF-org/UIGF-SchemaVerify).
+Additionally, we provide the [SRGF Json Schema Verify Tool](https://schema.uigf.org/).
 :::
 
 ```json

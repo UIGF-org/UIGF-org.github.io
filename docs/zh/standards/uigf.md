@@ -84,11 +84,11 @@ App 不应假定 `region_time_zone` 的值为上表中给出的值，应具有�
 > UIGF-Org 提供下述 Json Schema 以用于验证资料结构的正确性。
 
 ::: warning 注意字段类型
-请各位开发者务必尊重 Schema 内定义的字段类型，即使用预期内的 `type`。使用错误的类型会导致其它由强类型编程语言制成的工具在解析 Json 文件时产生错误，进而导致数据转移失败。
+请各位开发者务必尊重 Schema 内定义的字段类型。使用错误的类型可能会导致其它由强类型编程语言制成的工具在解析 Json 文件时产生错误，进而导致数据转移失败。
 
 为了规避这类问题，您或许可以针对 UIGF 资料导出的需求设计专用的 Struct（而非与其他 Class 互为继承关系）、或善用「JsonNumberHandling.WriteAsString」等手段，且设计专门的单元测试、以确保导出与导入时的资料的一致性。
 
-此外，这里也有 [Json 格式合规性校验工具](https://schema.uigf.org/) 可用。
+同时，我们也提供 [UIGF 格式校验工具](https://schema.uigf.org/)。
 :::
 
 ```json

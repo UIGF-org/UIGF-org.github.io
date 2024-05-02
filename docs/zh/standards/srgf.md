@@ -48,14 +48,12 @@ head:
 
 ## Json Schema
 
-::: warning 警告
-请各位开发者务必尊重 Schema 内定义的资料类型。该是 String 的请一定不要用 Int 凑合。
+::: warning 注意字段类型
+请各位开发者务必尊重 Schema 内定义的字段类型。使用错误的类型可能会导致其它由强类型编程语言制成的工具在解析 Json 文件时产生错误，进而导致数据转移失败。
 
-任何此类行为都等价于让其他支持 SRGF 的 App 开发者们替您擦屁股。
+为了规避这类问题，您或许可以针对 UIGF 资料导出的需求设计专用的 Struct（而非与其他 Class 互为继承关系）、或善用「JsonNumberHandling.WriteAsString」等手段，且设计专门的单元测试、以确保导出与导入时的资料的一致性。
 
-为了规避这类问题，您或许可以针对 SRGF 资料导出的需求设计专用的 Struct（而非与其他 Class 互为继承关系）、或善用「JsonNumberHandling.WriteAsString」等手段，且设计专门的单元测试、以确保导出与导入时的资料的一致性。
-
-此外，这里也有 [Json 格式合规性校验工具](https://github.com/UIGF-org/UIGF-SchemaVerify) 可用。
+同时，我们也提供 [SRGF 格式校验工具](https://schema.uigf.org/)。
 :::
 
 ```json

@@ -29,7 +29,7 @@ export const enNavbar = navbar([
         icon: "repo",
       },
       {
-        text: "Schema Verify Tool",
+        text: "UIGF Schema Verify Tool",
         link: "https://schema.uigf.org/",
         icon: "tool"
       }
