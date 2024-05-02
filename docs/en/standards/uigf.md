@@ -90,9 +90,9 @@ Item's in-game ID, refer to [UIGF API](../API.md) to get this data.
 ::: warning Mind the Field Types
 Devs are strongly urged to respect the data types of each property in the schema. Using incorrect types could result in errors when parsing JSON files by other tools developed in strong typing programming languages, leading to data transfer failures.
 
-Use of dedicated structs (in lieu of inheritable classes) is strongly recommended for UIGF exports in order to avoid such kind of troubles. You may also take advantages of some in-language features like `JsonNumberHandling.WriteAsString` in C#. Use dedicated unit tests to make sure the consistency between the exported and the imported data.
+To avoid such issues, we recommend designing dedicated structs for the UIGF format or utilizing methods like `JsonNumberHandling.WriteAsString`. Additionally, it is advisable to design relevant unit tests to ensure consistency between imports and exports.
 
-Additionally, we provide the [UIGF Json Schema Verify Tool](https://schema.uigf.org/).
+We also provide the [UIGF Json Schema Verify Tool](https://schema.uigf.org/) to help you to verify validation of Json files.
 :::
 
 ```json
