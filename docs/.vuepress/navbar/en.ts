@@ -28,6 +28,11 @@ export const enNavbar = navbar([
         link: "https://github.com/Kamisato-Ayaka-233/mihoyo-api-collect",
         icon: "repo",
       },
+      {
+        text: "Schema Verify Tool",
+        link: "https://schema.uigf.org/",
+        icon: "tool"
+      }
     ],
   },
 ]);

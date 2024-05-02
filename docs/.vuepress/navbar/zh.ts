@@ -28,6 +28,11 @@ export const zhNavbar = navbar([
         link: "/zh/mihoyo-api-collection-project.html",
         icon: "api",
       },
+      {
+        text: "UIGF 格式合规性校验工具",
+        link: "https://schema.uigf.org/",
+        icon: "tool"
+      }
     ],
   },
 ]);
