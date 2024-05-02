@@ -277,7 +277,7 @@ preview="/partnerships/Firefly/preview.png"
 <RelativeProject
 name="Pizza Helper 4 HSR"
 desc="A companion app (for Honkai: Star Rail)<br /> on iPadOS / iOS / watchOS / macOS"
-logo="https://gi.pizzastudio.org/img/hsrhelper_logo_clipped.png"
+logo="https://hsr.pizzastudio.org/img/icon.hsrhelper.clipped.png"
 url="https://apps.apple.com/app/id6448894222"
 version="SRGF v1.0"
 :thirdparty="[{type: 'github', url: 'https://github.com/pizza-studio/HSRPizzaHelper/'}]"
