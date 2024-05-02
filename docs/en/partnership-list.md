@@ -281,7 +281,7 @@ logo="https://gi.pizzastudio.org/img/hsrhelper_logo_clipped.png"
 url="https://apps.apple.com/app/id6448894222"
 version="SRGF v1.0"
 :thirdparty="[{type: 'github', url: 'https://github.com/pizza-studio/HSRPizzaHelper/'}]"
-preview="https://gi.pizzastudio.org/img/hsrhelper-srgf-preview.png"
+preview="https://hsr.pizzastudio.org/img/hsrhelper-srgf-preview.png"
 />
 
 </RelativeProjectPanel>
