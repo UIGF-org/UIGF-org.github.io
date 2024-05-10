@@ -93,14 +93,13 @@ head:
           },
           "status": {
             "type": "number",
-            "description": "完成状态",
+            "description": "完成状态:ACHIEVEMENT_INVALID = 0; ACHIEVEMENT_UNFINISHED = 1; ACHIEVEMENT_FINISHED = 2;ACHIEVEMENT_POINT_TAKEN = 3;",
             "enum": [
               0,
               1,
               2,
               3
-            ],
-            "enumDesc": "ACHIEVEMENT_INVALID = 0; ACHIEVEMENT_UNFINISHED = 1; ACHIEVEMENT_FINISHED = 2;ACHIEVEMENT_POINT_TAKEN = 3;"
+            ]
           },
           "timestamp": {
             "type": "number",
