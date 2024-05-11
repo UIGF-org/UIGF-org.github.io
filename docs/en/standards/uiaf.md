@@ -93,14 +93,13 @@ We also provide the [UIAF Json Schema Verify Tool](https://schema.uigf.org/?sche
           },
           "status": {
             "type": "number",
-            "description": "Finished status",
+            "description": "Finished status:ACHIEVEMENT_INVALID = 0; ACHIEVEMENT_UNFINISHED = 1; ACHIEVEMENT_FINISHED = 2;ACHIEVEMENT_POINT_TAKEN = 3;",
             "enum": [
               0,
               1,
               2,
               3
-            ],
-            "enumDesc": "ACHIEVEMENT_INVALID = 0; ACHIEVEMENT_UNFINISHED = 1; ACHIEVEMENT_FINISHED = 2;ACHIEVEMENT_POINT_TAKEN = 3;"
+            ]
           },
           "timestamp": {
             "type": "number",
