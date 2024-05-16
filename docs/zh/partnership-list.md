@@ -68,7 +68,7 @@ preview="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01Or2BBf1g6dvUQwGP9_!
 />
 
 <RelativeProject
-name="原神披萨助手"
+name="原神披萨助小手"
 desc="iPadOS / iOS / watchOS / macOS 专用原神小助手"
 logo="https://gi.pizzastudio.org/img/ophelper_logo_clipped.png"
 url="https://apps.apple.com/app/id1635319193"
@@ -275,7 +275,7 @@ preview="/partnerships/Firefly/preview.png"
 />
 
 <RelativeProject
-name="星穹铁道披萨助手"
+name="星铁披萨小助手"
 desc="iPadOS / iOS / watchOS / macOS 专用星穹铁道小助手"
 logo="https://hsr.pizzastudio.org/img/icon.hsrhelper.clipped.png"
 url="https://apps.apple.com/app/id6448894222"

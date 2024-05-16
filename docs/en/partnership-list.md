@@ -68,7 +68,7 @@ preview="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01Or2BBf1g6dvUQwGP9_!
 />
 
 <RelativeProject
-name="Pizza Helper 4 Genshin"
+name="Pizza Helper for Genshin"
 desc="A companion app (for Genshin Impact) among Apple platforms."
 logo="https://gi.pizzastudio.org/img/ophelper_logo_clipped.png"
 url="https://apps.apple.com/app/id1635319193"
@@ -275,7 +275,7 @@ preview="/partnerships/Firefly/preview.png"
 />
 
 <RelativeProject
-name="Pizza Helper 4 HSR"
+name="Pizza Helper for HSR"
 desc="A companion app (for Honkai: Star Rail) among Apple platforms."
 logo="https://hsr.pizzastudio.org/img/icon.hsrhelper.clipped.png"
 url="https://apps.apple.com/app/id6448894222"
