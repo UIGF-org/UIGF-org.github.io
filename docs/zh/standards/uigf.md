@@ -11,10 +11,10 @@ head:
 > Uniformed Interchangeable GachaLog Format standard (UIGF) v4.0 <Badge text="Current" type="message" />
 
 ::: warning UIGF 标准使用声明
-1. 必须在同时支持 UIGF 数据格式**导入**和**导出**功能
+1. 必须同时支持 UIGF 数据格式**导入**和**导出**功能
 2. 提供跳转至 [UIGF-Org](https://uigf.org) 的超链接，声明支持 UIGF 格式
 
-仅包含导入或导出功能降低了用户数据可流通性，且将数据置于用户不可控的风险中，不符合 UIGF-Org 设计的初衷。
+仅包含导入或导出功能降低了用户数据可流通性，且将数据置于用户不可控的风险中，不符合 UIGF-Org 设计的初衷
 :::
 
 ## 更新记录
@@ -27,7 +27,6 @@ head:
 
 为了统一不同 App, 不同游戏，不同账号间的抽卡记录导入导出行为，我们决定将所有支持的游戏抽卡格式合入 UIGF 中。
 不同的游戏，不同的账号将能够以单个文件或字符串的形式进行表示，导入与导出操作对用户而言将变的史无前例的简单。
-
 
 ## Json Schema
 
