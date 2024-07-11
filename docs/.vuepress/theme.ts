@@ -11,7 +11,9 @@ export default hopeTheme(
       url: "https://github.com/UIGF-org",
     },
 
-    iconAssets: "iconfont",
+    iconAssets: [
+      "https://at.alicdn.com/t/c/font_2410206_5vb9zlyghj.css",
+    ],
 
     logo: "/uigf-logo128.png",
 
@@ -66,19 +68,14 @@ export default hopeTheme(
       mdEnhance: {
         align: true,
         attrs: true,
-        chart: true,
         codetabs: true,
         hint: true,
         demo: true,
-        echarts: true,
-        flowchart: true,
         gfm: false,
         imgSize: true,
         include: true,
-        katex: true,
         imgLazyload: true,
         mark: true,
-        mermaid: true,
         playground: {
           presets: ["ts", "vue"],
         },
@@ -99,7 +96,6 @@ export default hopeTheme(
         sup: true,
         tabs: true,
         vPre: true,
-        vuePlayground: true,
       },
       components: {
         components: ["SiteInfo", "Badge", "FontIcon"],

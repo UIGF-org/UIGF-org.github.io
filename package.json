@@ -11,14 +11,14 @@
     "prettier": "prettier --write \"./docs/.vuepress/**/*\""
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "^2.0.0-rc.8",
-    "@vuepress/plugin-docsearch": "2.0.0-rc.18",
-    "@vuepress/plugin-google-analytics": "2.0.0-rc.15",
-    "@vuepress/plugin-redirect": "2.0.0-rc.18",
+    "@vuepress/bundler-vite": "2.0.0-rc.14",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.37",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.37",
+    "@vuepress/plugin-redirect": "2.0.0-rc.37",
     "@vueuse/core": "^10.9.0",
     "prettier": "3.2.5",
-    "vue": "^3.4.21",
-    "vuepress": "2.0.0-rc.8",
-    "vuepress-theme-hope": "2.0.0-rc.27"
+    "vue": "^3.4.31",
+    "vuepress": "2.0.0-rc.14",
+    "vuepress-theme-hope": "2.0.0-rc.50"
   }
 }
