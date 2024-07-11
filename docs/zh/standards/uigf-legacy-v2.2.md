@@ -12,7 +12,7 @@ head:
 > Uniformed Interchangeable GachaLog Format standard (UIGF) v2.2 <Badge text="Archived" type="message" />
 
 ::: warning 警告
-该标准已过时，[UIGF v2.4](uigf.md) 替代了本标准。本页面已归档，请使用最新的 [UIGF 标准](./uigf.md)。
+该标准已过时并归档，请查看 [UIGF 最新标准文档](./uigf.md)。
 :::
 
 ## 前言
