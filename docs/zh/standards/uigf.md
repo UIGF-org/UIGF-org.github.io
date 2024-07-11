@@ -49,7 +49,14 @@ head:
             "type": "object",
             "properties": {
                 "export_timestamp": {
-                    "type": "string|integer",
+                    "oneof": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ],
                     "description": "导出档案的时间戳，秒级"
                 },
                 "export_app": {
@@ -79,7 +86,14 @@ head:
                 "type": "object",
                 "properties": {
                     "uid": {
-                        "type": "string|integer",
+                        "oneof": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "integer"
+                            }
+                        ],
                         "description": "UID"
                     },
                     "timezone": {
@@ -171,7 +185,14 @@ head:
                 "type": "object",
                 "properties": {
                     "uid": {
-                        "type": "string|integer",
+                        "oneof": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "integer"
+                            }
+                        ],
                         "description": "UID"
                     },
                     "timezone": {
@@ -253,7 +274,14 @@ head:
                 "type": "object",
                 "properties": {
                     "uid": {
-                        "type": "string|integer",
+                        "oneof": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "integer"
+                            }
+                        ],
                         "description": "UID"
                     },
                     "timezone": {
