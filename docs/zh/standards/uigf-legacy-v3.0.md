@@ -8,12 +8,17 @@ head:
 ---
 
 # 统一可交换抽卡记录标准 v3.0
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v3.0 <Badge text="Current" type="message" />
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v3.0 <Badge text="Legacy" type="message" />
 > 
-::: warning UIGF 标准使用声明
+::: info UIGF 标准使用声明
 应用必须在同时支持 UIGF 数据格式**导入**和**导出**功能并在相关功能区域或文档中提供跳转至 [UIGF-Org](https://uigf.org) 的超链接后声明支持 UIGF 格式
 
 仅包含导入或导出功能降低了用户数据可流通性，且将数据置于用户不可控的风险中，不符合 UIGF-Org 设计的初衷。
+:::
+::: warning Deprecating Version
+**该标准已过时，[UIGF v4.0](uigf.md) 替代了该版本的标准。** 
+
+最新的 UIGF 4.0 版本继承并合并了 UIGF 3.0 和 [SRGF](./srgf.md) 标准，并增加了对绝区零抽卡数据的支持。如果你是应用开发者，可以根据文档中定义的格式实现对旧版格式的导入兼容。
 :::
 
 ## 更新记录
