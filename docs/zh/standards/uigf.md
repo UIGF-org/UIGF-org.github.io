@@ -112,7 +112,7 @@ tags:
                     },
                     "timezone": {
                         "type": "integer",
-                        "description": "时区偏移"
+                        "description": "时区偏移，由米哈游 API 返回，若与服务器时区不同请注意 list 中 time 的转换"
                     },
                     "lang": {
                         "type": "string",
@@ -136,7 +136,7 @@ tags:
                                 },
                                 "gacha_type": {
                                     "type": "string",
-                                    "description": "卡池类型，API返回",
+                                    "description": "卡池类型，米哈游 API 返回",
                                     "enum": [
                                         "100",
                                         "200",
@@ -152,27 +152,27 @@ tags:
                                 },
                                 "count": {
                                     "type": "string",
-                                    "description": "物品个数，一般为1，API返回"
+                                    "description": "物品个数，一般为1，米哈游 API 返回"
                                 },
                                 "time": {
                                     "type": "string",
-                                    "description": "获取物品的本地时间，与 timezone 一起计算出物品的准确获取时间，API返回"
+                                    "description": "抽取物品时对应时区（timezone）下的本地时间"
                                 },
                                 "name": {
                                     "type": "string",
-                                    "description": "物品名称, API返回"
+                                    "description": "物品名称，米哈游 API 返回"
                                 },
                                 "item_type": {
                                     "type": "string",
-                                    "description": "物品类型, API返回"
+                                    "description": "物品类型，米哈游 API 返回"
                                 },
                                 "rank_type": {
                                     "type": "string",
-                                    "description": "物品等级, API返回"
+                                    "description": "物品等级，米哈游 API 返回"
                                 },
                                 "id": {
                                     "type": "string",
-                                    "description": "记录内部 ID, API返回"
+                                    "description": "记录内部 ID，米哈游 API 返回"
                                 }
                             },
                             "required": [
@@ -211,7 +211,7 @@ tags:
                     },
                     "timezone": {
                         "type": "integer",
-                        "description": "时区偏移"
+                        "description": "时区偏移，由米哈游 API 返回，若与服务器时区不同请注意 list 中 time 的转换"
                     },
                     "lang": {
                         "type": "string",
@@ -242,23 +242,23 @@ tags:
                                 },
                                 "count": {
                                     "type": "string",
-                                    "description": "物品个数，一般为1，API返回"
+                                    "description": "物品个数，一般为1，米哈游 API 返回"
                                 },
                                 "time": {
                                     "type": "string",
-                                    "description": "获取物品的本地时间，与 timezone 一起计算出物品的准确获取时间，API返回"
+                                    "description": "抽取物品时对应时区（timezone）下的本地时间"
                                 },
                                 "name": {
                                     "type": "string",
-                                    "description": "物品名称, API返回"
+                                    "description": "物品名称，米哈游 API 返回"
                                 },
                                 "item_type": {
                                     "type": "string",
-                                    "description": "物品类型, API返回"
+                                    "description": "物品类型，米哈游 API 返回"
                                 },
                                 "rank_type": {
                                     "type": "string",
-                                    "description": "物品等级, API返回"
+                                    "description": "物品等级，米哈游 API 返回"
                                 },
                                 "id": {
                                     "type": "string",
@@ -300,7 +300,7 @@ tags:
                     },
                     "timezone": {
                         "type": "integer",
-                        "description": "时区偏移"
+                        "description": "时区偏移，由米哈游 API 返回，若与服务器时区不同请注意 list 中 time 的转换"
                     },
                     "lang": {
                         "type": "string",
@@ -331,27 +331,27 @@ tags:
                                 },
                                 "count": {
                                     "type": "string",
-                                    "description": "物品个数，一般为1，API返回"
+                                    "description": "物品个数，一般为1，米哈游 API 返回"
                                 },
                                 "time": {
                                     "type": "string",
-                                    "description": "获取物品的本地时间，与 timezone 一起计算出物品的准确获取时间，API返回"
+                                    "description": "抽取物品时对应时区（timezone）下的本地时间"
                                 },
                                 "name": {
                                     "type": "string",
-                                    "description": "物品名称, API返回"
+                                    "description": "物品名称，米哈游 API 返回"
                                 },
                                 "item_type": {
                                     "type": "string",
-                                    "description": "物品类型, API返回"
+                                    "description": "物品类型，米哈游 API 返回"
                                 },
                                 "rank_type": {
                                     "type": "string",
-                                    "description": "物品等级, API返回"
+                                    "description": "物品等级，米哈游 API 返回"
                                 },
                                 "id": {
                                     "type": "string",
-                                    "description": "记录内部 ID, API返回"
+                                    "description": "记录内部 ID，米哈游 API 返回"
                                 }
                             },
                             "required": [
