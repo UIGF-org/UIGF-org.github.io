@@ -10,11 +10,12 @@ head:
 # 统一可交换抽卡记录标准 v4.0
 > Uniformed Interchangeable GachaLog Format standard (UIGF) v4.0 <Badge text="Current" type="message" />
 
-::: warning UIGF 标准使用声明
-1. 必须同时支持 UIGF 数据格式**导入**和**导出**功能
-2. 提供跳转至 [UIGF-Org](https://uigf.org) 的超链接，声明支持 UIGF 格式
+::: warning 中断性更新警告
+UIGF v4.0 and higher 对于 UIGF v3.0 and lower | SRGF v1.0 间**不具备向下兼容性**，UIGF/SRGF 合作项目如果进行适配需进行重新认证。
+:::
 
-仅包含导入或导出功能降低了用户数据可流通性，且将数据置于用户不可控的风险中，不符合 UIGF-Org 设计的初衷
+::: warning UIGF 标准使用声明
+请在 App 内提供跳转至 [UIGF-Org](https://uigf.org) 的超链接，声明支持 UIGF 格式
 :::
 
 ## 更新记录
@@ -27,6 +28,16 @@ head:
 
 为了统一不同 App, 不同游戏，不同账号间的抽卡记录导入导出行为，我们决定将所有支持的游戏抽卡格式合入 UIGF 中。
 不同的游戏，不同的账号将能够以单个文件或字符串的形式进行表示，导入与导出操作对用户而言将变的史无前例的简单。
+
+## 实现与认证
+
+实现 UIGF v4.0 and higher 导入导出并不意味着需要移除对 UIGF v3.0 and lower | SRGF v1.0 的导入导出支持
+但是，不建议对 UIGF v4.0 and higher 与 UIGF v3.0 and lower | SRGF v1.0 使用同一套导入导出逻辑。
+
+导出方可以选择性的填充的填充针对每个游戏的字段或直接忽略
+导入方可以选择性的读取针对每个游戏的字段或直接忽略
+
+一旦实现了针对某个游戏的导入/导出，必须同时实现导出/导入功能，否则将无法通过认证
 
 ## Json Schema
 
