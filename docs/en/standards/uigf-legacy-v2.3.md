@@ -1,13 +1,13 @@
 ---
-category: [Standard Document]
-order: 1
+category: [Standardization Documents]
+order: 5
 head:
   - - meta
     - name: keywords
       content: Genshin, Genshin Impact, Gacha, Gacha log, UIGF
 ---
 # Uniformed Interchangeable GachaLog Format Standard v2.3
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.3 <Badge text="Legacy" type="message" />
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.3 <Badge text="Archived" type="message" />
 
 ::: warning Usage of UIGF Statement Requirement
 
@@ -16,8 +16,8 @@ Application must declare support of UIGF data format only after supporting of bo
 Including only importing feature reduces the interchangeability of user data, and puts the data in a risk that user can not control, which is not in line with intention of UIGF-Org.
 :::
 
-::: warning Warning
-This standard is outdated, [UIGF v2.4](uigf.md) is the successor.
+::: warning Archived Version
+This standard is outdated and archived, please check our latest [UIGF standard](./uigf.md) document.
 :::
 
 ## Versions Features
