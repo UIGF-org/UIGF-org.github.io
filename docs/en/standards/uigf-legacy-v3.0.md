@@ -15,6 +15,7 @@ Application must declare support of UIGF data format only after supporting of bo
 
 Including only importing feature reduces the interchangeability of user data, and puts the data in a risk that user can not control, which is not in line with intention of UIGF-Org.
 :::
+
 ::: warning Deprecating Version
 This standard is outdated, [UIGF v4.0](uigf-legacy-v3.0) is the successor.
 

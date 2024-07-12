@@ -152,7 +152,7 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                                 },
                                 "gacha_type": {
                                     "type": "string",
-                                    "description": "Gacha type, returned by API",
+                                    "description": "Gacha type, returned by MiHoYo API",
                                     "enum": [
                                         "100",
                                         "200",
@@ -168,27 +168,27 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                                 },
                                 "count": {
                                     "type": "string",
-                                    "description": "The number of items, usually 1, returned by API"
+                                    "description": "The number of items, usually 1, returned by MiHoYo API"
                                 },
                                 "time": {
                                     "type": "string",
-                                    "description": "获取物品的本地时间，与 timezone 一起计算出物品的准确获取时间，API返回"
+                                    "description": "The local time in the timezone of the item being drawn"
                                 },
                                 "name": {
                                     "type": "string",
-                                    "description": "The name of the item, returned by API"
+                                    "description": "The name of the item, returned by MiHoYo API"
                                 },
                                 "item_type": {
                                     "type": "string",
-                                    "description": "The type of the item, returned by API"
+                                    "description": "The type of the item, returned by MiHoYo API"
                                 },
                                 "rank_type": {
                                     "type": "string",
-                                    "description": "The rank of the item, returned by API"
+                                    "description": "The rank of the item, returned by MiHoYo API"
                                 },
                                 "id": {
                                     "type": "string",
-                                    "description": "The internal ID of the record, returned by API"
+                                    "description": "The internal ID of the record, returned by MiHoYo API"
                                 }
                             },
                             "required": [
@@ -275,27 +275,27 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                                 },
                                 "count": {
                                     "type": "string",
-                                    "description": "The number of items, usually 1, returned by API"
+                                    "description": "The number of items, usually 1, returned by MiHoYo API"
                                 },
                                 "time": {
                                     "type": "string",
-                                    "description": "获取物品的本地时间，与 timezone 一起计算出物品的准确获取时间，API返回"
+                                    "description": "The local time in the timezone of the item being drawn"
                                 },
                                 "name": {
                                     "type": "string",
-                                    "description": "The name of the item, returned by API"
+                                    "description": "The name of the item, returned by MiHoYo API"
                                 },
                                 "item_type": {
                                     "type": "string",
-                                    "description": "The type of the item, returned by API"
+                                    "description": "The type of the item, returned by MiHoYo API"
                                 },
                                 "rank_type": {
                                     "type": "string",
-                                    "description": "The rank of the item, returned by API"
+                                    "description": "The rank of the item, returned by MiHoYo API"
                                 },
                                 "id": {
                                     "type": "string",
-                                    "description": "The internal ID of the record, returned by API"
+                                    "description": "The internal ID of the record, returned by MiHoYo API"
                                 }
                             },
                             "required": [
@@ -381,27 +381,27 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                                 },
                                 "count": {
                                     "type": "string",
-                                    "description": "The number of items, usually 1, returned by API"
+                                    "description": "The number of items, usually 1, returned by MiHoYo API"
                                 },
                                 "time": {
                                     "type": "string",
-                                    "description": "获取物品的本地时间，与 timezone 一起计算出物品的准确获取时间，API返回"
+                                    "description": "The local time in the timezone of the item being drawn"
                                 },
                                 "name": {
                                     "type": "string",
-                                    "description": "The name of the item, returned by API"
+                                    "description": "The name of the item, returned by MiHoYo API"
                                 },
                                 "item_type": {
                                     "type": "string",
-                                    "description": "The type of the item, returned by API"
+                                    "description": "The type of the item, returned by MiHoYo API"
                                 },
                                 "rank_type": {
                                     "type": "string",
-                                    "description": "The rank of the item, returned by API"
+                                    "description": "The rank of the item, returned by MiHoYo API"
                                 },
                                 "id": {
                                     "type": "string",
-                                    "description": "The internal ID of the record, returned by API"
+                                    "description": "The internal ID of the record, returned by MiHoYo API"
                                 }
                             },
                             "required": [
