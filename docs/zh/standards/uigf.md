@@ -173,7 +173,7 @@ tags:
                                 },
                                 "time": {
                                     "type": "string",
-                                    "description": "抽取物品时对应时区（timezone）下的本地时间"
+                                    "description": "抽取物品时对应时区（timezone）下的当地时间"
                                 },
                                 "name": {
                                     "type": "string",
@@ -280,7 +280,7 @@ tags:
                                 },
                                 "time": {
                                     "type": "string",
-                                    "description": "抽取物品时对应时区（timezone）下的本地时间"
+                                    "description": "抽取物品时对应时区（timezone）下的当地时间"
                                 },
                                 "name": {
                                     "type": "string",
@@ -386,7 +386,7 @@ tags:
                                 },
                                 "time": {
                                     "type": "string",
-                                    "description": "抽取物品时对应时区（timezone）下的本地时间"
+                                    "description": "抽取物品时对应时区（timezone）下的当地时间"
                                 },
                                 "name": {
                                     "type": "string",
