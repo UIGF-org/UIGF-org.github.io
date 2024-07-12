@@ -21,12 +21,12 @@ This standard is outdated and archived, please check our latest [UIGF standard](
 :::
 
 ## Versions Features
-| Version                       | Note                                                                              | Compatibility  |
-|-------------------------------|-----------------------------------------------------------------------------------|----------------|
-| `v2.0`                        | First public version                                                              | v2.0           |
-| `v2.1`                        | Simplified in language expression, data format is completely consistent with v2.0 | v2.1 and lower |
-| [`v2.2`](UIGF-legacy-v2.2.md) | Add `info.export_timestamp` to fill UNIX timestamp                                | v2.2 and lower |
-| `v2.3`                        | Add support for non-Chinese environment, express in Json Schema                   | v2.3 and lower |
+| Version                         | Note                                                                              | Compatibility  |
+|---------------------------------|-----------------------------------------------------------------------------------|----------------|
+| `v2.0`                          | First public version                                                              | v2.0           |
+| `v2.1`                          | Simplified in language expression, data format is completely consistent with v2.0 | v2.1 and lower |
+| [`v2.2`](./uigf-legacy-v2.2.md) | Add `info.export_timestamp` to fill UNIX timestamp                                | v2.2 and lower |
+| `v2.3`                          | Add support for non-Chinese environment, express in Json Schema                   | v2.3 and lower |
 
 ### What's Changed in v2.3
 * UIGF.W standard is deprecated
@@ -64,7 +64,7 @@ Please remember to add corresponding uigf_gacha_type field when applying UIGF fo
 
 ### item_id
 
-Item's in-game ID, refer to [UIGF API](../API.md) to get this data
+Item's in-game ID, refer to [UIGF API](../api.md) to get this data
 
 ## Json Schema
 

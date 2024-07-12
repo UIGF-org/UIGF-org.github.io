@@ -23,14 +23,14 @@ The latest UIGF 4.0 version inherits and merges the standards of UIGF 3.0 and [S
 :::
 
 ## Versions Features
-| Version                       | Note                                                                              | Compatibility  |
-|-------------------------------|-----------------------------------------------------------------------------------|----------------|
-| `v2.0`                        | First public version                                                              | v2.0           |
-| `v2.1`                        | Simplified in language expression, data format is completely consistent with v2.0 | v2.1 and lower |
-| [`v2.2`](uigf-legacy-v2.2.md) | Add `info.export_timestamp` to fill UNIX timestamp                                | v2.2 and lower |
-| [`v2.3`](uigf-legacy-v2.3.md) | Add support for non-Chinese environment, express in Json Schema                   | v2.3 and lower |
-| `v2.4`                        | Add `info.region_time_zone` to support time zone processing                       | v2.4 and lower |
-| `v3.0`                        | Add support for Chronicled Wish                                                   | v3.0 and lower |
+| Version                         | Note                                                                              | Compatibility  |
+|---------------------------------|-----------------------------------------------------------------------------------|----------------|
+| `v2.0`                          | First public version                                                              | v2.0           |
+| `v2.1`                          | Simplified in language expression, data format is completely consistent with v2.0 | v2.1 and lower |
+| [`v2.2`](./uigf-legacy-v2.2.md) | Add `info.export_timestamp` to fill UNIX timestamp                                | v2.2 and lower |
+| [`v2.3`](./uigf-legacy-v2.3.md) | Add support for non-Chinese environment, express in Json Schema                   | v2.3 and lower |
+| `v2.4`                          | Add `info.region_time_zone` to support time zone processing                       | v2.4 and lower |
+| `v3.0`                          | Add support for Chronicled Wish                                                   | v3.0 and lower |
 
 ### What's Changed in v3.0
 * Added new enumeration items in `gacha_type`
@@ -87,7 +87,7 @@ Please remember to add corresponding uigf_gacha_type field when applying UIGF fo
 
 ### `item_id`
 
-Item's in-game ID, refer to [UIGF API](../API.md) to get this data.
+Item's in-game ID, refer to [UIGF API](../api.md) to get this data.
 
 ## Json Schema
 
