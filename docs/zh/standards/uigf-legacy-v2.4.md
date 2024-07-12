@@ -1,6 +1,6 @@
 ---
 category: [标准化文档]
-order: 1
+order: 6
 head:
   - - meta
     - name: keywords
