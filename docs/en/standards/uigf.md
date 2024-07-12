@@ -52,6 +52,7 @@ Developers must follow the field types defined in the Schema. Using incorrect ty
 To avoid such problems, we recommend designing a dedicated data structure for the UIGF format. Also, design relevant unit tests to ensure consistency in import and export.
 
 We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=uigf) to help you verify the correctness of the data structure.
+:::
 
 ```json
 {
