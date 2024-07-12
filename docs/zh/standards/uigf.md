@@ -116,7 +116,24 @@ tags:
                     },
                     "lang": {
                         "type": "string",
-                        "description": "语言代码"
+                        "description": "语言代码",
+                        "enum": [
+                            "de-de",
+                            "en-us",
+                            "es-es",
+                            "fr-fr",
+                            "id-id",
+                            "it-it",
+                            "ja-jp",
+                            "ko-kr",
+                            "pt-pt",
+                            "ru-ru",
+                            "th-th",
+                            "tr-tr",
+                            "vi-vn",
+                            "zh-cn",
+                            "zh-tw"
+                        ]
                     },
                     "list": {
                         "type": "array",
@@ -215,7 +232,24 @@ tags:
                     },
                     "lang": {
                         "type": "string",
-                        "description": "语言代码"
+                        "description": "语言代码",
+                        "enum": [
+                            "de-de",
+                            "en-us",
+                            "es-es",
+                            "fr-fr",
+                            "id-id",
+                            "it-it",
+                            "ja-jp",
+                            "ko-kr",
+                            "pt-pt",
+                            "ru-ru",
+                            "th-th",
+                            "tr-tr",
+                            "vi-vn",
+                            "zh-cn",
+                            "zh-tw"
+                        ]
                     },
                     "list": {
                         "type": "array",
@@ -304,7 +338,24 @@ tags:
                     },
                     "lang": {
                         "type": "string",
-                        "description": "语言代码"
+                        "description": "语言代码",
+                        "enum": [
+                            "de-de",
+                            "en-us",
+                            "es-es",
+                            "fr-fr",
+                            "id-id",
+                            "it-it",
+                            "ja-jp",
+                            "ko-kr",
+                            "pt-pt",
+                            "ru-ru",
+                            "th-th",
+                            "tr-tr",
+                            "vi-vn",
+                            "zh-cn",
+                            "zh-tw"
+                        ]
                     },
                     "list": {
                         "type": "array",

@@ -115,7 +115,24 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                     },
                     "lang": {
                         "type": "string",
-                        "description": "Language code"
+                        "description": "Language code",
+                        "enum": [
+                            "de-de",
+                            "en-us",
+                            "es-es",
+                            "fr-fr",
+                            "id-id",
+                            "it-it",
+                            "ja-jp",
+                            "ko-kr",
+                            "pt-pt",
+                            "ru-ru",
+                            "th-th",
+                            "tr-tr",
+                            "vi-vn",
+                            "zh-cn",
+                            "zh-tw"
+                        ]
                     },
                     "list": {
                         "type": "array",
@@ -214,7 +231,24 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                     },
                     "lang": {
                         "type": "string",
-                        "description": "Language code"
+                        "description": "Language code",
+                        "enum": [
+                            "de-de",
+                            "en-us",
+                            "es-es",
+                            "fr-fr",
+                            "id-id",
+                            "it-it",
+                            "ja-jp",
+                            "ko-kr",
+                            "pt-pt",
+                            "ru-ru",
+                            "th-th",
+                            "tr-tr",
+                            "vi-vn",
+                            "zh-cn",
+                            "zh-tw"
+                        ]
                     },
                     "list": {
                         "type": "array",
@@ -303,7 +337,24 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                     },
                     "lang": {
                         "type": "string",
-                        "description": "Language code"
+                        "description": "Language code",
+                        "enum": [
+                            "de-de",
+                            "en-us",
+                            "es-es",
+                            "fr-fr",
+                            "id-id",
+                            "it-it",
+                            "ja-jp",
+                            "ko-kr",
+                            "pt-pt",
+                            "ru-ru",
+                            "th-th",
+                            "tr-tr",
+                            "vi-vn",
+                            "zh-cn",
+                            "zh-tw"
+                        ]
                     },
                     "list": {
                         "type": "array",
