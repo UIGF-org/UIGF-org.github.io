@@ -15,7 +15,7 @@ head:
 
 仅包含导入或导出功能降低了用户数据可流通性，且将数据置于用户不可控的风险中，不符合 UIGF-Org 设计的初衷。
 :::
-::: warning Deprecating Version
+::: warning Deprecated Version
 **该标准已过时，[UIGF v4.0](uigf.md) 替代了该版本的标准。** 
 
 UIGF 4.0 版本继承并合并了 UIGF 3.0 和 [SRGF](./srgf.md) 标准的功能，并增加了对绝区零抽卡数据的支持。

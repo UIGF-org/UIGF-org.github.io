@@ -39,7 +39,9 @@ Exporters can selectively fill in fields for each game or ignore them; importers
 To support a particular game, it is necessary to implement both data import and export functions, otherwise, certification cannot be passed.
 
 ::: info UIGF Standard Use Statement
-Please provide a hyperlink to [UIGF-Org](https://uigf.org) within the application, declaring support for the UIGF data format. Including only import or export functionality reduces the liquidity of user data and places the data at risk beyond the control of the user, which does not align with the original intention of UIGF-Org.
+Please provide a hyperlink to [UIGF-Org](https://uigf.org) within the application, declaring support for the UIGF data format.
+
+Including only import or export functionality reduces the liquidity of user data and places the data at risk beyond the control of the user, which does not align with the original intention of UIGF-Org.
 :::
 
 ## Json Schema
