@@ -148,7 +148,6 @@
         "required": [
           "uid",
           "timezone",
-          "lang",
           "list"
         ]
       }
@@ -254,7 +253,6 @@
         "required": [
           "uid",
           "timezone",
-          "lang",
           "list"
         ]
       }
@@ -360,7 +358,6 @@
         "required": [
           "uid",
           "timezone",
-          "lang",
           "list"
         ]
       }

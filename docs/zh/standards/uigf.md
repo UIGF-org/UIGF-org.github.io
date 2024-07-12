@@ -205,7 +205,6 @@ tags:
                 "required": [
                     "uid",
                     "timezone",
-                    "lang",
                     "list"
                 ]
             }
@@ -311,7 +310,6 @@ tags:
                 "required": [
                     "uid",
                     "timezone",
-                    "lang",
                     "list"
                 ]
             }
@@ -417,7 +415,6 @@ tags:
                 "required": [
                     "uid",
                     "timezone",
-                    "lang",
                     "list"
                 ]
             }

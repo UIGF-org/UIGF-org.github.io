@@ -205,7 +205,6 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                 "required": [
                     "uid",
                     "timezone",
-                    "lang",
                     "list"
                 ]
             }
@@ -311,7 +310,6 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                 "required": [
                     "uid",
                     "timezone",
-                    "lang",
                     "list"
                 ]
             }
@@ -417,7 +415,6 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                 "required": [
                     "uid",
                     "timezone",
-                    "lang",
                     "list"
                 ]
             }
