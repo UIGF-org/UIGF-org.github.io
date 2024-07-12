@@ -23,7 +23,7 @@ This standard is deprecated. [UIGF v4.0](uigf-legacy-v3.0) is the successor.
 
 The latest UIGF 4.0 version inherits and merges the features of both [UIGF 3.0](./uigf-legacy-v3.0.md) and SRGF standards, plus additional support for Zenless Zone Zero gacha record data.
 
-UIGF 4.0 **is not backward compatible with previous UIGF versions**. Apps previously certified for UIGF v3.0 or earlier must re-certify for this UIGF version. If you are an application developer, you may introduce compatibility implementations with the old format according to the format defined in the document.
+UIGF 4.0 **is not backward compatible with previous UIGF versions**. Apps previously certified for UIGF v3.0 or earlier must re-certify for newer UIGF versions. If you are an application developer, you may introduce compatibility implementations with the old format according to the format defined in the document.
 :::
 
 ## Json Example
