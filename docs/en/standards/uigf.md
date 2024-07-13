@@ -302,6 +302,7 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                             },
                             "required": [
                                 "gacha_type",
+                                "gacha_id",
                                 "time",
                                 "item_id",
                                 "id"

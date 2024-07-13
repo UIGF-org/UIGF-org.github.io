@@ -302,6 +302,7 @@ tags:
                             },
                             "required": [
                                 "gacha_type",
+                                "gacha_id",
                                 "time",
                                 "item_id",
                                 "id"
