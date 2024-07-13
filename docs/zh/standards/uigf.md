@@ -297,7 +297,7 @@ tags:
                                 },
                                 "id": {
                                     "type": "string",
-                                    "description": "内部 Id"
+                                    "description": "记录内部 ID，米哈游 API 返回"
                                 }
                             },
                             "required": [
