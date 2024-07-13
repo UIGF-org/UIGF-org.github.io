@@ -65,7 +65,7 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
             "type": "object",
             "properties": {
                 "export_timestamp": {
-                    "oneof": [
+                    "oneOf": [
                         {
                             "type": "string"
                         },
@@ -102,7 +102,7 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                 "type": "object",
                 "properties": {
                     "uid": {
-                        "oneof": [
+                        "oneOf": [
                             {
                                 "type": "string"
                             },
@@ -217,7 +217,7 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                 "type": "object",
                 "properties": {
                     "uid": {
-                        "oneof": [
+                        "oneOf": [
                             {
                                 "type": "string"
                             },
@@ -322,7 +322,7 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                 "type": "object",
                 "properties": {
                     "uid": {
-                        "oneof": [
+                        "oneOf": [
                             {
                                 "type": "string"
                             },

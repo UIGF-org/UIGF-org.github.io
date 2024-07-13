@@ -65,7 +65,7 @@ tags:
             "type": "object",
             "properties": {
                 "export_timestamp": {
-                    "oneof": [
+                    "oneOf": [
                         {
                             "type": "string"
                         },
@@ -102,7 +102,7 @@ tags:
                 "type": "object",
                 "properties": {
                     "uid": {
-                        "oneof": [
+                        "oneOf": [
                             {
                                 "type": "string"
                             },
@@ -217,7 +217,7 @@ tags:
                 "type": "object",
                 "properties": {
                     "uid": {
-                        "oneof": [
+                        "oneOf": [
                             {
                                 "type": "string"
                             },
@@ -322,7 +322,7 @@ tags:
                 "type": "object",
                 "properties": {
                     "uid": {
-                        "oneof": [
+                        "oneOf": [
                             {
                                 "type": "string"
                             },
