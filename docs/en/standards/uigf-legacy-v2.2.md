@@ -13,7 +13,7 @@ head:
 ::: warning Archived Version
 This standard is deprecated and archived, please check our latest [UIGF standard](./uigf.md) document.
 
-The latest UIGF 4.0 **is not backward compatible with previous UIGF versions**. The maximum compatible UIGF version is [UIGF v3.0](uigf-legacy-v3.0.md).
+The latest UIGF 4.0 **is not backward compatible with previous UIGF versions**. The last compatible version is [UIGF v3.0](uigf-legacy-v3.0.md).
 :::
 
 ## Manifesto
