@@ -1,15 +1,5 @@
 ## 使用 UIGF v4.0 开始至今的标准的项目（原神＆星穹铁道＆绝区零）
 
-<RelativeProject
-name="星铁披萨小助手"
-desc="iPadOS / iOS / watchOS / macOS 专用星穹铁道小助手"
-logo="https://hsr.pizzastudio.org/img/icon.hsrhelper.clipped.png"
-url="https://apps.apple.com/app/id6448894222"
-version="UIGF v4.0"
-:thirdparty="[{type: 'github', url: 'https://github.com/pizza-studio/HSRPizzaHelper/'}]"
-preview="https://hsr.pizzastudio.org/img/hsrhelper-srgf-preview.png"
-/>
-
 ## 使用 UIGF v3.0 及更旧版 UIGF 标准的项目（仅原神可用）
 <RelativeProjectPanel>
 

@@ -1,15 +1,5 @@
 ## Projects conforming to UIGF standard (v4.0 - current; for Genshin & Star Rail & ZZZ)
 
-<RelativeProject
-name="Pizza Helper for HSR"
-desc="A companion app (for Honkai: Star Rail) among Apple platforms."
-logo="https://hsr.pizzastudio.org/img/icon.hsrhelper.clipped.png"
-url="https://apps.apple.com/app/id6448894222"
-version="UIGF v4.0"
-:thirdparty="[{type: 'github', url: 'https://github.com/pizza-studio/HSRPizzaHelper/'}]"
-preview="https://hsr.pizzastudio.org/img/hsrhelper-srgf-preview.png"
-/>
-
 ## Projects conforming to UIGF standard (v3.0 and earlier; for Genshin Impact only)
 <RelativeProjectPanel>
 
