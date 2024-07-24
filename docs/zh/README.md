@@ -17,7 +17,7 @@ actions:
   link: partnership.html
 
 features:
-  - title: 统一可交换祈愿记录标准
+  - title: 统一可交换抽卡记录标准
     icon: proposal
     details: Uniformed Interchangeable GachaLog Format standard (UIGF)
     link: standards/uigf.html
