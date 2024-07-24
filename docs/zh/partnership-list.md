@@ -1,7 +1,7 @@
 ## 使用 UIGF v4.0 开始至今的标准的项目（原神＆星穹铁道＆绝区零）
 
 <RelativeProjectPanel>
-  <Pcd 
+  <Pcd
     bg="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01F0AGTl1g6dvW6j28q_!!1797064093.png"
     icon="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01oaGvKE1g6dut0pICS_!!1797064093.png"
     repo="https://github.com/DGP-Studio/Snap.Hutao"
@@ -46,7 +46,6 @@
     bg="https://img.alicdn.com/imgextra/i3/1797064093/O1CN018VkZBw1g6dvTMaX9W_!!1797064093.png"
     icon="https://s1.ax1x.com/2023/09/09/pP6xBef.png"
     repo="https://github.com/biuuu/genshin-wish-export"
-    site="https://github.com/biuuu/genshin-wish-export"
     title="genshin wish export"
     desc="Easily export the Genshin Impact wish record">
     <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
@@ -90,7 +89,6 @@
     bg="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01Or2BBf1g6dvUQwGP9_!!1797064093.png"
     icon="https://s1.ax1x.com/2023/09/09/pP6xyFg.jpg"
     repo="https://github.com/sunfkny/genshin-gacha-export"
-    site="https://github.com/sunfkny/genshin-gacha-export"
     title="genshin-gacha-export"
     desc="原神抽卡记录导出">
     <Pcb label="UIGF v2.2" :games="['ys']" bg="blue"></Pcb>
@@ -99,17 +97,15 @@
     bg="https://s1.ax1x.com/2023/09/09/pP6xHfJ.png"
     icon="https://s1.ax1x.com/2023/09/09/pP6x7Y4.png"
     repo="https://github.com/AuroraZiling/sangonomiya"
-    site="https://github.com/AuroraZiling/sangonomiya"
     title="Sangonomiya"
     desc="原神祈愿记录工具">
-    <Pcb bg="red">Archived</Pcb>
     <Pcb label="UIGF Unknown" :games="['ys']" bg="green"></Pcb>
+    <Pcb bg="red">Archived</Pcb>
   </Pcd>
   <Pcd
     bg="https://starward.scighost.com/resource/img/uigf/uigf_zh.webp"
     icon="/partnerships/starward/logo.ico"
     repo="https://github.com/Scighost/Starward"
-    site="https://github.com/Scighost/Starward"
     title="Starward"
     desc="米家游戏启动器">
     <Pcb label="UIGF v2.3" :games="['ys']" bg="blue"></Pcb>
@@ -118,7 +114,6 @@
     bg="/partnerships/PaimonsNotebook/preview.webp"
     icon="/partnerships/PaimonsNotebook/logo.webp"
     repo="https://github.com/QooLianyi/PaimonsNotebook"
-    site="https://github.com/QooLianyi/PaimonsNotebook"
     title="派蒙笔记本"
     desc="安卓平台下的原神工具">
     <Pcb label="UIGF v3.0" :games="['ys']" bg="green"></Pcb>
@@ -159,7 +154,6 @@
     bg="https://raw.githubusercontent.com/Finchaos/yae-markdown-230119/main/images/4.png"
     icon="https://raw.githubusercontent.com/HolographicHat/YaeAchievement/master/icon.ico"
     repo="https://github.com/HolographicHat/YaeAchievement"
-    site="https://github.com/HolographicHat/YaeAchievement"
     title="YaeAchievement"
     desc="更快、更准的原神成就导出工具">
     <Pcb label="UIAF Unknown" :games="['ys']" bg="orange"></Pcb>
@@ -177,7 +171,6 @@
     bg="/partnerships/PaimonsNotebook/preview.webp"
     icon="/partnerships/PaimonsNotebook/logo.webp"
     repo="https://github.com/QooLianyi/PaimonsNotebook"
-    site="https://github.com/QooLianyi/PaimonsNotebook"
     title="派蒙笔记本"
     desc="安卓平台下的原神工具">
     <Pcb label="UIAF v1.1" :games="['ys']" bg="green"></Pcb>
@@ -191,7 +184,6 @@
       bg="https://raw.githubusercontent.com/DancingSnow0517/StarRail-gacha/master/imgs/1.png"
       icon="https://raw.githubusercontent.com/DancingSnow0517/StarRail-gacha/master/imgs/star_rail.png"
       repo="https://github.com/DancingSnow0517/StarRail-gacha"
-      site="https://dancingsnow0517.github.io/StarRail-gacha/"
       title="StarRail Gacha Exporter"
       desc="一个快捷简便的崩坏：星穹铁道抽卡导出工具">
       <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
@@ -209,16 +201,15 @@
       bg="https://s1.ax1x.com/2023/09/09/pP6xO61.png"
       icon="https://s1.ax1x.com/2023/09/09/pP6xLlR.png"
       repo="https://github.com/AuroraZiling/star-rail-asta"
-      site="https://github.com/AuroraZiling/star-rail-asta"
       title="Asta"
       desc="崩坏：星穹铁道 跃迁记录工具">
       <Pcb label="SRGF v1.0" :games="['sr']" bg="red"></Pcb>
+      <Pcb bg="blue">Archived</Pcb>
     </Pcd>
     <Pcd
       bg="https://starward.scighost.com/resource/img/uigf/uigf_zh.webp"
       icon="/partnerships/starward/logo.ico"
       repo="https://github.com/Scighost/Starward"
-      site="https://github.com/Scighost/Starward"
       title="Starward"
       desc="米家游戏启动器">
       <Pcb label="SRGF v1.0" :games="['sr']" bg="blue"></Pcb>
@@ -254,7 +245,6 @@
       bg="https://raw.githubusercontent.com/cntvc/star-rail-tools/main/docs/image/star_rail_tools_cover.png"
       icon="/games/sr.webp"
       repo="https://github.com/cntvc/star-rail-tools"
-      site="https://github.com/cntvc/star-rail-tools"
       title="StarRailTools"
       desc="保存星铁数据的小工具">
       <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
@@ -263,7 +253,6 @@
       bg="/partnerships/StarRailToolkit/preview.jpg"
       icon="/partnerships/StarRailToolkit/logo.jpg"
       repo="https://github.com/LittleNyima/honkai-starrail-toolkit"
-      site="https://github.com/LittleNyima/honkai-starrail-toolkit"
       title="StarRailToolkit"
       desc="崩坏：星穹铁道工具箱">
       <Pcb label="SRGF v1.0" :games="['sr']" bg="red"></Pcb>
@@ -272,7 +261,6 @@
       bg="/partnerships/Firefly/preview.png"
       icon="/partnerships/Firefly/logo.png"
       repo="https://github.com/Natrium0521/Firefly"
-      site="https://github.com/Natrium0521/Firefly"
       title="流萤工具箱"
       desc="《崩坏：星穹铁道》工具集">
       <Pcb label="SRGF v1.0" :games="['sr']" bg="purple"></Pcb>
