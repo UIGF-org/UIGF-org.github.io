@@ -70,6 +70,7 @@ const props = withDefaults(defineProps<PcbProps>(), { bg: "unknown" });
   transition: background-color 0.3s, color 0.3s;
   color: white;
   padding: 2px 6px;
+  font-weight: bold;
 }
 
 .proj-card-badge {

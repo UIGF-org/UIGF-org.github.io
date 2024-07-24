@@ -45,11 +45,11 @@ function isDarkTheme(): boolean {
 
 const contentBg = computed(() => {
   const theme = isDarkTheme();
-  return theme ? "#191919" : "#ffffff";
+  return theme ? "#333333" : "#ffffff";
 });
 const shadowColor = computed(() => {
   const theme = isDarkTheme();
-  return theme ? "#252525" : "#d9d9d9";
+  return theme ? "#114514" : "#d9d9d9";
 });
 
 function toRepo() {
@@ -67,7 +67,7 @@ function toSite() {
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 10px v-bind(shadowColor);
+  box-shadow: 0 0 5px v-bind(shadowColor);
   display: flex;
   flex-direction: column;
   background: v-bind(contentBg);
@@ -76,6 +76,7 @@ function toSite() {
 .proj-card-bg {
   position: relative;
   width: 100%;
+  aspect-ratio: 2 / 1;
   overflow: hidden;
 
   img {
@@ -109,10 +110,10 @@ function toSite() {
 .proj-card-content {
   padding: 1em;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1em;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 1em;
 }
 
 .proj-card-main {
