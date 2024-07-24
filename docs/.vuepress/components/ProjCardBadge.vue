@@ -99,6 +99,8 @@ const props = withDefaults(defineProps<PcbProps>(), { bg: "unknown" });
     width: 20px;
     height: 20px;
     border-radius: 50%;
+    cursor: initial !important;
+    pointer-events: none;
   }
 }
 

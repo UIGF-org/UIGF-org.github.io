@@ -127,6 +127,8 @@ function toSite() {
     width: 4em;
     height: 4em;
     border-radius: 8px;
+    cursor: initial !important;
+    pointer-events: none;
   }
 }
 
