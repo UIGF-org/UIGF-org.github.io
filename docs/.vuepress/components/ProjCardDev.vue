@@ -1,27 +1,25 @@
 <template>
-  <ClientOnly>
-    <div class="proj-card-dev">
-      <div class="proj-card-bg">
-        <div class="proj-card-extra">
-          <i class="iconfont icon-github" v-if="props.repo" @click="toRepo" :title="props.repo" />
-          <i class="iconfont icon-link" v-if="props.site" @click="toSite" :title="props.site" />
-        </div>
-        <img :src="props.bg" alt="background" />
+  <div class="proj-card-dev">
+    <div class="proj-card-bg">
+      <div class="proj-card-extra">
+        <i class="iconfont icon-github" v-if="props.repo" @click="toRepo" :title="props.repo" />
+        <i class="iconfont icon-link" v-if="props.site" @click="toSite" :title="props.site" />
       </div>
-      <div class="proj-card-content">
-        <div class="proj-card-main">
-          <img :src="props.icon" alt="icon" />
-          <div class="proj-card-info">
-            <div class="proj-card-title">{{ props.title }}</div>
-            <div class="proj-card-desc">{{ props.desc }}</div>
-          </div>
+      <img :src="props.bg" alt="background" />
+    </div>
+    <div class="proj-card-content">
+      <div class="proj-card-main">
+        <img :src="props.icon" alt="icon" />
+        <div class="proj-card-info">
+          <div class="proj-card-title">{{ props.title }}</div>
+          <div class="proj-card-desc">{{ props.desc }}</div>
         </div>
-        <div class="proj-card-badges">
-          <slot></slot>
-        </div>
+      </div>
+      <div class="proj-card-badges">
+        <slot></slot>
       </div>
     </div>
-  </ClientOnly>
+  </div>
 </template>
 <script lang="ts" setup>
 import { computed } from "vue";
@@ -40,6 +38,8 @@ const props = defineProps<ProjCardDevProps>();
 
 function isDarkTheme(): boolean {
   const theme = useLocalStorage<"auto" | "dark" | "light">("vuepress-theme-hope-scheme", "auto");
+  // window is not defined in SSR
+  if(theme.value === "auto" && typeof window === "undefined") return false;
   return theme.value === "auto"
     ? window.matchMedia("(prefers-color-scheme: dark)").matches
     : theme.value === "dark";

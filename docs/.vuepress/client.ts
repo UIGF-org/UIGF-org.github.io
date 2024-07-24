@@ -10,7 +10,6 @@ export default defineClientConfig({
       Pcb,
       RelativeProjectPanel,
     };
-
     for (const name in comps) {
       if (Object.prototype.hasOwnProperty.call(comps, name)) {
         ctx.app.component(name, comps[name]);
