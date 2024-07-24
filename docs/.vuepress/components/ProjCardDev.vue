@@ -1,25 +1,27 @@
 <template>
-  <div class="proj-card-dev">
-    <div class="proj-card-bg">
-      <div class="proj-card-extra">
-        <i class="iconfont icon-github" v-if="props.repo" @click="toRepo" :title="props.repo" />
-        <i class="iconfont icon-link" v-if="props.site" @click="toSite" :title="props.site" />
+  <ClientOnly>
+    <div class="proj-card-dev">
+      <div class="proj-card-bg">
+        <div class="proj-card-extra">
+          <i class="iconfont icon-github" v-if="props.repo" @click="toRepo" :title="props.repo" />
+          <i class="iconfont icon-link" v-if="props.site" @click="toSite" :title="props.site" />
+        </div>
+        <img :src="props.bg" alt="background" />
       </div>
-      <img :src="props.bg" alt="background" />
-    </div>
-    <div class="proj-card-content">
-      <div class="proj-card-main">
-        <img :src="props.icon" alt="icon" />
-        <div class="proj-card-info">
-          <div class="proj-card-title">{{ props.title }}</div>
-          <div class="proj-card-desc">{{ props.desc }}</div>
+      <div class="proj-card-content">
+        <div class="proj-card-main">
+          <img :src="props.icon" alt="icon" />
+          <div class="proj-card-info">
+            <div class="proj-card-title">{{ props.title }}</div>
+            <div class="proj-card-desc">{{ props.desc }}</div>
+          </div>
+        </div>
+        <div class="proj-card-badges">
+          <slot></slot>
         </div>
       </div>
-      <div class="proj-card-badges">
-        <slot></slot>
-      </div>
     </div>
-  </div>
+  </ClientOnly>
 </template>
 <script lang="ts" setup>
 import { computed } from "vue";
