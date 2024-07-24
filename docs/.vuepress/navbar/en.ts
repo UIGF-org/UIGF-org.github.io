@@ -10,8 +10,12 @@ export const enNavbar = navbar([
     prefix: "/en/standards/",
     children: [
       {
+        text: "Generic Standards",
+        children: ["uigf.md"]
+      },
+      {
         text: "Genshin Impact",
-        children: ["uigf.md", "uiaf.md"],
+        children: ["uiaf.md", "uigf-legacy-v3.0.md"],
       },
       {
         text: "Honkai: Star Rail",

@@ -1,195 +1,430 @@
 ---
-category: [Standard Document]
+category: [Standardization Documents]
 order: 1
 head:
   - - meta
     - name: keywords
-      content: Genshin, Genshin Impact, Gacha, Gacha log, UIGF
+      content: Genshin Impact, Honkai Star Rail, Zenless Zone Zero, gacha, gacha record, UIGF
+tags:
+    - UIGF
+    - Gacha Record
+    - Genshin Impact
+    - "Honkai: Star Rail"
+    - Zenless Zone Zero
 ---
-# Uniformed Interchangeable GachaLog Format Standard v3.0
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v3.0 <Badge text="Current" type="message" />
 
-::: warning Usage of UIGF Statement Requirement
+# Uniformed Interchangeable GachaLog Format standard v4.0
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v4.0 <Badge text="Current" type="message" />
 
-Application must declare support of UIGF data format only after supporting of both **import** and **export** features, and provide link to [UIGF-Org](https://uigf.org) in the associated page.
-
-Including only importing feature reduces the interchangeability of user data, and puts the data in a risk that user can not control, which is not in line with intention of UIGF-Org.
+::: warning Breaking Changes
+`UIGF v4.0 and higher versions` are **not backward compatible** with `UIGF v3.0 and lower versions` and `SRGF v1.0`. Projects collaborating with UIGF/SRGF need to be re-certified for compatibility.
 :::
 
-## Versions Features
-| Version                       | Note                                                                              | Compatibility  |
-|-------------------------------|-----------------------------------------------------------------------------------|----------------|
-| `v2.0`                        | First public version                                                              | v2.0           |
-| `v2.1`                        | Simplified in language expression, data format is completely consistent with v2.0 | v2.1 and lower |
-| [`v2.2`](uigf-legacy-v2.2.md) | Add `info.export_timestamp` to fill UNIX timestamp                                | v2.2 and lower |
-| [`v2.3`](uigf-legacy-v2.3.md) | Add support for non-Chinese environment, express in Json Schema                   | v2.3 and lower |
-| `v2.4`                        | Add `info.region_time_zone` to support time zone processing                       | v2.4 and lower |
-| `v3.0`                        | Add support for Chronicled Wish                                                   | v3.0 and lower |
+## Update Log
+| Version | Description                                                                    | Compatibility           |
+|---------|--------------------------------------------------------------------------------|-------------------------|
+| `v3.0`  | For the update log of lower versions, please refer to the historical versions. | v3.0 and lower versions |
+| `v4.0`  | Merged SRGF, added support for Zenless Zone Zero gacha format                  | v4.0                    |
 
-### What's Changed in v3.0
-* Added new enumeration items in `gacha_type`
-  * In the `gacha_type` enumeration, a new item with a value of `500` is used to represent the Chronicled Wish type.
+## Preface
 
+In order to unify the import and export behavior of gacha records across different applications, games, and accounts, we have decided to merge all supported game gacha formats into UIGF. Different games and accounts will be able to be represented as a single file or string, making the import and export operations unprecedentedly simple for users.
 
-## `info` Data Field Explanations
-### `region_time_zone`
+## Implementation and Certification
 
-Since `time` received from wish records are server local time, this field is introduced in order to accurately 
-determine the time zone offset of the wish record time.
+Implementing the import and export of the `UIGF v4.0 and higher versions` format does not mean that support for `UIGF v3.0 and lower versions` or `SRGF v1.0` should be removed. However, it is not recommended to use the same import and export logic for `UIGF v4.0 and higher versions` and `UIGF v3.0 and lower versions` or `SRGF v1.0`.
 
-Unlike SRGF, since `region_time_zone` cannot be obtained directly from the game server, when this field is not 
-provided by the exporter, it needs to be inferred based on the uid.
+Exporters can selectively fill in fields for each game or ignore them; importers can selectively read fields for each game or ignore them.
 
-#### Mapping
+To support a particular game, it is necessary to implement both data import and export functions, otherwise, certification cannot be passed.
 
-| First Character of `uid` | `region_time_zone` | Game Server                       |
-|--------------------------|--------------------|-----------------------------------|
-| `'6'`                    | `-5`               | os_usa                            |
-| `'7'`                    | `1`                | os_euro                           |
-| Any other                | `8`                | os_cht, os_asia, cn_gf01, cn_qd01 |
+::: info UIGF Standard Use Statement
+Please provide a hyperlink to [UIGF-Org](https://uigf.org) within the application, declaring support for the UIGF data format.
 
-Application should not presume value in `region_time_zone` match the value in the form above, and should be able to handle
-non-standardized `region_time_zone` values. If `region_time_zone` value is different from value inferred based on `uid`, 
-then value provided by `region_time_zone` should be preferred.
-
-## `list` Data Field Explanations
-### id
-
-There is a special field `id` in the item, which is included in Genshin Impact official API wish history API and represents
-unique ID of each wish record. When exporting data in UIGF format, app should:
-- Make sure each item has a unique and valid `id`
-- If there is not `id` included in the record, then the missing `id` field should be filled starting form the next item 
-with a valid `id`. The assigned data should be sequentially decreased (time-ordered), with each decrease being a value 
-of `1`.
-
-### gacha_type
-
-The probabilistic wish system has a shared pity rule, so we need extra field to identify the pool. 
-In UIGF format, we added a uigf_gacha_type field addition to the original wish record data.
-
-Please remember to add corresponding uigf_gacha_type field when applying UIGF format
-
-#### Mapping
-
-| `uigf_gacha_type` | `gacha_type`   |
-|-------------------|----------------|
-| `100`             | `100`          |
-| `200`             | `200`          |
-| `301`             | `301` or `400` |
-| `302`             | `302`          |
-| `500`             | `500`          |
-
-### `item_id`
-
-Item's in-game ID, refer to [UIGF API](../API.md) to get this data.
+Including only import or export functionality reduces the liquidity of user data and places the data at risk beyond the control of the user, which does not align with the original intention of UIGF-Org.
+:::
 
 ## Json Schema
 
-> UIGF-Org provides the following JSON Schema for the validation of the data structure.
+> UIGF-Org provides the following Json Schema to verify the correctness of the data structure.
 
-::: warning Mind the Field Types
-Devs are strongly urged to respect the data types of each property in the schema. Using incorrect types could result in errors when parsing JSON files by other tools developed in strong typing programming languages, leading to data transfer failures.
+::: warning Note on Field Types
+Developers must follow the field types defined in the Schema. Using incorrect types may cause errors when other tools written in strongly typed programming languages parse the Json file, leading to data transfer failures.
 
-To avoid such issues, we recommend designing dedicated structs for the UIGF format or utilizing methods like `JsonNumberHandling.WriteAsString`. Additionally, it is advisable to design relevant unit tests to ensure consistency between imports and exports.
+To avoid such problems, we recommend designing a dedicated data structure for the UIGF format. Also, design relevant unit tests to ensure consistency in import and export.
 
-We also provide the [UIGF Json Schema Verify Tool](https://schema.uigf.org/?schema=uigf) to help you to verify validation of Json files.
+We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=uigf) to help you verify the correctness of the data structure.
 :::
 
 ```json
 {
-  "type": "object",
-  "properties": {
-    "info": {
-      "type": "object",
-      "properties": {
-        "uid": {
-          "type": "string",
-          "title": "UID of the export record"
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "info": {
+            "type": "object",
+            "properties": {
+                "export_timestamp": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ],
+                    "description": "The timestamp of the export, in seconds"
+                },
+                "export_app": {
+                    "type": "string",
+                    "description": "The name of the application that exported the archive"
+                },
+                "export_app_version": {
+                    "type": "string",
+                    "description": "The version of the app that exported the archive"
+                },
+                "version": {
+                    "type": "string",
+                    "pattern": "^v\\d+\\.\\d+$",
+                    "description": "The UIGF version of the exported archive, formatted as 'v{major}.{minor}', e.g., v4.0"
+                }
+            },
+            "required": [
+                "export_timestamp",
+                "export_app",
+                "export_app_version",
+                "version"
+            ]
         },
-        "lang": {
-          "type": "string",
-          "title": "language in the format of languagecode2-country/regioncode2"
+        "hk4e": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "integer"
+                            }
+                        ],
+                        "description": "UID"
+                    },
+                    "timezone": {
+                        "type": "integer",
+                        "description": "Time zone offset"
+                    },
+                    "lang": {
+                        "type": "string",
+                        "description": "Language code",
+                        "enum": [
+                            "de-de",
+                            "en-us",
+                            "es-es",
+                            "fr-fr",
+                            "id-id",
+                            "it-it",
+                            "ja-jp",
+                            "ko-kr",
+                            "pt-pt",
+                            "ru-ru",
+                            "th-th",
+                            "tr-tr",
+                            "vi-vn",
+                            "zh-cn",
+                            "zh-tw"
+                        ]
+                    },
+                    "list": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "uigf_gacha_type": {
+                                    "type": "string",
+                                    "description": "UIGF gacha type, used to distinguish between different gacha types that have the same pity calculation",
+                                    "enum": [
+                                        "100",
+                                        "200",
+                                        "301",
+                                        "302",
+                                        "500"
+                                    ]
+                                },
+                                "gacha_type": {
+                                    "type": "string",
+                                    "description": "Gacha type, returned by MiHoYo API",
+                                    "enum": [
+                                        "100",
+                                        "200",
+                                        "301",
+                                        "302",
+                                        "400",
+                                        "500"
+                                    ]
+                                },
+                                "item_id": {
+                                    "type": "string",
+                                    "description": "The internal ID of the item"
+                                },
+                                "count": {
+                                    "type": "string",
+                                    "description": "The number of items, usually 1, returned by MiHoYo API"
+                                },
+                                "time": {
+                                    "type": "string",
+                                    "description": "The local time in the timezone of the item being drawn"
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "description": "The name of the item, returned by MiHoYo API"
+                                },
+                                "item_type": {
+                                    "type": "string",
+                                    "description": "The type of the item, returned by MiHoYo API"
+                                },
+                                "rank_type": {
+                                    "type": "string",
+                                    "description": "The rank of the item, returned by MiHoYo API"
+                                },
+                                "id": {
+                                    "type": "string",
+                                    "description": "The internal ID of the record, returned by MiHoYo API"
+                                }
+                            },
+                            "required": [
+                                "uigf_gacha_type",
+                                "gacha_type",
+                                "item_id",
+                                "time",
+                                "id"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "uid",
+                    "timezone",
+                    "list"
+                ]
+            }
         },
-        "export_timestamp": {
-          "type": "number",
-          "title": "Export UNIX timestamp (accurate to the second)"
+        "hkrpg": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "integer"
+                            }
+                        ],
+                        "description": "UID"
+                    },
+                    "timezone": {
+                        "type": "integer",
+                        "description": "Time zone offset"
+                    },
+                    "lang": {
+                        "type": "string",
+                        "description": "Language code",
+                        "enum": [
+                            "de-de",
+                            "en-us",
+                            "es-es",
+                            "fr-fr",
+                            "id-id",
+                            "it-it",
+                            "ja-jp",
+                            "ko-kr",
+                            "pt-pt",
+                            "ru-ru",
+                            "th-th",
+                            "tr-tr",
+                            "vi-vn",
+                            "zh-cn",
+                            "zh-tw"
+                        ]
+                    },
+                    "list": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "gacha_id": {
+                                    "type": "string",
+                                    "description": "Gacha Pool ID"
+                                },
+                                "gacha_type": {
+                                    "type": "string",
+                                    "description": "Gacha type",
+                                    "enum": [
+                                        "1",
+                                        "2",
+                                        "11",
+                                        "12"
+                                    ]
+                                },
+                                "item_id": {
+                                    "type": "string",
+                                    "description": "The internal ID of the item"
+                                },
+                                "count": {
+                                    "type": "string",
+                                    "description": "The number of items, usually 1, returned by MiHoYo API"
+                                },
+                                "time": {
+                                    "type": "string",
+                                    "description": "The local time in the timezone of the item being drawn"
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "description": "The name of the item, returned by MiHoYo API"
+                                },
+                                "item_type": {
+                                    "type": "string",
+                                    "description": "The type of the item, returned by MiHoYo API"
+                                },
+                                "rank_type": {
+                                    "type": "string",
+                                    "description": "The rank of the item, returned by MiHoYo API"
+                                },
+                                "id": {
+                                    "type": "string",
+                                    "description": "The internal ID of the record, returned by MiHoYo API"
+                                }
+                            },
+                            "required": [
+                                "gacha_type",
+                                "gacha_id",
+                                "time",
+                                "item_id",
+                                "id"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "uid",
+                    "timezone",
+                    "list"
+                ]
+            }
         },
-        "export_time": {
-          "type": "string",
-          "title": "Export time",
-          "description": "yyyy-MM-dd HH:mm:ss"
-        },
-        "export_app": {
-          "type": "string",
-          "title": "Name of the export application"
-        },
-        "export_app_version": {
-          "type": "string",
-          "title": "Version of the export application"
-        },
-        "uigf_version": {
-          "type": "string",
-          "title": "UIGF version; follow the regular expression pattern",
-          "pattern": "v\\d+\\.\\d+"
-        },
-        "region_time_zone": {
-          "type": "number",
-          "title": "Region timezone offset"
+        "nap": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "integer"
+                            }
+                        ],
+                        "description": "UID"
+                    },
+                    "timezone": {
+                        "type": "integer",
+                        "description": "Time zone offset"
+                    },
+                    "lang": {
+                        "type": "string",
+                        "description": "Language code",
+                        "enum": [
+                            "de-de",
+                            "en-us",
+                            "es-es",
+                            "fr-fr",
+                            "id-id",
+                            "it-it",
+                            "ja-jp",
+                            "ko-kr",
+                            "pt-pt",
+                            "ru-ru",
+                            "th-th",
+                            "tr-tr",
+                            "vi-vn",
+                            "zh-cn",
+                            "zh-tw"
+                        ]
+                    },
+                    "list": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "gacha_id": {
+                                    "type": "string",
+                                    "description": "Gacha Pool ID"
+                                },
+                                "gacha_type": {
+                                    "type": "string",
+                                    "description": "Gacha type",
+                                    "enum": [
+                                        "1",
+                                        "2",
+                                        "3",
+                                        "5"
+                                    ]
+                                },
+                                "item_id": {
+                                    "type": "string",
+                                    "description": "The internal ID of the item"
+                                },
+                                "count": {
+                                    "type": "string",
+                                    "description": "The number of items, usually 1, returned by MiHoYo API"
+                                },
+                                "time": {
+                                    "type": "string",
+                                    "description": "The local time in the timezone of the item being drawn"
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "description": "The name of the item, returned by MiHoYo API"
+                                },
+                                "item_type": {
+                                    "type": "string",
+                                    "description": "The type of the item, returned by MiHoYo API"
+                                },
+                                "rank_type": {
+                                    "type": "string",
+                                    "description": "The rank of the item, returned by MiHoYo API"
+                                },
+                                "id": {
+                                    "type": "string",
+                                    "description": "The internal ID of the record, returned by MiHoYo API"
+                                }
+                            },
+                            "required": [
+                                "gacha_type",
+                                "item_id",
+                                "time",
+                                "id"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "uid",
+                    "timezone",
+                    "list"
+                ]
+            }
         }
-      },
-      "required": ["uid", "uigf_version"],
-      "title": "UIGF Export Information"
     },
-    "list": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "uigf_gacha_type": {
-            "type": "string",
-            "title": "UIGF gacha type",
-            "description": "Used to differentiate different gacha types with the same pity calculation for items"
-          },
-          "gacha_type": {
-            "type": "string",
-            "title": "Gacha type"
-          },
-          "item_id": {
-            "type": "string",
-            "title": "Internal ID of the item"
-          },
-          "count": {
-            "type": "string",
-            "title": "Count, usually 1"
-          },
-          "time": {
-            "type": "string",
-            "title": "Time when the item was obtained. This MUST BE THE String typed value captured intact from the gacha record webpage WITHOUT ANY CONVERTION TO ANY DATE TYPES. Any conversion of such can cause potential timezone mistakes if the device time zone differs from the server time zone, unless special treatments are applied by individual app devs."
-          },
-          "name": {
-            "type": "string",
-            "title": "Item name"
-          },
-          "item_type": {
-            "type": "string",
-            "title": "Item type"
-          },
-          "rank_type": {
-            "type": "string",
-            "title": "Item rank"
-          },
-          "id": {
-            "type": "string",
-            "title": "Internal ID of the record"
-          }
-        },
-        "required": ["uigf_gacha_type", "gacha_type", "id", "item_id", "time"],
-        "title": "UIGF Item"
-      },
-      "title": "Item List"
-    }
-  },
-  "required": ["info", "list"],
-  "title": "UIGF Root Object"
+    "required": [
+        "info"
+    ]
 }
 ```

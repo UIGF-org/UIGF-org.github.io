@@ -1,6 +1,6 @@
 ---
 category: [标准化文档]
-order: 2
+order: 3
 head:
   - - meta
     - name: keywords
@@ -9,12 +9,20 @@ head:
 
 # 星穹铁道抽卡记录标准 v1.0
 
-> Star Rail GachaLog Format standard (SRGF) v1.0 <Badge text="Current" type="message" />
+> Star Rail GachaLog Format standard (SRGF) v1.0 <Badge text="Legacy" type="message" />
 
-::: warning SRGF 标准使用声明
+::: info SRGF 标准使用声明
 应用必须在同时支持 SRGF 数据格式**导入**和**导出**功能并在相关功能区域或文档中提供跳转至 [UIGF-Org](https://uigf.org) 的超链接后声明支持 SRGF 格式
 
 仅包含导入或导出功能降低了用户数据可流通性，且将数据置于用户不可控的风险中，不符合 UIGF-Org 设计的初衷。
+:::
+
+::: warning Deprecated Version
+**该标准已过时，[UIGF v4.0](uigf.md) 替代了该版本的标准。**
+
+最新的 UIGF 4.0 版本继承并合并了 [UIGF 3.0](./uigf-legacy-v3.0.md) 和 SRGF 标准的功能，并增加了对绝区零抽卡数据的支持。
+
+UIGF 4.0 **不具备对旧有标准的向下兼容性**，且与旧有标准的认证相互独立。如果你是应用开发者，可以根据文档中定义的格式实现对旧版格式的导入兼容。
 :::
 
 ## Json 示例

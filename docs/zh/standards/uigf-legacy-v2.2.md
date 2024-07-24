@@ -1,6 +1,6 @@
 ---
 category: [标准化文档]
-order: 3
+order: 4
 head:
   - - meta
     - name: keywords
@@ -9,10 +9,12 @@ head:
 
 # 统一可交换祈愿记录标准 v2.2
 
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.2 <Badge text="Legacy" type="message" />
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.2 <Badge text="Archived" type="message" />
 
 ::: warning 警告
-该标准已过时，[UIGF v2.4](uigf.md) 替代了本标准。
+该标准已过时并归档，请查看 [UIGF 最新标准文档](./uigf.md)。
+
+最新的 UIGF 标准版本不具有对该标准的向下兼容性。与该标准兼容的最高版本为 [UIGF v3.0](uigf-legacy-v3.0.md)。
 :::
 
 ## 前言

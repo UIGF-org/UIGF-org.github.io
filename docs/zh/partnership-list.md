@@ -1,4 +1,6 @@
-## 使用 UIGF 标准的项目
+## 使用 UIGF v4.0 开始至今的标准的项目（原神＆星穹铁道＆绝区零）
+
+## 使用 UIGF v3.0 及更旧版 UIGF 标准的项目（仅原神可用）
 <RelativeProjectPanel>
 
 <RelativeProject

@@ -1,6 +1,6 @@
 ---
 category: [标准化文档]
-order: 1
+order: 5
 head:
   - - meta
     - name: keywords
@@ -8,24 +8,26 @@ head:
 ---
 
 # 统一可交换抽卡记录标准 v2.3
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.3 <Badge text="Legacy" type="message" />
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.3 <Badge text="Archived" type="message" />
 >
-::: warning UIGF 标准使用声明
+::: info UIGF 标准使用声明
 应用必须在同时支持 UIGF 数据格式**导入**和**导出**功能并在相关功能区域或文档中提供跳转至 [UIGF-Org](https://uigf.org) 的超链接后声明支持 UIGF 格式
 
 仅包含导入或导出功能降低了用户数据可流通性，且将数据置于用户不可控的风险中，不符合 UIGF-Org 设计的初衷。
 :::
 ::: warning 警告
-该标准已过时，[UIGF v2.4](uigf.md) 替代了本标准。
+该标准已过时并归档，请查看 [UIGF 最新标准文档](./uigf.md)。
+
+最新的 UIGF 标准版本不具有对该标准的向下兼容性。与该标准兼容的最高版本为 [UIGF v3.0](uigf-legacy-v3.0.md)。
 :::
 
 ## 更新记录
-| 版本                            | 说明                                      | 兼容             |
-|-------------------------------|-----------------------------------------|----------------|
-| `v2.0`                        | 首个正式版本                                  | v2.0           |
-| `v2.1`                        | 简化了部分语言表述，与 v2.0在数据格式上完全一致              | v2.1 and lower |
-| [`v2.2`](UIGF-legacy-v2.2.md) | 新增 `info.export_timestamp` 填充 UNIX 时间戳  | v2.2 and lower |
-| `v2.3`                        | 扩充至非中文语境，使用 Json Schema 表述。移除了 Excel 格式 | v2.3 and lower |
+| 版本                              | 说明                                      | 兼容             |
+|---------------------------------|-----------------------------------------|----------------|
+| `v2.0`                          | 首个正式版本                                  | v2.0           |
+| `v2.1`                          | 简化了部分语言表述，与 v2.0在数据格式上完全一致              | v2.1 and lower |
+| [`v2.2`](./uigf-legacy-v2.2.md) | 新增 `info.export_timestamp` 填充 UNIX 时间戳  | v2.2 and lower |
+| `v2.3`                          | 扩充至非中文语境，使用 Json Schema 表述。移除了 Excel 格式 | v2.3 and lower |
 
 ### v2.3 更新内容
 * 移除了 UIGF.W 标准
@@ -59,7 +61,7 @@ head:
 
 ### item_id
 
-物品游戏内ID，你可以通过 [UIGF API](../API.md) 获取这一数据
+物品游戏内ID，你可以通过 [UIGF API](../api.md) 获取这一数据
 
 ## Json Schema
 

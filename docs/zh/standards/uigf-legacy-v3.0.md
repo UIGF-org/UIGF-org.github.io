@@ -1,39 +1,42 @@
 ---
 category: [标准化文档]
-order: 6
+order: 7
 head:
   - - meta
     - name: keywords
       content: 原神, 抽卡, 抽卡记录, UIGF
 ---
 
-# 统一可交换抽卡记录标准 v2.4
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.4 <Badge text="Archived" type="message" />
+# 统一可交换抽卡记录标准 v3.0
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v3.0 <Badge text="Legacy" type="message" />
 > 
 ::: info UIGF 标准使用声明
 应用必须在同时支持 UIGF 数据格式**导入**和**导出**功能并在相关功能区域或文档中提供跳转至 [UIGF-Org](https://uigf.org) 的超链接后声明支持 UIGF 格式
 
 仅包含导入或导出功能降低了用户数据可流通性，且将数据置于用户不可控的风险中，不符合 UIGF-Org 设计的初衷。
 :::
-::: warning 警告
-该标准已过时并归档，请查看 [UIGF 最新标准文档](./uigf.md)。
+::: warning Deprecated Version
+**该标准已过时，[UIGF v4.0](uigf.md) 替代了该版本的标准。** 
 
-最新的 UIGF 标准版本不具有对该标准的向下兼容性。与该标准兼容的最高版本为 [UIGF v3.0](uigf-legacy-v3.0.md)。
+UIGF 4.0 版本继承并合并了 UIGF 3.0 和 [SRGF](./srgf.md) 标准的功能，并增加了对绝区零抽卡数据的支持。
+
+UIGF 4.0 **不具备对旧有标准的向下兼容性**，且与旧有标准的认证相互独立。如果你是应用开发者，可以根据文档中定义的格式实现对旧版格式的导入兼容。
 :::
 
 ## 更新记录
-| 版本                              | 说明                                      | 兼容             |
-|---------------------------------|-----------------------------------------|----------------|
-| `v2.0`                          | 首个正式版本                                  | v2.0           |
-| `v2.1`                          | 简化了部分语言表述，与 v2.0在数据格式上完全一致              | v2.1 and lower |
-| [`v2.2`](./uigf-legacy-v2.2.md) | 新增 `info.export_timestamp` 填充 UNIX 时间戳  | v2.2 and lower |
-| [`v2.3`](./uigf-legacy-v2.3.md) | 扩充至非中文语境，使用 Json Schema 表述。移除了 Excel 格式 | v2.3 and lower |
-| `v2.4`                          | 新增 `info.region_time_zone` 支持时区处理       | v2.4 and lower |
+| 版本                            | 说明                                      | 兼容             |
+|-------------------------------|-----------------------------------------|----------------|
+| `v2.0`                        | 首个正式版本                                  | v2.0           |
+| `v2.1`                        | 简化了部分语言表述，与 v2.0在数据格式上完全一致              | v2.1 and lower |
+| [`v2.2`](uigf-legacy-v2.2.md) | 新增 `info.export_timestamp` 填充 UNIX 时间戳  | v2.2 and lower |
+| [`v2.3`](uigf-legacy-v2.3.md) | 扩充至非中文语境，使用 Json Schema 表述。移除了 Excel 格式 | v2.3 and lower |
+| [`v2.4`](uigf-legacy-v2.4.md) | 新增 `info.region_time_zone` 支持时区处理       | v2.4 and lower |
+| `v3.0`                        | 新增 集录祈愿类型支持       | v3.0 and lower |
 
-### v2.4 更新内容
+### v3.0 更新内容
 
-* 国际化兼容性增强
-  * 在 `info` 对象中新增了 `region_time_zone` 字段
+* `gacha_type` 增加新枚举项
+  * 在 `gacha_type` 枚举新增值为 `500` 的项，用于表示集录祈愿类型
 
 ## `info` 字段说明
 
@@ -67,7 +70,7 @@ App 不应假定 `region_time_zone` 的值为上表中给出的值，应具有�
 
 由于存在会共享保底与概率的卡池，所以需要一个额外的字段来界定  
 我们在 `UIGF` 的所有格式中注入了 `uigf_gacha_type` 字段  
-在导出到 `UIGF` 格式时需要注意添加对应的 `uigf_gacha_type` 字段  
+在导出到 `UIGF` 格式时需要注意添加对应的 `uigf_gacha_type` 字段。
 
 #### 映射关系
 
@@ -77,14 +80,23 @@ App 不应假定 `region_time_zone` 的值为上表中给出的值，应具有�
 | `200`             | `200`          |
 | `301`             | `301` or `400` |
 | `302`             | `302`          |
+| `500`             | `500`          |
 
 ### `item_id`
 
-物品游戏内ID，你可以通过 [UIGF API](../api.md) 获取这一数据
+物品游戏内ID，你可以通过 [UIGF API](../api.md) 获取这一数据。
 
 ## Json Schema
 
-> UIGF-Org 提供[Json Schema](/schema/uigf.json) 用于验证
+> UIGF-Org 提供下述 Json Schema 以用于验证资料结构的正确性。
+
+::: warning 注意字段类型
+请各位开发者务必尊重 Schema 内定义的字段类型。使用错误的类型可能会导致其它由强类型编程语言制成的工具在解析 Json 文件时产生错误，进而导致数据转移失败。
+
+为了避免这类问题，我们建议您针对 UIGF 格式设计专用的 struct，或善用 `JsonNumberHandling.WriteAsString` 等方法。同时，设计相关的单元测试以确保导入导出的一致性。
+
+我们也提供 [UIGF 格式校验工具](https://schema.uigf.org/?schema=uigf)来帮助你校验 Json 文件。
+:::
 
 ```json
 {
@@ -155,7 +167,7 @@ App 不应假定 `region_time_zone` 的值为上表中给出的值，应具有�
           },
           "time": {
             "type": "string",
-            "title": "获取物品的时间"
+            "description": "获取物品的时间，应为「抽卡记录网页上显示的原始时间字符串」而非任何转换过的值。如果设备时区与服务器时区不一致，任意类型转换将会导致时区转换出现误差（除非应用进行了特殊处理）。"
           },
           "name": {
             "type": "string",

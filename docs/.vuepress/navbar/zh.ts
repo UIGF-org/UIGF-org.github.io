@@ -10,8 +10,12 @@ export const zhNavbar = navbar([
     prefix: "/zh/standards/",
     children: [
       {
+        "text": "通用型标准",
+        children: ["uigf.md"]
+      },
+      {
         text: "原神",
-        children: ["uigf.md", "uiaf.md"],
+        children: ["uiaf.md", "uigf-legacy-v3.0.md"],
       },
       {
         text: "崩坏：星穹铁道",

@@ -1,6 +1,6 @@
 ---
 category: [Standard Document]
-order: 2
+order: 3
 head:
   - - meta
     - name: keywords
@@ -16,6 +16,14 @@ head:
 Application must declare support of SRGF data format only after supporting of both **import** and **export** features, and provide link to [UIGF-Org](https://uigf.org) in the associated page.
 
 Including only importing feature reduces the interchangeability of user data, and puts the data in a risk that user can not control, which is not in line with intention of UIGF-Org.
+:::
+
+::: warning Deprecated Version
+This standard is deprecated. [UIGF v4.0](uigf-legacy-v3.0) is the successor.
+
+The latest UIGF 4.0 version inherits and merges the features of both [UIGF 3.0](./uigf-legacy-v3.0.md) and SRGF standards, plus additional support for Zenless Zone Zero gacha record data.
+
+UIGF 4.0 **is not backward compatible with previous UIGF versions**. Apps previously certified for UIGF v3.0 or earlier must re-certify for newer UIGF versions. If you are an application developer, you may introduce compatibility implementations with the old format according to the format defined in the document.
 :::
 
 ## Json Example

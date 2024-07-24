@@ -1,96 +1,370 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
     "info": {
       "type": "object",
       "properties": {
-        "uid": {
-          "type": "string",
-          "title": "UID of the export record"
-        },
-        "lang": {
-          "type": "string",
-          "title": "language in the format of languagecode2-country/regioncode2"
-        },
         "export_timestamp": {
-          "type": "number",
-          "title": "Export UNIX timestamp (accurate to the second)"
-        },
-        "export_time": {
-          "type": "string",
-          "title": "Export time",
-          "description": "yyyy-MM-dd HH:mm:ss"
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "description": "The timestamp of the export, in seconds"
         },
         "export_app": {
           "type": "string",
-          "title": "Name of the export application"
+          "description": "The name of the application that exported the archive"
         },
         "export_app_version": {
           "type": "string",
-          "title": "Version of the export application"
+          "description": "The version of the app that exported the archive"
         },
-        "uigf_version": {
+        "version": {
           "type": "string",
-          "title": "UIGF version; follow the regular expression pattern",
-          "pattern": "v\\d+\\.\\d+"
-        },
-        "region_time_zone": {
-          "type": "number",
-          "title": "Region timezone offset"
+          "pattern": "^v\\d+\\.\\d+$",
+          "description": "The UIGF version of the exported archive, formatted as 'v{major}.{minor}', e.g., v4.0"
         }
       },
-      "required": ["uid", "uigf_version"],
-      "title": "UIGF Export Information"
+      "required": [
+        "export_timestamp",
+        "export_app",
+        "export_app_version",
+        "version"
+      ]
     },
-    "list": {
+    "hk4e": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "uigf_gacha_type": {
-            "type": "string",
-            "title": "UIGF gacha type",
-            "description": "Used to differentiate different gacha types with the same pity calculation for items"
+          "uid": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ],
+            "description": "UID"
           },
-          "gacha_type": {
-            "type": "string",
-            "title": "Gacha type"
+          "timezone": {
+            "type": "integer",
+            "description": "Time zone offset"
           },
-          "item_id": {
+          "lang": {
             "type": "string",
-            "title": "Internal ID of the item"
+            "description": "Language code",
+            "enum": [
+              "de-de",
+              "en-us",
+              "es-es",
+              "fr-fr",
+              "id-id",
+              "it-it",
+              "ja-jp",
+              "ko-kr",
+              "pt-pt",
+              "ru-ru",
+              "th-th",
+              "tr-tr",
+              "vi-vn",
+              "zh-cn",
+              "zh-tw"
+            ]
           },
-          "count": {
-            "type": "string",
-            "title": "Count, usually 1"
-          },
-          "time": {
-            "type": "string",
-            "title": "Time when the item was obtained"
-          },
-          "name": {
-            "type": "string",
-            "title": "Item name"
-          },
-          "item_type": {
-            "type": "string",
-            "title": "Item type"
-          },
-          "rank_type": {
-            "type": "string",
-            "title": "Item rank"
-          },
-          "id": {
-            "type": "string",
-            "title": "Internal ID of the record"
+          "list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "uigf_gacha_type": {
+                  "type": "string",
+                  "description": "UIGF gacha type, used to distinguish between different gacha types that have the same pity calculation",
+                  "enum": [
+                    "100",
+                    "200",
+                    "301",
+                    "302",
+                    "500"
+                  ]
+                },
+                "gacha_type": {
+                  "type": "string",
+                  "description": "Gacha type, returned by MiHoYo API",
+                  "enum": [
+                    "100",
+                    "200",
+                    "301",
+                    "302",
+                    "400",
+                    "500"
+                  ]
+                },
+                "item_id": {
+                  "type": "string",
+                  "description": "The internal ID of the item"
+                },
+                "count": {
+                  "type": "string",
+                  "description": "The number of items, usually 1, returned by MiHoYo API"
+                },
+                "time": {
+                  "type": "string",
+                  "description": "The local time in the timezone of the item being drawn"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "The name of the item, returned by MiHoYo API"
+                },
+                "item_type": {
+                  "type": "string",
+                  "description": "The type of the item, returned by MiHoYo API"
+                },
+                "rank_type": {
+                  "type": "string",
+                  "description": "The rank of the item, returned by MiHoYo API"
+                },
+                "id": {
+                  "type": "string",
+                  "description": "The internal ID of the record, returned by MiHoYo API"
+                }
+              },
+              "required": [
+                "uigf_gacha_type",
+                "gacha_type",
+                "item_id",
+                "time",
+                "id"
+              ]
+            }
           }
         },
-        "required": ["uigf_gacha_type", "gacha_type", "id", "item_id", "time"],
-        "title": "UIGF Item"
-      },
-      "title": "Item List"
+        "required": [
+          "uid",
+          "timezone",
+          "list"
+        ]
+      }
+    },
+    "hkrpg": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uid": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ],
+            "description": "UID"
+          },
+          "timezone": {
+            "type": "integer",
+            "description": "Time zone offset"
+          },
+          "lang": {
+            "type": "string",
+            "description": "Language code",
+            "enum": [
+              "de-de",
+              "en-us",
+              "es-es",
+              "fr-fr",
+              "id-id",
+              "it-it",
+              "ja-jp",
+              "ko-kr",
+              "pt-pt",
+              "ru-ru",
+              "th-th",
+              "tr-tr",
+              "vi-vn",
+              "zh-cn",
+              "zh-tw"
+            ]
+          },
+          "list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "gacha_id": {
+                  "type": "string",
+                  "description": "Gacha Pool ID"
+                },
+                "gacha_type": {
+                  "type": "string",
+                  "description": "Gacha type",
+                  "enum": [
+                    "1",
+                    "2",
+                    "11",
+                    "12"
+                  ]
+                },
+                "item_id": {
+                  "type": "string",
+                  "description": "The internal ID of the item"
+                },
+                "count": {
+                  "type": "string",
+                  "description": "The number of items, usually 1, returned by MiHoYo API"
+                },
+                "time": {
+                  "type": "string",
+                  "description": "The local time in the timezone of the item being drawn"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "The name of the item, returned by MiHoYo API"
+                },
+                "item_type": {
+                  "type": "string",
+                  "description": "The type of the item, returned by MiHoYo API"
+                },
+                "rank_type": {
+                  "type": "string",
+                  "description": "The rank of the item, returned by MiHoYo API"
+                },
+                "id": {
+                  "type": "string",
+                  "description": "The internal ID of the record, returned by MiHoYo API"
+                }
+              },
+              "required": [
+                "gacha_type",
+                "gacha_id",
+                "time",
+                "item_id",
+                "id"
+              ]
+            }
+          }
+        },
+        "required": [
+          "uid",
+          "timezone",
+          "list"
+        ]
+      }
+    },
+    "nap": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uid": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ],
+            "description": "UID"
+          },
+          "timezone": {
+            "type": "integer",
+            "description": "Time zone offset"
+          },
+          "lang": {
+            "type": "string",
+            "description": "Language code",
+            "enum": [
+              "de-de",
+              "en-us",
+              "es-es",
+              "fr-fr",
+              "id-id",
+              "it-it",
+              "ja-jp",
+              "ko-kr",
+              "pt-pt",
+              "ru-ru",
+              "th-th",
+              "tr-tr",
+              "vi-vn",
+              "zh-cn",
+              "zh-tw"
+            ]
+          },
+          "list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "gacha_id": {
+                  "type": "string",
+                  "description": "Gacha Pool ID"
+                },
+                "gacha_type": {
+                  "type": "string",
+                  "description": "Gacha type",
+                  "enum": [
+                    "1",
+                    "2",
+                    "3",
+                    "5"
+                  ]
+                },
+                "item_id": {
+                  "type": "string",
+                  "description": "The internal ID of the item"
+                },
+                "count": {
+                  "type": "string",
+                  "description": "The number of items, usually 1, returned by MiHoYo API"
+                },
+                "time": {
+                  "type": "string",
+                  "description": "The local time in the timezone of the item being drawn"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "The name of the item, returned by MiHoYo API"
+                },
+                "item_type": {
+                  "type": "string",
+                  "description": "The type of the item, returned by MiHoYo API"
+                },
+                "rank_type": {
+                  "type": "string",
+                  "description": "The rank of the item, returned by MiHoYo API"
+                },
+                "id": {
+                  "type": "string",
+                  "description": "The internal ID of the record, returned by MiHoYo API"
+                }
+              },
+              "required": [
+                "gacha_type",
+                "item_id",
+                "time",
+                "id"
+              ]
+            }
+          }
+        },
+        "required": [
+          "uid",
+          "timezone",
+          "list"
+        ]
+      }
     }
   },
-  "required": ["info", "list"],
-  "title": "UIGF Root Object"
+  "required": [
+    "info"
+  ]
 }

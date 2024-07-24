@@ -1,4 +1,6 @@
-## Projects conforming to UIGF standard
+## Projects conforming to UIGF standard (v4.0 - current; for Genshin & Star Rail & ZZZ)
+
+## Projects conforming to UIGF standard (v3.0 and earlier; for Genshin Impact only)
 <RelativeProjectPanel>
 
 <RelativeProject

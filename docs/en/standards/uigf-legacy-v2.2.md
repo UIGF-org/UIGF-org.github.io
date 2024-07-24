@@ -1,6 +1,6 @@
 ---
-category: [Standard Document]
-order: 3
+category: [Standardization Documents]
+order: 4
 head:
   - - meta
     - name: keywords
@@ -8,10 +8,12 @@ head:
 ---
 # Uniformed Interchangeable GachaLog Format Standard v2.2
 
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.2 <Badge text="Legacy" type="message" />
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v2.2 <Badge text="Archived" type="message" />
 
-::: warning Warning
-This standard is outdated, [UIGF v2.3](uigf-legacy-v2.3.md) is the successor.
+::: warning Archived Version
+This standard is deprecated and archived, please check our latest [UIGF standard](./uigf.md) document.
+
+The latest UIGF 4.0 **is not backward compatible with previous UIGF versions**. The last compatible version is [UIGF v3.0](uigf-legacy-v3.0.md).
 :::
 
 ## Manifesto
