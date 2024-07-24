@@ -2,8 +2,8 @@
   <div class="proj-card-dev">
     <div class="proj-card-bg">
       <div class="proj-card-extra">
-        <i class="iconfont icon-github" @click="toRepo" :title="props.repo" />
-        <i class="iconfont icon-link" @click="toSite" :title="props.site" />
+        <i class="iconfont icon-github" v-if="props.repo" @click="toRepo" :title="props.repo" />
+        <i class="iconfont icon-link" v-if="props.site" @click="toSite" :title="props.site" />
       </div>
       <img :src="props.bg" alt="background" />
     </div>
@@ -30,8 +30,8 @@ interface ProjCardDevProps {
   icon: string;
   title: string;
   desc: string;
-  repo: string;
-  site: string;
+  repo?: string;
+  site?: string;
 }
 
 const props = defineProps<ProjCardDevProps>();
@@ -100,6 +100,7 @@ function toSite() {
     border-radius: 50%;
     cursor: pointer;
     color: black;
+    box-shadow: 0 0 5px #000000;
   }
 
   i:hover {
