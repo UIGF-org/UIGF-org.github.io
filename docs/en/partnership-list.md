@@ -94,6 +94,16 @@
     <Pcb label="UIGF v2.2" :games="['ys']" bg="blue"></Pcb>
   </Pcd>
   <Pcd
+    bg="https://gi.pizzastudio.org/img/ophelper-uigf-preview.png"
+    icon="https://gi.pizzastudio.org/img/ophelper_logo_clipped.png"
+    repo="https://github.com/pizza-studio/GenshinPizzaHelper"
+    site="https://apps.apple.com/app/id1635319193"
+    title="Pizza Helper for Genshin"
+    desc="A companion app (for Genshin Impact) among Apple platforms.">
+    <Pcb label="UIGF v2.2~v3.0" :games="['ys']" bg="purple"></Pcb>
+    <Pcb bg="red">Export between versions is not supported</Pcb>
+  </Pcd>
+  <Pcd
     bg="https://s1.ax1x.com/2023/09/09/pP6xHfJ.png"
     icon="https://s1.ax1x.com/2023/09/09/pP6x7Y4.png"
     repo="https://github.com/AuroraZiling/sangonomiya"
@@ -166,6 +176,15 @@
     title="Teyvat Guide"
     desc="Game Tool for Genshin Impact Player">
     <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
+  </Pcd>
+  <Pcd
+    bg="/partnerships/TeyvatGuide/AppPreview.png"
+    icon="/partnerships/TeyvatGuide/logo.png"
+    repo="https://github.com/BTMuli/TeyvatGuide"
+    site="https://apps.microsoft.com/detail/9NLBNNNBNSJN"
+    title="Teyvat Guide"
+    desc="Game Tool for Genshin Impact Player">
+    <Pcb label="UIGF v3.0" :games="['ys']" bg="orange"></Pcb>
   </Pcd>
   <Pcd
     bg="/partnerships/PaimonsNotebook/preview.webp"
@@ -264,5 +283,14 @@
     title="Firefly"
     desc="Honkai: Star Rail Tools">
     <Pcb label="SRGF v1.0" :games="['sr']" bg="purple"></Pcb>
+  </Pcd>
+  <Pcd
+    bg="https://hsr.pizzastudio.org/img/hsrhelper-srgf-preview.png"
+    icon="https://hsr.pizzastudio.org/img/icon.hsrhelper.clipped.png"
+    repo="https://github.com/pizza-studio/HSRPizzaHelper/"
+    site="https://apps.apple.com/app/id6448894222"
+    title="Pizza Helper for HSR"
+    desc="A companion app (for Honkai: Star Rail) among Apple platforms.">
+    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
   </Pcd>
 </RelativeProjectPanel>
