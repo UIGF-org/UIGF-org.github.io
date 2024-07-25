@@ -36,10 +36,9 @@ interface ProjCardDevProps {
 
 const props = defineProps<ProjCardDevProps>();
 
-function isDarkTheme(): boolean {
+function isDarkTheme(): boolean | null {
   const theme = useLocalStorage<"auto" | "dark" | "light">("vuepress-theme-hope-scheme", "auto");
-  // window is not defined in SSR
-  if (theme.value === "auto" && typeof window === "undefined") return false;
+  if (theme.value === "auto" && typeof window === "undefined") return null;
   return theme.value === "auto"
     ? window.matchMedia("(prefers-color-scheme: dark)").matches
     : theme.value === "dark";
@@ -47,10 +46,12 @@ function isDarkTheme(): boolean {
 
 const contentBg = computed(() => {
   const theme = isDarkTheme();
+  if (theme === null) return "transparent";
   return theme ? "#333333" : "#ffffff";
 });
 const shadowColor = computed(() => {
   const theme = isDarkTheme();
+  if (theme === null) return "rgba(0,0,0,0.48)";
   return theme ? "rgba(255,223,0,0.48)" : "#d9d9d9";
 });
 
