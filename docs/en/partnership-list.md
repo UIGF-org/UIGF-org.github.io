@@ -37,6 +37,14 @@
     desc="A companion app (for Honkai: Star Rail) among Apple platforms.">
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="white"></Pcb>
   </Pcd>
+  <Pcd
+    bg="/partnerships/Firefly/preview.png"
+    icon="/partnerships/Firefly/logo.png"
+    repo="https://github.com/Natrium0521/Firefly"
+    title="Firefly"
+    desc="Honkai: Star Rail Tools">
+    <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## Projects conforming to UIGF standard (v3.0 and earlier; for Genshin Impact only)
