@@ -12,9 +12,7 @@
       <span>{{ props.label }}</span>
       <div class="proj-games">
         <div class="proj-game" v-for="game in props.games" :key="game">
-          <div class="proj-game-lock" v-if="game.endsWith('_')">
-            <i class="font-icon lock" />
-          </div>
+          <div class="proj-game-lock" v-if="game.endsWith('_')" />
           <img :src="getGameIcon(game)" :alt="game" />
         </div>
       </div>
@@ -113,9 +111,5 @@ const props = withDefaults(defineProps<PcbProps>(), { bg: "unknown" });
   height: 20px;
   border-radius: 50%;
   background-color: rgb(0 0 0 / 50%);
-}
-
-.proj-game-lock i {
-  font-size: 10px;
 }
 </style>

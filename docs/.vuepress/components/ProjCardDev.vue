@@ -39,7 +39,7 @@ const props = defineProps<ProjCardDevProps>();
 function isDarkTheme(): boolean {
   const theme = useLocalStorage<"auto" | "dark" | "light">("vuepress-theme-hope-scheme", "auto");
   // window is not defined in SSR
-  if(theme.value === "auto" && typeof window === "undefined") return false;
+  if (theme.value === "auto" && typeof window === "undefined") return false;
   return theme.value === "auto"
     ? window.matchMedia("(prefers-color-scheme: dark)").matches
     : theme.value === "dark";
@@ -85,6 +85,13 @@ function toSite() {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s linear;
+  }
+
+  img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s linear;
   }
 }
 
