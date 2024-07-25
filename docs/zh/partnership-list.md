@@ -37,6 +37,14 @@
     desc="iPadOS / iOS / watchOS / macOS 专用星穹铁道小助手">
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="white"></Pcb>
   </Pcd>
+  <Pcd
+    bg="/partnerships/Firefly/preview.png"
+    icon="/partnerships/Firefly/logo.png"
+    repo="https://github.com/Natrium0521/Firefly"
+    title="流萤工具箱"
+    desc="《崩坏：星穹铁道》工具集">
+    <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用 UIGF v3.0 及更旧版 UIGF 标准的项目（仅原神可用）
