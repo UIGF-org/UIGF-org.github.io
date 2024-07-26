@@ -58,7 +58,7 @@
       - 已经是UIGF v3.0或以下版本 或 SRGF的认证合作项目
       - 仍然保留对UIGF v3.0或以下版本 或 SRGF的完整支持
 
-      请仅将您的项目置于“使用 UIGF (v4.0 或以上) 标准的项目”区域中，并添加对应旧有认证版本的<Pcb>标签。
+      请仅将您的项目置于“使用 UIGF (v4.0 或以上) 标准的项目”区域中，并添加对应旧有认证版本的<Pcb>标签。该标签的背景颜色建议选择`white`。
    - 我们建议在本项目的 `docs/.vuepress/public/partnerships` 目录下以你的项目名称创建一个文件夹，并上传相关图片资源。 如果你创建的资源路径为 `docs/.vuepress/public/partnerships/sample-project/logo.png`，则其 URL 路径可以写为`https://uigf.org/partnerships/sample-project/logo.png` 或 `/partnerships/sample-project/logo.png`
 
 5. 保存你的更改；开启一个 Pull Request 将更改提交到本库的主分支中

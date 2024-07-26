@@ -18,7 +18,7 @@
     title="提瓦特指南"
     desc="Game Tool for Genshin Impact Player">
     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
-    <Pcb label="UIGF v3.0" :games="['ys']" bg="orange"></Pcb>
+    <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
   </Pcd>
   <Pcd
     bg="https://gi.pizzastudio.org/img/ophelper-uigf-preview.png"
@@ -28,7 +28,7 @@
     title="原神披萨小助手"
     desc="iPadOS / iOS / watchOS / macOS 专用原神小助手">
     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="purple"></Pcb>
-    <Pcb label="UIGF v2.2~v3.0 (仅导入)" :games="['ys']" bg="purple"></Pcb>
+    <Pcb label="UIGF v2.2~v3.0 (仅导入)" :games="['ys']" bg="white"></Pcb>
   </Pcd>
   <Pcd
     bg="https://hsr.pizzastudio.org/img/hsrhelper-srgf-preview.png"
@@ -37,7 +37,7 @@
     site="https://apps.apple.com/app/id6448894222"
     title="星铁披萨小助手"
     desc="iPadOS / iOS / watchOS / macOS 专用星穹铁道小助手">
-    <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="white"></Pcb>
+    <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
     <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
   </Pcd>
   <Pcd
@@ -229,7 +229,7 @@
     site="https://srtools.jamsg.cn"
     title="星轨工具箱"
     desc="被增强后的星穹铁道启动器">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="blue"></Pcb>
+    <Pcb label="SRGF v1.0" :games="['sr']" bg="purple"></Pcb>
   </Pcd>
   <Pcd
     bg="https://raw.githubusercontent.com/xyxyx718/HSRchargingCalculator/main/img/mp-history.jpg"
