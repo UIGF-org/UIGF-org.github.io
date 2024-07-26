@@ -30,6 +30,16 @@
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
     <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
   </Pcd>
+  <Pcd
+    bg="/partnerships/starwo/preview.png"
+    icon="/partnerships/starwo/logo.png"
+    repo="https://github.com/TremblingMoeNew/StarRailWarpObserve"
+    site="https://starwo.dodocotales.cc/"
+    title="星穹铁道跃迁观测工具"
+    desc="记录您的每一次跃迁">
+    <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="blue"></Pcb>
+    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用 UIAF 标准的项目
@@ -201,15 +211,6 @@
     title="Starward"
     desc="米家游戏启动器">
     <Pcb label="SRGF v1.0" :games="['sr']" bg="blue"></Pcb>
-  </Pcd>
-  <Pcd
-    bg="/partnerships/starwo/preview.png"
-    icon="/partnerships/starwo/logo.png"
-    repo="https://github.com/TremblingMoeNew/StarRailWarpObserve"
-    site="https://starwo.dodocotales.cc/"
-    title="星穹铁道跃迁观测工具"
-    desc="观测您的每一次跃迁">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
   </Pcd>
   <Pcd
     bg="https://cdn.jamsg.cn/release/SRTools/Preview.webp"
