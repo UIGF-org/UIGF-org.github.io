@@ -64,3 +64,4 @@
 5. 保存你的更改；开启一个 Pull Request 将更改提交到本库的主分支中
 
    - 请在 PR 评论区中上传一份你项目导出的 Json 数据文件作为参考
+   - 你也可以将导出的 Json 通过 [UIGF-SchemaVerify](https://schema.uigf.org) 进行验证
