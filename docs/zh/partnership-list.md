@@ -1,4 +1,4 @@
-## 使用 UIGF v4.0 开始至今的标准的项目（原神＆星穹铁道＆绝区零）
+## 使用 UIGF (v4.0 或以上) 标准的项目
 
 <RelativeProjectPanel>
   <Pcd
@@ -18,6 +18,7 @@
     title="提瓦特指南"
     desc="Game Tool for Genshin Impact Player">
     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+    <Pcb label="UIGF v3.0" :games="['ys']" bg="orange"></Pcb>
   </Pcd>
   <Pcd
     bg="https://gi.pizzastudio.org/img/ophelper-uigf-preview.png"
@@ -27,6 +28,7 @@
     title="原神披萨小助手"
     desc="iPadOS / iOS / watchOS / macOS 专用原神小助手">
     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="purple"></Pcb>
+    <Pcb label="UIGF v2.2~v3.0 (仅导入)" :games="['ys']" bg="purple"></Pcb>
   </Pcd>
   <Pcd
     bg="https://hsr.pizzastudio.org/img/hsrhelper-srgf-preview.png"
@@ -36,106 +38,7 @@
     title="星铁披萨小助手"
     desc="iPadOS / iOS / watchOS / macOS 专用星穹铁道小助手">
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="white"></Pcb>
-  </Pcd>
-</RelativeProjectPanel>
-
-## 使用 UIGF v3.0 及更旧版 UIGF 标准的项目（仅原神可用）
-
-<RelativeProjectPanel>
-  <Pcd
-    bg="https://img.alicdn.com/imgextra/i3/1797064093/O1CN018VkZBw1g6dvTMaX9W_!!1797064093.png"
-    icon="https://s1.ax1x.com/2023/09/09/pP6xBef.png"
-    repo="https://github.com/biuuu/genshin-wish-export"
-    title="genshin wish export"
-    desc="Easily export the Genshin Impact wish record">
-    <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
-  </Pcd>
-  <Pcd
-    bg="https://file.xunkong.cc/static/repo/xunkong/YanfeiLawyer.webp"
-    icon="https://xunkong.cc/images/logo.640.webp"
-    repo="https://github.com/xunkong/xunkong"
-    site="https://xunkong.cc/"
-    title="寻空"
-    desc="记录旅途中发生的事">
-    <Pcb label="UIGF v2.2" :games="['ys']" bg="red"></Pcb>
-  </Pcd>
-  <Pcd
-    bg="https://s1.ax1x.com/2023/09/09/pP6x1eK.png"
-    icon="https://s1.ax1x.com/2023/09/09/pP6xyFg.jpg"
-    repo="https://github.com/voderl/genshin-gacha-analyzer"
-    site="https://genshin.voderl.cn/"
-    title="genshin-gacha-analyzer"
-    desc="genshin wish history analyzer">
-    <Pcb label="UIGF v2.2" :games="['ys']" bg="green"></Pcb>
-    <Pcb bg="red">不支持 UIGF 导出</Pcb>
-  </Pcd>
-  <Pcd
-    bg="/partnerships/mukapp/preview.webp"
-    icon="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01agfnd91g6dvMzibmE_!!1797064093.png"
-    site="https://gtool.mukapp.top/"
-    title="应急食品"
-    desc="安卓平台下的原神工具客户端">
-    <Pcb label="UIGF Unknown" :games="['ys']" bg="green"></Pcb>
-  </Pcd>
-  <Pcd
-    bg="/partnerships/teyvat-preview.png"
-    icon="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01wVRiEq1g6dvGG2mmX_!!1797064093.png"
-    site="https://www.yshelper.com/index.php"
-    title="提瓦特小助手 (YSHelper)"
-    desc="专注旅行者服务的微信小程序">
-    <Pcb label="UIGF Unknown" :games="['ys']" bg="green"></Pcb>
-  </Pcd>
-  <Pcd
-    bg="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01Or2BBf1g6dvUQwGP9_!!1797064093.png"
-    icon="https://s1.ax1x.com/2023/09/09/pP6xyFg.jpg"
-    repo="https://github.com/sunfkny/genshin-gacha-export"
-    title="genshin-gacha-export"
-    desc="原神抽卡记录导出">
-    <Pcb label="UIGF v2.2" :games="['ys']" bg="blue"></Pcb>
-  </Pcd>
-  <Pcd
-    bg="https://gi.pizzastudio.org/img/ophelper-uigf-preview.png"
-    icon="https://gi.pizzastudio.org/img/ophelper_logo_clipped.png"
-    repo="https://github.com/pizza-studio/GenshinPizzaHelper"
-    site="https://apps.apple.com/app/id1635319193"
-    title="原神披萨小助手"
-    desc="iPadOS / iOS / watchOS / macOS 专用原神小助手">
-    <Pcb label="UIGF v2.2~v3.0" :games="['ys']" bg="purple"></Pcb>
-    <Pcb bg="red">不支持这部分版本的导出</Pcb>
-  </Pcd>
-  <Pcd
-    bg="https://s1.ax1x.com/2023/09/09/pP6xHfJ.png"
-    icon="https://s1.ax1x.com/2023/09/09/pP6x7Y4.png"
-    repo="https://github.com/AuroraZiling/sangonomiya"
-    title="Sangonomiya"
-    desc="原神祈愿记录工具">
-    <Pcb label="UIGF Unknown" :games="['ys']" bg="green"></Pcb>
-    <Pcb bg="red">Archived</Pcb>
-  </Pcd>
-  <Pcd
-    bg="https://starward.scighost.com/resource/img/uigf/uigf_zh.webp"
-    icon="/partnerships/starward/logo.ico"
-    repo="https://github.com/Scighost/Starward"
-    title="Starward"
-    desc="米家游戏启动器">
-    <Pcb label="UIGF v2.3" :games="['ys']" bg="blue"></Pcb>
-  </Pcd>
-  <Pcd
-    bg="/partnerships/TeyvatGuide/AppPreview.png"
-    icon="/partnerships/TeyvatGuide/logo.png"
-    repo="https://github.com/BTMuli/TeyvatGuide"
-    site="https://apps.microsoft.com/detail/9NLBNNNBNSJN"
-    title="提瓦特指南"
-    desc="Game Tool for Genshin Impact Player">
-    <Pcb label="UIGF v3.0" :games="['ys']" bg="orange"></Pcb>
-  </Pcd>
-  <Pcd
-    bg="/partnerships/PaimonsNotebook/preview.webp"
-    icon="/partnerships/PaimonsNotebook/logo.webp"
-    repo="https://github.com/QooLianyi/PaimonsNotebook"
-    title="派蒙笔记本"
-    desc="安卓平台下的原神工具">
-    <Pcb label="UIGF v3.0" :games="['ys']" bg="green"></Pcb>
+    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
   </Pcd>
 </RelativeProjectPanel>
 
@@ -196,9 +99,85 @@
   </Pcd>
 </RelativeProjectPanel>
 
-## 使用 SRGF 标准的项目
+## 使用 已弃用标准 的项目
 
 <RelativeProjectPanel>
+  <Pcd
+    bg="https://img.alicdn.com/imgextra/i3/1797064093/O1CN018VkZBw1g6dvTMaX9W_!!1797064093.png"
+    icon="https://s1.ax1x.com/2023/09/09/pP6xBef.png"
+    repo="https://github.com/biuuu/genshin-wish-export"
+    title="genshin wish export"
+    desc="Easily export the Genshin Impact wish record">
+    <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+  </Pcd>
+  <Pcd
+    bg="https://file.xunkong.cc/static/repo/xunkong/YanfeiLawyer.webp"
+    icon="https://xunkong.cc/images/logo.640.webp"
+    repo="https://github.com/xunkong/xunkong"
+    site="https://xunkong.cc/"
+    title="寻空"
+    desc="记录旅途中发生的事">
+    <Pcb label="UIGF v2.2" :games="['ys']" bg="red"></Pcb>
+  </Pcd>
+  <Pcd
+    bg="https://s1.ax1x.com/2023/09/09/pP6x1eK.png"
+    icon="https://s1.ax1x.com/2023/09/09/pP6xyFg.jpg"
+    repo="https://github.com/voderl/genshin-gacha-analyzer"
+    site="https://genshin.voderl.cn/"
+    title="genshin-gacha-analyzer"
+    desc="genshin wish history analyzer">
+    <Pcb label="UIGF v2.2" :games="['ys']" bg="green"></Pcb>
+    <Pcb bg="red">不支持 UIGF 导出</Pcb>
+  </Pcd>
+  <Pcd
+    bg="/partnerships/mukapp/preview.webp"
+    icon="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01agfnd91g6dvMzibmE_!!1797064093.png"
+    site="https://gtool.mukapp.top/"
+    title="应急食品"
+    desc="安卓平台下的原神工具客户端">
+    <Pcb label="UIGF Unknown" :games="['ys']" bg="green"></Pcb>
+  </Pcd>
+  <Pcd
+    bg="/partnerships/teyvat-preview.png"
+    icon="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01wVRiEq1g6dvGG2mmX_!!1797064093.png"
+    site="https://www.yshelper.com/index.php"
+    title="提瓦特小助手 (YSHelper)"
+    desc="专注旅行者服务的微信小程序">
+    <Pcb label="UIGF Unknown" :games="['ys']" bg="green"></Pcb>
+  </Pcd>
+  <Pcd
+    bg="https://img.alicdn.com/imgextra/i1/1797064093/O1CN01Or2BBf1g6dvUQwGP9_!!1797064093.png"
+    icon="https://s1.ax1x.com/2023/09/09/pP6xyFg.jpg"
+    repo="https://github.com/sunfkny/genshin-gacha-export"
+    title="genshin-gacha-export"
+    desc="原神抽卡记录导出">
+    <Pcb label="UIGF v2.2" :games="['ys']" bg="blue"></Pcb>
+  </Pcd>
+  <Pcd
+    bg="https://s1.ax1x.com/2023/09/09/pP6xHfJ.png"
+    icon="https://s1.ax1x.com/2023/09/09/pP6x7Y4.png"
+    repo="https://github.com/AuroraZiling/sangonomiya"
+    title="Sangonomiya"
+    desc="原神祈愿记录工具">
+    <Pcb label="UIGF Unknown" :games="['ys']" bg="green"></Pcb>
+    <Pcb bg="red">Archived</Pcb>
+  </Pcd>
+  <Pcd
+    bg="https://starward.scighost.com/resource/img/uigf/uigf_zh.webp"
+    icon="/partnerships/starward/logo.ico"
+    repo="https://github.com/Scighost/Starward"
+    title="Starward"
+    desc="米家游戏启动器">
+    <Pcb label="UIGF v2.3" :games="['ys']" bg="blue"></Pcb>
+  </Pcd>
+  <Pcd
+    bg="/partnerships/PaimonsNotebook/preview.webp"
+    icon="/partnerships/PaimonsNotebook/logo.webp"
+    repo="https://github.com/QooLianyi/PaimonsNotebook"
+    title="派蒙笔记本"
+    desc="安卓平台下的原神工具">
+    <Pcb label="UIGF v3.0" :games="['ys']" bg="green"></Pcb>
+  </Pcd>
   <Pcd
     bg="https://raw.githubusercontent.com/DancingSnow0517/StarRail-gacha/master/imgs/1.png"
     icon="https://raw.githubusercontent.com/DancingSnow0517/StarRail-gacha/master/imgs/star_rail.png"
@@ -283,14 +262,5 @@
     title="流萤工具箱"
     desc="《崩坏：星穹铁道》工具集">
     <Pcb label="SRGF v1.0" :games="['sr']" bg="purple"></Pcb>
-  </Pcd>
-  <Pcd
-    bg="https://hsr.pizzastudio.org/img/hsrhelper-srgf-preview.png"
-    icon="https://hsr.pizzastudio.org/img/icon.hsrhelper.clipped.png"
-    repo="https://github.com/pizza-studio/HSRPizzaHelper/"
-    site="https://apps.apple.com/app/id6448894222"
-    title="星铁披萨小助手"
-    desc="iPadOS / iOS / watchOS / macOS 专用星穹铁道小助手">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
   </Pcd>
 </RelativeProjectPanel>
