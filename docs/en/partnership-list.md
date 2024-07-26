@@ -38,14 +38,6 @@
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="white"></Pcb>
   </Pcd>
   <Pcd
-    bg="/partnerships/Firefly/preview.png"
-    icon="/partnerships/Firefly/logo.png"
-    repo="https://github.com/Natrium0521/Firefly"
-    title="Firefly"
-    desc="Honkai: Star Rail Tools">
-    <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
-  </Pcd>
-  <Pcd
     bg="/partnerships/ZzzSignalSearchExport/preview_en.png"
     icon="/partnerships/ZzzSignalSearchExport/logo.jpeg"
     repo="https://github.com/earthjasonlin/zzz-signal-search-export"
