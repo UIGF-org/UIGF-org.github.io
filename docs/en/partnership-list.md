@@ -40,16 +40,6 @@
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
     <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
   </Pcd>
-  <Pcd
-    bg="/partnerships/starwo/preview.png"
-    icon="/partnerships/starwo/logo.png"
-    repo="https://github.com/TremblingMoeNew/StarRailWarpObserve"
-    site="https://starwo.dodocotales.cc/"
-    title="Star Rail Warp Observe"
-    desc="Record every warp of you">
-    <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="blue"></Pcb>
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
-  </Pcd>
 </RelativeProjectPanel>
 
 ## Projects conforming to UIAF standard
@@ -221,6 +211,15 @@
     title="Starward"
     desc="Game Launcher for miHoYo">
     <Pcb label="SRGF v1.0" :games="['sr']" bg="blue"></Pcb>
+  </Pcd>
+  <Pcd
+    bg="/partnerships/starwo/preview.png"
+    icon="/partnerships/starwo/logo.png"
+    repo="https://github.com/TremblingMoeNew/StarRailWarpObserve"
+    site="https://starwo.dodocotales.cc/"
+    title="Star Rail Warp Observe"
+    desc="Observe every warp of you">
+    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
   </Pcd>
   <Pcd
     bg="https://cdn.jamsg.cn/release/SRTools/Preview.webp"
