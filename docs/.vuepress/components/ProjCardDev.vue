@@ -161,6 +161,6 @@ function toSite() {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 10px;
 }
 </style>

@@ -19,11 +19,13 @@
 
 ## 如何在主页中添加你的项目
 
-1. 克隆这个库
+1. 请确保您的项目对于对应标准具有完整的导入与导出支持，能够正确导出可通过验证的该标准格式文件，能够正确导入可通过验证的、仅具有必要字段的该标准格式文件。
 
-2. 在 `docs/en/` 和 `docs/zh/` 目录下，找到 `partnership-list.md`
+2. 克隆这个库
 
-3. 在正确的标准区域中，复制以下代码并填入你项目的信息
+3. 在 `docs/en/` 和 `docs/zh/` 目录下，找到 `partnership-list.md`
+
+4. 在正确的标准区域中，复制以下代码并填入你项目的信息
 
    ```html
     <Pcd
@@ -45,14 +47,21 @@
      - **`site`**: 项目主页的 URL
      - **`title`**: 你的项目名称
      - **`desc`**: 你的项目介绍
-     - **`games`**: 你的项目支持的游戏列表，可选值为 `ys`,`ys_`,`sr`,`sr_`,`zzz`,`zzz_`，后面的 `_` 表示不支持，按照原神、星铁、绝区零的顺序填写
-       - 项目支持 UIGF v4.0且支持原神、星铁、绝区零，应填写 `label="UIGF v4.0" :games="['ys', 'sr', 'zzz']"`
+     - **`games`**: 你的项目支持的游戏列表，可选值为 `ys`,`ys_`,`sr`,`sr_`,`zzz`,`zzz_`，后面的 `_` 表示不支持，按照原神、星铁、绝区零的顺序填写。列表中应含有对于该标准所涵盖的**所有游戏**的支持情况。
+       - 项目支持 UIGF v4.0且支持原神、绝区零，不支持星铁，应填写 `label="UIGF v4.0" :games="['ys', 'sr_', 'zzz']"`
        - 项目支持 UIGF v2.2，应填写 `label="UIGF v2.2" :games="['ys']"`
        - 若有追加说明，可使用 `<Pcb>Text</Pcb>` 标签，其中 `Text` 为你的说明文字
      - **`bg`**: 可选字段，你的说明文字的背景颜色，可选值为 `red`, `blue`, `green`, `yellow`, `purple`,`white`
      
+   - 若您的项目
+      - 支持 UIGF v4.0或以上版本
+      - 已经是UIGF v3.0或以下版本 或 SRGF的认证合作项目
+      - 仍然保留对UIGF v3.0或以下版本 或 SRGF的完整支持
+
+      请仅将您的项目置于“使用 UIGF (v4.0 或以上) 标准的项目”区域中，并添加对应旧有认证版本的<Pcb>标签。该标签的背景颜色建议选择`white`。
    - 我们建议在本项目的 `docs/.vuepress/public/partnerships` 目录下以你的项目名称创建一个文件夹，并上传相关图片资源。 如果你创建的资源路径为 `docs/.vuepress/public/partnerships/sample-project/logo.png`，则其 URL 路径可以写为`https://uigf.org/partnerships/sample-project/logo.png` 或 `/partnerships/sample-project/logo.png`
 
-4. 保存你的更改；开启一个 Pull Request 将更改提交到本库的主分支中
+5. 保存你的更改；开启一个 Pull Request 将更改提交到本库的主分支中
 
    - 请在 PR 评论区中上传一份你项目导出的 Json 数据文件作为参考
+   - 你也可以将导出的 Json 通过 [UIGF-SchemaVerify](https://schema.uigf.org) 进行验证
