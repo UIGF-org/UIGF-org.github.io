@@ -90,7 +90,7 @@
   </Pcd>
 </RelativeProjectPanel>
 
-## 使用 已弃用标准 的项目
+## 使用已弃用标准的项目
 
 <RelativeProjectPanel>
   <Pcd
@@ -118,7 +118,6 @@
     title="genshin-gacha-analyzer"
     desc="genshin wish history analyzer">
     <Pcb label="UIGF v2.2" :games="['ys']" bg="green"></Pcb>
-    <Pcb bg="red">不支持 UIGF 导出</Pcb>
   </Pcd>
   <Pcd
     bg="/partnerships/mukapp/preview.webp"

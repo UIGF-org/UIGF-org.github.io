@@ -1,4 +1,4 @@
-## Projects conforming to UIGF v4.0+ standard
+## Projects Verified with UIGF v4.0+ Standard
 
 <RelativeProjectPanel>
   <Pcd
@@ -32,7 +32,7 @@
   </Pcd>
 </RelativeProjectPanel>
 
-## Projects conforming to UIAF standard
+## Projects Verified with UIAF Standard
 
 <RelativeProjectPanel>
   <Pcd
@@ -90,7 +90,7 @@
   </Pcd>
 </RelativeProjectPanel>
 
-## Projects conforming to deprecated standards
+## Projects with Deprecated Standards
 
 <RelativeProjectPanel>
 <Pcd
@@ -118,7 +118,6 @@
     title="genshin-gacha-analyzer"
     desc="genshin wish history analyzer">
     <Pcb label="UIGF v2.2" :games="['ys']" bg="green"></Pcb>
-    <Pcb bg="red">UIGF Export is not supported</Pcb>
   </Pcd>
   <Pcd
     bg="/partnerships/mukapp/preview.webp"
