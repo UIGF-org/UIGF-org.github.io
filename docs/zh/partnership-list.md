@@ -51,7 +51,7 @@
     site="https://xunkong.cc/"
     title="寻空"
     desc="记录旅途中发生的事">
-    <Pcb label="UIAF Unknown" :games="['ys']" bg="red"></Pcb>
+    <Pcb label="UIAF 1.1" :games="['ys']" bg="red"></Pcb>
   </Pcd>
   <Pcd
     bg="/partnerships/cocogoat.png"
@@ -60,7 +60,8 @@
     site="https://cocogoat.work/"
     title="椰羊 cocogoat"
     desc="A toolbox for Genshin Impact 100% running in browser.">
-    <Pcb label="UIAF Unknown" :games="['ys']" bg="blue"></Pcb>
+    <Pcb label="UIAF 1.1" :games="['ys']" bg="blue"></Pcb>
+    <Pcb label="UIAF 1.0" :games="['ys']" bg="white"></Pcb>
   </Pcd>
   <Pcd
     bg="https://raw.githubusercontent.com/Finchaos/yae-markdown-230119/main/images/4.png"
@@ -68,7 +69,7 @@
     repo="https://github.com/HolographicHat/YaeAchievement"
     title="YaeAchievement"
     desc="更快、更准的原神成就导出工具">
-    <Pcb label="UIAF Unknown" :games="['ys']" bg="orange"></Pcb>
+    <Pcb label="UIAF 1.1" :games="['ys']" bg="orange"></Pcb>
   </Pcd>
   <Pcd
     bg="/partnerships/TeyvatGuide/AppPreview.png"
