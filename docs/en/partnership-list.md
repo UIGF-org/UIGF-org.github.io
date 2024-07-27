@@ -30,6 +30,15 @@
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
     <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
   </Pcd>
+  <Pcd
+      bg="https://i.ibb.co/jg6fRSx/hollow-home.webp"
+      icon="https://i.ibb.co/c61HgRg/small-icon.png"
+      repo="https://github.com/AuroraZiling/Hollow"
+      site="https://github.com/AuroraZiling/Hollow"
+      title="Hollow"
+      desc="Zenless Zone Zero Toolbox">
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="green"></Pcb>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## Projects Verified with UIAF Standard
