@@ -1,4 +1,4 @@
-## 使用 UIGF (v4.0 或以上) 标准的项目
+## 使用 UIGF v4.0+ 标准的项目
 
 <RelativeProjectPanel>
   <Pcd

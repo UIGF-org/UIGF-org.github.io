@@ -1,4 +1,4 @@
-## Projects conforming to UIGF standard (v4.0 or above)
+## Projects conforming to UIGF v4.0+ standard
 
 <RelativeProjectPanel>
   <Pcd
