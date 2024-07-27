@@ -19,7 +19,6 @@
     title="原神披萨小助手"
     desc="iPadOS / iOS / watchOS / macOS 专用原神小助手">
     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="purple"></Pcb>
-    <Pcb label="UIGF v2.2~v3.0 (仅导入)" :games="['ys']" bg="white"></Pcb>
   </Pcd>
   <Pcd
     bg="https://hsr.pizzastudio.org/img/hsrhelper-srgf-preview.png"

@@ -19,7 +19,6 @@
     title="Pizza Helper for Genshin"
     desc="A companion app (for Genshin Impact) among Apple platforms.">
     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="purple"></Pcb>
-    <Pcb label="UIGF v2.2~v3.0 (Import Only)" :games="['ys']" bg="white"></Pcb>
   </Pcd>
   <Pcd
     bg="https://hsr.pizzastudio.org/img/hsrhelper-srgf-preview.png"
