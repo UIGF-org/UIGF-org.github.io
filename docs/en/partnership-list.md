@@ -2,15 +2,6 @@
 
 <RelativeProjectPanel>
   <Pcd
-    bg="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01F0AGTl1g6dvW6j28q_!!1797064093.png"
-    icon="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01oaGvKE1g6dut0pICS_!!1797064093.png"
-    repo="https://github.com/DGP-Studio/Snap.Hutao"
-    site="https://hut.ao/"
-    title="Snap Hutao"
-    desc="A multifunctional open-source Genshin Impact toolkit">
-    <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="red"></Pcb>
-  </Pcd>
-  <Pcd
     bg="/partnerships/TeyvatGuide/AppPreview.png"
     icon="/partnerships/TeyvatGuide/logo.png"
     repo="https://github.com/BTMuli/TeyvatGuide"
