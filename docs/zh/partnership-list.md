@@ -30,6 +30,25 @@
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
     <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
   </Pcd>
+  <Pcd
+    bg="https://cdn.jamsg.cn/release/SRTools/Preview.webp"
+    icon="https://cdn.jamsg.cn/release/SRTools/Logo.webp"
+    repo="https://github.com/JamXi233/SRTools/"
+    site="https://srtools.jamsg.cn"
+    title="星轨工具箱"
+    desc="被增强后的崩铁启动器">
+    <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
+    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+  </Pcd>
+  <Pcd
+    bg="https://cdn.jamsg.cn/release/ZenlessTools/Preview.webp"
+    icon="https://cdn.jamsg.cn/release/ZenlessTools/Logo.webp"
+    repo="https://github.com/JamXi233/ZenlessTools/"
+    site="https://zentools.jamsg.cn"
+    title="绝区零工具箱"
+    desc="给绳匠们最好用的工具箱">
+    <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用 UIAF 标准的项目
@@ -210,15 +229,6 @@
     title="星穹铁道跃迁观测工具"
     desc="观测您的每一次跃迁">
     <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
-  </Pcd>
-  <Pcd
-    bg="https://cdn.jamsg.cn/release/SRTools/Preview.webp"
-    icon="https://cdn.jamsg.cn/release/SRTools/Logo.webp"
-    repo="https://github.com/JamXi233/SRTools"
-    site="https://srtools.jamsg.cn"
-    title="星轨工具箱"
-    desc="被增强后的星穹铁道启动器">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="purple"></Pcb>
   </Pcd>
   <Pcd
     bg="https://raw.githubusercontent.com/xyxyx718/HSRchargingCalculator/main/img/mp-history.jpg"

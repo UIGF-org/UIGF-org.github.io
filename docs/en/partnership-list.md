@@ -30,6 +30,25 @@
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
     <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
   </Pcd>
+  <Pcd
+    bg="https://cdn.jamsg.cn/release/SRTools/Preview.webp"
+    icon="https://cdn.jamsg.cn/release/SRTools/Logo.webp"
+    repo="https://github.com/JamXi233/SRTools/"
+    site="https://srtools.jamsg.cn"
+    title="SRTools"
+    desc="Enhanced Honkai: Star Rail Launcher">
+    <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
+    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+  </Pcd>
+  <Pcd
+    bg="https://cdn.jamsg.cn/release/ZenlessTools/Preview.webp"
+    icon="https://cdn.jamsg.cn/release/ZenlessTools/Logo.webp"
+    repo="https://github.com/JamXi233/ZenlessTools/"
+    site="https://zentools.jamsg.cn"
+    title="ZenlessTools"
+    desc="The Best Toolbox for Proxies">
+    <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## Projects Verified with UIAF Standard
@@ -210,15 +229,6 @@
     title="Star Rail Warp Observe"
     desc="Observe every warp of you">
     <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
-  </Pcd>
-  <Pcd
-    bg="https://cdn.jamsg.cn/release/SRTools/Preview.webp"
-    icon="https://cdn.jamsg.cn/release/SRTools/Logo.webp"
-    repo="https://github.com/JamXi233/SRTools"
-    site="https://srtools.jamsg.cn"
-    title="SRTools"
-    desc="Enhanced StarRail Launcher">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="purple"></Pcb>
   </Pcd>
   <Pcd
     bg="https://raw.githubusercontent.com/xyxyx718/HSRchargingCalculator/main/img/mp-history.jpg"
