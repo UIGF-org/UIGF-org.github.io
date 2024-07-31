@@ -7,9 +7,18 @@
     repo="https://github.com/BTMuli/TeyvatGuide"
     site="https://apps.microsoft.com/detail/9NLBNNNBNSJN"
     title="提瓦特指南"
-    desc="Game Tool for Genshin Impact Player">
-    <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
-    <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+    desc="Game Tool for Genshin Impact Player"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+      <Pcb label="UIGF v2.4" :games="['ys']" bg="white"></Pcb>
+      <Pcb label="UIGF v2.3" :games="['ys']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="https://gi.pizzastudio.org/img/ophelper-uigf-preview.png"
