@@ -46,6 +46,7 @@
     title="Zenless Zone Zero Signal Search History Exporter"
     desc="A simple tool to manage your signal search history in Zenless Zone Zero">
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## Projects Verified with UIAF Standard
