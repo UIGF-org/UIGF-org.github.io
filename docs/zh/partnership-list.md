@@ -47,6 +47,15 @@
     desc="一个简洁的管理绝区零调频记录的工具">
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
   </Pcd>
+  <Pcd
+    bg="/partnerships/StarRailToolkit/preview.png"
+    icon="/partnerships/StarRailToolkit/logo.jpg"
+    repo="https://github.com/LittleNyima/honkai-starrail-toolkit"
+    title="《崩坏：星穹铁道》工具箱"
+    desc="全平台支持的星铁工具箱">
+    <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
+    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用 UIAF 标准的项目
@@ -253,13 +262,5 @@
     title="StarRailTools"
     desc="保存星铁数据的小工具">
     <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
-  </Pcd>
-  <Pcd
-    bg="/partnerships/StarRailToolkit/preview.jpg"
-    icon="/partnerships/StarRailToolkit/logo.jpg"
-    repo="https://github.com/LittleNyima/honkai-starrail-toolkit"
-    title="StarRailToolkit"
-    desc="崩坏：星穹铁道工具箱">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="red"></Pcb>
   </Pcd>
 </RelativeProjectPanel>
