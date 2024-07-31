@@ -2,7 +2,6 @@
 import { onMounted } from "vue";
 import { useLocalStorage } from "@vueuse/core";
 
-
 const theme = useLocalStorage<"auto" | "dark" | "light">("vuepress-theme-hope-scheme", "auto");
 
 onMounted(() => {
@@ -12,7 +11,6 @@ onMounted(() => {
     }
   });
 });
-
 </script>
 
 <template>
@@ -23,11 +21,10 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .relative-project-panel {
-  display: grid;
+  column-count: 2;
   gap: 1.2em;
-  grid-template-columns: repeat(2, 1fr);
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+    column-count: 1;
   }
 }
 </style>
