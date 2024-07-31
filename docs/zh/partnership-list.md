@@ -30,6 +30,15 @@
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
     <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
   </Pcd>
+  <Pcd
+    bg="/partnerships/Firefly/preview.png"
+    icon="/partnerships/Firefly/logo.png"
+    repo="https://github.com/Natrium0521/Firefly"
+    title="流萤工具箱"
+    desc="《崩坏：星穹铁道》工具集">
+    <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
+    <Pcb label="SRGF v4.0" :games="['sr']" bg="white"></Pcb>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用 UIAF 标准的项目
@@ -244,13 +253,5 @@
     title="StarRailToolkit"
     desc="崩坏：星穹铁道工具箱">
     <Pcb label="SRGF v1.0" :games="['sr']" bg="red"></Pcb>
-  </Pcd>
-  <Pcd
-    bg="/partnerships/Firefly/preview.png"
-    icon="/partnerships/Firefly/logo.png"
-    repo="https://github.com/Natrium0521/Firefly"
-    title="流萤工具箱"
-    desc="《崩坏：星穹铁道》工具集">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="purple"></Pcb>
   </Pcd>
 </RelativeProjectPanel>
