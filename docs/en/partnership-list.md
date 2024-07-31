@@ -47,6 +47,15 @@
     desc="A simple tool to manage your signal search history in Zenless Zone Zero">
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
   </Pcd>
+  <Pcd
+    bg="/partnerships/StarRailToolkit/preview.png"
+    icon="/partnerships/StarRailToolkit/logo.jpg"
+    repo="https://github.com/LittleNyima/honkai-starrail-toolkit"
+    title="Honkai: Star Rail Toolkit"
+    desc="HSR Toolbox with cross-platform compatibility.">
+    <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
+    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## Projects Verified with UIAF Standard
@@ -253,13 +262,5 @@
     title="StarRailTools"
     desc="保存星铁数据的小工具">
     <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
-  </Pcd>
-  <Pcd
-    bg="/partnerships/StarRailToolkit/preview.jpg"
-    icon="/partnerships/StarRailToolkit/logo.jpg"
-    repo="https://github.com/LittleNyima/honkai-starrail-toolkit"
-    title="StarRailToolkit"
-    desc="Honkai: Star Rail Toolkit">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="red"></Pcb>
   </Pcd>
 </RelativeProjectPanel>
