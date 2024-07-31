@@ -38,7 +38,6 @@
 <script lang="ts" setup>
 import { computed, onMounted, ref } from "vue";
 import { useLocalStorage } from "@vueuse/core";
-import { useThemeData } from "vuepress-theme-hope/client";
 
 interface ProjCardDevProps {
   bg: string;

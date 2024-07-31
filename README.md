@@ -35,8 +35,7 @@
       site=""
       title=""
       desc=""
-      import
-      export>
+      import export>
       <template #import>
         <Pcb label="UIGF vx.x" :games="['ys', 'sr', 'zzz_']" bg=""></Pcb>
         <Pcb bg="">Text</Pcb>
@@ -60,7 +59,7 @@
        - 项目支持 UIGF v2.2，应填写 `label="UIGF v2.2" :games="['ys']"`
        - 若有追加说明，可使用 `<Pcb>Text</Pcb>` 标签，其中 `Text` 为你的说明文字
      - **`bg`**: 可选字段，你的说明文字的背景颜色，可选值为 `red`, `blue`, `green`, `yellow`, `purple`,`white`
-     - **`import`**、**`export`**：**建议填写字段**，对项目导入和导出的支持情况进行说明
+     - **`import`**、**`export`**：**必填填写字段**，对项目导入和导出的支持情况进行说明
 
    - 示例代码：
 
@@ -84,16 +83,6 @@
          <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
          <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
        </template>
-     </Pcd>
-     <!-- 项目支持UIAFv1.1的导入导出 -->
-     <Pcd 
-       bg="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01F0AGTl1g6dvW6j28q_!!1797064093.png"
-       icon="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01oaGvKE1g6dut0pICS_!!1797064093.png"
-       repo="https://github.com/DGP-Studio/Snap.Hutao"
-       site="https://hut.ao/"
-       title="胡桃工具箱"
-       desc="实用的开源多功能原神工具箱">
-       <Pcb label="UIAF v1.1" :games="['ys']" bg="red"></Pcb>
      </Pcd>
      ```
      
