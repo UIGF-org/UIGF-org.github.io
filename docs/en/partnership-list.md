@@ -39,6 +39,14 @@
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
     <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
   </Pcd>
+  <Pcd
+    bg="/partnerships/ZzzSignalSearchExport/preview_en.png"
+    icon="/partnerships/ZzzSignalSearchExport/logo.jpeg"
+    repo="https://github.com/earthjasonlin/zzz-signal-search-export"
+    title="Zenless Zone Zero Signal Search History Exporter"
+    desc="A simple tool to manage your signal search history in Zenless Zone Zero">
+    <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## Projects Verified with UIAF Standard

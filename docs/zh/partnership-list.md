@@ -37,7 +37,15 @@
     title="流萤工具箱"
     desc="《崩坏：星穹铁道》工具集">
     <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
-    <Pcb label="SRGF v4.0" :games="['sr']" bg="white"></Pcb>
+    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+  </Pcd>
+  <Pcd
+    bg="/partnerships/ZzzSignalSearchExport/preview_cn.png"
+    icon="/partnerships/ZzzSignalSearchExport/logo.jpeg"
+    repo="https://github.com/earthjasonlin/zzz-signal-search-export"
+    title="绝区零调频记录导出工具"
+    desc="一个简洁的管理绝区零调频记录的工具">
+    <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
   </Pcd>
 </RelativeProjectPanel>
 
