@@ -105,14 +105,6 @@
     desc="安卓平台下的原神工具">
     <Pcb label="UIAF v1.1" :games="['ys']" bg="green"></Pcb>
   </Pcd>
-  <Pcd
-    bg="/partnerships/ZzzSignalSearchExport/preview_cn.png"
-    icon="/partnerships/ZzzSignalSearchExport/logo.jpeg"
-    repo="https://github.com/earthjasonlin/zzz-signal-search-export"
-    title="绝区零调频记录导出工具"
-    desc="一个简洁的管理绝区零调频记录的工具">
-    <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
-  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用已弃用标准的项目
