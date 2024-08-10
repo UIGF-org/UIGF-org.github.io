@@ -184,8 +184,14 @@
     icon="https://s1.ax1x.com/2023/09/09/pP6xBef.png"
     repo="https://github.com/biuuu/genshin-wish-export"
     title="genshin wish export"
-    desc="Easily export the Genshin Impact wish record">
-    <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+    desc="Easily export the Genshin Impact wish record"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="https://file.xunkong.cc/static/repo/xunkong/YanfeiLawyer.webp"
@@ -193,8 +199,14 @@
     repo="https://github.com/xunkong/xunkong"
     site="https://xunkong.cc/"
     title="寻空"
-    desc="记录旅途中发生的事">
-    <Pcb label="UIGF v2.2" :games="['ys']" bg="red"></Pcb>
+    desc="记录旅途中发生的事"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v2.2" :games="['ys']" bg="red"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v2.2" :games="['ys']" bg="red"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="https://s1.ax1x.com/2023/09/09/pP6x1eK.png"
@@ -202,12 +214,16 @@
     repo="https://github.com/voderl/genshin-gacha-analyzer"
     site="https://genshin.voderl.cn/"
     title="genshin-gacha-analyzer"
-    desc="genshin wish history analyzer">
-    <Pcb label="UIGF v2.2" :games="['ys']" bg="green"></Pcb>
+    desc="genshin wish history analyzer"
+    import>
+    <template #import>
+      <Pcb label="UIGF v2.2" :games="['ys']" bg="green"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="/partnerships/mukapp/preview.webp"
     icon="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01agfnd91g6dvMzibmE_!!1797064093.png"
+    repo="https://github.com/MUKAPP/MGenshinTool"
     site="https://gtool.mukapp.top/"
     title="应急食品"
     desc="安卓平台下的原神工具客户端">
@@ -226,8 +242,11 @@
     icon="https://s1.ax1x.com/2023/09/09/pP6xyFg.jpg"
     repo="https://github.com/sunfkny/genshin-gacha-export"
     title="genshin-gacha-export"
-    desc="原神抽卡记录导出">
-    <Pcb label="UIGF v2.2" :games="['ys']" bg="blue"></Pcb>
+    desc="原神抽卡记录导出"
+    export>
+    <template #export>
+      <Pcb label="UIGF v2.2" :games="['ys']" bg="blue"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="https://s1.ax1x.com/2023/09/09/pP6xHfJ.png"
@@ -251,16 +270,25 @@
     icon="/partnerships/PaimonsNotebook/logo.webp"
     repo="https://github.com/QooLianyi/PaimonsNotebook"
     title="派蒙笔记本"
-    desc="安卓平台下的原神工具">
-    <Pcb label="UIGF v3.0" :games="['ys']" bg="green"></Pcb>
+    desc="安卓平台下的原神工具"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="green"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="green"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="https://raw.githubusercontent.com/DancingSnow0517/StarRail-gacha/master/imgs/1.png"
     icon="https://raw.githubusercontent.com/DancingSnow0517/StarRail-gacha/master/imgs/star_rail.png"
     repo="https://github.com/DancingSnow0517/StarRail-gacha"
     title="StarRail Gacha Exporter"
-    desc="一个快捷简便的崩坏：星穹铁道抽卡导出工具">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    desc="一个快捷简便的崩坏：星穹铁道抽卡导出工具"
+    export>
+    <template #export>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="https://raw.githubusercontent.com/BoxCatTeam/SRCat/master/github-assets/images/3.png"
@@ -268,25 +296,23 @@
     repo="https://github.com/BoxCatTeam/SRCat"
     site="https://srcat.boxcat.org/"
     title="SRCat"
-    desc="崩坏：星穹铁道 - 工具箱 / 愿此行，有猫猫一直相伴">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="red"></Pcb>
+    desc="崩坏：星穹铁道 - 工具箱 / 愿此行，有猫猫一直相伴"
+    export>
+    <template #export>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="red"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="https://s1.ax1x.com/2023/09/09/pP6xO61.png"
     icon="https://s1.ax1x.com/2023/09/09/pP6xLlR.png"
     repo="https://github.com/AuroraZiling/star-rail-asta"
     title="Asta"
-    desc="崩坏：星穹铁道 跃迁记录工具">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="red"></Pcb>
+    desc="崩坏：星穹铁道 跃迁记录工具"
+    export>
+    <template #export>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="red"></Pcb>
+    </template>
     <Pcb bg="blue">Archived</Pcb>
-  </Pcd>
-  <Pcd
-    bg="https://starward.scighost.com/resource/img/uigf/uigf_zh.webp"
-    icon="/partnerships/starward/logo.ico"
-    repo="https://github.com/Scighost/Starward"
-    title="Starward"
-    desc="米家游戏启动器">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="blue"></Pcb>
   </Pcd>
   <Pcd
     bg="/partnerships/starwo/preview.png"
@@ -294,8 +320,14 @@
     repo="https://github.com/TremblingMoeNew/StarRailWarpObserve"
     site="https://starwo.dodocotales.cc/"
     title="星穹铁道跃迁观测工具"
-    desc="观测您的每一次跃迁">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    desc="观测您的每一次跃迁"
+    import export>
+    <template #import>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="https://cdn.jamsg.cn/release/SRTools/Preview.webp"
@@ -303,8 +335,14 @@
     repo="https://github.com/JamXi233/SRTools"
     site="https://srtools.jamsg.cn"
     title="星轨工具箱"
-    desc="被增强后的星穹铁道启动器">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="purple"></Pcb>
+    desc="被增强后的星穹铁道启动器"
+    import export>
+    <template #import>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="purple"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="purple"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="https://raw.githubusercontent.com/xyxyx718/HSRchargingCalculator/main/img/mp-history.jpg"
@@ -312,8 +350,14 @@
     repo="https://github.com/xyxyx718/HSRchargingCalculator"
     site="https://github.com/xyxyx718/HSRchargingCalculator/blob/main/%E5%92%B8%E9%B1%BC%E7%9A%84%E5%B4%A9%E9%93%81%E5%8A%A9%E7%90%86.md"
     title="咸鱼的崩铁助理"
-    desc="崩坏：星穹铁道 抽卡分析&充能计算器">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="blue"></Pcb>
+    desc="崩坏：星穹铁道 抽卡分析&充能计算器"
+    import export>
+    <template #import>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="https://raw.githubusercontent.com/cntvc/star-rail-tools/main/docs/image/star_rail_tools_cover.png"
@@ -328,7 +372,13 @@
     icon="/partnerships/StarRailToolkit/logo.jpg"
     repo="https://github.com/LittleNyima/honkai-starrail-toolkit"
     title="StarRailToolkit"
-    desc="崩坏：星穹铁道工具箱">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="red"></Pcb>
+    desc="崩坏：星穹铁道工具箱"
+    import export>
+    <template #import>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="red"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="red"></Pcb>
+    </template>
   </Pcd>
 </RelativeProjectPanel>
