@@ -185,10 +185,7 @@
     repo="https://github.com/biuuu/genshin-wish-export"
     title="genshin wish export"
     desc="Easily export the Genshin Impact wish record"
-    import export>
-    <template #import>
-      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
-    </template>
+    export>
     <template #export>
       <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
     </template>
@@ -262,8 +259,12 @@
     icon="/partnerships/starward/logo.ico"
     repo="https://github.com/Scighost/Starward"
     title="Starward"
-    desc="米家游戏启动器">
-    <Pcb label="UIGF v2.3" :games="['ys']" bg="blue"></Pcb>
+    desc="米家游戏启动器"
+    export>
+    <template #export>
+      <Pcb label="UIGF v2.3" :games="['ys']" bg="blue"></Pcb>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="blue"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="/partnerships/PaimonsNotebook/preview.webp"

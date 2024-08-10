@@ -185,10 +185,7 @@
     repo="https://github.com/biuuu/genshin-wish-export"
     title="genshin wish export"
     desc="Easily export the Genshin Impact wish record"
-    import export>
-    <template #import>
-      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
-    </template>
+    export>
     <template #export>
       <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
     </template>
