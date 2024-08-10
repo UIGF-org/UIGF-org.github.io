@@ -26,8 +26,14 @@
     repo="https://github.com/pizza-studio/GenshinPizzaHelper"
     site="https://apps.apple.com/app/id1635319193"
     title="Pizza Helper for Genshin"
-    desc="A companion app (for Genshin Impact) among Apple platforms.">
-    <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="purple"></Pcb>
+    desc="A companion app (for Genshin Impact) among Apple platforms."
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="purple"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="purple"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="https://hsr.pizzastudio.org/img/hsrhelper-srgf-preview.png"
@@ -35,26 +41,46 @@
     repo="https://github.com/pizza-studio/HSRPizzaHelper/"
     site="https://apps.apple.com/app/id6448894222"
     title="Pizza Helper for HSR"
-    desc="A companion app (for Honkai: Star Rail) among Apple platforms.">
-    <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    desc="A companion app (for Honkai: Star Rail) among Apple platforms."
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="/partnerships/Firefly/preview.png"
     icon="/partnerships/Firefly/logo.png"
     repo="https://github.com/Natrium0521/Firefly"
     title="Firefly"
-    desc="Honkai: Star Rail Tools">
-    <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    desc="Honkai: Star Rail Tools"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="/partnerships/ZzzSignalSearchExport/preview_en.png"
     icon="/partnerships/ZzzSignalSearchExport/logo.jpeg"
     repo="https://github.com/earthjasonlin/zzz-signal-search-export"
     title="Zenless Zone Zero Signal Search History Exporter"
-    desc="A simple tool to manage your signal search history in Zenless Zone Zero">
-    <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
+    desc="A simple tool to manage your signal search history in Zenless Zone Zero"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
+    </template>
   </Pcd>
 </RelativeProjectPanel>
 
@@ -67,8 +93,14 @@
     repo="https://github.com/DGP-Studio/Snap.Hutao"
     site="https://hut.ao/"
     title="Snap Hutao"
-    desc="A multifunctional open-source Genshin Impact toolkit">
-    <Pcb label="UIAF v1.1" :games="['ys']" bg="red"></Pcb>
+    desc="A multifunctional open-source Genshin Impact toolkit"
+    import export>
+    <template #import>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="red"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="red"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="https://file.xunkong.cc/static/repo/xunkong/YanfeiLawyer.webp"
@@ -76,8 +108,14 @@
     repo="https://github.com/xunkong/xunkong"
     site="https://xunkong.cc/"
     title="Xunkong"
-    desc="记录旅途中发生的事">
-    <Pcb label="UIAF 1.1" :games="['ys']" bg="red"></Pcb>
+    desc="记录旅途中发生的事"
+    import export>
+    <template #import>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="red"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="red"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="/partnerships/cocogoat.png"
@@ -85,17 +123,27 @@
     repo="https://github.com/yuehaiTeam/cocogoat"
     site="https://cocogoat.work/"
     title="椰羊 cocogoat"
-    desc="A toolbox for Genshin Impact 100% running in browser.">
-    <Pcb label="UIAF 1.1" :games="['ys']" bg="blue"></Pcb>
-    <Pcb label="UIAF 1.0" :games="['ys']" bg="white"></Pcb>
+    desc="A toolbox for Genshin Impact 100% running in browser."
+    import export>
+    <template #import>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="blue"></Pcb>
+      <Pcb label="UIAF v1.0" :games="['ys']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="blue"></Pcb>
+      <Pcb label="UIAF v1.0" :games="['ys']" bg="white"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="https://raw.githubusercontent.com/Finchaos/yae-markdown-230119/main/images/4.png"
     icon="https://raw.githubusercontent.com/HolographicHat/YaeAchievement/master/icon.ico"
     repo="https://github.com/HolographicHat/YaeAchievement"
     title="YaeAchievement"
-    desc="更快、更准的原神成就导出工具">
-    <Pcb label="UIAF 1.1" :games="['ys']" bg="orange"></Pcb>
+    desc="更快、更准的原神成就导出工具"
+    export>
+    <template #export>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="/partnerships/TeyvatGuide/AppPreview.png"
@@ -103,16 +151,28 @@
     repo="https://github.com/BTMuli/TeyvatGuide"
     site="https://apps.microsoft.com/detail/9NLBNNNBNSJN"
     title="Teyvat Guide"
-    desc="Game Tool for Genshin Impact Player">
-    <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
+    desc="Game Tool for Genshin Impact Player"
+    import export>
+    <template #import>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="/partnerships/PaimonsNotebook/preview.webp"
     icon="/partnerships/PaimonsNotebook/logo.webp"
     repo="https://github.com/QooLianyi/PaimonsNotebook"
     title="PaimonsNotebook"
-    desc="Android-platform game tool for Genshin Impact">
-    <Pcb label="UIAF v1.1" :games="['ys']" bg="green"></Pcb>
+    desc="Android-platform game tool for Genshin Impact"
+    import export>
+    <template #import>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="green"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="green"></Pcb>
+    </template>
   </Pcd>
 </RelativeProjectPanel>
 
