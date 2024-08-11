@@ -246,15 +246,6 @@
     </template>
   </Pcd>
   <Pcd
-    bg="https://s1.ax1x.com/2023/09/09/pP6xHfJ.png"
-    icon="https://s1.ax1x.com/2023/09/09/pP6x7Y4.png"
-    repo="https://github.com/AuroraZiling/sangonomiya"
-    title="Sangonomiya"
-    desc="Gacha Report Tool for Genshin Impact">
-    <Pcb label="UIGF Unknown" :games="['ys']" bg="green"></Pcb>
-    <Pcb bg="red">Archived</Pcb>
-  </Pcd>
-  <Pcd
     bg="https://starward.scighost.com/resource/img/uigf/uigf_en.webp"
     icon="/partnerships/starward/logo.ico"
     repo="https://github.com/Scighost/Starward"
@@ -304,18 +295,6 @@
     </template>
   </Pcd>
   <Pcd
-    bg="https://s1.ax1x.com/2023/09/09/pP6xO61.png"
-    icon="https://s1.ax1x.com/2023/09/09/pP6xLlR.png"
-    repo="https://github.com/AuroraZiling/star-rail-asta"
-    title="Asta"
-    desc="Gacha Report Tool for Honkai: Star Rail"
-    export>
-    <template #export>
-      <Pcb label="SRGF v1.0" :games="['sr']" bg="red"></Pcb>
-    </template>
-    <Pcb bg="blue">Archived</Pcb>
-  </Pcd>
-  <Pcd
     bg="/partnerships/starwo/preview.png"
     icon="/partnerships/starwo/logo.png"
     repo="https://github.com/TremblingMoeNew/StarRailWarpObserve"
@@ -344,15 +323,6 @@
     <template #export>
       <Pcb label="SRGF v1.0" :games="['sr']" bg="purple"></Pcb>
     </template>
-  </Pcd>
-  <Pcd
-    bg="https://raw.githubusercontent.com/xyxyx718/HSRchargingCalculator/main/img/mp-history.jpg"
-    icon="https://raw.githubusercontent.com/xyxyx718/HSRchargingCalculator/main/img/logo.png"
-    repo="https://github.com/xyxyx718/HSRchargingCalculator"
-    site="https://github.com/xyxyx718/HSRchargingCalculator/blob/main/%E5%92%B8%E9%B1%BC%E7%9A%84%E5%B4%A9%E9%93%81%E5%8A%A9%E7%90%86.md"
-    title="咸鱼的崩铁助理"
-    desc="Gacha Analyzer & Charging Calculator for Honkai: Star Rail">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="blue"></Pcb>
   </Pcd>
   <Pcd
     bg="https://raw.githubusercontent.com/cntvc/star-rail-tools/main/docs/image/star_rail_tools_cover.png"
