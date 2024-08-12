@@ -127,6 +127,21 @@
       <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="orange"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+    bg="/partnerships/ShufflePlay/preview.png"
+    icon="/partnerships/ShufflePlay/logo.png"
+    repo="https://github.com/BTMuli/ShufflePlay"
+    site="https://apps.microsoft.com/detail/9n6vc24jx0jq"
+    title="ShufflePlay"
+    desc="又一个绝区零第三方游戏工具"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## Projects with UIAF Standard
