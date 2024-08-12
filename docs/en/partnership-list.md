@@ -1,4 +1,4 @@
-## Projects Verified with UIGF v4.0+ Standard
+## Projects with UIGF v4.0+ Standard
 
 <RelativeProjectPanel>
   <Pcd
@@ -84,7 +84,7 @@
   </Pcd>
 </RelativeProjectPanel>
 
-## Projects Verified with UIAF Standard
+## Projects with UIAF Standard
 
 <RelativeProjectPanel>
   <Pcd
