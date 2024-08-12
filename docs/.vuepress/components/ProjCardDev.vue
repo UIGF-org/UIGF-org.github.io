@@ -11,18 +11,32 @@
       <div class="proj-card-main">
         <img :src="props.icon" alt="icon" />
         <div class="proj-card-info">
-          <div class="proj-card-title" :title="props.title">{{ props.title }}</div>
+          <div class="proj-card-title" :title="props.title" @click="toProj()">
+            {{ props.title }}
+          </div>
           <div class="proj-card-desc" :title="props.desc">{{ props.desc }}</div>
         </div>
       </div>
-      <div class="proj-card-badges">
+      <div v-if="props.import" class="proj-card-badge-box">
+        <div class="proj-card-badge-title">{{ getImportTitle() }}</div>
+        <div class="proj-card-badges">
+          <slot name="import"></slot>
+        </div>
+      </div>
+      <div v-if="props.export" class="proj-card-badge-box">
+        <div class="proj-card-badge-title">{{ getExportTitle() }}</div>
+        <div class="proj-card-badges">
+          <slot name="export"></slot>
+        </div>
+      </div>
+      <div class="proj-card-badges" v-if="!props.export && !props.import">
         <slot></slot>
       </div>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
-import { computed } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { useLocalStorage } from "@vueuse/core";
 
 interface ProjCardDevProps {
@@ -32,9 +46,25 @@ interface ProjCardDevProps {
   desc: string;
   repo?: string;
   site?: string;
+  import?: true;
+  export?: true;
 }
 
 const props = defineProps<ProjCardDevProps>();
+const lang = ref("zh-CN");
+
+onMounted(() => {
+  const path = window.location.pathname;
+  lang.value = path.startsWith("/zh/") ? "zh-CN" : "en-US";
+});
+
+function getImportTitle() {
+  return lang.value === "zh-CN" ? "导入支持：" : "Supported Import:";
+}
+
+function getExportTitle() {
+  return lang.value === "zh-CN" ? "导出支持：" : "Supported Export:";
+}
 
 function isDarkTheme(): boolean | null {
   const theme = useLocalStorage<"auto" | "dark" | "light">("vuepress-theme-hope-scheme", "auto");
@@ -62,6 +92,10 @@ function toRepo() {
 function toSite() {
   window.open(props.site, "_blank");
 }
+
+function toProj() {
+  window.open(props.site || props.repo, "_blank");
+}
 </script>
 <style lang="css" scoped>
 .proj-card-dev {
@@ -74,6 +108,7 @@ function toSite() {
   display: flex;
   flex-direction: column;
   background: v-bind(contentBg);
+  margin-bottom: 1.2em;
 }
 
 .proj-card-bg {
@@ -114,7 +149,7 @@ function toSite() {
   }
 
   i:hover {
-    color: var(--theme-color)
+    color: var(--theme-color);
   }
 }
 
@@ -153,6 +188,20 @@ function toSite() {
 
 .proj-card-title {
   font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.proj-card-badge-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5em;
+}
+
+.proj-card-badge-title {
+  font-size: 1.2em;
   font-weight: bold;
 }
 

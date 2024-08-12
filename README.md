@@ -34,9 +34,16 @@
       repo=""
       site=""
       title=""
-      desc="">
-      <Pcb label="UIGF vx.x" :games="['ys', 'sr', 'zzz_']" bg=""></Pcb>
-      <Pcb bg="">Text</Pcb>
+      desc=""
+      import export>
+      <template #import>
+        <Pcb label="UIGF vx.x" :games="['ys', 'sr', 'zzz_']" bg=""></Pcb>
+        <Pcb bg="">Text</Pcb>
+      </template>
+      <template #export>
+        <Pcb label="UIGF vx.x" :games="['ys', 'sr', 'zzz_']" bg=""></Pcb>
+        <Pcb bg="">Text</Pcb>
+      </template>
     </Pcd>
    ```
 
@@ -52,6 +59,32 @@
        - 项目支持 UIGF v2.2，应填写 `label="UIGF v2.2" :games="['ys']"`
        - 若有追加说明，可使用 `<Pcb>Text</Pcb>` 标签，其中 `Text` 为你的说明文字
      - **`bg`**: 可选字段，你的说明文字的背景颜色，可选值为 `red`, `blue`, `green`, `yellow`, `purple`,`white`
+     - **`import`**、**`export`**：**必填填写字段**，对项目导入和导出的支持情况进行说明
+
+   - 示例代码：
+
+     ```html
+     <!-- 项目支持UIGFv2.4~4.0的导入，但仅支持UIGF3.0 4.0的导出 -->
+     <Pcd
+       bg="/partnerships/TeyvatGuide/AppPreview.png"
+       icon="/partnerships/TeyvatGuide/logo.png"
+       repo="https://github.com/BTMuli/TeyvatGuide"
+       site="https://apps.microsoft.com/detail/9NLBNNNBNSJN"
+       title="提瓦特指南"
+       desc="Game Tool for Genshin Impact Player"
+       import export>
+       <template #import>
+         <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+         <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+         <Pcb label="UIGF v2.4" :games="['ys']" bg="white"></Pcb>
+         <Pcb label="UIGF v2.3" :games="['ys']" bg="white"></Pcb>
+       </template>
+       <template #export>
+         <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+         <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+       </template>
+     </Pcd>
+     ```
      
    - 若您的项目
       - 支持 UIGF v4.0或以上版本
