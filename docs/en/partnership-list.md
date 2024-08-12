@@ -82,6 +82,37 @@
       <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+    bg="https://cdn.jamsg.cn/release/SRTools/Preview.webp"
+    icon="https://cdn.jamsg.cn/release/SRTools/Logo.webp"
+    repo="https://github.com/JamXi233/SRTools/"
+    site="https://srtools.jamsg.cn"
+    title="SRTools"
+    desc="Enhanced Honkai: Star Rail Launcher"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="purple"></Pcb>
+    </template>
+  </Pcd>
+  <Pcd
+    bg="https://cdn.jamsg.cn/release/ZenlessTools/Preview.webp"
+    icon="https://cdn.jamsg.cn/release/ZenlessTools/Logo.webp"
+    repo="https://github.com/JamXi233/ZenlessTools/"
+    site="https://zentools.jamsg.cn"
+    title="ZenlessTools"
+    desc="The Best Toolbox for Proxies"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="orange"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="orange"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## Projects with UIAF Standard
@@ -307,21 +338,6 @@
     </template>
     <template #export>
       <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
-    </template>
-  </Pcd>
-  <Pcd
-    bg="https://cdn.jamsg.cn/release/SRTools/Preview.webp"
-    icon="https://cdn.jamsg.cn/release/SRTools/Logo.webp"
-    repo="https://github.com/JamXi233/SRTools"
-    site="https://srtools.jamsg.cn"
-    title="SRTools"
-    desc="Enhanced StarRail Launcher"
-    import export>
-    <template #import>
-      <Pcb label="SRGF v1.0" :games="['sr']" bg="purple"></Pcb>
-    </template>
-    <template #export>
-      <Pcb label="SRGF v1.0" :games="['sr']" bg="purple"></Pcb>
     </template>
   </Pcd>
   <Pcd
