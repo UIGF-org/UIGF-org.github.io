@@ -82,6 +82,20 @@
       <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="white"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+    bg="/partnerships/Hollow/home.webp"
+    icon="/partnerships/Hollow/icon.png"
+    repo="https://github.com/AuroraZiling/Hollow"
+    title="Hollow"
+    desc="绝区零工具箱"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="green"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr_', 'zzz']" bg="green"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用 UIAF 标准的项目
