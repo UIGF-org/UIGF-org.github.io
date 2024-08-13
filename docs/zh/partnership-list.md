@@ -158,6 +158,21 @@
       <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+    bg="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01F0AGTl1g6dvW6j28q_!!1797064093.png"
+    icon="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01oaGvKE1g6dut0pICS_!!1797064093.png"
+    repo="https://github.com/DGP-Studio/Snap.Hutao"
+    site="https://hut.ao/"
+    title="胡桃工具箱"
+    desc="实用的开源多功能原神工具箱"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="red"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="red"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用 UIAF 标准的项目
