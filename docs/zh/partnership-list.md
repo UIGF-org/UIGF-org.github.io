@@ -173,6 +173,22 @@
       <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="red"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+    bg="https://raw.githubusercontent.com/cntvc/star-rail-tools/main/docs/image/star_rail_tools_cover.png"
+    icon="https://raw.githubusercontent.com/cntvc/star-rail-tools/main/resource/hsr.ico"
+    repo="https://github.com/cntvc/star-rail-tools"
+    title="StarRailTools"
+    desc="保存星铁数据的小工具"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="orange"></Pcb>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="orange"></Pcb>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用 UIAF 标准的项目
