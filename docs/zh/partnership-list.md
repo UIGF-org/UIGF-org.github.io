@@ -416,12 +416,4 @@
       <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
     </template>
   </Pcd>
-  <Pcd
-    bg="https://raw.githubusercontent.com/cntvc/star-rail-tools/main/docs/image/star_rail_tools_cover.png"
-    icon="/games/sr.webp"
-    repo="https://github.com/cntvc/star-rail-tools"
-    title="StarRailTools"
-    desc="保存星铁数据的小工具">
-    <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
-  </Pcd>
 </RelativeProjectPanel>
