@@ -36,6 +36,11 @@ export const enNavbar = navbar([
         text: "UIGF Schema Verify Tool",
         link: "https://schema.uigf.org/",
         icon: "tool"
+      },
+      {
+        text: "UIGF Upgrader",
+        link: "https://upgrader.uigf.org/",
+        icon: "update"
       }
     ],
   },

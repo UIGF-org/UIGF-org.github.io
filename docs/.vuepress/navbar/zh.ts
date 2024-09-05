@@ -36,6 +36,11 @@ export const zhNavbar = navbar([
         text: "UIGF 格式校验工具",
         link: "https://schema.uigf.org/",
         icon: "tool"
+      },
+      {
+        text: "UIGF 升级工具",
+        link: "https://upgrader.uigf.org/",
+        icon: "update"
       }
     ],
   },
