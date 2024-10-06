@@ -323,6 +323,9 @@
     <template #import>
       <Pcb label="UIGF v2.2" :games="['ys']" bg="green"></Pcb>
     </template>
+    <template #export>
+      <Pcb label="UIGF v2.2" :games="['ys']" bg="red"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="/partnerships/mukapp/preview.webp"
@@ -331,7 +334,9 @@
     site="https://gtool.mukapp.top/"
     title="应急食品"
     desc="安卓平台下的原神工具客户端">
-    <Pcb label="UIGF Unknown" :games="['ys']" bg="green"></Pcb>
+    <template #import>
+      <Pcb label="UIGF v2.2" :games="['ys']" bg="green"></Pcb>
+    </template>
   </Pcd>
   <Pcd
     bg="/partnerships/teyvat-preview.png"
