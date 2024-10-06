@@ -5,3 +5,4 @@ docs/.vuepress/.temp/
 dist/
 /.idea/
 *.code-workspace
+.DS_Store
