@@ -1,6 +1,23 @@
 ## Projects with UIGF v4.0+ Standard
 
 <RelativeProjectPanel>
+<Pcd
+   bg="/public/projBg.png"
+   icon="/public/projIcon.png"
+   repo="https://github.com/DreamedWorker/TravellersBag"
+   site="https://bluedream.icu/TravellersBag"
+   title="TravelleysBag"
+   desc="TravellersBag is a tool set software with content from Genshin Impact and designed for modern macOS"
+   import export>
+   <template #import>
+     <Pcb label="UIGF v4.0" :games="['ys']" bg="yellow"></Pcb>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="yellow"></Pcb>
+   </template>
+   <template #export>
+     <Pcb label="UIGF v4.0" :games="['ys']" bg="yellow"></Pcb>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="yellow"></Pcb>
+   </template>
+ </Pcd>
   <Pcd
     bg="/partnerships/TeyvatGuide/AppPreview.png"
     icon="/partnerships/TeyvatGuide/logo.png"

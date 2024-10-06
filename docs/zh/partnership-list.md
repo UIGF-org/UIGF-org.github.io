@@ -1,6 +1,23 @@
 ## 使用 UIGF v4.0+ 标准的项目
 
 <RelativeProjectPanel>
+<Pcd
+   bg="/public/projBg.png"
+   icon="/public/projIcon.png"
+   repo="https://github.com/DreamedWorker/TravellersBag"
+   site="https://bluedream.icu/TravellersBag"
+   title="旅者行囊"
+   desc="专为现代macOS设计的《原神》工具箱"
+   import export>
+   <template #import>
+     <Pcb label="UIGF v4.0" :games="['ys']" bg="yellow"></Pcb>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="yellow"></Pcb>
+   </template>
+   <template #export>
+     <Pcb label="UIGF v4.0" :games="['ys']" bg="yellow"></Pcb>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="yellow"></Pcb>
+   </template>
+ </Pcd>
   <Pcd
     bg="/partnerships/TeyvatGuide/AppPreview.png"
     icon="/partnerships/TeyvatGuide/logo.png"
