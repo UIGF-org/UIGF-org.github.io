@@ -189,6 +189,21 @@
       <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+   bg="/partnerships/travellersbag/projBg.png"
+   icon="/partnerships/travellersbag/projIcon.png"
+   repo="https://github.com/DreamedWorker/TravellersBag"
+   site="https://bluedream.icu/TravellersBag"
+   title="TravellersBag"
+   desc="TravellersBag is a tool set software with content from Genshin Impact and designed for modern macOS"
+   import export>
+   <template #import>
+     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+   </template>
+   <template #export>
+     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+   </template>
+ </Pcd>
 </RelativeProjectPanel>
 
 ## Projects with UIAF Standard
@@ -281,6 +296,21 @@
       <Pcb label="UIAF v1.1" :games="['ys']" bg="green"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+   bg="/partnerships/travellersbag/projBg.png"
+   icon="/partnerships/travellersbag/projIcon.png"
+   repo="https://github.com/DreamedWorker/TravellersBag"
+   site="https://bluedream.icu/TravellersBag"
+   title="TravellersBag"
+   desc="TravellersBag is a tool set software with content from Genshin Impact and designed for modern macOS"
+   import export>
+   <template #import>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
+   </template>
+   <template #export>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
+   </template>
+ </Pcd>
 </RelativeProjectPanel>
 
 ## Projects with Deprecated Standards
