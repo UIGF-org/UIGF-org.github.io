@@ -190,8 +190,8 @@
     </template>
   </Pcd>
   <Pcd
-   bg="/public/partnerships/travellersbag/projBg.png"
-   icon="/public/partnerships/travellersbag/projIcon.png"
+   bg="https://bluedream.icu/TravellersBag/public/partnerships/travellersbag/projBg.png"
+   icon="https://bluedream.icu/TravellersBag/public/partnerships/travellersbag/projIcon.png"
    repo="https://github.com/DreamedWorker/TravellersBag"
    site="https://bluedream.icu/TravellersBag"
    title="旅者行囊"
@@ -297,8 +297,8 @@
     </template>
   </Pcd>
   <Pcd
-   bg="/public/partnerships/travellersbag/projBg.png"
-   icon="/public/partnerships/travellersbag/projIcon.png"
+   bg="https://bluedream.icu/TravellersBag/public/partnerships/travellersbag/projBg.png"
+   icon="https://bluedream.icu/TravellersBag/public/partnerships/travellersbag/projIcon.png"
    repo="https://github.com/DreamedWorker/TravellersBag"
    site="https://bluedream.icu/TravellersBag"
    title="旅者行囊"
