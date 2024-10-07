@@ -305,10 +305,10 @@
    desc="专为现代macOS设计的《原神》工具箱"
    import export>
    <template #import>
-     <Pcb label="UIAF v1.1" :games="['ys', 'sr_', 'zzz_']" bg="yellow"></Pcb>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="yellow"></Pcb>
    </template>
    <template #export>
-     <Pcb label="UIAF v1.1" :games="['ys', 'sr_', 'zzz_']" bg="yellow"></Pcb>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="yellow"></Pcb>
    </template>
  </Pcd>
 </RelativeProjectPanel>

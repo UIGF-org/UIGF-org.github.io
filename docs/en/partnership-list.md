@@ -305,10 +305,10 @@
    desc="TravellersBag is a tool set software with content from Genshin Impact and designed for modern macOS"
    import export>
    <template #import>
-     <Pcb label="UIAF v1.1" :games="['ys', 'sr_', 'zzz_']" bg="yellow"></Pcb>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="yellow"></Pcb>
    </template>
    <template #export>
-     <Pcb label="UIAF v1.1" :games="['ys', 'sr_', 'zzz_']" bg="yellow"></Pcb>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="yellow"></Pcb>
    </template>
  </Pcd>
 </RelativeProjectPanel>
