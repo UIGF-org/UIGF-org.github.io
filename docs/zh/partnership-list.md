@@ -190,18 +190,18 @@
     </template>
   </Pcd>
   <Pcd
-   bg="https://bluedream.icu/TravellersBag/public/partnerships/travellersbag/projBg.png"
-   icon="https://bluedream.icu/TravellersBag/public/partnerships/travellersbag/projIcon.png"
+   bg="/partnerships/travellersbag/projBg.png"
+   icon="/partnerships/travellersbag/projIcon.png"
    repo="https://github.com/DreamedWorker/TravellersBag"
    site="https://bluedream.icu/TravellersBag"
    title="旅者行囊"
    desc="专为现代macOS设计的《原神》工具箱"
    import export>
    <template #import>
-     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="yellow"></Pcb>
+     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
    </template>
    <template #export>
-     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="yellow"></Pcb>
+     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
    </template>
  </Pcd>
 </RelativeProjectPanel>
@@ -297,18 +297,18 @@
     </template>
   </Pcd>
   <Pcd
-   bg="https://bluedream.icu/TravellersBag/public/partnerships/travellersbag/projBg.png"
-   icon="https://bluedream.icu/TravellersBag/public/partnerships/travellersbag/projIcon.png"
+   bg="/partnerships/travellersbag/projBg.png"
+   icon="/partnerships/travellersbag/projIcon.png"
    repo="https://github.com/DreamedWorker/TravellersBag"
    site="https://bluedream.icu/TravellersBag"
    title="旅者行囊"
    desc="专为现代macOS设计的《原神》工具箱"
    import export>
    <template #import>
-     <Pcb label="UIAF v1.1" :games="['ys']" bg="yellow"></Pcb>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
    </template>
    <template #export>
-     <Pcb label="UIAF v1.1" :games="['ys']" bg="yellow"></Pcb>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
    </template>
  </Pcd>
 </RelativeProjectPanel>
