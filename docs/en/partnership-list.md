@@ -194,7 +194,7 @@
    icon="https://bluedream.icu/TravellersBag/public/partnerships/travellersbag/projIcon.png"
    repo="https://github.com/DreamedWorker/TravellersBag"
    site="https://bluedream.icu/TravellersBag"
-   title="TravelleysBag"
+   title="TravellersBag"
    desc="TravellersBag is a tool set software with content from Genshin Impact and designed for modern macOS"
    import export>
    <template #import>
@@ -301,7 +301,7 @@
    icon="https://bluedream.icu/TravellersBag/public/partnerships/travellersbag/projIcon.png"
    repo="https://github.com/DreamedWorker/TravellersBag"
    site="https://bluedream.icu/TravellersBag"
-   title="TravelleysBag"
+   title="TravellersBag"
    desc="TravellersBag is a tool set software with content from Genshin Impact and designed for modern macOS"
    import export>
    <template #import>
