@@ -195,7 +195,7 @@
     repo="https://github.com/seriaati/hoyo-buddy"
     site="https://hb.seria.moe/index-zh-tw.html"
     title="Hoyo Buddy"
-    desc="一個為 Hoyoverse 遊戲玩家量身訂做的 Discord 機器人, 功能豐富、易於使用且設計精美"
+    desc="一个为 Hoyoverse 游戏玩家量身订做的 Discord 机器人, 功能丰富、易于使用且设计精美"
     import export>
     <template #import>
       <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
