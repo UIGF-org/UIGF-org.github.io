@@ -190,12 +190,12 @@
     </template>
   </Pcd>
   <Pcd
-    bg="https://raw.githubusercontent.com/seriaati/hoyo-buddy/refs/heads/assets/app-directory/zh/nav-1.png"
-    icon="https://raw.githubusercontent.com/seriaati/hoyo-buddy/refs/heads/assets/hb-icon.png"
+    bg="/partnerships/HoyoBuddy/zh-bg.png"
+    icon="/partnerships/HoyoBuddy/icon.png"
     repo="https://github.com/seriaati/hoyo-buddy"
     site="https://hb.seria.moe/index-zh-tw.html"
     title="Hoyo Buddy"
-    desc="一個為 Hoyoverse 遊戲玩家量身訂做的 Discord 機器人, 功能豐富、易於使用且設計精美。"
+    desc="一個為 Hoyoverse 遊戲玩家量身訂做的 Discord 機器人, 功能豐富、易於使用且設計精美"
     import export>
     <template #import>
       <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
