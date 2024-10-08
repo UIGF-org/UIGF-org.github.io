@@ -189,6 +189,21 @@
       <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+    bg="https://raw.githubusercontent.com/seriaati/hoyo-buddy/refs/heads/assets/app-directory/zh/nav-1.png"
+    icon="https://raw.githubusercontent.com/seriaati/hoyo-buddy/refs/heads/assets/hb-icon.png"
+    repo="https://github.com/seriaati/hoyo-buddy"
+    site="https://hb.seria.moe/index-zh-tw.html"
+    title="Hoyo Buddy"
+    desc="一個為 Hoyoverse 遊戲玩家量身訂做的 Discord 機器人, 功能豐富、易於使用且設計精美。"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用 UIAF 标准的项目

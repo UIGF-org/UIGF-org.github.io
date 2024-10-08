@@ -189,6 +189,21 @@
       <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+    bg="https://raw.githubusercontent.com/seriaati/hoyo-buddy/refs/heads/assets/app-directory/nav-1.png"
+    icon="https://raw.githubusercontent.com/seriaati/hoyo-buddy/refs/heads/assets/hb-icon.png"
+    repo="https://github.com/seriaati/hoyo-buddy"
+    site="https://hb.seria.moe/"
+    title="Hoyo Buddy"
+    desc="A feature rich, easy to use, and beautifully designed Discord bot made for Hoyoverse gamers."
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## Projects with UIAF Standard
