@@ -189,6 +189,22 @@
       <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+    bg="/partnerships/PaimonsNotebook/preview.webp"
+    icon="/partnerships/PaimonsNotebook/logo.webp"
+    repo="https://github.com/QooLianyi/PaimonsNotebook"
+    title="派蒙笔记本"
+    desc="安卓平台下的原神工具"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="green"></Pcb>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="green"></Pcb>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用 UIAF 标准的项目
@@ -367,20 +383,6 @@
     <template #export>
       <Pcb label="UIGF v2.3" :games="['ys']" bg="blue"></Pcb>
       <Pcb label="SRGF v1.0" :games="['sr']" bg="blue"></Pcb>
-    </template>
-  </Pcd>
-  <Pcd
-    bg="/partnerships/PaimonsNotebook/preview.webp"
-    icon="/partnerships/PaimonsNotebook/logo.webp"
-    repo="https://github.com/QooLianyi/PaimonsNotebook"
-    title="派蒙笔记本"
-    desc="安卓平台下的原神工具"
-    import export>
-    <template #import>
-      <Pcb label="UIGF v3.0" :games="['ys']" bg="green"></Pcb>
-    </template>
-    <template #export>
-      <Pcb label="UIGF v3.0" :games="['ys']" bg="green"></Pcb>
     </template>
   </Pcd>
   <Pcd
