@@ -190,6 +190,36 @@
     </template>
   </Pcd>
   <Pcd
+   bg="/partnerships/travellersbag/projBg.png"
+   icon="/partnerships/travellersbag/projIcon.png"
+   repo="https://github.com/DreamedWorker/TravellersBag"
+   site="https://bluedream.icu/TravellersBag"
+   title="TravellersBag"
+   desc="TravellersBag is a tool set software with content from Genshin Impact and designed for modern macOS"
+   import export>
+   <template #import>
+     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+   </template>
+   <template #export>
+     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+   </template>
+ </Pcd>
+ <Pcd
+    bg="/partnerships/HoyoBuddy/bg.png"
+    icon="/partnerships/HoyoBuddy/icon.png"
+    repo="https://github.com/seriaati/hoyo-buddy"
+    site="https://hb.seria.moe/"
+    title="Hoyo Buddy"
+    desc="A feature rich, easy to use, and beautifully designed Discord bot made for Hoyoverse gamers"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+  </Pcd>
+  <Pcd
     bg="/partnerships/PaimonsNotebook/preview.webp"
     icon="/partnerships/PaimonsNotebook/logo.webp"
     repo="https://github.com/QooLianyi/PaimonsNotebook"
@@ -297,6 +327,21 @@
       <Pcb label="UIAF v1.1" :games="['ys']" bg="green"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+   bg="/partnerships/travellersbag/projBg.png"
+   icon="/partnerships/travellersbag/projIcon.png"
+   repo="https://github.com/DreamedWorker/TravellersBag"
+   site="https://bluedream.icu/TravellersBag"
+   title="TravellersBag"
+   desc="TravellersBag is a tool set software with content from Genshin Impact and designed for modern macOS"
+   import export>
+   <template #import>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
+   </template>
+   <template #export>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
+   </template>
+ </Pcd>
 </RelativeProjectPanel>
 
 ## Projects with Deprecated Standards
@@ -419,3 +464,4 @@
     </template>
   </Pcd>
 </RelativeProjectPanel>
+

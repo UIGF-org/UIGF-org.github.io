@@ -190,6 +190,36 @@
     </template>
   </Pcd>
   <Pcd
+   bg="/partnerships/travellersbag/projBg.png"
+   icon="/partnerships/travellersbag/projIcon.png"
+   repo="https://github.com/DreamedWorker/TravellersBag"
+   site="https://bluedream.icu/TravellersBag"
+   title="旅者行囊"
+   desc="专为现代macOS设计的《原神》工具箱"
+   import export>
+   <template #import>
+     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+   </template>
+   <template #export>
+     <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+   </template>
+ </Pcd>
+ <Pcd
+    bg="/partnerships/HoyoBuddy/zh-bg.png"
+    icon="/partnerships/HoyoBuddy/icon.png"
+    repo="https://github.com/seriaati/hoyo-buddy"
+    site="https://hb.seria.moe/index-zh-tw.html"
+    title="Hoyo Buddy"
+    desc="一个为 Hoyoverse 游戏玩家量身订做的 Discord 机器人, 功能丰富、易于使用且设计精美"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+  </Pcd>
+  <Pcd
     bg="/partnerships/PaimonsNotebook/preview.webp"
     icon="/partnerships/PaimonsNotebook/logo.webp"
     repo="https://github.com/QooLianyi/PaimonsNotebook"
@@ -297,6 +327,21 @@
       <Pcb label="UIAF v1.1" :games="['ys']" bg="green"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+   bg="/partnerships/travellersbag/projBg.png"
+   icon="/partnerships/travellersbag/projIcon.png"
+   repo="https://github.com/DreamedWorker/TravellersBag"
+   site="https://bluedream.icu/TravellersBag"
+   title="旅者行囊"
+   desc="专为现代macOS设计的《原神》工具箱"
+   import export>
+   <template #import>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
+   </template>
+   <template #export>
+     <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
+   </template>
+ </Pcd>
 </RelativeProjectPanel>
 
 ## 使用已弃用标准的项目
@@ -424,3 +469,4 @@
     </template>
   </Pcd>
 </RelativeProjectPanel>
+
