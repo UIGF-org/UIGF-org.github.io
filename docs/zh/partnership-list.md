@@ -204,6 +204,7 @@
      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
    </template>
  </Pcd>
+<Pcd
     bg="/partnerships/HoyoBuddy/zh-bg.png"
     icon="/partnerships/HoyoBuddy/icon.png"
     repo="https://github.com/seriaati/hoyo-buddy"
@@ -466,3 +467,4 @@
     </template>
   </Pcd>
 </RelativeProjectPanel>
+
