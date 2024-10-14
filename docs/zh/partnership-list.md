@@ -204,7 +204,7 @@
      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
    </template>
  </Pcd>
-<Pcd
+ <Pcd
     bg="/partnerships/HoyoBuddy/zh-bg.png"
     icon="/partnerships/HoyoBuddy/icon.png"
     repo="https://github.com/seriaati/hoyo-buddy"
@@ -217,6 +217,22 @@
     </template>
     <template #export>
       <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+  </Pcd>
+  <Pcd
+    bg="/partnerships/PaimonsNotebook/preview.webp"
+    icon="/partnerships/PaimonsNotebook/logo.webp"
+    repo="https://github.com/QooLianyi/PaimonsNotebook"
+    title="派蒙笔记本"
+    desc="安卓平台下的原神工具"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="green"></Pcb>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="green"></Pcb>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
     </template>
   </Pcd>
 </RelativeProjectPanel>
@@ -412,20 +428,6 @@
     <template #export>
       <Pcb label="UIGF v2.3" :games="['ys']" bg="blue"></Pcb>
       <Pcb label="SRGF v1.0" :games="['sr']" bg="blue"></Pcb>
-    </template>
-  </Pcd>
-  <Pcd
-    bg="/partnerships/PaimonsNotebook/preview.webp"
-    icon="/partnerships/PaimonsNotebook/logo.webp"
-    repo="https://github.com/QooLianyi/PaimonsNotebook"
-    title="派蒙笔记本"
-    desc="安卓平台下的原神工具"
-    import export>
-    <template #import>
-      <Pcb label="UIGF v3.0" :games="['ys']" bg="green"></Pcb>
-    </template>
-    <template #export>
-      <Pcb label="UIGF v3.0" :games="['ys']" bg="green"></Pcb>
     </template>
   </Pcd>
   <Pcd
