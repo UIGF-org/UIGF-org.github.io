@@ -2,21 +2,6 @@
 
 <RelativeProjectPanel>
   <Pcd
-    bg="https://raw.githubusercontent.com/pizza-studio/PizzaHelperUnited/refs/heads/main/PromotionMaterials/UIGF/ThePizzaHelper-uigf-preview.png"
-    icon="https://raw.githubusercontent.com/pizza-studio/PizzaHelperUnited/refs/heads/main/PromotionMaterials/UIGF/ThePizzaHelper-logo-clipped.png"
-    repo="https://github.com/pizza-studio/PizzaHelperUnited"
-    site="https://apps.apple.com/app/id1635319193"
-    title="The Pizza Helper"
-    desc="A companion app (for Genshin Impact & Star Rail) among Apple platforms."
-    import export>
-    <template #import>
-      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz_']" bg="blue"></Pcb>
-    </template>
-    <template #export>
-      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz_']" bg="blue"></Pcb>
-    </template>
-  </Pcd>
-  <Pcd
     bg="/partnerships/TeyvatGuide/AppPreview.png"
     icon="/partnerships/TeyvatGuide/logo.png"
     repo="https://github.com/BTMuli/TeyvatGuide"
@@ -33,6 +18,21 @@
     <template #export>
       <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
       <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+    </template>
+  </Pcd>
+  <Pcd
+    bg="/partnerships/ThePizzaHelper/ThePizzaHelper-uigf-preview.png"
+    icon="/partnerships/ThePizzaHelper/ThePizzaHelper-logo-clipped.png"
+    repo="https://github.com/pizza-studio/PizzaHelperUnited"
+    site="https://apps.apple.com/app/id1635319193"
+    title="The Pizza Helper"
+    desc="A companion app (for Genshin Impact & Star Rail) among Apple platforms."
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz_']" bg="blue"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz_']" bg="blue"></Pcb>
     </template>
   </Pcd>
   <Pcd
