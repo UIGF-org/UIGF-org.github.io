@@ -25,14 +25,14 @@
     icon="/partnerships/NekoGame/logo.png"
     repo="https://github.com/Summer-Neko/NekoGame"
     title="Neko Game"
-    desc="原神崩铁抽卡记录分析，游戏时长记录工具"
+    desc="原神崩铁绝区零抽卡记录分析，游戏时长记录工具"
     import export>
     <template #import>
-      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz_']" bg="purple"></Pcb>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="purple"></Pcb>
       <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
     </template>
     <template #export>
-      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz_']" bg="purple"></Pcb>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="purple"></Pcb>
     </template>
   </Pcd>
   <Pcd

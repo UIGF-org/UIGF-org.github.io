@@ -25,14 +25,14 @@
     icon="/partnerships/NekoGame/logo.png"
     repo="https://github.com/Summer-Neko/NekoGame"
     title="Neko Game"
-    desc="Duration Records, Genshin Impact and Honkai: Star Rail Gacha Record Analysis Tool"
+    desc="Duration Records, Genshin Impact、ZZZ and Honkai: Star Rail Gacha Record Analysis Tool"
     import export>
     <template #import>
-      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz_']" bg="purple"></Pcb>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="purple"></Pcb>
       <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
     </template>
     <template #export>
-      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz_']" bg="purple"></Pcb>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="purple"></Pcb>
     </template>
   </Pcd>
   <Pcd
