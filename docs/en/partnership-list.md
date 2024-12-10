@@ -30,10 +30,10 @@
     <template #import>
       <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="purple"></Pcb>
       <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
     </template>
     <template #export>
       <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="purple"></Pcb>
-      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
     </template>
   </Pcd>
   <Pcd
