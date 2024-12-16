@@ -1,7 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
-import theme from "./theme.js";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
+import theme from "./theme.js";
 
 export default defineUserConfig({
   base: "/",
