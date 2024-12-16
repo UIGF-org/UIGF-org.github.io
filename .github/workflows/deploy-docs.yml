@@ -1,4 +1,3 @@
-
 name: Deploy Docs
 
 on:
@@ -15,18 +14,21 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+          cache: pnpm
 
       - name: Install Deps
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build Docs
         run: |-
-          npm run docs:build
+          pnpm docs:build
           > dist/.nojekyll
 
       - name: Deploy Docs
@@ -35,4 +37,3 @@ jobs:
           # This is the branch where the docs are deployed to
           branch: gh-pages
           folder: dist
-
