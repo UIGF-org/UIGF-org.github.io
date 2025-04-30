@@ -138,6 +138,7 @@ function toProj() {
   display: flex;
   padding: 5px;
   column-gap: 5px;
+  z-index: 1;
 
   i {
     background: white;
