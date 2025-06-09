@@ -198,6 +198,7 @@
     import export>
     <template #import>
       <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="blue"></Pcb>
     </template>
     <template #export>
       <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
