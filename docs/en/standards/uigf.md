@@ -268,7 +268,9 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                                         "1",
                                         "2",
                                         "11",
-                                        "12"
+                                        "12",
+                                        "21",
+                                        "22"
                                     ]
                                 },
                                 "item_id": {

@@ -125,7 +125,9 @@ We also provide the [SRGF Json Schema Verify Tool](https://schema.uigf.org/?sche
               "1",
               "2",
               "11",
-              "12"
+              "12",
+              "21",
+              "22"
             ]
           },
           "item_id": {
