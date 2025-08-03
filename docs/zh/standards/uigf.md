@@ -13,8 +13,8 @@ tags:
     - 绝区零
 ---
 
-# 统一可交换抽卡记录标准 v4.0
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v4.0 <Badge text="Current" type="message" />
+# 统一可交换抽卡记录标准 v4.1
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v4.1 <Badge text="Current" type="message" />
 
 ::: warning 中断性更新警告
 `UIGF v4.0 及更高版本` 对于 `UIGF v3.0 及更低版本` 和 `SRGF v1.0` **不具备向下兼容性**。UIGF/SRGF 合作项目如需适配，需重新认证。
@@ -25,6 +25,7 @@ tags:
 |--------|---------------------|------------|
 | `v3.0` | 低版本的更新日志请查看历史版本     | v3.0 及更低版本 |
 | `v4.0` | 合并 SRGF，新增绝区零抽卡格式支持 | v4.0       |
+| `v4.1` | 新增对星穹铁道 v3.4 版所引入的新的卡池类型的支持 | v4.1       |
 
 ## 前言
 

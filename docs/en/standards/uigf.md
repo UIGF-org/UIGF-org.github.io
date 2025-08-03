@@ -13,8 +13,8 @@ tags:
     - Zenless Zone Zero
 ---
 
-# Uniformed Interchangeable GachaLog Format standard v4.0
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v4.0 <Badge text="Current" type="message" />
+# Uniformed Interchangeable GachaLog Format standard v4.1
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v4.1 <Badge text="Current" type="message" />
 
 ::: warning Breaking Changes
 `UIGF v4.0 and higher versions` are **not backward compatible** with `UIGF v3.0 and lower versions` and `SRGF v1.0`. Projects collaborating with UIGF/SRGF need to be re-certified for compatibility.
@@ -25,6 +25,7 @@ tags:
 |---------|--------------------------------------------------------------------------------|-------------------------|
 | `v3.0`  | For the update log of lower versions, please refer to the historical versions. | v3.0 and lower versions |
 | `v4.0`  | Merged SRGF, added support for Zenless Zone Zero gacha format                  | v4.0                    |
+| `v4.1`  | Added support for new gacha pool types introduced in Star Rail v3.4 release.   | v4.1                    |
 
 ## Preface
 
