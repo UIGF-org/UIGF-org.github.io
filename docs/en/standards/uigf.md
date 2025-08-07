@@ -25,7 +25,9 @@ tags:
 |---------|--------------------------------------------------------------------------------|-------------------------|
 | `v3.0`  | For the update log of lower versions, please refer to the historical versions. | v3.0 and lower versions |
 | `v4.0`  | Merged SRGF, added support for Zenless Zone Zero gacha format                  | v4.0                    |
-| `v4.1`  | Added support for new gacha pool types introduced in Star Rail v3.4 release.   | v4.1                    |
+| `v4.1`  | Added support for new gacha pool types introduced in Star Rail v3.4 release.   | v4.1/v4.0*              |
+
+* For applications that do not need to handle Star Rail, v4.1 is compatible with v4.0.
 
 ## Preface
 
