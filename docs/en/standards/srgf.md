@@ -19,7 +19,7 @@ Including only importing feature reduces the interchangeability of user data, an
 :::
 
 ::: warning Deprecated Version
-This standard is deprecated. [UIGF v4.0](uigf-legacy-v3.0) is the successor.
+This standard is deprecated and won't be maintained anymore (incl. its supported gacha pool types.). [UIGF v4.1](uigf.md) is the successor.
 
 The latest UIGF 4.0 version inherits and merges the features of both [UIGF 3.0](./uigf-legacy-v3.0.md) and SRGF standards, plus additional support for Zenless Zone Zero gacha record data.
 

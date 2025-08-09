@@ -1,6 +1,6 @@
 ---
 category: [Standardization Documents]
-order: 1
+order: 8
 head:
   - - meta
     - name: keywords
@@ -13,11 +13,16 @@ tags:
     - Zenless Zone Zero
 ---
 
-# Uniformed Interchangeable GachaLog Format standard v4.1
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v4.1 <Badge text="Current" type="message" />
+# Uniformed Interchangeable GachaLog Format standard v4.0
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v4.0 <Badge text="Current" type="message" />
 
 ::: warning Breaking Changes
 `UIGF v4.0 and higher versions` are **not backward compatible** with `UIGF v3.0 and lower versions` and `SRGF v1.0`. Projects collaborating with UIGF/SRGF need to be re-certified for compatibility.
+:::
+
+::: warning Archived Version
+This standard is deprecated and archived, please check our latest [UIGF standard](./uigf.md) document.
+
 :::
 
 ## Update Log
@@ -25,9 +30,6 @@ tags:
 |---------|--------------------------------------------------------------------------------|-------------------------|
 | `v3.0`  | For the update log of lower versions, please refer to the historical versions. | v3.0 and lower versions |
 | `v4.0`  | Merged SRGF, added support for Zenless Zone Zero gacha format                  | v4.0                    |
-| `v4.1`  | Added support for new gacha pool types introduced in Star Rail v3.4 release.   | v4.1/v4.0*              |
-
-* For applications that do not need to handle Star Rail, v4.1 is compatible with v4.0.
 
 ## Preface
 
@@ -271,9 +273,7 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                                         "1",
                                         "2",
                                         "11",
-                                        "12",
-                                        "21",
-                                        "22"
+                                        "12"
                                     ]
                                 },
                                 "item_id": {

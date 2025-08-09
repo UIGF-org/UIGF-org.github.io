@@ -18,7 +18,7 @@ head:
 :::
 
 ::: warning Deprecated Version
-**该标准已过时，[UIGF v4.0](uigf.md) 替代了该版本的标准。**
+**该标准已过时，不再受维护（也不会再新增对新的卡池类型的支持）。[UIGF v4.1](uigf.md) 替代了该版本的标准。**
 
 最新的 UIGF 4.0 版本继承并合并了 [UIGF 3.0](./uigf-legacy-v3.0.md) 和 SRGF 标准的功能，并增加了对绝区零抽卡数据的支持。
 

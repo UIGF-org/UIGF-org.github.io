@@ -1,62 +1,63 @@
 ---
-category: [Standardization Documents]
-order: 1
+category: [标准化文档]
+order: 8
 head:
   - - meta
     - name: keywords
-      content: Genshin Impact, Honkai Star Rail, Zenless Zone Zero, gacha, gacha record, UIGF
+      content: 原神, 崩坏：星穹铁道, 绝区零, 抽卡, 抽卡记录, UIGF
 tags:
     - UIGF
-    - Gacha Record
-    - Genshin Impact
-    - "Honkai: Star Rail"
-    - Zenless Zone Zero
+    - 抽卡记录
+    - 原神
+    - 崩坏：星穹铁道
+    - 绝区零
 ---
 
-# Uniformed Interchangeable GachaLog Format standard v4.1
-> Uniformed Interchangeable GachaLog Format standard (UIGF) v4.1 <Badge text="Current" type="message" />
+# 统一可交换抽卡记录标准 v4.0
+> Uniformed Interchangeable GachaLog Format standard (UIGF) v4.0 <Badge text="Current" type="message" />
 
-::: warning Breaking Changes
-`UIGF v4.0 and higher versions` are **not backward compatible** with `UIGF v3.0 and lower versions` and `SRGF v1.0`. Projects collaborating with UIGF/SRGF need to be re-certified for compatibility.
+::: warning 中断性更新警告
+`UIGF v4.0 及更高版本` 对于 `UIGF v3.0 及更低版本` 和 `SRGF v1.0` **不具备向下兼容性**。UIGF/SRGF 合作项目如需适配，需重新认证。
 :::
 
-## Update Log
-| Version | Description                                                                    | Compatibility           |
-|---------|--------------------------------------------------------------------------------|-------------------------|
-| `v3.0`  | For the update log of lower versions, please refer to the historical versions. | v3.0 and lower versions |
-| `v4.0`  | Merged SRGF, added support for Zenless Zone Zero gacha format                  | v4.0                    |
-| `v4.1`  | Added support for new gacha pool types introduced in Star Rail v3.4 release.   | v4.1/v4.0*              |
+::: warning 警告
+该标准已过时并归档，请查看 [UIGF 最新标准文档](./uigf.md)。
+:::
 
-* For applications that do not need to handle Star Rail, v4.1 is compatible with v4.0.
+## 更新记录
+| 版本     | 说明                  | 兼容         |
+|--------|---------------------|------------|
+| `v3.0` | 低版本的更新日志请查看历史版本     | v3.0 及更低版本 |
+| `v4.0` | 合并 SRGF，新增绝区零抽卡格式支持 | v4.0       |
 
-## Preface
+## 前言
 
-In order to unify the import and export behavior of gacha records across different applications, games, and accounts, we have decided to merge all supported game gacha formats into UIGF. Different games and accounts will be able to be represented as a single file or string, making the import and export operations unprecedentedly simple for users.
+为了统一不同应用、不同游戏、不同账号间的抽卡记录导入导出行为，我们决定将所有支持的游戏抽卡格式合并入 UIGF 中。不同的游戏、不同的账号将能够以单个文件或字符串的形式进行表示，导入与导出操作对用户而言将变得史无前例的简单。
 
-## Implementation and Certification
+## 实现与认证
 
-Implementing the import and export of the `UIGF v4.0 and higher versions` format does not mean that support for `UIGF v3.0 and lower versions` or `SRGF v1.0` should be removed. However, it is not recommended to use the same import and export logic for `UIGF v4.0 and higher versions` and `UIGF v3.0 and lower versions` or `SRGF v1.0`.
+实现 `UIGF v4.0 及更高版本`格式的导入导出并不意味着需要移除对 `UIGF v3.0 及更低版本`或 `SRGF v1.0` 的导入导出支持。但是，不建议对 `UIGF v4.0 和更高版本` 与 `UIGF v3.0 及更低版本`或 `SRGF v1.0` 使用同一套导入导出逻辑。
 
-Exporters can selectively fill in fields for each game or ignore them; importers can selectively read fields for each game or ignore them.
+导出方可以选择性地填充针对每个游戏的字段或直接忽略；导入方可以选择性地读取针对每个游戏的字段或直接忽略。
 
-To support a particular game, it is necessary to implement both data import and export functions, otherwise, certification cannot be passed.
+针对对某一款游戏的支持，必须同时实现数据的导入和导出功能，否则将无法通过认证。
 
-::: info UIGF Standard Use Statement
-Please provide a hyperlink to [UIGF-Org](https://uigf.org) within the application, declaring support for the UIGF data format.
+::: info UIGF 标准使用声明
+请在应用内提供跳转至 [UIGF-Org](https://uigf.org) 的超链接，声明支持 UIGF 数据格式。
 
-Including only import or export functionality reduces the liquidity of user data and places the data at risk beyond the control of the user, which does not align with the original intention of UIGF-Org.
+仅包含导入或导出功能降低了用户数据的流通性，且将数据置于用户不可控的风险中，不符合 UIGF-Org 设计的初衷。
 :::
 
 ## Json Schema
 
-> UIGF-Org provides the following Json Schema to verify the correctness of the data structure.
+> UIGF-Org 提供下述 Json Schema 以用于验证资料结构的正确性。
 
-::: warning Note on Field Types
-Developers must follow the field types defined in the Schema. Using incorrect types may cause errors when other tools written in strongly typed programming languages parse the Json file, leading to data transfer failures.
+::: warning 注意字段类型
+开发者务必遵循 Schema 内定义的字段类型。使用错误的类型可能会导致其他由强类型编程语言编写的工具在解析 Json 文件时产生错误，进而导致数据转移失败。
 
-To avoid such problems, we recommend designing a dedicated data structure for the UIGF format. Also, design relevant unit tests to ensure consistency in import and export.
+为了避免这类问题，我们建议您针对 UIGF 格式设计专用的数据结构。同时，设计相关的单元测试以确保导入导出的一致性。
 
-We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=uigf) to help you verify the correctness of the data structure.
+我们也提供 [UIGF 格式校验工具](https://schema.uigf.org/?schema=uigf)来帮助你校验 Json 文件。
 :::
 
 ```json
@@ -76,20 +77,20 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                             "type": "integer"
                         }
                     ],
-                    "description": "The timestamp of the export, in seconds"
+                    "description": "导出档案的时间戳，秒级"
                 },
                 "export_app": {
                     "type": "string",
-                    "description": "The name of the application that exported the archive"
+                    "description": "导出档案的 App 名称"
                 },
                 "export_app_version": {
                     "type": "string",
-                    "description": "The version of the app that exported the archive"
+                    "description": "导出档案的 App 版本"
                 },
                 "version": {
                     "type": "string",
                     "pattern": "^v\\d+\\.\\d+$",
-                    "description": "The UIGF version of the exported archive, formatted as 'v{major}.{minor}', e.g., v4.0"
+                    "description": "导出档案的 UIGF 版本号，格式为 'v{major}.{minor}'，如 v4.0"
                 }
             },
             "required": [
@@ -117,11 +118,11 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                     },
                     "timezone": {
                         "type": "integer",
-                        "description": "Time zone offset"
+                        "description": "时区偏移，由米哈游 API 返回，若与服务器时区不同请注意 list 中 time 的转换"
                     },
                     "lang": {
                         "type": "string",
-                        "description": "Language code",
+                        "description": "语言代码",
                         "enum": [
                             "de-de",
                             "en-us",
@@ -147,7 +148,7 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                             "properties": {
                                 "uigf_gacha_type": {
                                     "type": "string",
-                                    "description": "UIGF gacha type, used to distinguish between different gacha types that have the same pity calculation",
+                                    "description": "UIGF 卡池类型，用于区分卡池类型不同，但卡池保底计算相同的物品",
                                     "enum": [
                                         "100",
                                         "200",
@@ -158,7 +159,7 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                                 },
                                 "gacha_type": {
                                     "type": "string",
-                                    "description": "Gacha type, returned by MiHoYo API",
+                                    "description": "卡池类型，米哈游 API 返回",
                                     "enum": [
                                         "100",
                                         "200",
@@ -170,31 +171,31 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                                 },
                                 "item_id": {
                                     "type": "string",
-                                    "description": "The internal ID of the item"
+                                    "description": "物品的内部 ID"
                                 },
                                 "count": {
                                     "type": "string",
-                                    "description": "The number of items, usually 1, returned by MiHoYo API"
+                                    "description": "物品个数，一般为1，米哈游 API 返回"
                                 },
                                 "time": {
                                     "type": "string",
-                                    "description": "The local time in the timezone of the item being drawn"
+                                    "description": "抽取物品时对应时区（timezone）下的当地时间"
                                 },
                                 "name": {
                                     "type": "string",
-                                    "description": "The name of the item, returned by MiHoYo API"
+                                    "description": "物品名称，米哈游 API 返回"
                                 },
                                 "item_type": {
                                     "type": "string",
-                                    "description": "The type of the item, returned by MiHoYo API"
+                                    "description": "物品类型，米哈游 API 返回"
                                 },
                                 "rank_type": {
                                     "type": "string",
-                                    "description": "The rank of the item, returned by MiHoYo API"
+                                    "description": "物品等级，米哈游 API 返回"
                                 },
                                 "id": {
                                     "type": "string",
-                                    "description": "The internal ID of the record, returned by MiHoYo API"
+                                    "description": "记录内部 ID，米哈游 API 返回"
                                 }
                             },
                             "required": [
@@ -232,11 +233,11 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                     },
                     "timezone": {
                         "type": "integer",
-                        "description": "Time zone offset"
+                        "description": "时区偏移，由米哈游 API 返回，若与服务器时区不同请注意 list 中 time 的转换"
                     },
                     "lang": {
                         "type": "string",
-                        "description": "Language code",
+                        "description": "语言代码",
                         "enum": [
                             "de-de",
                             "en-us",
@@ -262,47 +263,45 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                             "properties": {
                                 "gacha_id": {
                                     "type": "string",
-                                    "description": "Gacha Pool ID"
+                                    "description": "卡池 Id"
                                 },
                                 "gacha_type": {
                                     "type": "string",
-                                    "description": "Gacha type",
+                                    "description": "卡池类型",
                                     "enum": [
                                         "1",
                                         "2",
                                         "11",
-                                        "12",
-                                        "21",
-                                        "22"
+                                        "12"
                                     ]
                                 },
                                 "item_id": {
                                     "type": "string",
-                                    "description": "The internal ID of the item"
+                                    "description": "物品的内部 ID"
                                 },
                                 "count": {
                                     "type": "string",
-                                    "description": "The number of items, usually 1, returned by MiHoYo API"
+                                    "description": "物品个数，一般为1，米哈游 API 返回"
                                 },
                                 "time": {
                                     "type": "string",
-                                    "description": "The local time in the timezone of the item being drawn"
+                                    "description": "抽取物品时对应时区（timezone）下的当地时间"
                                 },
                                 "name": {
                                     "type": "string",
-                                    "description": "The name of the item, returned by MiHoYo API"
+                                    "description": "物品名称，米哈游 API 返回"
                                 },
                                 "item_type": {
                                     "type": "string",
-                                    "description": "The type of the item, returned by MiHoYo API"
+                                    "description": "物品类型，米哈游 API 返回"
                                 },
                                 "rank_type": {
                                     "type": "string",
-                                    "description": "The rank of the item, returned by MiHoYo API"
+                                    "description": "物品等级，米哈游 API 返回"
                                 },
                                 "id": {
                                     "type": "string",
-                                    "description": "The internal ID of the record, returned by MiHoYo API"
+                                    "description": "记录内部 ID，米哈游 API 返回"
                                 }
                             },
                             "required": [
@@ -340,11 +339,11 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                     },
                     "timezone": {
                         "type": "integer",
-                        "description": "Time zone offset"
+                        "description": "时区偏移，由米哈游 API 返回，若与服务器时区不同请注意 list 中 time 的转换"
                     },
                     "lang": {
                         "type": "string",
-                        "description": "Language code",
+                        "description": "语言代码",
                         "enum": [
                             "de-de",
                             "en-us",
@@ -370,11 +369,11 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                             "properties": {
                                 "gacha_id": {
                                     "type": "string",
-                                    "description": "Gacha Pool ID"
+                                    "description": "卡池 Id"
                                 },
                                 "gacha_type": {
                                     "type": "string",
-                                    "description": "Gacha type",
+                                    "description": "卡池类型",
                                     "enum": [
                                         "1",
                                         "2",
@@ -384,31 +383,31 @@ We also provide a [UIGF Format Validation Tool](https://schema.uigf.org/?schema=
                                 },
                                 "item_id": {
                                     "type": "string",
-                                    "description": "The internal ID of the item"
+                                    "description": "物品的内部 ID"
                                 },
                                 "count": {
                                     "type": "string",
-                                    "description": "The number of items, usually 1, returned by MiHoYo API"
+                                    "description": "物品个数，一般为1，米哈游 API 返回"
                                 },
                                 "time": {
                                     "type": "string",
-                                    "description": "The local time in the timezone of the item being drawn"
+                                    "description": "抽取物品时对应时区（timezone）下的当地时间"
                                 },
                                 "name": {
                                     "type": "string",
-                                    "description": "The name of the item, returned by MiHoYo API"
+                                    "description": "物品名称，米哈游 API 返回"
                                 },
                                 "item_type": {
                                     "type": "string",
-                                    "description": "The type of the item, returned by MiHoYo API"
+                                    "description": "物品类型，米哈游 API 返回"
                                 },
                                 "rank_type": {
                                     "type": "string",
-                                    "description": "The rank of the item, returned by MiHoYo API"
+                                    "description": "物品等级，米哈游 API 返回"
                                 },
                                 "id": {
                                     "type": "string",
-                                    "description": "The internal ID of the record, returned by MiHoYo API"
+                                    "description": "记录内部 ID，米哈游 API 返回"
                                 }
                             },
                             "required": [
