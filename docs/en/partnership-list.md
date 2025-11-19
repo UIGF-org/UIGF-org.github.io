@@ -159,21 +159,6 @@
     </template>
   </Pcd>
   <Pcd
-    bg="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01F0AGTl1g6dvW6j28q_!!1797064093.png"
-    icon="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01oaGvKE1g6dut0pICS_!!1797064093.png"
-    repo="https://github.com/DGP-Studio/Snap.Hutao"
-    site="https://hut.ao/"
-    title="Snap Hutao"
-    desc="A multifunctional open-source Genshin Impact toolkit"
-    import export>
-    <template #import>
-      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="red"></Pcb>
-    </template>
-    <template #export>
-      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="red"></Pcb>
-    </template>
-  </Pcd>
-  <Pcd
     bg="https://raw.githubusercontent.com/cntvc/star-rail-tools/main/docs/image/star_rail_tools_cover.png"
     icon="https://raw.githubusercontent.com/cntvc/star-rail-tools/main/resource/hsr.ico"
     repo="https://github.com/cntvc/star-rail-tools"
@@ -241,21 +226,6 @@
 ## Projects with UIAF Standard
 
 <RelativeProjectPanel>
-  <Pcd
-    bg="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01F0AGTl1g6dvW6j28q_!!1797064093.png"
-    icon="https://img.alicdn.com/imgextra/i4/1797064093/O1CN01oaGvKE1g6dut0pICS_!!1797064093.png"
-    repo="https://github.com/DGP-Studio/Snap.Hutao"
-    site="https://hut.ao/"
-    title="Snap Hutao"
-    desc="A multifunctional open-source Genshin Impact toolkit"
-    import export>
-    <template #import>
-      <Pcb label="UIAF v1.1" :games="['ys']" bg="red"></Pcb>
-    </template>
-    <template #export>
-      <Pcb label="UIAF v1.1" :games="['ys']" bg="red"></Pcb>
-    </template>
-  </Pcd>
   <Pcd
     bg="https://file.xunkong.cc/static/repo/xunkong/YanfeiLawyer.webp"
     icon="https://xunkong.cc/images/logo.640.webp"
