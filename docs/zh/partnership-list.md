@@ -260,9 +260,9 @@
   </Pcd>
   <Pcd
     bg="https://raw.githubusercontent.com/Finchaos/yae-markdown-230119/main/images/4.png"
-    icon="https://raw.githubusercontent.com/HolographicHat/YaeAchievement/master/icon.ico"
-    repo="https://github.com/HolographicHat/YaeAchievement"
-    title="YaeAchievement"
+    icon="https://raw.githubusercontent.com/HolographicHat/Yae/master/YaeAchievement/res/icon.ico"
+    repo="https://github.com/HolographicHat/Yae"
+    title="Yae"
     desc="更快、更准的原神成就导出工具"
     export>
     <template #export>
