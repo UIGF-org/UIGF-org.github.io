@@ -37,21 +37,6 @@
     </template>
   </Pcd>
   <Pcd
-    bg="/partnerships/GenshinWizard/preview.png"
-    icon="/partnerships/GenshinWizard/logo.png"
-    repo="https://github.com/Genshin-Wizard"
-    site="https://https://genshinwizard.com/"
-    title="Genshin Wizard"
-    desc="A powerful multi-utility Discord bot for Genshin Impact with beautiful infographics, comprehensive guides, and real-time data tracking."
-    import export>
-    <template #import>
-      <Pcb label="UIGF v4.1" :games="['ys']" bg="blue"></Pcb>
-    </template>
-    <template #export>
-      <Pcb label="UIGF v4.1" :games="['ys']" bg="blue"></Pcb>
-    </template>
-  </Pcd>
-  <Pcd
     bg="/partnerships/NekoGame/preview.png"
     icon="/partnerships/NekoGame/logo.png"
     repo="https://github.com/Summer-Neko/NekoGame"
@@ -234,6 +219,21 @@
     <template #export>
       <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="green"></Pcb>
       <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+    </template>
+  </Pcd>
+  <Pcd
+    bg="/partnerships/GenshinWizard/preview.png"
+    icon="/partnerships/GenshinWizard/logo.png"
+    repo="https://github.com/Genshin-Wizard"
+    site="https://genshinwizard.com/"
+    title="Genshin Wizard"
+    desc="A powerful multi-utility Discord bot for Genshin Impact with beautiful infographics, comprehensive guides, and real-time data tracking."
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.1" :games="['ys']" bg="blue"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.1" :games="['ys']" bg="blue"></Pcb>
     </template>
   </Pcd>
 </RelativeProjectPanel>

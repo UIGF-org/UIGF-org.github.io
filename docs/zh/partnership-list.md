@@ -36,21 +36,6 @@
       <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
     </template>
   </Pcd>
-    <Pcd
-    bg="/partnerships/GenshinWizard/preview.png"
-    icon="/partnerships/GenshinWizard/logo.png"
-    repo="https://github.com/Genshin-Wizard"
-    site="https://https://genshinwizard.com/"
-    title="Genshin Wizard"
-    desc="一款功能强大的 Discord 机器人，专为《原神》设计，提供精美的信息图、全面的指南和实时数据跟踪。"
-    import export>
-    <template #import>
-      <Pcb label="UIGF v4.1" :games="['ys']" bg="blue"></Pcb>
-    </template>
-    <template #export>
-      <Pcb label="UIGF v4.1" :games="['ys']" bg="blue"></Pcb>
-    </template>
-  </Pcd>
   <Pcd
     bg="/partnerships/NekoGame/preview.png"
     icon="/partnerships/NekoGame/logo.png"
@@ -234,6 +219,21 @@
     <template #export>
       <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="green"></Pcb>
       <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+    </template>
+  </Pcd>
+  <Pcd
+    bg="/partnerships/GenshinWizard/preview.png"
+    icon="/partnerships/GenshinWizard/logo.png"
+    repo="https://github.com/Genshin-Wizard"
+    site="https://genshinwizard.com/"
+    title="Genshin Wizard"
+    desc="一款功能强大的 Discord 机器人，专为《原神》设计，提供精美的信息图、全面的指南和实时数据跟踪。"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.1" :games="['ys']" bg="blue"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.1" :games="['ys']" bg="blue"></Pcb>
     </template>
   </Pcd>
 </RelativeProjectPanel>
