@@ -1,19 +1,19 @@
 <template>
   <div
-    class="proj-card-badge"
-    :style="{backgroundColor: getBgColor(props.bg)}"
-    :title="props.label"
     v-if="!props.games"
+    :style="{ backgroundColor: getBgColor(props.bg) }"
+    :title="props.label"
+    class="proj-card-badge"
   >
     <slot></slot>
   </div>
   <div v-else>
-    <div class="proj-game-badge" :style="{backgroundColor: getBgColor(props.bg)}">
+    <div :style="{ backgroundColor: getBgColor(props.bg) }" class="proj-game-badge">
       <span>{{ props.label }}</span>
       <div class="proj-games">
-        <div class="proj-game" v-for="game in props.games" :key="game">
-          <div class="proj-game-lock" v-if="game.endsWith('_')" />
-          <img :src="getGameIcon(game)" :alt="game" />
+        <div v-for="game in props.games" :key="game" class="proj-game">
+          <div v-if="game.endsWith('_')" class="proj-game-lock" />
+          <img :alt="game" :src="getGameIcon(game)" />
         </div>
       </div>
     </div>
@@ -21,12 +21,12 @@
 </template>
 <script lang="ts" setup>
 type PcbBgColor = "white" | "red" | "purple" | "blue" | "green" | "orange" | "unknown";
-type PcbGameType = "ys" | "ys_" | "sr" | "sr_" | "zzz" | "zzz_"
+type PcbGameType = "ys" | "ys_" | "sr" | "sr_" | "zzz" | "zzz_" | "qx" | "qx_";
 type PcbProps = {
   bg: PcbBgColor;
   label?: string;
   games?: Array<PcbGameType>;
-}
+};
 
 function getBgColor(bgColor: PcbBgColor): string {
   switch (bgColor) {
@@ -54,6 +54,9 @@ function getGameIcon(gameType: PcbGameType): string {
   if (gameType.startsWith("sr")) {
     return "/games/sr.webp";
   }
+  if (gameType.startsWith("qx")) {
+    return "/games/qx.webp";
+  }
   return "/games/zzz.webp";
 }
 
@@ -65,7 +68,9 @@ const props = withDefaults(defineProps<PcbProps>(), { bg: "unknown" });
   display: flex;
   font-size: 12px;
   height: 28px;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   color: white;
   padding: 2px 6px;
   font-weight: bold;
