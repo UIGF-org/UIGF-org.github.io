@@ -1,6 +1,6 @@
 ---
 category: [标准化文档]
-order: 1
+order: 9
 head:
   - - meta
     - name: keywords
@@ -18,6 +18,10 @@ tags:
 
 ::: warning 中断性更新警告
 `UIGF v4.0 及更高版本` 对于 `UIGF v3.0 及更低版本` 和 `SRGF v1.0` **不具备向下兼容性**。UIGF/SRGF 合作项目如需适配，需重新认证。
+:::
+
+::: warning 警告
+该标准已过时并归档，请查看 [UIGF 最新标准文档](./uigf.md)。
 :::
 
 ## 更新记录

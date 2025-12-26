@@ -1,6 +1,6 @@
 ---
 category: [Standardization Documents]
-order: 1
+order: 9
 head:
   - - meta
     - name: keywords
@@ -18,6 +18,11 @@ tags:
 
 ::: warning Breaking Changes
 `UIGF v4.0 and higher versions` are **not backward compatible** with `UIGF v3.0 and lower versions` and `SRGF v1.0`. Projects collaborating with UIGF/SRGF need to be re-certified for compatibility.
+:::
+
+::: warning Archived Version
+This standard is deprecated and archived, please check our latest [UIGF standard](./uigf.md) document.
+
 :::
 
 ## Update Log
