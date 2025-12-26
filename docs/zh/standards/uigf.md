@@ -81,20 +81,20 @@ tags:
               "type": "integer"
             }
           ],
-          "description": "The timestamp of the export, in seconds"
+          "description": "导出档案的时间戳，秒级"
         },
         "export_app": {
           "type": "string",
-          "description": "The name of the application that exported the archive"
+          "description": "导出档案的应用名称"
         },
         "export_app_version": {
           "type": "string",
-          "description": "The version of the app that exported the archive"
+          "description": "导出档案的应用版本"
         },
         "version": {
           "type": "string",
           "pattern": "^v\\d+\\.\\d+$",
-          "description": "The UIGF version of the exported archive, formatted as 'v{major}.{minor}', e.g., v4.0"
+          "description": "导出档案的 UIGF 版本号，格式为 'v{major}.{minor}'，如 v4.0"
         }
       },
       "required": [
@@ -122,11 +122,11 @@ tags:
           },
           "timezone": {
             "type": "integer",
-            "description": "Time zone offset"
+            "description": "时区偏移，由米哈游 API 返回，若与服务器时区不同请注意 list 中 time 的转换"
           },
           "lang": {
             "type": "string",
-            "description": "Language code",
+            "description": "语言代码",
             "enum": [
               "de-de",
               "en-us",
@@ -152,7 +152,7 @@ tags:
               "properties": {
                 "uigf_gacha_type": {
                   "type": "string",
-                  "description": "UIGF gacha type, used to distinguish between different gacha types that have the same pity calculation",
+                  "description": "UIGF 卡池类型，用于区分卡池类型不同，但卡池保底计算相同的物品",
                   "enum": [
                     "100",
                     "200",
@@ -163,7 +163,7 @@ tags:
                 },
                 "gacha_type": {
                   "type": "string",
-                  "description": "Gacha type, returned by MiHoYo API",
+                  "description": "卡池类型，米哈游 API 返回",
                   "enum": [
                     "100",
                     "200",
@@ -175,32 +175,32 @@ tags:
                 },
                 "item_id": {
                   "type": "string",
-                  "description": "The internal ID of the item"
+                  "description": "物品的内部 ID"
                 },
                 "count": {
                   "type": "string",
-                  "description": "The number of items, usually 1, returned by MiHoYo API"
+                  "description": "物品个数，一般为1，米哈游 API 返回"
                 },
                 "time": {
                   "type": "string",
-                  "description": "The local time in the timezone of the item being drawn.This MUST BE THE String typed value captured intact from the gacha record webpage WITHOUT ANY CONVERTION TO ANY DATE TYPES. Any conversion of such can cause potential timezone mistakes if the device time zone differs from the server time zone, unless special treatments are applied by individual app devs.",
+                  "description": "抽取物品时对应时区（timezone）下的当地时间",
                   "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$"
                 },
                 "name": {
                   "type": "string",
-                  "description": "The name of the item, returned by MiHoYo API"
+                  "description": "物品名称，米哈游 API 返回"
                 },
                 "item_type": {
                   "type": "string",
-                  "description": "The type of the item, returned by MiHoYo API"
+                  "description": "物品类型，米哈游 API 返回"
                 },
                 "rank_type": {
                   "type": "string",
-                  "description": "The rank of the item, returned by MiHoYo API"
+                  "description": "物品等级，米哈游 API 返回"
                 },
                 "id": {
                   "type": "string",
-                  "description": "The internal ID of the record, returned by MiHoYo API",
+                  "description": "记录内部 ID，米哈游 API 返回",
                   "maxLength": 19,
                   "minLength": 1,
                   "pattern": "^[0-9]+$"
@@ -241,11 +241,11 @@ tags:
           },
           "timezone": {
             "type": "integer",
-            "description": "Time zone offset"
+            "description": "时区偏移，由米哈游 API 返回，若与服务器时区不同请注意 list 中 time 的转换"
           },
           "lang": {
             "type": "string",
-            "description": "Language code",
+            "description": "语言代码",
             "enum": [
               "de-de",
               "en-us",
@@ -271,11 +271,11 @@ tags:
               "properties": {
                 "gacha_id": {
                   "type": "string",
-                  "description": "Gacha Pool ID"
+                  "description": "卡池 ID"
                 },
                 "gacha_type": {
                   "type": "string",
-                  "description": "Gacha type",
+                  "description": "卡池类型",
                   "enum": [
                     "1",
                     "2",
@@ -287,32 +287,32 @@ tags:
                 },
                 "item_id": {
                   "type": "string",
-                  "description": "The internal ID of the item"
+                  "description": "物品的内部 ID"
                 },
                 "count": {
                   "type": "string",
-                  "description": "The number of items, usually 1, returned by MiHoYo API"
+                  "description": "物品个数，一般为1，米哈游 API 返回"
                 },
                 "time": {
                   "type": "string",
-                  "description": "The local time in the timezone of the item being drawn.This MUST BE THE String typed value captured intact from the gacha record webpage WITHOUT ANY CONVERTION TO ANY DATE TYPES. Any conversion of such can cause potential timezone mistakes if the device time zone differs from the server time zone, unless special treatments are applied by individual app devs.",
+                  "description": "抽取物品时对应时区（timezone）下的当地时间",
                   "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$"
                 },
                 "name": {
                   "type": "string",
-                  "description": "The name of the item, returned by MiHoYo API"
+                  "description": "物品名称，米哈游 API 返回"
                 },
                 "item_type": {
                   "type": "string",
-                  "description": "The type of the item, returned by MiHoYo API"
+                  "description": "物品类型，米哈游 API 返回"
                 },
                 "rank_type": {
                   "type": "string",
-                  "description": "The rank of the item, returned by MiHoYo API"
+                  "description": "物品等级，米哈游 API 返回"
                 },
                 "id": {
                   "type": "string",
-                  "description": "The internal ID of the record, returned by MiHoYo API",
+                  "description": "记录内部 ID，米哈游 API 返回",
                   "maxLength": 19,
                   "minLength": 1,
                   "pattern": "^[0-9]+$"
@@ -353,11 +353,11 @@ tags:
           },
           "timezone": {
             "type": "integer",
-            "description": "Time zone offset"
+            "description": "时区偏移，由米哈游 API 返回，若与服务器时区不同请注意 list 中 time 的转换"
           },
           "lang": {
             "type": "string",
-            "description": "Language code",
+            "description": "语言代码",
             "enum": [
               "de-de",
               "en-us",
@@ -383,11 +383,11 @@ tags:
               "properties": {
                 "gacha_id": {
                   "type": "string",
-                  "description": "Gacha Pool ID"
+                  "description": "卡池 ID"
                 },
                 "gacha_type": {
                   "type": "string",
-                  "description": "Gacha type",
+                  "description": "卡池类型",
                   "enum": [
                     "1",
                     "2",
@@ -397,32 +397,32 @@ tags:
                 },
                 "item_id": {
                   "type": "string",
-                  "description": "The internal ID of the item"
+                  "description": "物品的内部 ID"
                 },
                 "count": {
                   "type": "string",
-                  "description": "The number of items, usually 1, returned by MiHoYo API"
+                  "description": "物品个数，一般为1，米哈游 API 返回"
                 },
                 "time": {
                   "type": "string",
-                  "description": "The local time in the timezone of the item being drawn.This MUST BE THE String typed value captured intact from the gacha record webpage WITHOUT ANY CONVERTION TO ANY DATE TYPES. Any conversion of such can cause potential timezone mistakes if the device time zone differs from the server time zone, unless special treatments are applied by individual app devs.",
+                  "description": "抽取物品时对应时区（timezone）下的当地时间",
                   "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$"
                 },
                 "name": {
                   "type": "string",
-                  "description": "The name of the item, returned by MiHoYo API"
+                  "description": "物品名称，米哈游 API 返回"
                 },
                 "item_type": {
                   "type": "string",
-                  "description": "The type of the item, returned by MiHoYo API"
+                  "description": "物品类型，米哈游 API 返回"
                 },
                 "rank_type": {
                   "type": "string",
-                  "description": "The rank of the item, returned by MiHoYo API"
+                  "description": "物品等级，米哈游 API 返回"
                 },
                 "id": {
                   "type": "string",
-                  "description": "The internal ID of the record, returned by MiHoYo API",
+                  "description": "记录内部 ID，米哈游 API 返回",
                   "maxLength": 19,
                   "minLength": 1,
                   "pattern": "^[0-9]+$"
@@ -460,11 +460,11 @@ tags:
         },
         "timezone": {
           "type": "integer",
-          "description": "Time zone offset"
+          "description": "时区偏移，由米哈游 API 返回，若与服务器时区不同请注意 list 中 time 的转换"
         },
         "lang": {
           "type": "string",
-          "description": "Language code",
+          "description": "语言代码",
           "enum": [
             "de-de",
             "en-us",
@@ -490,45 +490,45 @@ tags:
             "properties": {
               "id": {
                 "type": "string",
-                "description": "The internal ID of the record, returned by MiHoYo API",
+                "description": "记录内部 ID，米哈游 API 返回",
                 "maxLength": 19,
                 "minLength": 1,
                 "pattern": "^[0-9]+$"
               },
               "schedule_id": {
                 "type": "string",
-                "description": "The schedule ID of the record, returned by MiHoYo API",
+                "description": "卡池排期 ID，米哈游 API 返回",
                 "minLength": 1,
                 "pattern": "^[0-9]+$"
               },
               "item_type": {
                 "type": "string",
-                "description": "The type of the item, returned by MiHoYo API"
+                "description": "物品类型，米哈游 API 返回"
               },
               "item_id": {
                 "type": "string",
-                "description": "The internal ID of the item",
+                "description": "物品 ID，米哈游 API 返回",
                 "minLength": 1,
                 "pattern": "^[0-9]+$"
               },
               "item_name": {
                 "type": "string",
-                "description": "The name of the item, returned by MiHoYo API"
+                "description": "物品名称，米哈游 API 返回"
               },
               "rank_type": {
                 "type": "string",
-                "description": "The rank of the item, returned by MiHoYo API",
+                "description": "物品等级，米哈游 API 返回",
                 "minLength": 1,
                 "pattern": "^[0-9]+$"
               },
               "time": {
                 "type": "string",
-                "description": "The local time in the timezone of the item being drawn.This MUST BE THE String typed value captured intact from the gacha record webpage WITHOUT ANY CONVERTION TO ANY DATE TYPES. Any conversion of such can cause potential timezone mistakes if the device time zone differs from the server time zone, unless special treatments are applied by individual app devs.",
+                "description": "抽取物品时对应时区（timezone）下的当地时间",
                 "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$"
               },
               "op_gacha_type": {
                 "type": "string",
-                "description": "The gacha type of the record, returned by MiHoYo API",
+                "description": "卡池类型，米哈游 API 返回",
                 "enum": [
                   "1000",
                   "2000",
