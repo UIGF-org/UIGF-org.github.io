@@ -2,12 +2,12 @@
 
 <RelativeProjectPanel>
   <Pcd
-    bg="/partnerships/ThePizzaHelper/ThePizzaHelper-uigf-preview.png"
-    icon="/partnerships/ThePizzaHelper/ThePizzaHelper-logo-clipped.png"
+    bg="/partnerships/TheLatteHelper/TheLatteHelper-uigf-preview.png"
+    icon="/partnerships/TheLatteHelper/TheLatteHelper-logo-clipped.png"
     repo="https://github.com/pizza-studio/PizzaHelperUnited"
-    site="https://apps.apple.com/app/id1635319193"
-    title="披萨小助手"
-    desc="iPadOS / iOS / watchOS / macOS 专用的星穹铁道与原神小助手"
+    site="https://apps.apple.com/app/id6757201427"
+    title="拿铁小助手"
+    desc="iPadOS / iOS / watchOS / macOS 专用的星穹铁道与原神小助手 // 原名「披萨小助手」"
     import export>
     <template #import>
       <Pcb label="UIGF v4.1" :games="['ys', 'sr', 'zzz_']" bg="blue"></Pcb>

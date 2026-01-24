@@ -2,12 +2,12 @@
 
 <RelativeProjectPanel>
   <Pcd
-    bg="/partnerships/ThePizzaHelper/ThePizzaHelper-uigf-preview.png"
-    icon="/partnerships/ThePizzaHelper/ThePizzaHelper-logo-clipped.png"
+    bg="/partnerships/TheLatteHelper/TheLatteHelper-uigf-preview.png"
+    icon="/partnerships/TheLatteHelper/TheLatteHelper-logo-clipped.png"
     repo="https://github.com/pizza-studio/PizzaHelperUnited"
-    site="https://apps.apple.com/app/id1635319193"
-    title="The Pizza Helper"
-    desc="A companion app (for Genshin Impact & Star Rail) among Apple platforms."
+    site="https://apps.apple.com/app/id6757201427"
+    title="The Latte Helper"
+    desc="A companion app (for Genshin Impact & Star Rail) among Apple platforms. // Formerly “The Pizza Helper”."
     import export>
     <template #import>
       <Pcb label="UIGF v4.1" :games="['ys', 'sr', 'zzz_']" bg="blue"></Pcb>
