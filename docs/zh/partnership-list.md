@@ -2,6 +2,27 @@
 
 <RelativeProjectPanel>
   <Pcd
+    bg="/partnerships/TeyvatGuide/AppPreview.png"
+    icon="/partnerships/TeyvatGuide/logo.png"
+    repo="https://github.com/BTMuli/TeyvatGuide"
+    site="https://apps.microsoft.com/detail/9NLBNNNBNSJN"
+    title="提瓦特指南"
+    desc="Game Tool for Genshin Impact Player"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.2" :games="['ys', 'qx','sr_', 'zzz_']" bg="orange"></Pcb>
+      <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+      <Pcb label="UIGF v2.4" :games="['ys']" bg="white"></Pcb>
+      <Pcb label="UIGF v2.3" :games="['ys']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.2" :games="['ys', 'qx', 'sr_', 'zzz_']" bg="orange"></Pcb>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+    </template>
+  </Pcd>
+  <Pcd
     bg="/partnerships/TheLatteHelper/TheLatteHelper-uigf-preview.png"
     icon="/partnerships/TheLatteHelper/TheLatteHelper-logo-clipped.png"
     repo="https://github.com/pizza-studio/PizzaHelperUnited"
@@ -14,26 +35,6 @@
     </template>
     <template #export>
       <Pcb label="UIGF v4.1" :games="['ys', 'sr', 'zzz_']" bg="blue"></Pcb>
-    </template>
-  </Pcd>
-  <Pcd
-    bg="/partnerships/TeyvatGuide/AppPreview.png"
-    icon="/partnerships/TeyvatGuide/logo.png"
-    repo="https://github.com/BTMuli/TeyvatGuide"
-    site="https://apps.microsoft.com/detail/9NLBNNNBNSJN"
-    title="提瓦特指南"
-    desc="Game Tool for Genshin Impact Player"
-    import export>
-    <template #import>
-      <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
-      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
-      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
-      <Pcb label="UIGF v2.4" :games="['ys']" bg="white"></Pcb>
-      <Pcb label="UIGF v2.3" :games="['ys']" bg="white"></Pcb>
-    </template>
-    <template #export>
-      <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
-      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
     </template>
   </Pcd>
   <Pcd
