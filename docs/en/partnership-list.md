@@ -23,6 +23,27 @@
     </template>
   </Pcd>
   <Pcd
+    bg="/partnerships/Snap.Hutao.Remastered/AppPreview.png"
+    icon="/partnerships/Snap.Hutao.Remastered/logo.png"
+    repo="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered"
+    site="https://snaphutaorp.org"
+    title="Snap.Hutao.
+    Remastered"
+    desc="Multifunctional Open-source 
+    Genshin Impact Toolkit 🧰"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
+      <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
+      <Pcb label="UIGF v4.2" :games="['ys', 'qx', 'sr_', 'zzz_']" bg="red"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
+      <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
+      <Pcb label="UIGF v4.2" :games="['ys', 'qx', 'sr_', 'zzz_']" bg="red"></Pcb>
+    </template>
+  </Pcd>
+  <Pcd
     bg="/partnerships/TheLatteHelper/TheLatteHelper-uigf-preview.png"
     icon="/partnerships/TheLatteHelper/TheLatteHelper-logo-clipped.png"
     repo="https://github.com/pizza-studio/PizzaHelperUnited"
@@ -235,27 +256,6 @@
     </template>
     <template #export>
       <Pcb label="UIGF v4.1" :games="['ys']" bg="blue"></Pcb>
-    </template>
-  </Pcd>
-  <Pcd
-    bg="/partnerships/Snap.Hutao.Remastered/AppPreview.png"
-    icon="/partnerships/Snap.Hutao.Remastered/logo.png"
-    repo="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered"
-    site="https://snaphutaorp.org"
-    title="Snap.Hutao.
-    Remastered"
-    desc="Multifunctional Open-source 
-    Genshin Impact Toolkit 🧰"
-    import export>
-    <template #import>
-      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="red"></Pcb>
-      <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="red"></Pcb>
-      <Pcb label="UIGF v4.2" :games="['ys', 'qx', 'sr_', 'zzz_']" bg="red"></Pcb>
-    </template>
-    <template #export>
-      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="red"></Pcb>
-      <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="red"></Pcb>
-      <Pcb label="UIGF v4.2" :games="['ys', 'qx', 'sr_', 'zzz_']" bg="red"></Pcb>
     </template>
   </Pcd>
 </RelativeProjectPanel>
