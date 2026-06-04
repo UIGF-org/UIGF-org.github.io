@@ -160,11 +160,11 @@
     </template>
   </Pcd>
   <Pcd
-    bg="https://raw.githubusercontent.com/cntvc/star-rail-tools/main/docs/image/star_rail_tools_cover.png"
-    icon="https://raw.githubusercontent.com/cntvc/star-rail-tools/main/resource/hsr.ico"
-    repo="https://github.com/cntvc/star-rail-tools"
+    bg="https://raw.githubusercontent.com/woicc/star-rail-tools/main/docs/image/cover.png"
+    icon="https://raw.githubusercontent.com/woicc/star-rail-tools/main/assets/srt.ico"
+    repo="https://github.com/woicc/star-rail-tools"
     title="StarRailTools"
-    desc="保存星铁数据的小工具"
+    desc="星穹铁道跃迁记录统计工具"
     import export>
     <template #import>
       <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="orange"></Pcb>

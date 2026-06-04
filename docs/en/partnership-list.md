@@ -160,11 +160,11 @@
     </template>
   </Pcd>
   <Pcd
-    bg="https://raw.githubusercontent.com/cntvc/star-rail-tools/main/docs/image/star_rail_tools_cover.png"
-    icon="https://raw.githubusercontent.com/cntvc/star-rail-tools/main/resource/hsr.ico"
-    repo="https://github.com/cntvc/star-rail-tools"
+    bg="https://raw.githubusercontent.com/woicc/star-rail-tools/main/docs/image/cover.png"
+    icon="https://raw.githubusercontent.com/woicc/star-rail-tools/main/assets/srt.ico"
+    repo="https://github.com/woicc/star-rail-tools"
     title="StarRailTools"
-    desc="A StarRail data backup tools."
+    desc="Star Rail Gacha Statistics Tool"
     import export>
     <template #import>
       <Pcb label="UIGF v4.0" :games="['ys_', 'sr', 'zzz_']" bg="orange"></Pcb>
