@@ -42,6 +42,21 @@
     </template>
   </Pcd>
   <Pcd
+  bg="/partnerships/FufuLauncher/AppPreview.png"
+  icon="/partnerships/FufuLauncher/logo.png"
+  repo="https://github.com/FufuLauncher/FufuLauncher"
+  site="https://fu1.fun"
+  title="芙芙启动器"
+  desc="一个原神的第三方启动工具，支持游戏注入、自动签到和一些实用小功能"
+  import export>
+  <template #import>
+    <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+  </template>
+  <template #export>
+    <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+  </template>
+</Pcd>
+  <Pcd
     bg="/partnerships/TheLatteHelper/TheLatteHelper-uigf-preview.png"
     icon="/partnerships/TheLatteHelper/TheLatteHelper-logo-clipped.png"
     repo="https://github.com/pizza-studio/PizzaHelperUnited"
