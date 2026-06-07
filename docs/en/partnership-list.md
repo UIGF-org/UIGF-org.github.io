@@ -52,10 +52,14 @@
   desc="A third-party launcher for Genshin Impact that supports game injection, automatic check-in, and some useful small features."
   import export>
   <template #import>
-    <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+    <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="blue"></Pcb>
+    <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="blue"></Pcb>
+    <Pcb label="UIGF v4.2" :games="['ys', 'qx_', 'sr_', 'zzz_']" bg="blue"></Pcb>
   </template>
   <template #export>
-    <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+    <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="blue"></Pcb>
+    <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="blue"></Pcb>
+    <Pcb label="UIGF v4.2" :games="['ys', 'qx_', 'sr_', 'zzz_']" bg="blue"></Pcb>
   </template>
 </Pcd>
   <Pcd
@@ -365,6 +369,21 @@
      <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
    </template>
  </Pcd>
+<Pcd
+    bg="/partnerships/FufuLauncher/AppPreview.png"
+    icon="/partnerships/FufuLauncher/logo.png"
+    repo="https://github.com/FufuLauncher/FufuLauncher"
+    site="https://fu1.fun"
+    title="FufuLauncher"
+    desc="A third-party launcher for Genshin Impact that supports game injection, automatic check-in, and some useful small features."
+    import export>
+    <template #import>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="blue"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="blue"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## Projects with Deprecated Standards
