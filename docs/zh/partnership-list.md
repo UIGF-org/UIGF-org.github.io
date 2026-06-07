@@ -41,7 +41,7 @@
       <Pcb label="UIGF v4.2" :games="['ys', 'qx', 'sr_', 'zzz_']" bg="red"></Pcb>
     </template>
   </Pcd>
-  <Pcd
+<Pcd
   bg="/partnerships/FufuLauncher/AppPreview.png"
   icon="/partnerships/FufuLauncher/logo.png"
   repo="https://github.com/FufuLauncher/FufuLauncher"
@@ -50,10 +50,14 @@
   desc="一个原神的第三方启动工具，支持游戏注入、自动签到和一些实用小功能"
   import export>
   <template #import>
-    <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+    <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="blue"></Pcb>
+    <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="blue"></Pcb>
+    <Pcb label="UIGF v4.2" :games="['ys', 'qx_', 'sr_', 'zzz_']" bg="blue"></Pcb>
   </template>
   <template #export>
-    <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="orange"></Pcb>
+    <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="blue"></Pcb>
+    <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="blue"></Pcb>
+    <Pcb label="UIGF v4.2" :games="['ys', 'qx_', 'sr_', 'zzz_']" bg="blue"></Pcb>
   </template>
 </Pcd>
   <Pcd
@@ -363,6 +367,21 @@
      <Pcb label="UIAF v1.1" :games="['ys']" bg="orange"></Pcb>
    </template>
  </Pcd>
+<Pcd
+    bg="/partnerships/FufuLauncher/AppPreview.png"
+    icon="/partnerships/FufuLauncher/logo.png"
+    repo="https://github.com/FufuLauncher/FufuLauncher"
+    site="https://fu1.fun"
+    title="芙芙启动器"
+    desc="一个原神的第三方启动工具，支持游戏注入、自动签到和一些实用小功能"
+    import export>
+    <template #import>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="blue"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="blue"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用已弃用标准的项目
