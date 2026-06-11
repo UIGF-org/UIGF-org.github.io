@@ -22,23 +22,23 @@
       <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
     </template>
   </Pcd>
-    <Pcd
-    bg="/partnerships/Snap.Hutao.Remastered/AppPreview.png"
-    icon="/partnerships/Snap.Hutao.Remastered/logo.png"
-    repo="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered"
-    site="https://snaphutaorp.org"
-    title="胡桃重制版"
-    desc="实用的开源多功能原神工具箱 🧰"
-    import export>
+  <Pcd
+  bg="/partnerships/Snap.Hutao.Remastered/AppPreview.png"
+  icon="/partnerships/Snap.Hutao.Remastered/logo.png"
+  repo="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered"
+  site="https://snaphutaorp.org"
+  title="胡桃重制版"
+  desc="实用的开源多功能原神工具箱 🧰"
+  import export>
     <template #import>
-      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
-      <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
       <Pcb label="UIGF v4.2" :games="['ys', 'qx', 'sr_', 'zzz_']" bg="red"></Pcb>
+      <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
     </template>
     <template #export>
-      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
-      <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
       <Pcb label="UIGF v4.2" :games="['ys', 'qx', 'sr_', 'zzz_']" bg="red"></Pcb>
+      <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
     </template>
   </Pcd>
   <Pcd
