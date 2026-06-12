@@ -392,6 +392,21 @@
       <Pcb label="UIAF v1.1" :games="['ys']" bg="blue"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+    bg="/partnerships/Snap.Hutao.Remastered/AppPreview.png"
+    icon="/partnerships/Snap.Hutao.Remastered/logo.png"
+    repo="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered"
+    site="https://snaphutaorp.org"
+    title="Snap.Hutao.Remastered"
+    desc="Multifunctional Open-source Genshin Impact Toolkit 🧰"
+    import export>
+    <template #import>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="red"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIAF v1.1" :games="['ys']" bg="red"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## Projects with Deprecated Standards
