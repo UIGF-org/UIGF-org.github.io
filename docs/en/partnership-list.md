@@ -36,11 +36,19 @@
       <Pcb label="UIGF v4.2" :games="['ys', 'qx', 'sr_', 'zzz_']" bg="red"></Pcb>
       <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
       <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+      <Pcb label="UIGF v2.4" :games="['ys']" bg="white"></Pcb>
+      <Pcb label="UIGF v2.3" :games="['ys']" bg="white"></Pcb>
+      <Pcb label="UIGF v2.2" :games="['ys']" bg="white"></Pcb>
     </template>
     <template #export>
       <Pcb label="UIGF v4.2" :games="['ys', 'qx', 'sr_', 'zzz_']" bg="red"></Pcb>
       <Pcb label="UIGF v4.1" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
       <Pcb label="UIGF v4.0" :games="['ys', 'sr_', 'zzz_']" bg="white"></Pcb>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+      <Pcb label="UIGF v2.4" :games="['ys']" bg="white"></Pcb>
+      <Pcb label="UIGF v2.3" :games="['ys']" bg="white"></Pcb>
+      <Pcb label="UIGF v2.2" :games="['ys']" bg="white"></Pcb>
     </template>
   </Pcd>
   <Pcd
