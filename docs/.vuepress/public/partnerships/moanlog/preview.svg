@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#f0f4f8" rx="8"/>
+  <!-- nav bar -->
+  <rect width="600" height="50" fill="rgba(255,255,255,.85)" rx="8"/>
+  <rect x="16" y="12" width="30" height="26" rx="6" fill="#2563eb"/>
+  <text x="52" y="32" font-family="sans-serif" font-size="16" font-weight="700" fill="#1e293b">墨安云端记录</text>
+  <!-- tabs -->
+  <rect x="16" y="66" width="80" height="32" rx="8" fill="#2563eb"/>
+  <text x="38" y="86" font-family="sans-serif" font-size="13" fill="white" font-weight="600">总览</text>
+  <rect x="104" y="66" width="80" height="32" rx="8" fill="#fff" stroke="#e2e8f0"/>
+  <text x="126" y="86" font-family="sans-serif" font-size="13" fill="#475569">抽卡数据</text>
+  <!-- card -->
+  <rect x="16" y="114" width="568" height="80" rx="12" fill="white" stroke="#e2e8f0"/>
+  <text x="32" y="140" font-family="sans-serif" font-size="14" font-weight="700" fill="#0f172a">📊 数据概览</text>
+  <rect x="32" y="152" width="80" height="24" rx="6" fill="#dbeafe"/>
+  <text x="42" y="169" font-family="sans-serif" font-size="11" fill="#1d4ed8">抽卡记录</text>
+  <!-- stats -->
+  <rect x="32" y="184" width="200" height="50" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="50" y="206" font-family="sans-serif" font-size="12" fill="#64748b">总记录数</text>
+  <text x="50" y="224" font-family="sans-serif" font-size="18" font-weight="700" fill="#0f172a">45,678</text>
+  <!-- footer -->
+  <rect x="0" y="372" width="600" height="28" fill="#fff"/>
+  <text x="300" y="390" font-family="sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">墨安云端记录 · 遵循 UIGF 标准</text>
+</svg>

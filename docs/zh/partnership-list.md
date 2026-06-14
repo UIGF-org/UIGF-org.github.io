@@ -275,6 +275,21 @@
       <Pcb label="UIGF v4.1" :games="['ys']" bg="blue"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+    bg="/partnerships/moanlog/preview.svg"
+    icon="/partnerships/moanlog/logo.svg"
+    repo="https://github.com/Muoan/Moanlog"
+    site="https://record.muoan.com"
+    title="墨安云端记录"
+    desc="抽卡记录管理工具，支持UIGF v4.2导入导出和扫码自动拉取功能。"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.2" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.2" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用 UIAF 标准的项目

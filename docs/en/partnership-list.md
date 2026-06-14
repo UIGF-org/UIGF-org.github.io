@@ -277,6 +277,21 @@
       <Pcb label="UIGF v4.1" :games="['ys']" bg="blue"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+    bg="/partnerships/moanlog/preview.svg"
+    icon="/partnerships/moanlog/logo.svg"
+    repo="https://github.com/Muoan/Moanlog"
+    site="https://record.muoan.com"
+    title="Moanlog"
+    desc="Gacha Record Management Tool with UIGF v4.2 import/export and QR scan auto-fetch."
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.2" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.2" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## Projects with UIAF Standard
