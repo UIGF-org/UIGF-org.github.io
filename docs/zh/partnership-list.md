@@ -275,6 +275,28 @@
       <Pcb label="UIGF v4.1" :games="['ys']" bg="blue"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+    bg="/partnerships/Moonward/AppPreview.jpg"
+    icon="/partnerships/Moonward/logo.ico"
+    repo="https://github.com/TurmoilZoom/Moonward"
+    title="Moonward"
+    desc="基于 Starward 的米哈游 PC 启动器"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.2" :games="['ys', 'qx', 'sr', 'zzz']" bg="blue"></Pcb>
+      <Pcb label="UIGF v4.1" :games="['ys', 'sr', 'zzz']" bg="white"></Pcb>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="white"></Pcb>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.2" :games="['ys', 'qx', 'sr', 'zzz']" bg="blue"></Pcb>
+      <Pcb label="UIGF v4.1" :games="['ys', 'sr', 'zzz']" bg="white"></Pcb>
+      <Pcb label="UIGF v4.0" :games="['ys', 'sr', 'zzz']" bg="white"></Pcb>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+      <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用 UIAF 标准的项目
