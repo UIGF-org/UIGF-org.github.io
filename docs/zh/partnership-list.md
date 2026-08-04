@@ -298,6 +298,20 @@
       <Pcb label="SRGF v1.0" :games="['sr']" bg="white"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+    bg="/partnerships/GachaRecordsExport/preview.png"
+    icon="/partnerships/GachaRecordsExport/logo.png"
+    repo="https://github.com/asphyxiaxx/gacha-records-export"
+    title="Gacha Records Export"
+    desc="一个小工具来记录抽卡历史"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.1" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.1" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用 UIAF 标准的项目
