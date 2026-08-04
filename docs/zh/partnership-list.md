@@ -279,6 +279,7 @@
     bg="/partnerships/Moonward/AppPreview.jpg"
     icon="/partnerships/Moonward/logo.ico"
     repo="https://github.com/TurmoilZoom/Moonward"
+    site="https://turmoilzoom.github.io/Moonward/"
     title="Moonward"
     desc="基于 Starward 的米哈游 PC 启动器"
     import export>

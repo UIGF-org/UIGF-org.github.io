@@ -281,6 +281,7 @@
     bg="/partnerships/Moonward/AppPreview.jpg"
     icon="/partnerships/Moonward/logo.ico"
     repo="https://github.com/TurmoilZoom/Moonward"
+    site="https://turmoilzoom.github.io/Moonward/"
     title="Moonward"
     desc="A miHoYo PC launcher based on Starward"
     import export>
