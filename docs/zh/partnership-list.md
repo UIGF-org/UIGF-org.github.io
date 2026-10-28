@@ -320,6 +320,22 @@
       <Pcb label="UIGF v4.1" :games="['ys', 'sr', 'zzz']" bg="blue"></Pcb>
     </template>
   </Pcd>
+  <Pcd
+    bg="https://img.alicdn.com/imgextra/i3/1797064093/O1CN018VkZBw1g6dvTMaX9W_!!1797064093.png"
+    icon="https://s1.ax1x.com/2023/09/09/pP6xBef.png"
+    repo="https://github.com/biuuu/genshin-wish-export"
+    title="genshin wish export"
+    desc="Easily export the Genshin Impact wish record"
+    import export>
+    <template #import>
+      <Pcb label="UIGF v4.1" :games="['ys','sr_','zzz_']" bg="blue"></Pcb>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+    </template>
+    <template #export>
+      <Pcb label="UIGF v4.1" :games="['ys','sr_','zzz_']" bg="blue"></Pcb>
+      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
+    </template>
+  </Pcd>
 </RelativeProjectPanel>
 
 ## 使用 UIAF 标准的项目
@@ -447,17 +463,6 @@
 ## 使用已弃用标准的项目
 
 <RelativeProjectPanel>
-  <Pcd
-    bg="https://img.alicdn.com/imgextra/i3/1797064093/O1CN018VkZBw1g6dvTMaX9W_!!1797064093.png"
-    icon="https://s1.ax1x.com/2023/09/09/pP6xBef.png"
-    repo="https://github.com/biuuu/genshin-wish-export"
-    title="genshin wish export"
-    desc="Easily export the Genshin Impact wish record"
-    export>
-    <template #export>
-      <Pcb label="UIGF v3.0" :games="['ys']" bg="white"></Pcb>
-    </template>
-  </Pcd>
   <Pcd
     bg="https://file.xunkong.cc/static/repo/xunkong/YanfeiLawyer.webp"
     icon="https://xunkong.cc/images/logo.640.webp"
